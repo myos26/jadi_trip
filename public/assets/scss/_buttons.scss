@@ -1,0 +1,104 @@
+  /*****************************/
+ /******** Buttons CSS ********/
+/*****************************/
+
+.btn {    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s ease-in-out;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;  
+
+    @include media-breakpoint-down(md){
+        --#{$prefix}btn-font-size: 12px !important;
+        --#{$prefix}btn-padding-y: .4rem !important;
+        --#{$prefix}btn-padding-x: 2rem !important;
+        --#{$prefix}btn-border-radius: 4px !important;
+    }
+}
+
+.btn-primary {
+    --#{$prefix}btn-bg: var(--#{$prefix}primary);
+    --#{$prefix}btn-border-color: var(--#{$prefix}primary);      
+    --#{$prefix}btn-color: var(--#{$prefix}white);
+    --#{$prefix}btn-hover-bg: transparent;
+    --#{$prefix}btn-active-bg: transparent;
+    --#{$prefix}btn-hover-color: var(--#{$prefix}primary);
+    --#{$prefix}btn-active-color: var(--#{$prefix}primary); 
+    --#{$prefix}btn-hover-border-color: var(--#{$prefix}primary);   
+    --#{$prefix}btn-active-border-color: var(--#{$prefix}primary);
+    border: 1px solid var(--#{$prefix}primary); 
+    &:hover{
+        background: transparent;
+        border: 1px solid var(--#{$prefix}primary); 
+    }
+}
+
+.btn-secondary {
+    --#{$prefix}btn-bg: var(--#{$prefix}secondary);
+    --#{$prefix}btn-border-color: var(--#{$prefix}secondary);      
+    --#{$prefix}btn-color: var(--#{$prefix}body-color-style-4);
+    --#{$prefix}btn-hover-bg: var(--#{$prefix}primary);
+    --#{$prefix}btn-active-bg: var(--#{$prefix}primary);
+    --#{$prefix}btn-hover-color: var(--#{$prefix}white);
+    --#{$prefix}btn-active-color: var(--#{$prefix}white); 
+    --#{$prefix}btn-hover-border-color: var(--#{$prefix}primary);   
+    --#{$prefix}btn-active-border-color: var(--#{$prefix}primary);
+    // --#{$prefix}body-color-style-3
+
+    // border: 1px solid var(--#{$prefix}body-color-style-4);
+    // &:hover{
+    //     background: transparent;
+    //     border: 1px solid var(--#{$prefix}primary); 
+    // }
+}
+.btn-reply {
+    --bs-btn-border-color: var(--bs-body-color);
+    --bs-btn-hover-bg: var(--bs-primary);
+    --bs-btn-active-bg: var(--bs-primary);
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-active-color: var(--bs-white);
+    --bs-btn-hover-border-color: var(--bs-primary);
+    border: 1px solid var(--bs-body-color);
+    padding: 5px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 4px
+}
+
+.btn-xl {
+    @include button-size($btn-padding-y-xl, $btn-padding-x-xl, $btn-font-size-xl, $btn-border-radius-xl);
+}
+.btn-md {
+    @include button-size($btn-padding-y-md, $btn-padding-x-md, $btn-font-size-md, $btn-border-radius-md);
+}
+.btn-xs {
+    @include button-size($btn-padding-y-xs, $btn-padding-x-xs, $btn-font-size-xs, $btn-border-radius-xs);
+}
+
+
+.btn-submit{
+    --#{$prefix}-btn-submit-size: 44px;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    .btn-primary{
+        --#{$prefix}btn-padding-x: 0 !important;
+        --#{$prefix}btn-padding-y: 0 !important;
+        --#{$prefix}btn-border-radius: 6px !important;
+        width: var(--#{$prefix}-btn-submit-size);
+        height: var(--#{$prefix}-btn-submit-size);        
+    }  
+    @include media-breakpoint-down(md){
+        --#{$prefix}-btn-submit-size: 28px;   
+        .btn-primary{            
+            --#{$prefix}btn-border-radius: 3px;                   
+        }   
+        svg{
+            width: 10px;
+            height: 12px;
+        }      
+    }        
+}

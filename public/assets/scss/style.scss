@@ -1,0 +1,99 @@
+/*
+Template Name: exploreist
+Template URI: https://themeperch.net/html/exploreist/
+Author: Themeperch
+Author URI: https://themeforest.net/user/themeperch
+Description: Exploreist is your ultimate destination for travel inspiration, tips, and guides. Discover hidden gems, plan your next adventure, and make the most out of your travels with our expertly curated content. Join our community of wanderers and explore the world with Exploreist.
+Tags: one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-menu, flexible-header, post-formats, sticky-post, threaded-comments.
+Version: 1.0.0
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+
+1. Global
+2. Header
+3. Nav
+5. Buttons
+6. Hero
+7. Typography
+8. Card
+9. Category
+10. Blog
+11. Article
+11. About
+12. Dark
+12. Footer
+
+*/
+
+
+
+@import "../bootstrap/scss/mixins/banner";
+@include bsBanner("");
+
+@import "custom";
+
+// scss-docs-start import-stack
+// Configuration
+@import "../bootstrap/scss/functions";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/variables-dark";
+@import "../bootstrap/scss/maps";
+@import "../bootstrap/scss/mixins";
+@import "../bootstrap/scss/utilities";
+
+// Layout & components
+@import "../bootstrap/scss/root";
+@import "../bootstrap/scss/reboot";
+@import "../bootstrap/scss/type";
+@import "../bootstrap/scss/images";
+@import "../bootstrap/scss/containers";
+@import "../bootstrap/scss/grid";
+@import "../bootstrap/scss/tables";
+@import "../bootstrap/scss/forms";
+@import "../bootstrap/scss/buttons";
+@import "../bootstrap/scss/transitions";
+@import "../bootstrap/scss/dropdown";
+@import "../bootstrap/scss/button-group";
+@import "../bootstrap/scss/nav";
+@import "../bootstrap/scss/navbar";
+@import "../bootstrap/scss/card";
+@import "../bootstrap/scss/accordion";
+@import "../bootstrap/scss/breadcrumb";
+@import "../bootstrap/scss/pagination";
+@import "../bootstrap/scss/badge";
+@import "../bootstrap/scss/alert";
+@import "../bootstrap/scss/progress";
+@import "../bootstrap/scss/list-group";
+@import "../bootstrap/scss/close";
+@import "../bootstrap/scss/toasts";
+@import "../bootstrap/scss/modal";
+@import "../bootstrap/scss/tooltip";
+@import "../bootstrap/scss/popover";
+@import "../bootstrap/scss/carousel";
+@import "../bootstrap/scss/spinners";
+@import "../bootstrap/scss/offcanvas";
+@import "../bootstrap/scss/placeholders";
+
+@import "dark";
+@import "typography";
+@import "card";
+@import "category";
+@import "blog";
+@import "article";
+@import "header";
+@import "nav";
+@import "hero";
+@import "about";
+@import "buttons";
+@import "footer";
+
+@import "global";
+
+// Helpers
+@import "../bootstrap/scss/helpers";
+
+// Utilities
+@import "../bootstrap/scss/utilities/api";
+// scss-docs-end import-stack

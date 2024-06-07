@@ -1,0 +1,156 @@
+  /***************************/
+ /******** About CSS ********/
+/***************************/
+.title-style-2{
+    position: relative;
+    &::before{
+        position: absolute;
+        content: "";
+        left: -50px;
+        bottom: 5px;
+        width: 35px;
+        height: 2px;
+        background: var(--bs-heading-color);
+    }
+}
+// About-Hero-banner-area
+.about-banner-area{
+    
+    .about-banner{
+        width: 100%;
+        height: 700px;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        @include media-breakpoint-down(xxl) {
+            height: 600px;
+        }
+        @include media-breakpoint-down(xl) {
+            height: 550px;
+        }
+        @include media-breakpoint-down(lg) {
+            height: 450px;
+        }
+        @include media-breakpoint-down(md) {
+            height: 350px;
+        }
+    }
+    .about-banner-title{
+        position: relative;
+        padding-left: 60px;
+        &::before{
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: 7px;
+            width: 50px;
+            height: 2px;
+            background: var(--#{$prefix}heading-color);
+        }
+    }
+}
+.about-page-content{
+    .about-post-image {
+        height: 550px;
+        width: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @include media-breakpoint-down(xl) {
+            height: 400px;
+        }
+        @include media-breakpoint-down(lg) {
+            height: 350px;
+        }
+        @include media-breakpoint-down(md) {
+            height: 300px;
+        }
+        @include media-breakpoint-down(sm) {
+            height: 250px;
+        }
+    }
+}
+
+// home  page image 
+.about-image-1{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid var(--#{$prefix}white);
+    object-fit: cover;
+}
+
+.counter-wrapper{
+    background: rgba(76, 155, 179, 0.7);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: center;
+    padding: 30px 50px;
+    border-radius: 14px;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 200px);
+    justify-content: space-between;
+    @include media-breakpoint-down(lg) {
+        width: calc(100% - 100px);
+    }
+    @include media-breakpoint-down(md) {
+        width: calc(100% - 70px);
+    }
+    @include media-breakpoint-down(sm) {
+        width: calc(100% - 50px);
+        padding: 17px 20px;
+        gap: 20px;
+        justify-content: center;
+    }
+    .counter-number{
+        color: var(--#{$prefix}white);
+        font-weight: 600;
+        list-style: none;
+        .odometer{
+            font-size: 50px;
+            color: var(--#{$prefix}white);
+            @include media-breakpoint-down(lg) {
+                font-size: 40px;
+            }
+            @include media-breakpoint-down(sm) {
+                font-size: 30px;
+            }
+            
+        }
+        h5{
+            font-size: 50px;
+            display: inline-block;
+            color: var(--#{$prefix}white);
+            transform: translatey(7px);
+            @include media-breakpoint-down(sm) {
+                font-size: 30px;
+                transform: translatey(2px);
+            }
+        }
+        p{
+            margin: 0;
+            font-size: 16px;
+            position: relative;
+            top: -4px;
+        }
+    }
+}
+.counter-wrapper-style-2{
+    width: calc(100% - 400px);
+    @include media-breakpoint-down(lg) {
+        width: calc(100% - 200px);
+    }
+    @include media-breakpoint-down(md) {
+        width: calc(100% - 100px);
+    }
+}

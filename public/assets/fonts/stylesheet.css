@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'Lucida Handwriting Std';
+    src: url('LucidaHandwritingStd-Black.woff2') format('woff2'),
+        url('LucidaHandwritingStd-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lucida Handwriting Std';
+    src: url('LucidaHandwritingStd-Light.woff2') format('woff2'),
+        url('LucidaHandwritingStd-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lucida Handwriting Std';
+    src: url('LucidaHandwritingStd.woff2') format('woff2'),
+        url('LucidaHandwritingStd.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lucida Handwriting Std';
+    src: url('LucidaHandwritingStd-Bold.woff2') format('woff2'),
+        url('LucidaHandwritingStd-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lucida Handwriting Std';
+    src: url('LucidaHandwritingStd-Thin.woff2') format('woff2'),
+        url('LucidaHandwritingStd-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+

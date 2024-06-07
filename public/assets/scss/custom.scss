@@ -1,0 +1,140 @@
+$prefix: bs-;
+
+
+// ==============Spacers
+
+  $spacer: 1rem;
+  $spacers: (
+    0: 0,
+    1: $spacer * .25,
+    2: $spacer * .5,
+    3: $spacer,
+    4: $spacer * 1.5,
+    5: $spacer * 3,
+    10: $spacer * .625,
+    20: $spacer * 1.25,
+    30: $spacer * 1.875,
+    40: $spacer * 2.5,
+    60: $spacer * 3.75,
+    70: $spacer * 4.375,
+    90: $spacer * 5.625,
+    100: $spacer * 6.25,
+    120: $spacer * 7.5,
+    130: $spacer * 8.125,
+    150: $spacer * 9.375,
+    160: $spacer * 10,
+    200: $spacer * 12.5,
+  );
+// ==============Spacers
+
+
+
+
+// ==============Typography
+  // $display-font-weight: 700; 
+  // $headings-font-weight :700;
+
+ 
+  // $headings-font-weight:        900;
+  // $font-family-sans-serif: 'Lato', sans-serif;
+// ==============Typography
+
+
+
+// ==============Buttons
+
+  $btn-padding-x : 2.11rem;
+  $btn-padding-y : 0.674rem; // btn-height 68px
+  $btn-border-width : 0;
+  $btn-font-weight : 700;
+  $btn-font-size : 1.125rem; // font-size:24px
+  $btn-border-radius: 8px;
+
+  $btn-padding-x-xl : 2.12rem;
+  $btn-padding-y-xl : 1.03rem; // btn-height 100px
+  $btn-font-size-xl: 1.125rem;
+  $btn-border-radius-xl: 8px;
+
+
+  $btn-padding-x-lg : 1.125rem;
+  $btn-padding-y-lg : 1.165rem; // btn-height 75px
+  $btn-border-radius-lg : 0;
+
+  $btn-padding-x-md : 1.874rem;
+  $btn-padding-y-md : .563rem; // btn-height 58px
+  $btn-border-radius-md : 0;
+  $btn-font-size-md : 1.5rem;
+
+  $btn-font-size-sm : 1rem; // font-size:16px
+  $btn-padding-x-sm : 2.07rem;
+  $btn-padding-y-sm : .566rem; // btn-height 46px
+  $btn-border-radius-sm : 0;
+
+  $btn-font-size-xs : 14px; 
+  $btn-padding-x-xs : .7rem;
+  $btn-padding-y-xs : .2rem; 
+  $btn-border-radius-xs : 0;
+// ==============Buttons
+
+
+
+// ==============Font Sizes
+
+  $font-size-base: 1rem; //16px
+
+  $h1-font-size:                34px;
+  $h2-font-size:                32px;
+  $h3-font-size:                30px;
+  $h4-font-size:                24px;
+  $h5-font-size:                22px;
+  $h6-font-size:                20px;
+
+  //20,22,24,30,32,34
+
+  // $small-font-size:             14px;
+
+  // $lead-font-size:              $font-size-base * 1.125; //18px
+  // $lead-font-weight:            400;
+
+
+  $display-font-sizes: (     
+    1: 12.5rem, // 200px
+    2: 7.5rem, // 120px
+    3: 3.75rem, // 60px
+    4: 2.75rem, // 44px
+    5: 2.55rem,// 40px
+    6: 2.25rem // 36px
+  );
+// ==============Font Sizes
+
+
+// ============== Nav
+
+// $nav-link-padding-x:                1.75rem; // 28px
+// $nav-link-font-size:                1.25rem; // 20px
+// $nav-link-font-weight:              400;
+// $nav-link-color:                    rgba(var(--#{$prefix}white-rgb), .6);
+
+$navbar-padding-y:                  0;
+// $navbar-nav-link-padding-x:         1.75rem; // 28px
+$navbar-light-color:                rgba(var(--#{$prefix}white-rgb), .6);
+$navbar-light-hover-color:          rgba(var(--#{$prefix}white-rgb), .6);
+// $navbar-dark-hover-color:           var(--#{$prefix}primary);
+// $navbar-light-active-color:         var(--#{$prefix}secondary);
+// $navbar-dark-active-color:          var(--#{$prefix}secondary);
+// ============== Nav
+
+
+// scss-docs-start card-variables
+$card-title-spacer-y:               12px;
+$card-title-color:                  var(--#{$prefix}heading-color);
+$card-border-width:                 0;
+$card-border-color:                 var(--#{$prefix}border-color-style-1);
+$card-border-radius:                14px;
+$card-inner-border-radius:          14px;
+$card-cap-padding-y:                0;
+$card-cap-padding-x:                0;
+$card-cap-bg:                       var(--#{$prefix}body-bg);
+$card-cap-color:                    var(--#{$prefix}body-color-style-1);
+$card-bg:                           var(--#{$prefix}body-bg);
+// scss-docs-end card-variables

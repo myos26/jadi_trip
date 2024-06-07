@@ -1,0 +1,102 @@
+  /**************************/
+ /******** Dark CSS ********/
+/**************************/
+
+
+.dark-mode{
+    .about-me {
+        background: #154757;
+        color: #D9D9D9;
+    } 
+    .widget.widget-style-1{
+        background: #153B47;
+        .form-control{
+            background: transparent;
+            border-bottom: 2px solid var(--#{$prefix}primary);
+        }
+    }
+    .widget.widget-style-2{
+        background: #153B47;
+       
+    }
+
+    .card-style-2 {
+        background: #1D3038;
+        border: .5px solid #27414D;
+        &:hover {
+            box-shadow: 0px 0px 15px rgb(29, 48, 56);
+        }
+    }
+
+    .section-header.drop-shadow{
+        box-shadow: 0px 0px 15px rgb(29, 48, 56), 0px 0px 15px rgb(29, 48, 56);
+    }
+
+    .breadcrumb-style-2 {
+        --bs-breadcrumb-divider-color: var(--#{$prefix}white);
+        --bs-link-color-rgb: var(--#{$prefix}white);
+    }
+    .section-blog-hero{
+        background: #153B47;
+    }
+    // blog-page
+    .section-blog-slider::after {
+        background-image: linear-gradient(to right, rgba(29, 48, 56, 0.5), rgba(29, 48, 56, 0.02));
+    }
+    .section-blog-slider::before {
+        background-image: linear-gradient(to left, rgba(29, 48, 56, 0.2), rgba(29, 48, 56, 0.05))
+    }
+    .section-header-style-6.sticky {
+        background: #153B47;
+    }
+    // author card
+    .author-card-style-4{
+        color: #153B47 ;
+    }
+    .author-card .article-count-btn {
+        border: 1px solid #BBBBBB;
+        color: var(--#{$prefix}primary);
+    }
+    .section-article-hero-wrapper .breadcrumb-card {
+        background: rgb(29, 48, 56, 0.6);
+    }
+    .sidebar-table-of-content {
+        background: rgb(29, 48, 56, 0.6);
+        box-shadow: 0px 0px 15px rgb(29, 48, 56), 0px 0px 15px rgb(29, 48, 56);
+    }
+    .breadcrumb-style-4{
+        --#{$prefix}breadcrumb-divider-color: var(--#{$prefix}white);
+        --#{$prefix}link-color-rgb: var(--#{$prefix}white);
+    }
+    .dropdown.custom-dropdown .dropdown-menu.show {
+        background: rgb(29, 48, 56, 0.8);
+        backdrop-filter: blur(10px);
+    }
+    .table-of-content{
+        box-shadow: 0px 0px 15px rgb(29, 48, 56);
+    }
+    .cta-area {
+        background: #153B47;
+    }
+
+    .footer-1 .footer-wrapper::after{
+        background: rgb(21, 59, 71, 0.8);
+    }
+    .section-footer-1{
+        --bg-parallax-image: url(../images/footer-dark.jpg); 
+        .footer-top-contents{
+            border-bottom: 2px solid rgba(255,255,255,0.20);       
+        }
+    }
+    .section-footer-2{
+        --bg-parallax-image: url(../images/footer-image-dark-full.png); 
+        .footer-top-contents{
+            border-bottom: 2px solid rgba(255,255,255,0.20);       
+        }
+    }
+
+    .cta-area .btn {
+        color: var(--#{$prefix}body-color-style-4);
+    }
+}
+

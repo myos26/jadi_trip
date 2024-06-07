@@ -1,0 +1,78 @@
+  /*************************/
+ /******** Nav CSS ********/
+/*************************/
+.nav-link {
+    --#{$prefix}navbar-nav-link-padding-x: 10px;
+    --#{$prefix}nav-link-padding-y: 37px; 
+    --#{$prefix}navbar-active-color: var(--#{$prefix}white);
+    font-size: 20px;
+    font-weight: 400;
+    &.active,
+    &.show,&:hover {
+      color: var(--#{$prefix}navbar-active-color);
+    }
+    &:focus-visible {
+        box-shadow: none;
+    }
+    &.active{
+        font-weight: 700;
+    }
+}
+.nav-link-style-2{
+    --#{$prefix}navbar-active-color: var(--#{$prefix}heading-color);
+    color: var(--#{$prefix}heading-color);
+    color: var(--#{$prefix}heading-color-rgb);
+    &.active,
+    &:focus,
+    &.show,&:hover {
+      color: var(--#{$prefix}heading-color);
+      
+    }
+}
+@media (max-width: 1200px){
+    .nav-link {  
+        padding: 15px 0px;
+        color:#363636;
+        font-size: 22px;
+    }
+}
+@media (max-width: 992px){
+    .nav-link {  
+        padding: 10px 0px;
+        color:#363636;
+        font-size: 18px;
+    }
+}
+
+.navbar {    
+    --#{$prefix}navbar-toggler-border-color: transparent;
+    --#{$prefix}navbar-toggler-border-radius: 0;
+    --#{$prefix}navbar-toggler-focus-width: 0;
+    @include media-breakpoint-down(xl){
+        --#{$prefix}navbar-padding-y: 15px;
+    }
+}
+
+.navbar-nav{
+    --#{$prefix}nav-link-padding-y: 44px;
+    @include media-breakpoint-down(md){
+        --#{$prefix}nav-link-padding-y: 20px;
+    }
+}
+
+.btn-close{
+    --#{$prefix}btn-close-focus-shadow: none;
+}
+
+@include media-breakpoint-down(md){
+    .navbar-brand img{
+        width: 100px;
+        height: 20px;
+    }
+}
+.nav {    
+    --#{$prefix}nav-link-font-weight: 400;    
+    --#{$prefix}nav-link-font-size: 1.25rem; // 20px;    
+}
+
+

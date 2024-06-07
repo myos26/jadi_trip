@@ -1,0 +1,188 @@
+  /******************************/
+ /******** Category CSS ********/
+/******************************/
+.category-1{  
+    &.overlay{        
+        --#{$prefix}overlay-bg: linear-gradient(180deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.00) 100%);
+        --#{$prefix}overlay-height: 13.5%;
+        &::after{
+            bottom: auto;
+            top: 0;
+        }
+    }  
+    .category-wrapper {        
+        --bg-parallax-opacity: 1;
+        padding: 100px 0;
+        
+    }  
+    .category-wrapper-1{
+        --bg-parallax-image: url(../images/categories/banner-1.jpg);    
+    }
+    .category-wrapper-2{
+        --bg-parallax-image: url(../images/categories/banner-2.jpg);    
+    }
+    .category-wrapper-3{
+        --bg-parallax-image: url(../images/categories/banner-3.jpg);    
+    }
+    .category-wrapper-4{
+        --bg-parallax-image: url(../images/categories/banner-4.jpg);    
+    }
+    .category-wrapper-5{
+        --bg-parallax-image: url(../images/categories/banner-5.jpg);    
+    }
+    
+}
+
+// ======================== Ctegory-1 ==========================>>>>
+
+.category-title-style-1 {
+    padding: 20px 0 7px 0;
+    background-color: rgba(var(--bs-black-rgb), 0.7);
+    // backdrop-filter: blur(10px);
+    text-align: center;
+    border-radius: 14px;
+}
+.category-title-style-1.style-2 {
+    background: transparent;
+}
+.category-title-bg-position{
+    position: relative;
+    padding: 50px 123px 40px 0; 
+    background: transparent;
+    &:before{
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 300%;
+        height: 100%;
+        background-color: rgba(var(--bs-black-rgb), 0.7);
+        z-index: -1; 
+    }
+}
+
+.catagory-tag{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    a{
+        background: var(--#{$prefix}secondary);
+        padding: 8px 8px 8px 20px;
+        display: flex;
+        column-gap: 10px;
+        align-items: center;
+        border-radius: 8px;
+        border: 1px solid var(--#{$prefix}secondary);
+        span{
+            background: var(--bs-primary);
+            color: var(--bs-white);
+            padding: 3px 9px;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        &:hover{
+            background:var(--#{$prefix}white);
+            color: var(--#{$prefix}primary);
+            border: 1px solid var(--#{$prefix}primary);
+        }
+    }
+}
+.post-tag{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    a{
+        padding: 6px 20px;
+        display: flex;
+        justify-content: center;
+        border-radius: 8px;
+        border: 1px solid #E1E1E1;
+        color: var(--bs-body-color);
+        flex-wrap: wrap;
+        &:hover{
+            background: var(--#{$prefix}primary);
+            color: var(--#{$prefix}white);
+            border: 1px solid var(--#{$prefix}primary);
+        }
+    }
+}
+
+.add-banner{
+    height: 90px;
+    width: 100%;
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+.add-iamge{
+    height: 600px;
+    width: 300px;
+    img{
+        height: 100%;
+        width: auto
+    }
+    @include media-breakpoint-down(lg){
+        height: 300px;
+    }
+    @include media-breakpoint-down(md){
+       display: none;
+    }
+}
+.ml-auto{
+    margin-left: auto;
+}
+
+.drop-shadow{
+    box-shadow: 0px 0px 10px rgb(225, 225, 225);
+}
+.drop-shadow-2{
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.2);
+}
+
+// hero-bottom-area
+.caragory-area-section{
+    background: var(--#{$prefix}primary);
+    bottom: 0;
+    width: 100%;
+    .caragory-area {
+        display: flex;
+        align-items: center;
+        gap: 30px 60px;
+        position: relative;
+        bottom: -40px;
+        flex-wrap: wrap;
+        @media (max-width:480px) {
+            flex-direction: column;
+        } 
+        @include media-breakpoint-down(lg) {
+            gap: 30px 30px;
+        } 
+        @include media-breakpoint-down(md) {
+            gap: 20px 20px;
+        } 
+        .single-catagory{
+            background: var(--#{$prefix}white);
+            width: 210px;
+            height: 80px;
+            box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
+            border-radius: 14px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            gap: 20px;           
+            .catagory-title{
+                color:  #6A6A6A;
+                font-weight: 700;
+                font-size: 18px;
+                transition: all 0.3s ease;
+                &:hover{
+                    color: var(--#{$prefix}primary);
+                }
+            }
+        }
+    }
+}

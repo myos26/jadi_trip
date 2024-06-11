@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +32,21 @@ Route::get('/contact', function () {
 Route::get('/article', function () {
     return view('article');
 });
+
+// AUTH LOGIN REGISTER
+Route::get('/login', function () {
+    return view('auth.login');
+});
+Route::get('/register', function () {
+    return view('auth.register');
+});
+Route::get('/verifikasi', function () {
+    return view('auth.verifikasi');
+});
+
+// ADMIN ROUTES
+Route::get('/backend', function () {
+    return view('admin.index');
+});
+
+Route::get('/Dashboard', [AdminController::class, 'Dashboard']);

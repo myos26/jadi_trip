@@ -136,13 +136,13 @@
                                         
                                         </a>
 
-                                        <!-- <a class="menu-icon"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasDesktop" aria-controls="offcanvasDesktop">
+                                        <a class="menu-icon"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasDesktop" aria-controls="offcanvasDesktop">
                                                         <span class="menu-icon-2">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M3 12H21M3 6H21M3 18H21" stroke-linecap="round" stroke-linejoin="round"/>
                                                 </svg>
                                             </span>
-                                        </a> -->
+                                        </a>
                                     </div>
                                 </div>							
                             </div>
@@ -429,7 +429,7 @@
                     <div class="hero-wrapper mx-auto position-relative parallax">
                         <div class="container">
                             <div class="hero-inner-text position-relative text-center mb-5 mb-xxl-70">
-                                <h1 class="display-5 lh-1 text-white exp-text-animate-1">Let's Go!</h1>	
+                                {{-- <h1 class="display-5 lh-1 text-white exp-text-animate-1">Let's Go!</h1>	 --}}
                                 <p class="display-6 lh-1 exp-text-animate-1">The Adventure is waiting for you</p>	
                             </div>
                         </div>    

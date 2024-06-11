@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ asset('auth/style2.css') }}" />
+
+    <title>Form Login</title>
+</head>
+
+<body>
+
+    <div class="wrapper wrapper2">
+        <form action="">
+            <h1>Verifikasi Your Email</h1>
+
+            <div class="input-box">
+                <h3>#We have sent a code to your email, check it and enter it below</h3>
+                <div class="input-field">
+                    <input type="number" name="kode_otp" placeholder="Kode OTP" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+            </div>
+            {{-- <label>
+                <input type="checkbox">Saya menyatakan bahwa informasi yang diberikan di atas adalah benar dan tepat
+            </label> --}}
+
+            <button type="submit" class="btn"><a href="/dashboard">Verifikasi</a></button>
+            {{-- <a href="/register" class="btn2 btn3">Tidak punya akun? Daftar disini</a> --}}
+        </form>
+    </div>
+
+</body>
+
+</html>

@@ -54,18 +54,18 @@
                                 <div class="d-flex gap-70 align-items-center">
                                     <ul class="gap-20 navbar-nav mb-2 me-2 mb-lg-0">
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="blog.html" aria-label="nav-links">
+                                            <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="/blog" aria-label="nav-links">
                                                 Destinasi
                                             </a>									
                                         </li>
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="blog.html" aria-label="nav-links">
+                                            <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="/blog" aria-label="nav-links">
                                                 Aktifitas
                                             </a>
                                             							
                                         </li>
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="blog.html" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="/blog" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
                                                 Kuliner
                                                 <span class="dropdown-icon">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
@@ -75,15 +75,15 @@
                                             </a>									
                                             <ul class="dropdown-menu">
                                                 <li>
-                                                    <a class="dropdown-item" href="blog.html" aria-label="single-pages">Open Trip</a>
+                                                    <a class="dropdown-item" href="/blog" aria-label="single-pages">Open Trip</a>
                                                 </li>										
                                                 <li>
-                                                    <a class="dropdown-item" href="blog.html" aria-label="single-pages">Paket Wisata</a>
+                                                    <a class="dropdown-item" href="/blog" aria-label="single-pages">Paket Wisata</a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="blog.html" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="/blog" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
                                                 Paket
                                                 <span class="dropdown-icon">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
@@ -93,15 +93,15 @@
                                             </a>
                                             <ul class="dropdown-menu">
                                                 <li>
-                                                    <a class="dropdown-item" href="blog.html" aria-label="single-pages">Open Trip</a>
+                                                    <a class="dropdown-item" href="/blog" aria-label="single-pages">Open Trip</a>
                                                 </li>										
                                                 <li>
-                                                    <a class="dropdown-item" href="blog.html" aria-label="single-pages">Paket Wisata</a>
+                                                    <a class="dropdown-item" href="/blog" aria-label="single-pages">Paket Wisata</a>
                                                 </li>
                                             </ul>									
                                         </li>
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="blog.html" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="/blog" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
                                                 Blog
                                                 <span class="dropdown-icon">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
@@ -111,18 +111,18 @@
                                             </a>
                                             <ul class="dropdown-menu">
                                                 <li>
-                                                    <a class="dropdown-item" href="blog.html" aria-label="single-pages">Blog 1</a>
+                                                    <a class="dropdown-item" href="/blog" aria-label="single-pages">Blog 1</a>
                                                 </li>										
                                                 
                                             </ul>									
                                         </li>
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="about.html" aria-label="nav-links">
+                                            <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="/about" aria-label="nav-links">
                                                 About
                                             </a>									
                                         </li>
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="contact.html" aria-label="nav-links">
+                                            <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="/contact" aria-label="nav-links">
                                                 Kontak
                                             </a>								
                                         </li>
@@ -245,14 +245,14 @@
                     <div class="catagory mb-30">
                         <h3 class="offcanvas-title  mb-40">Category</h3>
                         <div class="catagory-tag">
-                            <a href="category.html">Hiking <span class="catagory-count">10</span></a>
-                            <a href="category.html">Camping <span class="catagory-count">08</span></a>
-                            <a href="category.html">Desert <span class="catagory-count">12</span></a>
-                            <a href="category.html">Beach <span class="catagory-count">22</span></a>
-                            <a href="category.html">Forest <span class="catagory-count">15</span></a>
-                            <a href="category.html">Ancient <span class="catagory-count">07</span></a>
-                            <a href="category.html">City <span class="catagory-count">18</span></a>
-                            <a href="category.html">Lake <span class="catagory-count">09</span></a>
+                            <a href="/category">Hiking <span class="catagory-count">10</span></a>
+                            <a href="/category">Camping <span class="catagory-count">08</span></a>
+                            <a href="/category">Desert <span class="catagory-count">12</span></a>
+                            <a href="/category">Beach <span class="catagory-count">22</span></a>
+                            <a href="/category">Forest <span class="catagory-count">15</span></a>
+                            <a href="/category">Ancient <span class="catagory-count">07</span></a>
+                            <a href="/category">City <span class="catagory-count">18</span></a>
+                            <a href="/category">Lake <span class="catagory-count">09</span></a>
                         </div>
                     </div>
 
@@ -272,17 +272,17 @@
                 <div class="offcanvas-body d-flex justify-content-start"> 
                     <ul class="navbar-nav custom-navbar-nav mb-2  mb-lg-0 hover-menu">
                         <li class="nav-item dropdown">
-                            <a class="nav-link active d-flex gap-2 align-items-center" aria-current="page" href="blog.html" aria-label="nav-links">
+                            <a class="nav-link active d-flex gap-2 align-items-center" aria-current="page" href="/blog" aria-label="nav-links">
                                 Destinasi
                             </a>									
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link d-flex gap-2 align-items-center"  href="blog.html" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="true">
+                            <a class="nav-link d-flex gap-2 align-items-center"  href="/blog" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="true">
                                 Aktifitas
                             </a>									
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="blog.html" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="/blog" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
                                 Kuliner
                                 <span class="dropdown-icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
@@ -292,17 +292,17 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item" href="blog.html" aria-label="single-pages">Malang</a>
+                                    <a class="dropdown-item" href="/blog" aria-label="single-pages">Malang</a>
                                 </li>										
                                 <li>
-                                    <a class="dropdown-item" href="blog.html" aria-label="single-pages">Banyuwangi</a>
+                                    <a class="dropdown-item" href="/blog" aria-label="single-pages">Banyuwangi</a>
                                 </li>				
                             </ul>									
                         </li>
 
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="blog.html" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="/blog" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
                                 Paket
                                 <span class="dropdown-icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
@@ -312,17 +312,17 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item" href="blog.html" aria-label="single-pages">Contact 1</a>
+                                    <a class="dropdown-item" href="/blog" aria-label="single-pages">Contact 1</a>
                                 </li>										
                                 <li>
-                                    <a class="dropdown-item" href="blog.html" aria-label="single-pages">Contact 2</a>
+                                    <a class="dropdown-item" href="/blog" aria-label="single-pages">Contact 2</a>
                                 </li>										
                                                     
                             </ul>									
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="blog.html" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="/blog" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
                                 Blog
                                 <span class="dropdown-icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
@@ -332,20 +332,20 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item" href="article.html" aria-label="single-pages">Article 1</a>
+                                    <a class="dropdown-item" href="/article" aria-label="single-pages">Article 1</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="article.html" aria-label="single-pages">Article 2</a>
+                                    <a class="dropdown-item" href="/article" aria-label="single-pages">Article 2</a>
                                 </li>
                             </ul>                                                    
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="about.html" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="/about" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
                                 About
                             </a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="contact.html" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="/contact" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
                                 Kontak
                             </a>
                         </li>
@@ -408,11 +408,11 @@
                                 <!-- mini-card-style -->
                                 <div class="mini-card-style mb-lg-40 mb-30">
                                     <div class="card-image-wrapper">
-                                        <a href="article.html"><img src="assets/images/placeholder.svg" data-src="assets/images/feature-images/feature-image-1.jpg" class="card-img-top" alt="Breakfast"> </a>
+                                        <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/feature-images/feature-image-1.jpg" class="card-img-top" alt="Breakfast"> </a>
                                     </div> 
                                 
                                     <div class="card-body">                                                
-                                        <h5 class="card-title lead fw-extrabold mb-0"><a href="article.html" class="blog-title">Quick and Easy Flaky Pastry for Tasty Breakfast</a></h5>                
+                                        <h5 class="card-title lead fw-extrabold mb-0"><a href="/article" class="blog-title">Quick and Easy Flaky Pastry for Tasty Breakfast</a></h5>                
                                         <ul class="list-unstyled card-meta-style-2 mb-0 extra-small">
                                             <li>By <a href="author-1.html" class="fw-bold">Mike Aiden</a></li>
                                             <li>January 27, <span class="dynamic-year"> </span>.</li>
@@ -423,11 +423,11 @@
                                 <!-- mini-card-style -->
                                 <div class="mini-card-style mb-lg-40 mb-30">
                                     <div class="card-image-wrapper">
-                                        <a href="article.html"> <img src="assets/images/placeholder.svg" data-src="assets/images/feature-images/feature-image-7.jpg" class="card-img-top" alt="Stories"> </a>
+                                        <a href="/article"> <img src="assets/images/placeholder.svg" data-src="assets/images/feature-images/feature-image-7.jpg" class="card-img-top" alt="Stories"> </a>
                                     </div>
                                 
                                     <div class="card-body">                                                
-                                        <h5 class="card-title lead fw-extrabold mb-0"><a href="article.html" class="blog-title">Footprints in the Wilderness: Hiking Stories</a></h5>                
+                                        <h5 class="card-title lead fw-extrabold mb-0"><a href="/article" class="blog-title">Footprints in the Wilderness: Hiking Stories</a></h5>                
                                         <ul class="list-unstyled card-meta-style-2 mb-0 extra-small">
                                             <li>By <a href="author-1.html" class="fw-bold">Mike Aiden</a></li>
 
@@ -441,11 +441,11 @@
                                 <!-- mini-card-style -->
                                 <div class="mini-card-style mb-lg-40 mb-30">
                                     <div class="card-image-wrapper">
-                                        <a href="article.html"> <img src="assets/images/placeholder.svg" data-src="assets/images/feature-images/feature-image-3.jpg" class="card-img-top" alt="Stories"> </a>
+                                        <a href="/article"> <img src="assets/images/placeholder.svg" data-src="assets/images/feature-images/feature-image-3.jpg" class="card-img-top" alt="Stories"> </a>
                                     </div>
                                 
                                     <div class="card-body">                                                
-                                        <h5 class="card-title lead fw-extrabold mb-0"><a href="article.html" class="blog-title">Lost Treasures: Top 10 Ancient City Sites</a></h5>          
+                                        <h5 class="card-title lead fw-extrabold mb-0"><a href="/article" class="blog-title">Lost Treasures: Top 10 Ancient City Sites</a></h5>          
                                         <ul class="list-unstyled card-meta-style-2 mb-0 extra-small">
                                             <li>By <a href="author-1.html" class="fw-bold">Mike Aiden</a></li>
 
@@ -456,11 +456,11 @@
                                 <!-- mini-card-style -->
                                 <div class="mini-card-style mb-lg-40 mb-30">
                                     <div class="card-image-wrapper">
-                                        <a href="article.html"> <img src="assets/images/placeholder.svg" data-src="assets/images/feature-images/feature-image-4.jpg" class="card-img-top" alt="Stories"> </a>
+                                        <a href="/article"> <img src="assets/images/placeholder.svg" data-src="assets/images/feature-images/feature-image-4.jpg" class="card-img-top" alt="Stories"> </a>
                                     </div>
                                 
                                     <div class="card-body">                                                
-                                        <h5 class="card-title lead fw-extrabold mb-0"><a href="article.html" class="blog-title">Beyond Shores: Discovering Idyllic Lake Paradises</a></h5>   
+                                        <h5 class="card-title lead fw-extrabold mb-0"><a href="/article" class="blog-title">Beyond Shores: Discovering Idyllic Lake Paradises</a></h5>   
                                         <ul class="list-unstyled card-meta-style-2 mb-0 extra-small">
                                             <li>By <a href="author-1.html" class="fw-bold">Mike Aiden</a></li>
 
@@ -474,11 +474,11 @@
                                     <!-- mini-card-style -->
                                 <div class="mini-card-style mb-lg-40 mb-30">
                                     <div class="card-image-wrapper">
-                                        <a href="article.html"> <img src="assets/images/placeholder.svg" data-src="assets/images/feature-images/feature-image-5.jpg" class="card-img-top" alt="Stories"> </a>
+                                        <a href="/article"> <img src="assets/images/placeholder.svg" data-src="assets/images/feature-images/feature-image-5.jpg" class="card-img-top" alt="Stories"> </a>
                                     </div>
                                 
                                     <div class="card-body">                                                
-                                        <h5 class="card-title lead fw-extrabold mb-0"><a href="article.html" class="blog-title">Seaside Serenity: Beachside Beauty Uncovered</a></h5>
+                                        <h5 class="card-title lead fw-extrabold mb-0"><a href="/article" class="blog-title">Seaside Serenity: Beachside Beauty Uncovered</a></h5>
                                         <ul class="list-unstyled card-meta-style-2 mb-0 extra-small">
                                             <li>By <a href="author-1.html" class="fw-bold">Mike Aiden</a></li>
 
@@ -490,11 +490,11 @@
                                 <!-- mini-card-style -->
                                 <div class="mini-card-style mb-lg-40 mb-30">
                                     <div class="card-image-wrapper">
-                                        <a href="article.html"> <img src="assets/images/placeholder.svg" data-src="assets/images/feature-images/feature-image-3.jpg" class="card-img-top" alt="Stories"> </a>
+                                        <a href="/article"> <img src="assets/images/placeholder.svg" data-src="assets/images/feature-images/feature-image-3.jpg" class="card-img-top" alt="Stories"> </a>
                                     </div>
                                 
                                     <div class="card-body">                                                
-                                        <h5 class="card-title lead fw-extrabold mb-0"><a href="article.html" class="blog-title">Lost Treasures: Top 10 Ancient City Sites</a></h5>          
+                                        <h5 class="card-title lead fw-extrabold mb-0"><a href="/article" class="blog-title">Lost Treasures: Top 10 Ancient City Sites</a></h5>          
                                         <ul class="list-unstyled card-meta-style-2 mb-0 extra-small">
                                             <li>By <a href="author-1.html" class="fw-bold">Mike Aiden</a></li>
 
@@ -559,14 +559,14 @@
                                     <div class="col-xl-6">
                                         <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp" data-wow-delay="0.4s">
                                             <div class="card-image-wrapper">
-                                                <a href="article.html"><img src="assets/images/placeholder.svg" data-src="assets/images/blog/explore-image-29.jpg" class="card-img-top" alt="Wonders"></a>
+                                                <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/blog/explore-image-29.jpg" class="card-img-top" alt="Wonders"></a>
                                             </div>
                                             
                                             <div class="card-body">
                                                 <div class="card-header text-uppercase">
-                                                    <a href="category.html">Lake</a>
+                                                    <a href="/category">Lake</a>
                                                 </div>
-                                                <h5 class="fs-4 card-title"><a href="article.html" class="blog-title">Lakeside Wonders: Nature's Peaceful Miracles</a></h5>
+                                                <h5 class="fs-4 card-title"><a href="/article" class="blog-title">Lakeside Wonders: Nature's Peaceful Miracles</a></h5>
                                                 
                                                  <ul class="list-unstyled card-meta lead  small">
                                                     <li>By <a href="author-1.html" class="blog-author fw-bold">Mike Aiden</a></li>
@@ -581,14 +581,14 @@
                                     <div class="col-xl-6">
                                         <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp" data-wow-delay="0.4s">
                                             <div class="card-image-wrapper">
-                                                <a href="article.html"><img src="assets/images/placeholder.svg" data-src="assets/images/blog/explore-image-30.jpg" class="card-img-top" alt="Sanctuary"></a>
+                                                <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/blog/explore-image-30.jpg" class="card-img-top" alt="Sanctuary"></a>
                                             </div>
                                             
                                             <div class="card-body">
                                                 <div class="card-header text-uppercase">
-                                                    <a href="category.html">Forest</a>
+                                                    <a href="/category">Forest</a>
                                                 </div>
-                                                <h5 class="fs-4 card-title"><a href="article.html" class="blog-title">The Mystic Woods: Nature's Healing Sanctuary</a></h5>
+                                                <h5 class="fs-4 card-title"><a href="/article" class="blog-title">The Mystic Woods: Nature's Healing Sanctuary</a></h5>
                                                 
                                                  <ul class="list-unstyled card-meta lead  small">
                                                     <li>By <a href="author-1.html" class="blog-author fw-bold">Mike Aiden</a></li>
@@ -602,14 +602,14 @@
                                     <div class="col-xl-6">
                                         <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp" data-wow-delay="0.4s">
                                             <div class="card-image-wrapper">
-                                                <a href="article.html"><img src="assets/images/placeholder.svg" data-src="assets/images/blog/explore-image-13.jpg" class="card-img-top" alt="Paradises"></a>
+                                                <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/blog/explore-image-13.jpg" class="card-img-top" alt="Paradises"></a>
                                             </div>
                                             
                                             <div class="card-body">
                                                 <div class="card-header text-uppercase">
-                                                    <a href="category.html">Beach</a>
+                                                    <a href="/category">Beach</a>
                                                 </div>
-                                                <h5 class="fs-4 card-title"><a href="article.html" class="blog-title">Waves of Wonder: Exploring Coastal Paradises</a></h5>
+                                                <h5 class="fs-4 card-title"><a href="/article" class="blog-title">Waves of Wonder: Exploring Coastal Paradises</a></h5>
                                                 
                                                  <ul class="list-unstyled card-meta lead  small">
                                                     <li>By <a href="author-1.html" class="blog-author fw-bold">Mike Aiden</a></li>
@@ -623,14 +623,14 @@
                                     <div class="col-xl-6">
                                         <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp" data-wow-delay="0.4s">
                                            <div class="card-image-wrapper">
-                                                <a href="article.html"><img src="assets/images/placeholder.svg" data-src="assets/images/blog/explore-image-30.jpg" class="card-img-top" alt="Sanctuary"></a>
+                                                <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/blog/explore-image-30.jpg" class="card-img-top" alt="Sanctuary"></a>
                                             </div>
                                             
                                             <div class="card-body">
                                                 <div class="card-header text-uppercase">
-                                                    <a href="category.html">Hiking</a>
+                                                    <a href="/category">Hiking</a>
                                                 </div>
-                                               <h5 class="fs-4 card-title"><a href="article.html" class="blog-title">Into the Wilderness: Hiking for Mind, Body, and Soul</a></h5>
+                                               <h5 class="fs-4 card-title"><a href="/article" class="blog-title">Into the Wilderness: Hiking for Mind, Body, and Soul</a></h5>
                                                 
                                                  <ul class="list-unstyled card-meta lead  small">
                                                     <li>By <a href="author-1.html" class="blog-author fw-bold">Mike Aiden</a></li>
@@ -644,14 +644,14 @@
                                     <div class="col-xl-6">
                                         <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp" data-wow-delay="0.4s">
                                             <div class="card-image-wrapper">
-                                                <a href="article.html"><img src="assets/images/placeholder.svg" data-src="assets/images/blog/explore-image-19.jpg" class="card-img-top" alt="Breakfast"></a>
+                                                <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/blog/explore-image-19.jpg" class="card-img-top" alt="Breakfast"></a>
                                             </div>
                                             
                                             <div class="card-body">
                                                 <div class="card-header text-uppercase">
-                                                    <a href="category.html">Forest</a>
+                                                    <a href="/category">Forest</a>
                                                 </div>
-                                                <h5 class="fs-4 card-title"><a href="article.html" class="blog-title">Forest Dreams: Escaping into Nature's Embrace</a></h5>
+                                                <h5 class="fs-4 card-title"><a href="/article" class="blog-title">Forest Dreams: Escaping into Nature's Embrace</a></h5>
                                                 
                                                  <ul class="list-unstyled card-meta lead  small">
                                                     <li>By <a href="author-1.html" class="blog-author fw-bold">Mike Aiden</a></li>
@@ -665,14 +665,14 @@
                                     <div class="col-xl-6">
                                         <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp" data-wow-delay="0.4s">
                                             <div class="card-image-wrapper">
-                                                <a href="article.html"><img src="assets/images/placeholder.svg" data-src="assets/images/categories/category3.jpg" class="card-img-top" alt="img-Tales"></a>
+                                                <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/categories/category3.jpg" class="card-img-top" alt="img-Tales"></a>
                                             </div>
                                             
                                             <div class="card-body">
                                                 <div class="card-header text-uppercase">
-                                                    <a href="category.html">Desert</a>
+                                                    <a href="/category">Desert</a>
                                                 </div>
-                                                <h5 class="fs-4 card-title"><a href="article.html" class="blog-title">Mirages & Realities: Tales from the Desert Wilderness</a></h5>
+                                                <h5 class="fs-4 card-title"><a href="/article" class="blog-title">Mirages & Realities: Tales from the Desert Wilderness</a></h5>
                                                 
                                                  <ul class="list-unstyled card-meta lead  small">
                                                     <li>By <a href="author-1.html" class="blog-author fw-bold">Mike Aiden</a></li>
@@ -687,14 +687,14 @@
                                     <div class="col-xl-6">
                                         <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp" data-wow-delay="0.4s">
                                             <div class="card-image-wrapper">
-                                                <a href="article.html"><img src="assets/images/placeholder.svg" data-src="assets/images/categories/category.jpg" class="card-img-top" alt="January"></a>
+                                                <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/categories/category.jpg" class="card-img-top" alt="January"></a>
                                             </div>
                                             
                                             <div class="card-body">
                                                 <div class="card-header text-uppercase">
-                                                    <a href="category.html">Camping</a>
+                                                    <a href="/category">Camping</a>
                                                 </div>
-                                                 <h5 class="fs-4 card-title"><a href="article.html" class="blog-title">Campfire Chronicles: Stories from Nature's Cozy Embrace</a></h5>
+                                                 <h5 class="fs-4 card-title"><a href="/article" class="blog-title">Campfire Chronicles: Stories from Nature's Cozy Embrace</a></h5>
                                                 
                                                  <ul class="list-unstyled card-meta lead  small">
                                                     <li>By <a href="author-1.html" class="blog-author fw-bold">Mike Aiden</a></li>
@@ -709,14 +709,14 @@
                                     <div class="col-xl-6">
                                         <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp" data-wow-delay="0.4s">
                                             <div class="card-image-wrapper">
-                                                <a href="article.html"><img src="assets/images/placeholder.svg" data-src="assets/images/categories/category1.jpg" class="card-img-top" alt="img-top"></a>
+                                                <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/categories/category1.jpg" class="card-img-top" alt="img-top"></a>
                                             </div>
                                             
                                             <div class="card-body">
                                                 <div class="card-header text-uppercase">
-                                                    <a href="category.html">Beach</a>
+                                                    <a href="/category">Beach</a>
                                                 </div>
-                                                <h5 class="fs-4 card-title"><a href="article.html" class="blog-title">Seabound Journeys: Exploring Coastal Frontiers</a></h5>
+                                                <h5 class="fs-4 card-title"><a href="/article" class="blog-title">Seabound Journeys: Exploring Coastal Frontiers</a></h5>
                                                 
                                                 <ul class="list-unstyled card-meta lead  small">
                                                     <li>By <a href="author-1.html" class="blog-author fw-bold">Mike Aiden</a></li>
@@ -730,14 +730,14 @@
                                     <div class="col-xl-6">
                                         <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp" data-wow-delay="0.4s">
                                             <div class="card-image-wrapper">
-                                                <a href="article.html"><img src="assets/images/placeholder.svg" data-src="assets/images/blog/explore-image-16.jpg" class="card-img-top" alt="Hiking"></a>
+                                                <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/blog/explore-image-16.jpg" class="card-img-top" alt="Hiking"></a>
                                             </div>
                                             
                                             <div class="card-body">
                                                 <div class="card-header text-uppercase">
-                                                    <a href="category.html">Hiking</a>
+                                                    <a href="/category">Hiking</a>
                                                 </div>
-                                                <h5 class="fs-4 card-title"><a href="article.html" class="blog-title">Trail Treasure: Unveiling Nature's Hidden Hiking Gems</a></h5>
+                                                <h5 class="fs-4 card-title"><a href="/article" class="blog-title">Trail Treasure: Unveiling Nature's Hidden Hiking Gems</a></h5>
                                                 
                                                 <ul class="list-unstyled card-meta lead  small">
                                                     <li>By <a href="author-1.html" class="blog-author fw-bold">Mike Aiden</a></li>
@@ -751,14 +751,14 @@
                                     <div class="col-xl-6">
                                         <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp" data-wow-delay="0.4s">
                                             <div class="card-image-wrapper">
-                                                <a href="article.html"><img src="assets/images/placeholder.svg" data-src="assets/images/categories/category.jpg" class="card-img-top" alt="Camping-Sleeping"></a>
+                                                <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/categories/category.jpg" class="card-img-top" alt="Camping-Sleeping"></a>
                                             </div>
                                             
                                             <div class="card-body">
                                                 <div class="card-header text-uppercase">
-                                                    <a href="category.html">Camping</a>
+                                                    <a href="/category">Camping</a>
                                                 </div>
-                                                <h5 class="fs-4 card-title"><a href="article.html" class="blog-title">Sleeping Under: A Guide to Night time Camping Delights</a></h5>
+                                                <h5 class="fs-4 card-title"><a href="/article" class="blog-title">Sleeping Under: A Guide to Night time Camping Delights</a></h5>
                                                 
                                                 <ul class="list-unstyled card-meta lead  small">
                                                     <li>By <a href="author-1.html" class="blog-author fw-bold">Mike Aiden</a></li>
@@ -772,14 +772,14 @@
                                     <div class="col-xl-6">
                                         <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp" data-wow-delay="0.4s">
                                             <div class="card-image-wrapper">
-                                                <a href="article.html"><img src="assets/images/placeholder.svg" data-src="assets/images/categories/category5.jpg" class="card-img-top" alt="img-top"></a>
+                                                <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/categories/category5.jpg" class="card-img-top" alt="img-top"></a>
                                             </div>
                                             
                                             <div class="card-body">
                                                <div class="card-header text-uppercase">
-                                                    <a href="category.html">Desert</a>
+                                                    <a href="/category">Desert</a>
                                                 </div>
-                                                <h5 class="fs-4 card-title"><a href="article.html" class="blog-title">Finding Refreshment in to the Arid Environments</a></h5>
+                                                <h5 class="fs-4 card-title"><a href="/article" class="blog-title">Finding Refreshment in to the Arid Environments</a></h5>
                                                 
                                                 <ul class="list-unstyled card-meta lead  small">
                                                     <li>By <a href="author-1.html" class="blog-author fw-bold">Mike Aiden</a></li>
@@ -793,14 +793,14 @@
                                     <div class="col-xl-6">
                                         <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp" data-wow-delay="0.4s">
                                             <div class="card-image-wrapper">
-                                                <a href="article.html"><img src="assets/images/placeholder.svg" data-src="assets/images/blog/explore-image-17.jpg" class="card-img-top" alt="Discovering"></a>
+                                                <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/blog/explore-image-17.jpg" class="card-img-top" alt="Discovering"></a>
                                             </div>
                                             
                                             <div class="card-body">
                                                 <div class="card-header text-uppercase">
-                                                    <a href="category.html">Ancient</a>
+                                                    <a href="/category">Ancient</a>
                                                 </div>
-                                                <h5 class="fs-4 card-title"><a href="article.html" class="blog-title">Historic Gems: Discovering Ancient City Secrets</a></h5>
+                                                <h5 class="fs-4 card-title"><a href="/article" class="blog-title">Historic Gems: Discovering Ancient City Secrets</a></h5>
                                                 
                                                 <ul class="list-unstyled card-meta lead  small">
                                                     <li>By <a href="author-1.html" class="blog-author fw-bold">Mike Aiden</a></li>
@@ -933,13 +933,13 @@
                                                 <a href="/">Home</a>
                                             </li>
                                             <li>
-                                                <a href="blog.html">Blog</a>
+                                                <a href="/blog">Blog</a>
                                             </li>
                                             <li>
-                                                <a href="about.html">About</a>
+                                                <a href="/about">About</a>
                                             </li>
                                             <li>
-                                                <a href="contact.html">Contact</a>
+                                                <a href="/contact">Contact</a>
                                             </li>
                                         </ul>
                                     </div>

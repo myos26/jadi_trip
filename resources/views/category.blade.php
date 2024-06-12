@@ -35,31 +35,36 @@
                 <div class="container">
                     <nav class="navbar navbar-expand-xl hover-menu">
                         <div class="d-flex w-100 justify-content-between align-items-center">
-                            <a class="navbar-brand" href="index.html" aria-label="nav-brands">
+                            <a class="navbar-brand" href="/" aria-label="nav-brands">
                                 <img src="assets/images/logo-white.png" class="logo-light img-fluid" alt="logo">
                                 <!-- <img src="assets/images/global/logo-dark.png" class="logo-dark" alt="logo"> -->
                             </a>
 
-                             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasmobile-menu" aria-controls="offcanvasmobile-menu" aria-expanded="false" aria-label="Toggle navigation">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasmobile-menu" aria-controls="offcanvasmobile-menu" aria-expanded="false" aria-label="Toggle navigation">
                                 <!-- <span class="navbar-toggler-icon"></span>		 -->
                                 <span class="menu-icon-2">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M3 12H21M3 6H21M3 18H21" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                 </span>
-                                <!-- <span class="menu-icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M3 12H21M3 6H21M3 18H21" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </span>                                 -->
                             </button>
 
                             <div class="d-none d-xl-block">
                                 <div class="d-flex gap-70 align-items-center">
                                     <ul class="gap-20 navbar-nav mb-2 me-2 mb-lg-0">
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="index.html" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
-                                                Home
+                                            <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow" aria-current="page" href="/blog" aria-label="nav-links">
+                                                Destinasi
+                                            </a>									
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow" aria-current="page" href="blog.html" aria-label="nav-links">
+                                                Aktifitas
+                                            </a>									
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"  href="blog.html" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="true">
+                                                Kuliner
                                                 <span class="dropdown-icon">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
                                                     <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
@@ -68,27 +73,34 @@
                                             </a>
                                             <ul class="dropdown-menu">
                                                 <li>
-                                                    <a class="dropdown-item" href="index.html" aria-label="single-pages">Home 1</a>
+                                                    <a class="dropdown-item" href="blog.html" aria-label="single-pages">Open Trip</a>
                                                 </li>										
                                                 <li>
-                                                    <a class="dropdown-item" href="home-2.html" aria-label="single-pages">Home 2</a>
-                                                </li>	
+                                                    <a class="dropdown-item" href="blog.html" aria-label="single-pages">Paket Wisata</a>
+                                                </li>				
+                                            </ul>									
+                                        </li>
+                                        
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"  href="blog.html" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="true">
+                                                Paket
+                                                <span class="dropdown-icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                            <ul class="dropdown-menu">
                                                 <li>
-                                                    <a class="dropdown-item" href="home-3.html" aria-label="single-pages">Home 3</a>
-                                                </li>	
+                                                    <a class="dropdown-item" href="blog.html" aria-label="single-pages">Open Trip</a>
+                                                </li>										
                                                 <li>
-                                                    <a class="dropdown-item" href="home-4.html" aria-label="single-pages">Home 4</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="home-5.html" aria-label="single-pages">Home 5</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="home-6.html" aria-label="single-pages">Home 6</a>
-                                                </li>					
+                                                    <a class="dropdown-item" href="blog.html" aria-label="single-pages">Paket Wisata</a>
+                                                </li>				
                                             </ul>									
                                         </li>
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="blog.html" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"  href="blog.html" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="true">
                                                 Blog
                                                 <span class="dropdown-icon">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
@@ -100,209 +112,41 @@
                                                 <li>
                                                     <a class="dropdown-item" href="blog.html" aria-label="single-pages">Blog 1</a>
                                                 </li>										
-                                                <li>
-                                                    <a class="dropdown-item" href="blog.html" aria-label="single-pages">Blog 2</a>
-                                                </li>	
-                                                <li>
-                                                    <a class="dropdown-item" href="blog.html" aria-label="single-pages">Blog 3</a>
-                                                </li>	
-                                                <li>
-                                                    <a class="dropdown-item" href="blog.html" aria-label="single-pages">Blog 4</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="blog.html" aria-label="single-pages">Blog 5</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="blog.html" aria-label="single-pages">Blog 6</a>
-                                                </li>					
-                                                <li>
-                                                    <a class="dropdown-item" href="blog.html" aria-label="single-pages">Blog 7</a>
-                                                </li>					
-                                                <li>
-                                                    <a class="dropdown-item" href="blog.html" aria-label="single-pages">Blog 8</a>
-                                                </li>					
+                                                					
                                             </ul>									
                                         </li>
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="about.html" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow" aria-current="page" href="about.html" aria-label="nav-links">
                                                 About
-                                                <span class="dropdown-icon">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
-                                                    </svg>
-                                                </span>
-                                            </a>
-                                            <ul class="dropdown-menu">
-                                                <li>
-                                                    <a class="dropdown-item" href="about.html" aria-label="single-pages">About 1</a>
-                                                </li>										
-                                                <li>
-                                                    <a class="dropdown-item" href="about.html" aria-label="single-pages">About 2</a>
-                                                </li>	
-                                                <li>
-                                                    <a class="dropdown-item" href="about.html" aria-label="single-pages">About 3</a>
-                                                </li>	
-                                                <li>
-                                                    <a class="dropdown-item" href="about.html" aria-label="single-pages">About 4</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="about.html" aria-label="single-pages">About 5</a>
-                                                </li>			
-                                            </ul>									
+                                            </a>									
                                         </li>
+                                        
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="contact.html" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
-                                                Contact
-                                                <span class="dropdown-icon">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
-                                                    </svg>
-                                                </span>
-                                            </a>
-                                            <ul class="dropdown-menu">
-                                                <li>
-                                                    <a class="dropdown-item" href="contact.html" aria-label="single-pages">Contact 1</a>
-                                                </li>										
-                                                <li>
-                                                    <a class="dropdown-item" href="contact.html" aria-label="single-pages">Contact 2</a>
-                                                </li>										
-                                                					
-                                            </ul>									
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link active d-flex gap-2 align-items-center" aria-current="page" href="article.html" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
-                                                Pages 
-                                                <span class="dropdown-icon">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
-                                                    </svg>
-                                                </span>
-                                            </a>
-                                            <ul class="dropdown-menu ">
-                                                <li class="nav-item dropdown submenu">
-                                                    <a class="dropdown-item  d-flex justify-content-between align-items-center" href="article.html" aria-label="single-pages" data-bs-toggle="dropdown" aria-expanded="false">
-                                                        Article												
-                                                        <span class="dropdown-icon">
-                                                            <i class="fa-light fa-angle-right"></i>
-                                                        </span>
-                                                    </a>
-                                                    <ul class="dropdown-menu">
-                                                        <li>
-                                                            <a class="dropdown-item" href="article.html" aria-label="single-pages">Article 1</a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="dropdown-item" href="article.html" aria-label="single-pages">Article 2</a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="dropdown-item" href="article.html" aria-label="single-pages">Article 3</a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="dropdown-item" href="article.html" aria-label="single-pages">Article 4</a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="dropdown-item" href="article.html" aria-label="single-pages">Article 5</a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="dropdown-item" href="article.html" aria-label="single-pages">Article 6</a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="dropdown-item" href="article.html" aria-label="single-pages">Article 7</a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="dropdown-item" href="article.html" aria-label="single-pages">Article 8</a>
-                                                        </li>
-                                                    </ul>                                                    
-                                                </li>									
-                                                <li class="nav-item dropdown submenu ">
-                                                    <a class="dropdown-item d-flex justify-content-between align-items-center" href="author-1.html"  aria-label="single-pages" data-bs-toggle="dropdown" aria-expanded="false">
-                                                        Author <span class="dropdown-icon">
-                                                            <i class="fa-light fa-angle-right"></i>
-                                                        </span>								
-                                                    </a>
-                                                    <ul class="dropdown-menu">
-                                                        <li>
-                                                        <a class="dropdown-item" href="author-1.html" aria-label="single-pages">Author 1</a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="dropdown-item" href="author-2.html" aria-label="single-pages">Author 2</a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="dropdown-item" href="author-3.html" aria-label="single-pages">Author 3</a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="dropdown-item" href="author-4.html" aria-label="single-pages">Author 4</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>										
-                                                <li class="nav-item dropdown submenu ">
-                                                    <a class="dropdown-item d-flex justify-content-between align-items-center" href="category.html" aria-label="single-pages" data-bs-toggle="dropdown" aria-expanded="false">
-                                                        Catagory	<span class="dropdown-icon">
-                                                            <i class="fa-light fa-angle-right"></i>
-                                                        </span>								
-                                                    </a>
-                                                    
-                                                    <ul class="dropdown-menu">
-                                                        <li>
-                                                            <a class="dropdown-item" href="category.html" aria-label="single-pages">Catagory 1</a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="dropdown-item" href="category.html" aria-label="single-pages">Catagory 2</a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="dropdown-item" href="category.html" aria-label="single-pages">Catagory 3</a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="dropdown-item" href="category.html" aria-label="single-pages">Catagory 4</a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="dropdown-item" href="category.html" aria-label="single-pages">Catagory 5</a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="dropdown-item" href="category.html" aria-label="single-pages">Catagory 6</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>										
-                                                <li class="nav-item dropdown submenu">
-                                                    <a class="dropdown-item d-flex justify-content-between align-items-center" href="404-1.html" aria-label="single-pages" data-bs-toggle="dropdown" aria-expanded="false">
-                                                        404 Page	 <span class="dropdown-icon">
-                                                            <i class="fa-light fa-angle-right"></i>
-                                                        </span>								
-                                                    </a>
-                                                    
-                                                    <ul class="dropdown-menu">
-                                                        <li>
-                                                            <a class="dropdown-item" href="404-1.html" aria-label="single-pages">
-                                                            <span class="link-hover-animation-1">404 1</span></a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="dropdown-item" href="404-2.html" aria-label="single-pages">
-                                                            <span class="link-hover-animation-1">404 2</span></a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="dropdown-item" href="404-3.html" aria-label="single-pages">
-                                                            <span class="link-hover-animation-1">404 3</span></a>
-                                                        </li>
-                                                    </ul>
-                                                </li>										
-                                                					
-                                            </ul>									
+                                            <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow" aria-current="page" href="contact.html" aria-label="nav-links">
+                                                Kontak
+                                            </a>							
                                         </li>
                                     </ul>
-                                    <div class="d-flex align-items-center gap-20">
-                                        <!-- serch-icon -->
-                                        <a class="serch-icon"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasserch" aria-controls="offcanvasserch">
-                             
+
+
+                                    <div class="d-flex gap-20 align-items-center">
+
+                                        <a class="serch-icon px-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasserch" aria-controls="offcanvasserch">
+                                            
                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M19 19L13.0001 13M15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
+                                        
                                         </a>
-                                        <!-- menu icon -->
-                                        <a href="#"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasDesktop" aria-controls="offcanvasDesktop">
-                                            <img src="assets/images/placeholder.svg" data-src="assets/images/header-menu.png" alt="menu">
+
+                                        <a class="menu-icon"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasDesktop" aria-controls="offcanvasDesktop">
+                                                        <span class="menu-icon-2">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3 12H21M3 6H21M3 18H21" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </span>
                                         </a>
-                                       
                                     </div>
-                                   
                                 </div>							
                             </div>
                         </div>
@@ -690,28 +534,37 @@
             <div class="main"  data-bs-spy="scroll" data-bs-target="#navContentmenu" data-bs-root-margin="0px 0px -50%" data-bs-smooth-scroll="true">
 
                 <!--Banner Section ======================-->
-                <section class="section-banner category position-relative overlay">
-                    <div class="category-wrapper category-wrapper-2 mx-auto position-relative parallax">
+                <section class="section-banner category-1 position-relative overlay">
+                    <div class="category-wrapper category-wrapper-1 mx-auto position-relative parallax">
                         <div class="container">
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb mb-lg-100 mb-60">
-                                  <li class="breadcrumb-item breadcrumb-style-3"><a href="index.html">Home</a></li>
+                            <nav aria-label="breadcrumb ">
+                                <ol class="breadcrumb mb-100">
+                                  <li class="breadcrumb-item breadcrumb-style-3"><a href="/">Home</a></li>
                                   <li class="breadcrumb-item breadcrumb-style-3 active" aria-current="page">Category</li>
                                 </ol>
                             </nav>
-                            <!-- breadcrumb -->   
-                            <div class="row justify-content-center">
+                            <!-- breadcrumb -->
+
+                            <div class="row">
                                 <div class="col-lg-3 col-md-4 col-sm-6">
 
-                                    <div class="category-title-style-1">
-                                        <h2 class="text-white">Hiking</h2>
-                                        <p class="text-white">22 articles</p>
-                                    </div>                                                     
+                                    <div class="category-title-style-1 text-start category-title-bg-position">
+                                        <h2 class="text-white">Camping</h2>
+                                        <p class="text-white">10 articles</p>
+                                    </div> 
                                 </div>
                             </div>
+                            
+                            
                         </div>  
+                        <!-- container -->
+                        <!-- <div class="category-title category-title-style-1">                                
+                        </div>   -->
+                        <!-- category-title -->
+                        
                     </div>
-                    <!-- category-wrapper -->		
+                    <!-- category-wrapper -->
+                    				
                 </section>
                 <!--Banner Section ======================-->
 

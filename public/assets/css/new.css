@@ -1,0 +1,32 @@
+.clickHere{
+    width: 25%;
+    padding: 2% 0;
+    /* border: 1px solid red; */
+    border-radius: 20px;
+    background-color: rgb(17, 213, 161);
+    margin: 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.clickHere a{
+    font-weight: bold;
+    color: white;
+}
+.clickHere:hover{
+    background-color: rgb(187, 245, 72);
+    transition: 0.3s;
+}
+#lihat{
+    /* display: flex; */
+    color: white;
+    width: 50px;
+    padding: 1% 2%;
+    border-radius: 20px;
+    background-color: rgb(17, 213, 161);
+    font-weight: 600;
+    transition: 0.3s;
+}
+#lihat:hover{
+    background-color: rgb(187, 245, 72);
+    transition: 0.3s;
+}

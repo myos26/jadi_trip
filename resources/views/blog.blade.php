@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,700;1,900&family=Lovers+Quarrel&family=Meddon&display=swap" rel="stylesheet">
-    
+
     <!-- css -->
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/css/all.min.css">
@@ -24,13 +24,13 @@
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    
+
 </head>
 
 
 	<body>
 		<div class="page">
-			<!-- Header ======================-->	
+			<!-- Header ======================-->
             <header class="section-header header-1 section-header-style-6 sticky-navbar drop-shadow  py-0">
                 <div class="container">
                     <nav class="navbar navbar-expand-xl hover-menu">
@@ -56,13 +56,13 @@
                                         <li class="nav-item dropdown">
                                             <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="/blog" aria-label="nav-links">
                                                 Destinasi
-                                            </a>									
+                                            </a>
                                         </li>
                                         <li class="nav-item dropdown">
                                             <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="/blog" aria-label="nav-links">
                                                 Aktifitas
                                             </a>
-                                            							
+
                                         </li>
                                         <li class="nav-item dropdown">
                                             <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="/blog" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
@@ -72,11 +72,11 @@
                                                     <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
                                                     </svg>
                                                 </span>
-                                            </a>									
+                                            </a>
                                             <ul class="dropdown-menu">
                                                 <li>
                                                     <a class="dropdown-item" href="/blog" aria-label="single-pages">Open Trip</a>
-                                                </li>										
+                                                </li>
                                                 <li>
                                                     <a class="dropdown-item" href="/blog" aria-label="single-pages">Paket Wisata</a>
                                                 </li>
@@ -94,11 +94,11 @@
                                             <ul class="dropdown-menu">
                                                 <li>
                                                     <a class="dropdown-item" href="/blog" aria-label="single-pages">Open Trip</a>
-                                                </li>										
+                                                </li>
                                                 <li>
                                                     <a class="dropdown-item" href="/blog" aria-label="single-pages">Paket Wisata</a>
                                                 </li>
-                                            </ul>									
+                                            </ul>
                                         </li>
                                         <li class="nav-item dropdown">
                                             <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="/blog" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
@@ -112,62 +112,62 @@
                                             <ul class="dropdown-menu">
                                                 <li>
                                                     <a class="dropdown-item" href="/blog" aria-label="single-pages">Blog 1</a>
-                                                </li>										
-                                                
-                                            </ul>									
+                                                </li>
+
+                                            </ul>
                                         </li>
                                         <li class="nav-item dropdown">
                                             <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="/about" aria-label="nav-links">
                                                 About
-                                            </a>									
+                                            </a>
                                         </li>
                                         <li class="nav-item dropdown">
                                             <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="/contact" aria-label="nav-links">
                                                 Kontak
-                                            </a>								
+                                            </a>
                                         </li>
-                                        
+
                                     </ul>
                                     <div class="d-flex align-items-center gap-20">
                                         <!-- serch-icon -->
                                         <a class="serch-icon-style-2"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasserch" aria-controls="offcanvasserch">
-                             
+
                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M19 19L13.0001 13M15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                         </a>
                                         <!-- menu icon -->
                                         <!-- <a href="#"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasDesktop" aria-controls="offcanvasDesktop">
-                                            
+
                                             <span class="menu-icon">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M3 12H21M3 6H21M3 18H21" stroke-linecap="round" stroke-linejoin="round"/>
                                                 </svg>
                                             </span>
                                         </a> -->
-                                       
+
                                     </div>
-                                </div>							
+                                </div>
                             </div>
                         </div>
                     </nav>
                 </div>
             </header>
             <!-- Header ======================-->
-		
+
             <!-- offcanvs desktop -->
             <div class="offcanvas d-none d-lg-block  offcanvas-end" data-bs-scroll="false" tabindex="-1" id="offcanvasDesktop">
                 <div class="offcanvas-header justify-content-end">
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                    
+
                     <div class="author-about mb-40 ">
                         <div class="text-center">
                             <div class="author-iamge">
-                                <a href="author-1.html"><img src="assets/images/placeholder.svg" data-src="assets/images/about-image-1.png" alt="author-iamge"></a>
+                                <a href="author-1"><img src="assets/images/placeholder.svg" data-src="assets/images/about-image-1.png" alt="author-iamge"></a>
                             </div>
-                            <h5><a  class="author-name" href="author-1.html">Mike Aiden</a></h5>
+                            <h5><a  class="author-name" href="author-1">Mike Aiden</a></h5>
                             <p class=" text-center">I’m a intrepid travel blogger, weaves tales of exploration and discovery. Let's traverse the globe together and share in the beauty of our world.</p>
                         </div>
                     </div>
@@ -183,7 +183,7 @@
                             <a href="https://www.pinterest.com" class="pinterest"><i class="fab fa-pinterest-p"></i></a>
                            <a href="https://twitter.com" class="twitter"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M15.8092 15.98H11.1569L6.89801 9.78339L1.56807 15.98H0.19043L6.28619 8.89157L0.19043 0.0195312H4.84276L8.87486 5.88989L13.9234 0.0195312H15.301L9.48808 6.77751L15.8092 15.98ZM11.8079 14.9929H13.9234L4.18054 1.05696H2.06508L11.8079 14.9929Z"></path>
-                                </svg> 
+                                </svg>
                             </a>
                         </div>
                     </div>
@@ -191,53 +191,53 @@
                     <!-- sidebar-gallery -->
                     <div class="sidebar-gallery mb-40">
                         <div class="div1 image-hover"><img src="assets/images/placeholder.svg" data-src="assets/images/instagram/instagram-1.png" alt="instagram">
-                            <span class="d-flex justify-content-center mb-10"> 
+                            <span class="d-flex justify-content-center mb-10">
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.4396 18H5.56042C2.49391 18 0 15.5061 0 12.4396V5.56042C0 2.49391 2.49391 0 5.56042 0H12.4396C15.5061 0 18 2.49391 18 5.56042V12.4396C18.0016 15.5061 15.5061 18 12.4396 18ZM5.56042 2.00648C3.60126 2.00648 2.00648 3.60126 2.00648 5.56042V12.4396C2.00648 14.3987 3.60126 15.9935 5.56042 15.9935H12.4396C14.3987 15.9935 15.9935 14.3987 15.9935 12.4396V5.56042C15.9935 3.60126 14.3987 2.00648 12.4396 2.00648H5.56042Z" fill="white"/>
                                     <path d="M9.0021 13.5979C6.4656 13.5979 4.40234 11.5347 4.40234 8.99819C4.40234 6.46169 6.4656 4.39844 9.0021 4.39844C11.5386 4.39844 13.6019 6.46169 13.6019 8.99819C13.6019 11.5347 11.5386 13.5979 9.0021 13.5979ZM9.0021 6.203C7.46095 6.203 6.20691 7.45705 6.20691 8.99819C6.20691 10.5393 7.46095 11.7934 9.0021 11.7934C10.5432 11.7934 11.7973 10.5393 11.7973 8.99819C11.7973 7.45705 10.5432 6.203 9.0021 6.203Z" fill="white"/>
                                     <path d="M14.6139 4.13508C14.6139 4.56414 14.2653 4.91278 13.8363 4.91278C13.4072 4.91278 13.0586 4.56414 13.0586 4.13508C13.0586 3.70602 13.4072 3.35742 13.8363 3.35742C14.2653 3.35742 14.6139 3.70444 14.6139 4.13508Z" fill="white"/>
                                 </svg>
-                                    
+
                             </span>
                         </div>
-                        <div class="div2 image-hover"><img src="assets/images/placeholder.svg" data-src="assets/images/instagram/instagram-4.png" alt="instagram"> 
-                            <span class="d-flex justify-content-center mb-10"> 
+                        <div class="div2 image-hover"><img src="assets/images/placeholder.svg" data-src="assets/images/instagram/instagram-4.png" alt="instagram">
+                            <span class="d-flex justify-content-center mb-10">
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.4396 18H5.56042C2.49391 18 0 15.5061 0 12.4396V5.56042C0 2.49391 2.49391 0 5.56042 0H12.4396C15.5061 0 18 2.49391 18 5.56042V12.4396C18.0016 15.5061 15.5061 18 12.4396 18ZM5.56042 2.00648C3.60126 2.00648 2.00648 3.60126 2.00648 5.56042V12.4396C2.00648 14.3987 3.60126 15.9935 5.56042 15.9935H12.4396C14.3987 15.9935 15.9935 14.3987 15.9935 12.4396V5.56042C15.9935 3.60126 14.3987 2.00648 12.4396 2.00648H5.56042Z" fill="white"/>
                                     <path d="M9.0021 13.5979C6.4656 13.5979 4.40234 11.5347 4.40234 8.99819C4.40234 6.46169 6.4656 4.39844 9.0021 4.39844C11.5386 4.39844 13.6019 6.46169 13.6019 8.99819C13.6019 11.5347 11.5386 13.5979 9.0021 13.5979ZM9.0021 6.203C7.46095 6.203 6.20691 7.45705 6.20691 8.99819C6.20691 10.5393 7.46095 11.7934 9.0021 11.7934C10.5432 11.7934 11.7973 10.5393 11.7973 8.99819C11.7973 7.45705 10.5432 6.203 9.0021 6.203Z" fill="white"/>
                                     <path d="M14.6139 4.13508C14.6139 4.56414 14.2653 4.91278 13.8363 4.91278C13.4072 4.91278 13.0586 4.56414 13.0586 4.13508C13.0586 3.70602 13.4072 3.35742 13.8363 3.35742C14.2653 3.35742 14.6139 3.70444 14.6139 4.13508Z" fill="white"/>
                                     </svg>
-                                    
+
                             </span>
                         </div>
-                        <div class="div3 image-hover"><img src="assets/images/placeholder.svg" data-src="assets/images/instagram/instagram-7.png" alt="instagram"> 
-                            <span class="d-flex justify-content-center mb-10"> 
+                        <div class="div3 image-hover"><img src="assets/images/placeholder.svg" data-src="assets/images/instagram/instagram-7.png" alt="instagram">
+                            <span class="d-flex justify-content-center mb-10">
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.4396 18H5.56042C2.49391 18 0 15.5061 0 12.4396V5.56042C0 2.49391 2.49391 0 5.56042 0H12.4396C15.5061 0 18 2.49391 18 5.56042V12.4396C18.0016 15.5061 15.5061 18 12.4396 18ZM5.56042 2.00648C3.60126 2.00648 2.00648 3.60126 2.00648 5.56042V12.4396C2.00648 14.3987 3.60126 15.9935 5.56042 15.9935H12.4396C14.3987 15.9935 15.9935 14.3987 15.9935 12.4396V5.56042C15.9935 3.60126 14.3987 2.00648 12.4396 2.00648H5.56042Z" fill="white"/>
                                     <path d="M9.0021 13.5979C6.4656 13.5979 4.40234 11.5347 4.40234 8.99819C4.40234 6.46169 6.4656 4.39844 9.0021 4.39844C11.5386 4.39844 13.6019 6.46169 13.6019 8.99819C13.6019 11.5347 11.5386 13.5979 9.0021 13.5979ZM9.0021 6.203C7.46095 6.203 6.20691 7.45705 6.20691 8.99819C6.20691 10.5393 7.46095 11.7934 9.0021 11.7934C10.5432 11.7934 11.7973 10.5393 11.7973 8.99819C11.7973 7.45705 10.5432 6.203 9.0021 6.203Z" fill="white"/>
                                     <path d="M14.6139 4.13508C14.6139 4.56414 14.2653 4.91278 13.8363 4.91278C13.4072 4.91278 13.0586 4.56414 13.0586 4.13508C13.0586 3.70602 13.4072 3.35742 13.8363 3.35742C14.2653 3.35742 14.6139 3.70444 14.6139 4.13508Z" fill="white"/>
                                     </svg>
-                                    
+
                             </span>
                         </div>
-                        <div class="div4 image-hover"><img src="assets/images/placeholder.svg" data-src="assets/images/instagram/instagram-3.png" alt="instagram"> 
-                            <span class="d-flex justify-content-center mb-10"> 
+                        <div class="div4 image-hover"><img src="assets/images/placeholder.svg" data-src="assets/images/instagram/instagram-3.png" alt="instagram">
+                            <span class="d-flex justify-content-center mb-10">
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.4396 18H5.56042C2.49391 18 0 15.5061 0 12.4396V5.56042C0 2.49391 2.49391 0 5.56042 0H12.4396C15.5061 0 18 2.49391 18 5.56042V12.4396C18.0016 15.5061 15.5061 18 12.4396 18ZM5.56042 2.00648C3.60126 2.00648 2.00648 3.60126 2.00648 5.56042V12.4396C2.00648 14.3987 3.60126 15.9935 5.56042 15.9935H12.4396C14.3987 15.9935 15.9935 14.3987 15.9935 12.4396V5.56042C15.9935 3.60126 14.3987 2.00648 12.4396 2.00648H5.56042Z" fill="white"/>
                                     <path d="M9.0021 13.5979C6.4656 13.5979 4.40234 11.5347 4.40234 8.99819C4.40234 6.46169 6.4656 4.39844 9.0021 4.39844C11.5386 4.39844 13.6019 6.46169 13.6019 8.99819C13.6019 11.5347 11.5386 13.5979 9.0021 13.5979ZM9.0021 6.203C7.46095 6.203 6.20691 7.45705 6.20691 8.99819C6.20691 10.5393 7.46095 11.7934 9.0021 11.7934C10.5432 11.7934 11.7973 10.5393 11.7973 8.99819C11.7973 7.45705 10.5432 6.203 9.0021 6.203Z" fill="white"/>
                                     <path d="M14.6139 4.13508C14.6139 4.56414 14.2653 4.91278 13.8363 4.91278C13.4072 4.91278 13.0586 4.56414 13.0586 4.13508C13.0586 3.70602 13.4072 3.35742 13.8363 3.35742C14.2653 3.35742 14.6139 3.70444 14.6139 4.13508Z" fill="white"/>
                                     </svg>
-                                    
+
                             </span>
                         </div>
-                        <div class="div5 image-hover"><img src="assets/images/placeholder.svg" data-src="assets/images/instagram/instagram-8.png" alt="instagram"> 
-                            <span class="d-flex justify-content-center mb-10"> 
+                        <div class="div5 image-hover"><img src="assets/images/placeholder.svg" data-src="assets/images/instagram/instagram-8.png" alt="instagram">
+                            <span class="d-flex justify-content-center mb-10">
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.4396 18H5.56042C2.49391 18 0 15.5061 0 12.4396V5.56042C0 2.49391 2.49391 0 5.56042 0H12.4396C15.5061 0 18 2.49391 18 5.56042V12.4396C18.0016 15.5061 15.5061 18 12.4396 18ZM5.56042 2.00648C3.60126 2.00648 2.00648 3.60126 2.00648 5.56042V12.4396C2.00648 14.3987 3.60126 15.9935 5.56042 15.9935H12.4396C14.3987 15.9935 15.9935 14.3987 15.9935 12.4396V5.56042C15.9935 3.60126 14.3987 2.00648 12.4396 2.00648H5.56042Z" fill="white"/>
                                     <path d="M9.0021 13.5979C6.4656 13.5979 4.40234 11.5347 4.40234 8.99819C4.40234 6.46169 6.4656 4.39844 9.0021 4.39844C11.5386 4.39844 13.6019 6.46169 13.6019 8.99819C13.6019 11.5347 11.5386 13.5979 9.0021 13.5979ZM9.0021 6.203C7.46095 6.203 6.20691 7.45705 6.20691 8.99819C6.20691 10.5393 7.46095 11.7934 9.0021 11.7934C10.5432 11.7934 11.7973 10.5393 11.7973 8.99819C11.7973 7.45705 10.5432 6.203 9.0021 6.203Z" fill="white"/>
                                     <path d="M14.6139 4.13508C14.6139 4.56414 14.2653 4.91278 13.8363 4.91278C13.4072 4.91278 13.0586 4.56414 13.0586 4.13508C13.0586 3.70602 13.4072 3.35742 13.8363 3.35742C14.2653 3.35742 14.6139 3.70444 14.6139 4.13508Z" fill="white"/>
                                     </svg>
-                                    
+
                             </span>
                         </div>
                     </div>
@@ -259,7 +259,7 @@
                 </div>
             </div>
             <!-- offcanvs desktop -->
-            
+
             <!-- of canvas Mobile menu start -->
             <div class="offcanvas offcanvas-end offcanvasmobile-menu" id="offcanvasmobile-menu" data-bs-backdrop="static" tabindex="-1">
                 <div class="offcanvas-header pb-30">
@@ -269,17 +269,17 @@
                     </a>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body d-flex justify-content-start"> 
+                <div class="offcanvas-body d-flex justify-content-start">
                     <ul class="navbar-nav custom-navbar-nav mb-2  mb-lg-0 hover-menu">
                         <li class="nav-item dropdown">
                             <a class="nav-link active d-flex gap-2 align-items-center" aria-current="page" href="/blog" aria-label="nav-links">
                                 Destinasi
-                            </a>									
+                            </a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link d-flex gap-2 align-items-center"  href="/blog" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="true">
                                 Aktifitas
-                            </a>									
+                            </a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="/blog" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
@@ -293,11 +293,11 @@
                             <ul class="dropdown-menu">
                                 <li>
                                     <a class="dropdown-item" href="/blog" aria-label="single-pages">Malang</a>
-                                </li>										
+                                </li>
                                 <li>
                                     <a class="dropdown-item" href="/blog" aria-label="single-pages">Banyuwangi</a>
-                                </li>				
-                            </ul>									
+                                </li>
+                            </ul>
                         </li>
 
 
@@ -313,12 +313,12 @@
                             <ul class="dropdown-menu">
                                 <li>
                                     <a class="dropdown-item" href="/blog" aria-label="single-pages">Contact 1</a>
-                                </li>										
+                                </li>
                                 <li>
                                     <a class="dropdown-item" href="/blog" aria-label="single-pages">Contact 2</a>
-                                </li>										
-                                                    
-                            </ul>									
+                                </li>
+
+                            </ul>
                         </li>
 
                         <li class="nav-item dropdown">
@@ -337,7 +337,7 @@
                                 <li>
                                     <a class="dropdown-item" href="/article" aria-label="single-pages">Article 2</a>
                                 </li>
-                            </ul>                                                    
+                            </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="/about" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
@@ -351,9 +351,9 @@
                         </li>
                     </ul>
 
-                    
+
                 </div>
-                
+
                 <div class="text-center d-flex justify-content-center px-30">
 
                     <!-- author-socials -->
@@ -365,13 +365,13 @@
                         <a href="https://www.pinterest.com" class="pinterest"><i class="fab fa-pinterest-p"></i></a>
                        <a href="https://twitter.com" class="twitter"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M15.8092 15.98H11.1569L6.89801 9.78339L1.56807 15.98H0.19043L6.28619 8.89157L0.19043 0.0195312H4.84276L8.87486 5.88989L13.9234 0.0195312H15.301L9.48808 6.77751L15.8092 15.98ZM11.8079 14.9929H13.9234L4.18054 1.05696H2.06508L11.8079 14.9929Z"></path>
-                                </svg> 
+                                </svg>
                             </a>
                     </div>
                 </div>
-            </div>	
+            </div>
             <!-- of canvas Mobile menu End -->
-            
+
             <!-- Offcanvas Serch -->
             <div class="offcanvas offcanvas-top offcanvasserch py-lg-100 py-40" data-bs-scroll="false" tabindex="-1" id="offcanvasserch" data-bs-backdrop="false">
                 <div class="offcanvas-header py-0 justify-content-end">
@@ -386,7 +386,7 @@
                                 <div class="serch-form mb-lg-60 mb-40">
                                     <form action="#">
                                         <div class="d-flex flex-wrap gap-40 justify-content-center">
-                                            <input type="search" name="search" class="form-control" placeholder="Search..." required> 
+                                            <input type="search" name="search" class="form-control" placeholder="Search..." required>
                                             <button type="submit" class="btn btn-primary search-btn">Search</button>
                                         </div>
                                     </form>
@@ -409,31 +409,31 @@
                                 <div class="mini-card-style mb-lg-40 mb-30">
                                     <div class="card-image-wrapper">
                                         <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/feature-images/feature-image-1.jpg" class="card-img-top" alt="Breakfast"> </a>
-                                    </div> 
-                                
-                                    <div class="card-body">                                                
-                                        <h5 class="card-title lead fw-extrabold mb-0"><a href="/article" class="blog-title">Quick and Easy Flaky Pastry for Tasty Breakfast</a></h5>                
+                                    </div>
+
+                                    <div class="card-body">
+                                        <h5 class="card-title lead fw-extrabold mb-0"><a href="/article" class="blog-title">Quick and Easy Flaky Pastry for Tasty Breakfast</a></h5>
                                         <ul class="list-unstyled card-meta-style-2 mb-0 extra-small">
-                                            <li>By <a href="author-1.html" class="fw-bold">Mike Aiden</a></li>
+                                            <li>By <a href="author-1" class="fw-bold">Mike Aiden</a></li>
                                             <li>January 27, <span class="dynamic-year"> </span>.</li>
                                         </ul>
                                     </div>
-                                                            
+
                                 </div>
                                 <!-- mini-card-style -->
                                 <div class="mini-card-style mb-lg-40 mb-30">
                                     <div class="card-image-wrapper">
                                         <a href="/article"> <img src="assets/images/placeholder.svg" data-src="assets/images/feature-images/feature-image-7.jpg" class="card-img-top" alt="Stories"> </a>
                                     </div>
-                                
-                                    <div class="card-body">                                                
-                                        <h5 class="card-title lead fw-extrabold mb-0"><a href="/article" class="blog-title">Footprints in the Wilderness: Hiking Stories</a></h5>                
+
+                                    <div class="card-body">
+                                        <h5 class="card-title lead fw-extrabold mb-0"><a href="/article" class="blog-title">Footprints in the Wilderness: Hiking Stories</a></h5>
                                         <ul class="list-unstyled card-meta-style-2 mb-0 extra-small">
-                                            <li>By <a href="author-1.html" class="fw-bold">Mike Aiden</a></li>
+                                            <li>By <a href="author-1" class="fw-bold">Mike Aiden</a></li>
 
                                             <li>January 25, <span class="dynamic-year"> </span>.</li>
                                         </ul>
-                                    </div>                                
+                                    </div>
                                 </div>
                             </div>
 
@@ -443,30 +443,30 @@
                                     <div class="card-image-wrapper">
                                         <a href="/article"> <img src="assets/images/placeholder.svg" data-src="assets/images/feature-images/feature-image-3.jpg" class="card-img-top" alt="Stories"> </a>
                                     </div>
-                                
-                                    <div class="card-body">                                                
-                                        <h5 class="card-title lead fw-extrabold mb-0"><a href="/article" class="blog-title">Lost Treasures: Top 10 Ancient City Sites</a></h5>          
+
+                                    <div class="card-body">
+                                        <h5 class="card-title lead fw-extrabold mb-0"><a href="/article" class="blog-title">Lost Treasures: Top 10 Ancient City Sites</a></h5>
                                         <ul class="list-unstyled card-meta-style-2 mb-0 extra-small">
-                                            <li>By <a href="author-1.html" class="fw-bold">Mike Aiden</a></li>
+                                            <li>By <a href="author-1" class="fw-bold">Mike Aiden</a></li>
 
                                             <li>January 07, <span class="dynamic-year"> </span>.</li>
                                         </ul>
-                                    </div>                                
+                                    </div>
                                 </div>
                                 <!-- mini-card-style -->
                                 <div class="mini-card-style mb-lg-40 mb-30">
                                     <div class="card-image-wrapper">
                                         <a href="/article"> <img src="assets/images/placeholder.svg" data-src="assets/images/feature-images/feature-image-4.jpg" class="card-img-top" alt="Stories"> </a>
                                     </div>
-                                
-                                    <div class="card-body">                                                
-                                        <h5 class="card-title lead fw-extrabold mb-0"><a href="/article" class="blog-title">Beyond Shores: Discovering Idyllic Lake Paradises</a></h5>   
+
+                                    <div class="card-body">
+                                        <h5 class="card-title lead fw-extrabold mb-0"><a href="/article" class="blog-title">Beyond Shores: Discovering Idyllic Lake Paradises</a></h5>
                                         <ul class="list-unstyled card-meta-style-2 mb-0 extra-small">
-                                            <li>By <a href="author-1.html" class="fw-bold">Mike Aiden</a></li>
+                                            <li>By <a href="author-1" class="fw-bold">Mike Aiden</a></li>
 
                                             <li>January 18, <span class="dynamic-year"> </span>.</li>
                                         </ul>
-                                    </div>                                
+                                    </div>
                                 </div>
                             </div>
 
@@ -476,15 +476,15 @@
                                     <div class="card-image-wrapper">
                                         <a href="/article"> <img src="assets/images/placeholder.svg" data-src="assets/images/feature-images/feature-image-5.jpg" class="card-img-top" alt="Stories"> </a>
                                     </div>
-                                
-                                    <div class="card-body">                                                
+
+                                    <div class="card-body">
                                         <h5 class="card-title lead fw-extrabold mb-0"><a href="/article" class="blog-title">Seaside Serenity: Beachside Beauty Uncovered</a></h5>
                                         <ul class="list-unstyled card-meta-style-2 mb-0 extra-small">
-                                            <li>By <a href="author-1.html" class="fw-bold">Mike Aiden</a></li>
+                                            <li>By <a href="author-1" class="fw-bold">Mike Aiden</a></li>
 
                                             <li>January 15, <span class="dynamic-year"> </span>.</li>
                                         </ul>
-                                    </div>                                
+                                    </div>
                                 </div>
 
                                 <!-- mini-card-style -->
@@ -492,15 +492,15 @@
                                     <div class="card-image-wrapper">
                                         <a href="/article"> <img src="assets/images/placeholder.svg" data-src="assets/images/feature-images/feature-image-3.jpg" class="card-img-top" alt="Stories"> </a>
                                     </div>
-                                
-                                    <div class="card-body">                                                
-                                        <h5 class="card-title lead fw-extrabold mb-0"><a href="/article" class="blog-title">Lost Treasures: Top 10 Ancient City Sites</a></h5>          
+
+                                    <div class="card-body">
+                                        <h5 class="card-title lead fw-extrabold mb-0"><a href="/article" class="blog-title">Lost Treasures: Top 10 Ancient City Sites</a></h5>
                                         <ul class="list-unstyled card-meta-style-2 mb-0 extra-small">
-                                            <li>By <a href="author-1.html" class="fw-bold">Mike Aiden</a></li>
+                                            <li>By <a href="author-1" class="fw-bold">Mike Aiden</a></li>
 
                                             <li>February 07, <span class="dynamic-year"> </span>.</li>
                                         </ul>
-                                    </div>                                
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -529,7 +529,7 @@
                 <span class="dark-icon"><i class="fa-solid fa-moon"></i></span>
             </div>
             <!-- dark-light-buttons -->
-            
+
             <div class="main"  data-bs-spy="scroll" data-bs-target="#navContentmenu" data-bs-root-margin="0px 0px -50%" data-bs-smooth-scroll="true">
 
                 <!--breadcrumb Section ======================-->
@@ -542,13 +542,13 @@
                                   <li class="breadcrumb-item breadcrumb-item-style-2 active" aria-current="page">blog</li>
                                 </ol>
                             </nav>
-                           
+
                         </div>
                     </div>
-                    <!-- breadcrumb-wrapper -->			
+                    <!-- breadcrumb-wrapper -->
                 </div>
                 <!--breadcrumb Section ======================-->
-                
+
                 <!--Blog Section ======================-->
                 <section class="section-blog py-4 pb-sm-5 pb-md-60 pb-lg-100">
                     <div class="container">
@@ -561,18 +561,18 @@
                                             <div class="card-image-wrapper">
                                                 <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/blog/explore-image-29.jpg" class="card-img-top" alt="Wonders"></a>
                                             </div>
-                                            
+
                                             <div class="card-body">
                                                 <div class="card-header text-uppercase">
                                                     <a href="/category">Lake</a>
                                                 </div>
                                                 <h5 class="fs-4 card-title"><a href="/article" class="blog-title">Lakeside Wonders: Nature's Peaceful Miracles</a></h5>
-                                                
+
                                                  <ul class="list-unstyled card-meta lead  small">
-                                                    <li>By <a href="author-1.html" class="blog-author fw-bold">Mike Aiden</a></li>
+                                                    <li>By <a href="author-1" class="blog-author fw-bold">Mike Aiden</a></li>
                                                     <li>January 27, <span class="dynamic-year"> </span>.</li>
                                                 </ul>
-                
+
                                                 <p class="card-text small">Nature's Peaceful Miracles captivate with serene reflections, gentle ripples, and harmonious symphony. A tranquil haven where beauty meets...</p>
                                             </div>
                                         </div>
@@ -583,15 +583,15 @@
                                             <div class="card-image-wrapper">
                                                 <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/blog/explore-image-30.jpg" class="card-img-top" alt="Sanctuary"></a>
                                             </div>
-                                            
+
                                             <div class="card-body">
                                                 <div class="card-header text-uppercase">
                                                     <a href="/category">Forest</a>
                                                 </div>
                                                 <h5 class="fs-4 card-title"><a href="/article" class="blog-title">The Mystic Woods: Nature's Healing Sanctuary</a></h5>
-                                                
+
                                                  <ul class="list-unstyled card-meta lead  small">
-                                                    <li>By <a href="author-1.html" class="blog-author fw-bold">Mike Aiden</a></li>
+                                                    <li>By <a href="author-1" class="blog-author fw-bold">Mike Aiden</a></li>
                                                     <li>January 25, <span class="dynamic-year"> </span>.</li>
                                                 </ul>
                                                 <p class="card-text small">Nature's Healing invite weary souls to immerse in the enchanting embrace  ancient tree, where whispers of the wind and rustling leaves orchestrate...</p>
@@ -604,15 +604,15 @@
                                             <div class="card-image-wrapper">
                                                 <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/blog/explore-image-13.jpg" class="card-img-top" alt="Paradises"></a>
                                             </div>
-                                            
+
                                             <div class="card-body">
                                                 <div class="card-header text-uppercase">
                                                     <a href="/category">Beach</a>
                                                 </div>
                                                 <h5 class="fs-4 card-title"><a href="/article" class="blog-title">Waves of Wonder: Exploring Coastal Paradises</a></h5>
-                                                
+
                                                  <ul class="list-unstyled card-meta lead  small">
-                                                    <li>By <a href="author-1.html" class="blog-author fw-bold">Mike Aiden</a></li>
+                                                    <li>By <a href="author-1" class="blog-author fw-bold">Mike Aiden</a></li>
                                                     <li>January 23, <span class="dynamic-year"> </span>.</li>
                                                 </ul>
                                                 <p class="card-text small">Exploring Coastal Paradises" invites you to embrace mesmerizing allure of coastal beauty. Immerse yourself in the rhythmic dance of waves, discovere...</p>
@@ -625,15 +625,15 @@
                                            <div class="card-image-wrapper">
                                                 <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/blog/explore-image-30.jpg" class="card-img-top" alt="Sanctuary"></a>
                                             </div>
-                                            
+
                                             <div class="card-body">
                                                 <div class="card-header text-uppercase">
                                                     <a href="/category">Hiking</a>
                                                 </div>
                                                <h5 class="fs-4 card-title"><a href="/article" class="blog-title">Into the Wilderness: Hiking for Mind, Body, and Soul</a></h5>
-                                                
+
                                                  <ul class="list-unstyled card-meta lead  small">
-                                                    <li>By <a href="author-1.html" class="blog-author fw-bold">Mike Aiden</a></li>
+                                                    <li>By <a href="author-1" class="blog-author fw-bold">Mike Aiden</a></li>
                                                     <li>January 22, <span class="dynamic-year"> </span>.</li>
                                                 </ul>
                                                 <p class="card-text small">Embark on a transformative journey with 'Into the Wilderness: Hiking for Mind, Body, and Soul.' This immersive experience reconnects you...</p>
@@ -646,15 +646,15 @@
                                             <div class="card-image-wrapper">
                                                 <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/blog/explore-image-19.jpg" class="card-img-top" alt="Breakfast"></a>
                                             </div>
-                                            
+
                                             <div class="card-body">
                                                 <div class="card-header text-uppercase">
                                                     <a href="/category">Forest</a>
                                                 </div>
                                                 <h5 class="fs-4 card-title"><a href="/article" class="blog-title">Forest Dreams: Escaping into Nature's Embrace</a></h5>
-                                                
+
                                                  <ul class="list-unstyled card-meta lead  small">
-                                                    <li>By <a href="author-1.html" class="blog-author fw-bold">Mike Aiden</a></li>
+                                                    <li>By <a href="author-1" class="blog-author fw-bold">Mike Aiden</a></li>
                                                     <li>January 21, <span class="dynamic-year"> </span>.</li>
                                                 </ul>
                                                 <p class="card-text small">Escaping into The Nature's Embrace" invites readers on a poetic journey through lush canopies and whispering leaves. Immerse yourself in the serenity...</p>
@@ -667,59 +667,59 @@
                                             <div class="card-image-wrapper">
                                                 <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/categories/category3.jpg" class="card-img-top" alt="img-Tales"></a>
                                             </div>
-                                            
+
                                             <div class="card-body">
                                                 <div class="card-header text-uppercase">
                                                     <a href="/category">Desert</a>
                                                 </div>
                                                 <h5 class="fs-4 card-title"><a href="/article" class="blog-title">Mirages & Realities: Tales from the Desert Wilderness</a></h5>
-                                                
+
                                                  <ul class="list-unstyled card-meta lead  small">
-                                                    <li>By <a href="author-1.html" class="blog-author fw-bold">Mike Aiden</a></li>
+                                                    <li>By <a href="author-1" class="blog-author fw-bold">Mike Aiden</a></li>
                                                     <li>January 19, <span class="dynamic-year"> </span>.</li>
                                                 </ul>
                                                 <p class="card-text small">Tales from the Desert Wilderness'' immerses readers in a captivating journey through shifting sands, weaving a tapestry of mirages that blur the lines...</p>
                                             </div>
                                         </div>
                                     </div>
-                                  
+
                                     <!-- single card -->
                                     <div class="col-xl-6">
                                         <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp" data-wow-delay="0.4s">
                                             <div class="card-image-wrapper">
                                                 <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/categories/category.jpg" class="card-img-top" alt="January"></a>
                                             </div>
-                                            
+
                                             <div class="card-body">
                                                 <div class="card-header text-uppercase">
                                                     <a href="/category">Camping</a>
                                                 </div>
                                                  <h5 class="fs-4 card-title"><a href="/article" class="blog-title">Campfire Chronicles: Stories from Nature's Cozy Embrace</a></h5>
-                                                
+
                                                  <ul class="list-unstyled card-meta lead  small">
-                                                    <li>By <a href="author-1.html" class="blog-author fw-bold">Mike Aiden</a></li>
+                                                    <li>By <a href="author-1" class="blog-author fw-bold">Mike Aiden</a></li>
                                                     <li>January 17, <span class="dynamic-year"> </span>.</li>
                                                 </ul>
                                                 <p class="card-text small">Stories from Nature's Cozy Embrace'' weaves tales of the great outdoors, capturing the warmth of a campfire's glow and the enchanting embrace of...</p>
                                             </div>
                                         </div>
                                     </div>
-                                  
+
                                     <!-- single card -->
                                     <div class="col-xl-6">
                                         <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp" data-wow-delay="0.4s">
                                             <div class="card-image-wrapper">
                                                 <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/categories/category1.jpg" class="card-img-top" alt="img-top"></a>
                                             </div>
-                                            
+
                                             <div class="card-body">
                                                 <div class="card-header text-uppercase">
                                                     <a href="/category">Beach</a>
                                                 </div>
                                                 <h5 class="fs-4 card-title"><a href="/article" class="blog-title">Seabound Journeys: Exploring Coastal Frontiers</a></h5>
-                                                
+
                                                 <ul class="list-unstyled card-meta lead  small">
-                                                    <li>By <a href="author-1.html" class="blog-author fw-bold">Mike Aiden</a></li>
+                                                    <li>By <a href="author-1" class="blog-author fw-bold">Mike Aiden</a></li>
                                                     <li>January 14, <span class="dynamic-year"> </span>.</li>
                                                 </ul>
                                                 <p class="card-text small">Embark on Seabound Journeys, a captivating exploration of coastal frontiers where the rhythmic dance of waves meets untamed landscapes. Immerse...</p>
@@ -732,15 +732,15 @@
                                             <div class="card-image-wrapper">
                                                 <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/blog/explore-image-16.jpg" class="card-img-top" alt="Hiking"></a>
                                             </div>
-                                            
+
                                             <div class="card-body">
                                                 <div class="card-header text-uppercase">
                                                     <a href="/category">Hiking</a>
                                                 </div>
                                                 <h5 class="fs-4 card-title"><a href="/article" class="blog-title">Trail Treasure: Unveiling Nature's Hidden Hiking Gems</a></h5>
-                                                
+
                                                 <ul class="list-unstyled card-meta lead  small">
-                                                    <li>By <a href="author-1.html" class="blog-author fw-bold">Mike Aiden</a></li>
+                                                    <li>By <a href="author-1" class="blog-author fw-bold">Mike Aiden</a></li>
                                                     <li>January 13, <span class="dynamic-year"> </span>.</li>
                                                 </ul>
                                                 <p class="card-text small">Embark on a journey of discovery with "Trail Treasure," where each step reveals nature's hidden gems. This hiking experience unveils the enchanting...</p>
@@ -753,15 +753,15 @@
                                             <div class="card-image-wrapper">
                                                 <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/categories/category.jpg" class="card-img-top" alt="Camping-Sleeping"></a>
                                             </div>
-                                            
+
                                             <div class="card-body">
                                                 <div class="card-header text-uppercase">
                                                     <a href="/category">Camping</a>
                                                 </div>
                                                 <h5 class="fs-4 card-title"><a href="/article" class="blog-title">Sleeping Under: A Guide to Night time Camping Delights</a></h5>
-                                                
+
                                                 <ul class="list-unstyled card-meta lead  small">
-                                                    <li>By <a href="author-1.html" class="blog-author fw-bold">Mike Aiden</a></li>
+                                                    <li>By <a href="author-1" class="blog-author fw-bold">Mike Aiden</a></li>
                                                     <li>January 09, <span class="dynamic-year"> </span>.</li>
                                                 </ul>
                                                 <p class="card-text small">Discover the magic of nature's night sky with 'Sleeping Under Stars: A Guide to Night time Camping Delights.' This enchanting guide offers tips, stories...</p>
@@ -774,15 +774,15 @@
                                             <div class="card-image-wrapper">
                                                 <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/categories/category5.jpg" class="card-img-top" alt="img-top"></a>
                                             </div>
-                                            
+
                                             <div class="card-body">
                                                <div class="card-header text-uppercase">
                                                     <a href="/category">Desert</a>
                                                 </div>
                                                 <h5 class="fs-4 card-title"><a href="/article" class="blog-title">Finding Refreshment in to the Arid Environments</a></h5>
-                                                
+
                                                 <ul class="list-unstyled card-meta lead  small">
-                                                    <li>By <a href="author-1.html" class="blog-author fw-bold">Mike Aiden</a></li>
+                                                    <li>By <a href="author-1" class="blog-author fw-bold">Mike Aiden</a></li>
                                                     <li>January 05, <span class="dynamic-year"> </span>.</li>
                                                 </ul>
                                                 <p class="card-text small">Discovering solace in arid landscapes, one can find unexpected refreshment amidst the harsh beauty of deserts. The subtle hues of sand and the...</p>
@@ -795,35 +795,35 @@
                                             <div class="card-image-wrapper">
                                                 <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/blog/explore-image-17.jpg" class="card-img-top" alt="Discovering"></a>
                                             </div>
-                                            
+
                                             <div class="card-body">
                                                 <div class="card-header text-uppercase">
                                                     <a href="/category">Ancient</a>
                                                 </div>
                                                 <h5 class="fs-4 card-title"><a href="/article" class="blog-title">Historic Gems: Discovering Ancient City Secrets</a></h5>
-                                                
+
                                                 <ul class="list-unstyled card-meta lead  small">
-                                                    <li>By <a href="author-1.html" class="blog-author fw-bold">Mike Aiden</a></li>
+                                                    <li>By <a href="author-1" class="blog-author fw-bold">Mike Aiden</a></li>
                                                     <li>January 04, <span class="dynamic-year"> </span>.</li>
                                                 </ul>
                                                 <p class="card-text small">Unearth the mysteries of ancient cities with "Historic Gems," where each cobblestone and ruin tells tales of bygone eras. Embark on a journey...</p>
                                             </div>
                                         </div>
                                     </div>
-                                  
+
                                     <div class="load-more-btn mb-40 mb-lg-0 pt-20  wow fadeInUp" data-wow-delay="0.4s">
                                         <a href="#" class="btn btn-secondary" >Load More</a>
-                                    </div> 
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-xl-4">
                                 <div class="sticky-elements">
 
                                     <!-- socials widget -->
-                                    <div class="widget widget-style-2 mb-lg-60 mb-0 wow fadeInUp" data-wow-delay="0.4s">                                           
+                                    <div class="widget widget-style-2 mb-lg-60 mb-0 wow fadeInUp" data-wow-delay="0.4s">
                                         <h4 class="fs-1 mb-3 mb-lg-20 text-white text-center">Social Link</h4>
-                                        <p class="mb-20 mb-lg-30 text-white text-center">Follow Me On Social Media</p> 
-                                        
+                                        <p class="mb-20 mb-lg-30 text-white text-center">Follow Me On Social Media</p>
+
                                         <div class="social-icons d-flex flex-wrap justify-content-center align-items-center gap-20">
                                             <a href="https://www.facebook.com">
                                                 <span class="">
@@ -832,7 +832,7 @@
                                                     </svg>
                                                 </span>
                                             </a>
-                                            
+
                                             <a href="https://www.instagram.com">
                                                 <span class="">
                                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -842,7 +842,7 @@
                                                     </svg>
                                                 </span>
                                             </a>
-                                            
+
                                             <a href="https://www.youtube.com">
                                                 <span class="">
                                                     <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -850,37 +850,37 @@
                                                     </svg>
                                                 </span>
                                             </a>
-                                            
+
                                             <a href="https://twitter.com">
                                                 <span class="">
                                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M15.8092 15.98H11.1569L6.89801 9.78339L1.56807 15.98H0.19043L6.28619 8.89157L0.19043 0.0195312H4.84276L8.87486 5.88989L13.9234 0.0195312H15.301L9.48808 6.77751L15.8092 15.98ZM11.8079 14.9929H13.9234L4.18054 1.05696H2.06508L11.8079 14.9929Z"></path>
-                                                    </svg>                                                        
+                                                    </svg>
                                                 </span>
                                             </a>
-                                            
+
                                             <a href="https://www.pinterest.com">
                                                 <span class="">
                                                     <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M4.21932 8.5049C4.21932 8.5049 3.5417 6.42445 4.33972 5.28762C5.13774 4.15079 5.81536 4.0052 6.68619 4.22361C7.55701 4.44201 7.77542 5.57882 7.58081 6.54625C7.38761 7.51367 6.8794 9.23153 6.8556 9.49753C6.8318 9.76354 6.7828 10.5378 7.53322 10.8528C8.28364 11.1678 9.49327 10.78 10.1219 9.49753C10.7505 8.2151 10.9927 6.49724 10.8961 5.84483C10.7995 5.19101 10.7029 3.57118 8.76664 2.84456C6.83039 2.11794 5.29595 2.83617 4.92074 3.06718C4.36073 3.41159 3.30089 4.1956 2.86688 5.23583C2.59668 5.88405 2.49729 6.63306 2.56449 7.18467C2.64009 7.80629 2.9607 8.45591 3.2267 8.73452C3.49271 9.01313 3.3961 9.30292 3.3597 9.52132C3.3233 9.73973 3.2421 10.3445 3.0335 10.57C2.82349 10.7954 2.37967 10.8247 2.20187 10.7365C2.02406 10.6483 1.18826 10.2116 0.695443 9.35893C0.18163 8.46711 -0.0367782 7.08387 0.325831 5.29462C0.688441 3.50398 2.18787 1.89954 3.78251 1.10292C5.36875 0.310501 7.28401 -0.0871181 9.07466 0.429495C10.8653 0.946109 12.4445 1.92612 13.3154 3.81337C14.1862 5.70062 13.8236 8.14369 13.412 9.28192C13.0004 10.4188 12.2583 11.718 10.8555 12.5076C9.45266 13.2986 8.22623 13.2818 7.82302 13.1852C7.41981 13.0886 6.48459 12.7988 6.06458 12.3298C6.06458 12.3298 5.46816 14.6525 5.22596 15.2811C4.98375 15.9097 4.56934 16.9387 4.20533 17.3251C3.84272 17.7115 3.67332 17.846 3.33451 17.797C2.9957 17.748 2.8025 17.4455 2.7423 16.5383C2.68209 15.6311 3.12869 13.0228 3.3065 12.264C3.4857 11.5052 4.13112 8.86051 4.21932 8.5049Z"></path>
-                                                    </svg>                                                   
+                                                    </svg>
                                                 </span>
                                             </a>
-                                            
+
                                             <a href="https://www.linkedin.com">
                                                 <span class="">
                                                     <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M5.10708 6.41797H1.4502V16.6369H5.10708V6.41797Z"></path>
                                                         <path d="M6.99243 6.41898H9.8149V7.83861C9.8149 7.83861 10.2489 6.40637 12.8586 6.40637C15.0118 6.40637 16.5533 7.24499 16.5533 9.54945C16.5533 10.8235 16.5533 16.6379 16.5533 16.6379H13.539C13.539 16.6379 13.5558 10.6765 13.5726 10.4931C13.5894 10.3097 13.406 8.80606 11.8701 8.80606C10.3343 8.80606 9.8499 9.90786 9.8499 10.7423C9.8499 11.5767 9.8499 16.6365 9.8499 16.6365H6.99523V6.41898H6.99243Z"></path>
                                                         <path d="M4.56523 4.4804C5.27928 3.76636 5.27928 2.60864 4.56523 1.8946C3.85119 1.18055 2.69347 1.18055 1.97943 1.8946C1.26538 2.60864 1.26538 3.76636 1.97943 4.4804C2.69347 5.19445 3.85119 5.19445 4.56523 4.4804Z"></path>
-                                                    </svg>                                                                                                           
+                                                    </svg>
                                                 </span>
                                             </a>
-                                            
+
                                         </div>
                                         <!-- social-icons -->
                                     </div>
-    
+
                                     <div class="add-iamge d-none d-xl-block wow fadeInUp" data-wow-delay="0.4s">
                                         <a href="#"><img src="assets/images/add.png" class="img-fluid" alt="img"></a>
                                     </div>
@@ -888,7 +888,7 @@
 
                             </div>
                         </div>
-                        
+
                     </div>
                     <!-- container -->
                 </section>
@@ -905,7 +905,7 @@
                                     <form>
 
                                         <div class="form-group d-flex gap-30">
-                                            <input type="email" class="form-control" placeholder="Your email address" required>        
+                                            <input type="email" class="form-control" placeholder="Your email address" required>
                                             <button type="submit" class="btn btn-secondary">Subscribe</button>
                                         </div>
                                     </form>
@@ -923,7 +923,7 @@
             <!--Footer Section ======================-->
                         <footer class="section-footer section-footer-2  parallax pt-40 pt-md-60 pt-lg-130">
                 <div class="footer-wrapper position-relative py-20 py-lg-60 py-xl-100">
-                    <div class="container">                        
+                    <div class="container">
                         <div class="footer-top-contents pb-30">
                             <div class="row align-items-center gy-30 gy-lg-0">
                                 <div class="col-lg-6">
@@ -943,10 +943,10 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    
+
                                     <!-- footer-links -->
                                 </div>
-                                <!-- col-6 -->    
+                                <!-- col-6 -->
 
                                 <div class="col-lg-6">
                                     <div class="social-icons  d-flex align-items-center justify-content-lg-end gap-20">
@@ -957,7 +957,7 @@
                                                 </svg>
                                             </span>
                                         </a>
-                                        
+
                                         <a href="https://www.instagram.com/">
                                             <span class="text-white">
                                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -966,20 +966,20 @@
                                                     <path d="M12.982 3.68044C12.982 4.06125 12.6726 4.37069 12.2918 4.37069C11.911 4.37069 11.6016 4.06125 11.6016 3.68044C11.6016 3.29963 11.911 2.99023 12.2918 2.99023C12.6726 2.99023 12.982 3.29823 12.982 3.68044Z"/>
                                                 </svg>
                                             </span>
-                                        </a>    
-                                        
+                                        </a>
+
                                         <a href="https://twitter.com">
                                             <span class="text-white">
                                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M15.8092 15.98H11.1569L6.89801 9.78339L1.56807 15.98H0.19043L6.28619 8.89157L0.19043 0.0195312H4.84276L8.87486 5.88989L13.9234 0.0195312H15.301L9.48808 6.77751L15.8092 15.98ZM11.8079 14.9929H13.9234L4.18054 1.05696H2.06508L11.8079 14.9929Z"/>
-                                                </svg>                                                        
+                                                </svg>
                                             </span>
                                         </a>
                                         <a href="https://www.youtube.com">
                                             <span class="text-white">
                                                 <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M14.4095 0.0820312H3.59002C1.89177 0.0820312 0.50293 1.47084 0.50293 3.16909V8.83366C0.50293 10.5319 1.89177 11.9207 3.59002 11.9207H14.4095C16.1078 11.9207 17.4966 10.5319 17.4966 8.83366V3.16909C17.4966 1.47084 16.1078 0.0820312 14.4095 0.0820312ZM9.47718 7.67723L6.8409 9.30826V6.04617V2.78408L9.47718 4.41514L12.1134 6.04617L9.47718 7.67723Z" fill="#4C9BB3"/>
-                                                </svg>                                                       
+                                                </svg>
                                             </span>
                                         </a>
                                         <a href="https://www.linkedin.com">
@@ -989,21 +989,21 @@
                                                     <path d="M6.99219 6.41898H9.81465V7.83861C9.81465 7.83861 10.2487 6.40637 12.8583 6.40637C15.0116 6.40637 16.553 7.24499 16.553 9.54945C16.553 10.8235 16.553 16.6379 16.553 16.6379H13.5388C13.5388 16.6379 13.5556 10.6765 13.5724 10.4931C13.5892 10.3097 13.4057 8.80606 11.8699 8.80606C10.3341 8.80606 9.84965 9.90786 9.84965 10.7423C9.84965 11.5767 9.84965 16.6365 9.84965 16.6365H6.99499V6.41898H6.99219Z" fill="#4C9BB3"/>
                                                     <path d="M4.56523 4.4804C5.27928 3.76636 5.27928 2.60864 4.56523 1.8946C3.85119 1.18055 2.69347 1.18055 1.97943 1.8946C1.26538 2.60864 1.26538 3.76636 1.97943 4.4804C2.69347 5.19445 3.85119 5.19445 4.56523 4.4804Z" fill="#4C9BB3"/>
                                                 </svg>
-                                                                                                          
+
                                             </span>
                                         </a>
-                                        
+
                                         <a href="https://www.pinterest.com">
                                             <span class="text-white">
                                                 <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M4.21932 8.5049C4.21932 8.5049 3.5417 6.42445 4.33972 5.28762C5.13774 4.15079 5.81536 4.0052 6.68619 4.22361C7.55701 4.44201 7.77542 5.57882 7.58081 6.54625C7.38761 7.51367 6.8794 9.23153 6.8556 9.49753C6.8318 9.76354 6.7828 10.5378 7.53322 10.8528C8.28364 11.1678 9.49327 10.78 10.1219 9.49753C10.7505 8.2151 10.9927 6.49724 10.8961 5.84483C10.7995 5.19101 10.7029 3.57118 8.76664 2.84456C6.83039 2.11794 5.29595 2.83617 4.92074 3.06718C4.36073 3.41159 3.30089 4.1956 2.86688 5.23583C2.59668 5.88405 2.49729 6.63306 2.56449 7.18467C2.64009 7.80629 2.9607 8.45591 3.2267 8.73452C3.49271 9.01313 3.3961 9.30292 3.3597 9.52132C3.3233 9.73973 3.2421 10.3445 3.0335 10.57C2.82349 10.7954 2.37967 10.8247 2.20187 10.7365C2.02406 10.6483 1.18826 10.2116 0.695443 9.35893C0.18163 8.46711 -0.0367782 7.08387 0.325831 5.29462C0.688441 3.50398 2.18787 1.89954 3.78251 1.10292C5.36875 0.310501 7.28401 -0.0871181 9.07466 0.429495C10.8653 0.946109 12.4445 1.92612 13.3154 3.81337C14.1862 5.70062 13.8236 8.14369 13.412 9.28192C13.0004 10.4188 12.2583 11.718 10.8555 12.5076C9.45266 13.2986 8.22623 13.2818 7.82302 13.1852C7.41981 13.0886 6.48459 12.7988 6.06458 12.3298C6.06458 12.3298 5.46816 14.6525 5.22596 15.2811C4.98375 15.9097 4.56934 16.9387 4.20533 17.3251C3.84272 17.7115 3.67332 17.846 3.33451 17.797C2.9957 17.748 2.8025 17.4455 2.7423 16.5383C2.68209 15.6311 3.12869 13.0228 3.3065 12.264C3.4857 11.5052 4.13112 8.86051 4.21932 8.5049Z"/>
-                                                </svg>                                                   
+                                                </svg>
                                             </span>
                                         </a>
                                     </div>
                                     <!-- social-icons -->
                                 </div>
-                                <!-- col-6 -->    
+                                <!-- col-6 -->
 
                             </div>
                             <!-- row -->
@@ -1011,9 +1011,9 @@
                         <!-- footer-top-contents -->
 
                         <div class="footer-bottom-contents mt-30 text-white">
-                            
+
                              <div class="d-flex flex-column flex-sm-row gap-3 gap-lg-0 align-items-lg-center justify-content-lg-between justify-content-center">
-                               
+
                                 <div class="d-flex justify-content-center gap-10">
                                     <p class="mb-0 lead">A product of</p>
                                     <a class="footer-logo" href="/" aria-label="nav-brands">
@@ -1024,10 +1024,10 @@
                             </div>
                         </div>
                         <!-- footer-bottom-contents -->
-                        
+
                     </div>
                     <!-- container -->
-                </div>                
+                </div>
             </footer>
             <!--Footer Section ======================-->
 
@@ -1036,10 +1036,10 @@
 		<!-- page -->
 
         <!-- js link -->
-        <script src="assets/js/jquery-3.7.0.min.js"></script>	
-        <script src="assets/js/bootstrap.bundle.min.js"></script>	
-        <script src="assets/js/swiper-bundle.min.js"></script>	
-        <script src="assets/js/wow.js"></script>	
+        <script src="assets/js/jquery-3.7.0.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        <script src="assets/js/wow.js"></script>
         <script src="assets/js/venobox.min.js"></script>
         <script src="assets/js/odometer.min.js"></script>
         <script src="assets/js/owl.carousel.min.js"></script>
@@ -1048,8 +1048,8 @@
         <script src="assets/js/gsap/ScrollTrigger.min.js"></script>
         <script src="assets/js/gsap/split-type-0.3.3.min.js"></script>
         <script src="assets/js/appear.min.js"></script>
-        <script src="assets/js/lazy.image.js"></script>	
-        <script src="assets/js/script.js"></script>			
+        <script src="assets/js/lazy.image.js"></script>
+        <script src="assets/js/script.js"></script>
 
 
 	</body>

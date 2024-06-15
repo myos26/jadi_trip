@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -12,6 +13,17 @@ class HomeController extends Controller
     public function index()
     {
         return view('index');
+    }
+
+    public function verifyOtp()
+    {
+        $get_user = User::where('email', Auth()->user()->email)->first();
+
+        if ($get_user->is_verified == 1) {
+            return redirect('/');
+        } else {
+            return redirect('/verify-otp-page');
+        }
     }
 
     /**

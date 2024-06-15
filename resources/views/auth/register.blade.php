@@ -8,13 +8,14 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="{{ asset('auth/style.css') }}" />
     <title>Registrasi</title>
-    <link rel="icon" href="{{asset('assets/logo/logo.ico')}}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('assets/logo/logo.ico') }}" type="image/x-icon">
 </head>
 
 <body>
 
     <div class="wrapper">
-        <form id="daftarForm" action="">
+        <form id="daftarForm" action="{{ url('/register') }}" method="POST">
+            @csrf
             <h1>Registrasi</h1>
 
             <div class="input-box">
@@ -46,19 +47,19 @@
             </label>
 
             <button type="submit" class="btn">Register</button>
-            <a href="/login" class="btn2">Sudah mempunyai akun? Login disini</a>
+            <a href="{{ url('/login') }}" class="btn2">Sudah mempunyai akun? Login disini</a>
         </form>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            document.getElementById('no_telp').addEventListener('input', function (e) {
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('no_telp').addEventListener('input', function(e) {
                 var value = e.target.value;
                 e.target.value = value.replace(/[^0-9+]/g, '');
             });
         });
 
-        document.getElementById('daftarForm').addEventListener('submit', function (e) {
+        document.getElementById('daftarForm').addEventListener('submit', function(e) {
             var password = document.getElementById('password').value;
             var passwordReType = document.getElementById('password_reType').value;
             var errorMessage = document.getElementById('error-message');

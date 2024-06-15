@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
+use App\Models\User;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,22 +18,29 @@ use App\Http\Controllers\AdminController;
 */
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
-// Route::get('/blog/{kategori?}', function(){return view('blog');})->name('blogs');
 
-Route::get('/login', function(){
-return view('auth/login');
-});
-Route::get('/register', function(){
-    return view('auth/register');
-});
-Route::get('/verify', function(){
-    return view('auth/verifikasi');
-});
-Route::get('/info', function(){
-    return view('auth/lengkap_data');
-});
-Route::get('/paket', function(){
+Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
+
+Route::get('/blog', function () {
+    return view('blog');
+})->name('blog');
+
+Route::get('/temp-home', [HomeController::class, 'verifyOtp']);
+
+// route auth
+Route::get('/login', [AuthController::class, 'loginView'])->name('login');
+Route::post('/login', [AuthController::class, 'login']);
+Route::get('/register', [AuthController::class, 'registerView']);
+Route::post('/register', [AuthController::class, 'register']);
+Route::get('/verify', [AuthController::class, 'verifyInfo'])->middleware('auth');
+Route::post('/verified', [AuthController::class, 'verified']);
+Route::get('/info', [AuthController::class, 'info'])->middleware('auth');
+Route::post('/verified-info', [AuthController::class, 'infoVerified']);
+
+
+// route blog
+Route::get('/paket', function () {
+
     return view('paket');
 });
 Route::get('/about', function () {
@@ -46,3 +55,5 @@ Route::get('/contact', function () {
 Route::get('/article', function () {
     return view('article');
 });
+
+Route::get('/logout', [AuthController::class, 'logout']);

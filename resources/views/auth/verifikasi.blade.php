@@ -15,6 +15,7 @@
 
     <div class="wrapper wrapper2">
         <form action="{{ url('/verified') }}" method="POST">
+            @csrf
             <h1>Verifikasi Your Email</h1>
 
             <div class="input-box">
@@ -30,7 +31,7 @@
                 <input type="checkbox">Saya menyatakan bahwa informasi yang diberikan di atas adalah benar dan tepat
             </label> --}}
 
-            <button type="submit" class="btn"><a href="/dashboard">Verifikasi</a></button>
+            <button type="submit" class="btn">Verifikasi</button>
             {{-- <a href="/register" class="btn2 btn3">Tidak punya akun? Daftar disini</a> --}}
         </form>
     </div>

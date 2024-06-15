@@ -8,7 +8,7 @@
     <meta name="keywords" content="blog, blogging, blogger, articles, posts, content, writing, writers, blogosphere, online journal, web log, topics, ideas, tips, advice">
     <meta name="author" content="themeperch">
     <title>Exploreist</title>
-    <link rel="shortcut icon" type="images/png" href="assets/images/fav-icon/favicon.png">
+    <link rel="icon" href="{{asset('assets/logo/logo.ico')}}" type="image/x-icon">
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

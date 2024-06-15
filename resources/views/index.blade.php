@@ -8,7 +8,8 @@
     <meta name="keywords" content="blog, blogging, blogger, articles, posts, content, writing, writers, blogosphere, online journal, web log, topics, ideas, tips, advice">
     <meta name="author" content="themeperch">
     <title>Jadi Trip</title>
-    <link rel="shortcut icon" type="images/png" href="assets/images/fav-icon/favicon.png">
+    <link rel="icon" href="{{asset('assets/logo/logo.ico')}}" type="image/x-icon">
+
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,8 +35,8 @@
                     <nav class="navbar navbar-expand-xl hover-menu">
                         <div class="d-flex w-100 justify-content-between align-items-center">
                             <a class="navbar-brand" href="/" aria-label="nav-brands">
-                                <img src="assets/images/logo-white.png" class="logo-light img-fluid" alt="logo">
-                                <!-- <img src="assets/images/global/logo-dark.png" class="logo-dark" alt="logo"> -->
+                                <img src="assets/logo/Jadi Trip Bhitam.png" style="height: 70px" class="logo-light img-fluid" alt="logo-white">
+                                {{-- <img src="assets/logo/Jadi Trip Bputih.png" style="height: 70px" class="logo-dark" alt="logo-dark"> --}}
                             </a>
 
                             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasmobile-menu" aria-controls="offcanvasmobile-menu" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,17 +52,17 @@
                                 <div class="d-flex gap-70 align-items-center">
                                     <ul class="gap-20 navbar-nav mb-2 me-2 mb-lg-0">
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow" aria-current="page" href="blog" aria-label="nav-links">
+                                            <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow" aria-current="page" href="{{ route('blog', ['kategori'=>'destinasi']) }}" aria-label="nav-links">
                                                 Destinasi
                                             </a>
                                         </li>
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow" aria-current="page" href="blog" aria-label="nav-links">
+                                            <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow" aria-current="page" href="{{ route('blog', ['kategori'=>'aktifitas']) }}" aria-label="nav-links">
                                                 Aktifitas
                                             </a>
                                         </li>
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"  href="blog" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="true">
+                                            <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"  href="{{ route('blog', ['kategori'=>'kuliner']) }}" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="true">
                                                 Kuliner
                                                 <span class="dropdown-icon">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
@@ -71,16 +72,16 @@
                                             </a>
                                             <ul class="dropdown-menu">
                                                 <li>
-                                                    <a class="dropdown-item" href="blog" rel="nofollow" aria-label="single-pages">Open Trip</a>
+                                                    <a class="dropdown-item" href="{{ route('blog', ['kategori'=>'kuliner','banyuwangi']) }}" rel="nofollow" aria-label="single-pages">Banyuwangi</a>
                                                 </li>
                                                 <li>
-                                                    <a class="dropdown-item" href="blog" rel="nofollow" aria-label="single-pages">Paket Wisata</a>
+                                                    <a class="dropdown-item" href="{{ route('blog', ['kategori'=>'kuliner','malang']) }}" rel="nofollow" aria-label="single-pages">Malang</a>
                                                 </li>
                                             </ul>
                                         </li>
 
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"  href="blog" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="true">
+                                            <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"  href="" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="true">
                                                 Paket
                                                 <span class="dropdown-icon">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
@@ -98,7 +99,7 @@
                                             </ul>
                                         </li>
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"  href="blog" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="true">
+                                            <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"  href="" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="true">
                                                 Blog
                                                 <span class="dropdown-icon">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
@@ -108,7 +109,7 @@
                                             </a>
                                             <ul class="dropdown-menu">
                                                 <li>
-                                                    <a class="dropdown-item" href="blog" rel="nofollow" aria-label="single-pages">Blog 1</a>
+                                                    <a class="dropdown-item" href="{{ route('blog')}}" rel="nofollow" aria-label="single-pages">Blog 1</a>
                                                 </li>
 
                                             </ul>
@@ -731,25 +732,26 @@
                                     <div class="col-lg-12 col-xl-6">
                                         <!-- single card -->
                                         <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp" data-wow-delay="0.4s">
+                                            @foreach($datas as $data)
                                             <div class="card-image-wrapper">
                                                 <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/blog/explore-image-17.jpg" class="card-img-top" alt="Discovering"></a>
                                             </div>
 
                                             <div class="card-body">
                                                 <div class="card-header text-uppercase">
-                                                    <a href="/category">History</a>
+                                                    <a href="/category">{{ $data->kategori }}</a>
                                                 </div>
-                                                <h5 class="fs-4 card-title"><a href="/article" class="blog-title">Historic Gems: Discovering Ancient City Secrets</a></h5>
-
-                                                 <ul class="list-unstyled card-meta  align-items-center">
+                                                <h5 class="fs-4 card-title"><a href="/article" class="blog-title">{{ $data->judul }}</a></h5>
+                                                <ul class="list-unstyled card-meta  align-items-center">
                                                     <li>By <a href="author-1" class="blog-author fw-bold">Mike Aiden</a></li>
                                                     <li>January 26, <span class="dynamic-year"> </span>.</li>
-                                                </ul>
+                                                    </ul>
 
-                                                <p class="card-text small">Unearth the mysteries of ancient cities with "Historic Gems," where each cobblestone and ruin tells tales of bygone eras. Embark on a journey...</p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                                    <p class="card-text small">Unearth the mysteries of ancient cities with "Historic Gems," where each cobblestone and ruin tells tales of bygone eras. Embark on a journey...</p>
+                                                    </div>
+                                                    </div>
+                                                    </div>
+                                                    @endforeach
 
                                     <div class="col-lg-12 col-xl-6" >
                                         <!-- single card -->

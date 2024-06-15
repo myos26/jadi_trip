@@ -8,7 +8,8 @@
     <meta name="keywords" content="blog, blogging, blogger, articles, posts, content, writing, writers, blogosphere, online journal, web log, topics, ideas, tips, advice">
     <meta name="author" content="themeperch">
     <title>Jadi Trip</title>
-    <link rel="shortcut icon" type="images/png" href="assets/images/fav-icon/favicon.png">
+    <link rel="icon" href="{{asset('assets/logo/logo.ico')}}" type="image/x-icon">
+
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,8 +37,8 @@
                     <nav class="navbar navbar-expand-xl hover-menu">
                         <div class="d-flex w-100 justify-content-between align-items-center">
                             <a class="navbar-brand" href="/" aria-label="nav-brands">
-                                <img src="assets/images/logo-white.png" class="logo-light img-fluid" alt="logo">
-                                <!-- <img src="assets/images/global/logo-dark.png" class="logo-dark" alt="logo"> -->
+                                <img src="assets/logo/Jadi Trip Bhitam.png" style="height: 70px" class="logo-light img-fluid" alt="logo-white">
+                                {{-- <img src="assets/logo/Jadi Trip Bputih.png" style="height: 70px" class="logo-dark" alt="logo-dark"> --}}
                             </a>
 
                             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasmobile-menu" aria-controls="offcanvasmobile-menu" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,29 +48,23 @@
                                         <path d="M3 12H21M3 6H21M3 18H21" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                 </span>
-                                <!-- <span class="menu-icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M3 12H21M3 6H21M3 18H21" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </span>                                 -->
                             </button>
 
-                            <div class="d-none d-xl-block ms-5">
+                            <div class="d-none d-xl-block">
                                 <div class="d-flex gap-70 align-items-center">
                                     <ul class="gap-20 navbar-nav mb-2 me-2 mb-lg-0">
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="blog" aria-label="nav-links">
+                                            <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow" aria-current="page" href="/blog" aria-label="nav-links">
                                                 Destinasi
                                             </a>
                                         </li>
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="blog" aria-label="nav-links">
+                                            <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow" aria-current="page" href="blog" aria-label="nav-links">
                                                 Aktifitas
                                             </a>
-
                                         </li>
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="blog" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"  href="blog" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="true">
                                                 Kuliner
                                                 <span class="dropdown-icon">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
@@ -79,15 +74,16 @@
                                             </a>
                                             <ul class="dropdown-menu">
                                                 <li>
-                                                    <a class="dropdown-item" href="blog" aria-label="single-pages">Open Trip</a>
+                                                    <a class="dropdown-item" href="blog" rel="nofollow" aria-label="single-pages">Open Trip</a>
                                                 </li>
                                                 <li>
-                                                    <a class="dropdown-item" href="blog" aria-label="single-pages">Paket Wisata</a>
+                                                    <a class="dropdown-item" href="blog" rel="nofollow" aria-label="single-pages">Paket Wisata</a>
                                                 </li>
                                             </ul>
                                         </li>
+
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link active nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="blog" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"  href="blog" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="true">
                                                 Paket
                                                 <span class="dropdown-icon">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
@@ -97,15 +93,15 @@
                                             </a>
                                             <ul class="dropdown-menu">
                                                 <li>
-                                                    <a class="dropdown-item" href="blog" aria-label="single-pages">Open Trip</a>
+                                                    <a class="dropdown-item" href="blog" rel="nofollow" aria-label="single-pages">Open Trip</a>
                                                 </li>
                                                 <li>
-                                                    <a class="dropdown-item" href="blog" aria-label="single-pages">Paket Wisata</a>
+                                                    <a class="dropdown-item" href="blog" rel="nofollow" aria-label="single-pages">Paket Wisata</a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="blog" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"  href="blog" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="true">
                                                 Blog
                                                 <span class="dropdown-icon">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
@@ -115,41 +111,42 @@
                                             </a>
                                             <ul class="dropdown-menu">
                                                 <li>
-                                                    <a class="dropdown-item" href="blog" aria-label="single-pages">Blog 1</a>
+                                                    <a class="dropdown-item" href="blog" rel="nofollow" aria-label="single-pages">Blog 1</a>
                                                 </li>
 
                                             </ul>
                                         </li>
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="about" aria-label="nav-links">
+                                            <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow" aria-current="page" href="about" aria-label="nav-links">
                                                 About
                                             </a>
                                         </li>
+
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="contact" aria-label="nav-links">
+                                            <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow" aria-current="page" href="contact" aria-label="nav-links">
                                                 Kontak
                                             </a>
                                         </li>
-
                                     </ul>
-                                    <div class="d-flex align-items-center gap-20">
-                                        <!-- serch-icon -->
-                                        <a class="serch-icon-style-2"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasserch" aria-controls="offcanvasserch">
+
+
+                                    <div class="d-flex gap-20 align-items-center">
+
+                                        <a class="serch-icon px-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasserch" aria-controls="offcanvasserch">
 
                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M19 19L13.0001 13M15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
-                                        </a>
-                                        <!-- menu icon -->
-                                        <!-- <a href="#"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasDesktop" aria-controls="offcanvasDesktop">
 
-                                            <span class="menu-icon">
+                                        </a>
+
+                                        <a class="menu-icon"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasDesktop" aria-controls="offcanvasDesktop">
+                                                        <span class="menu-icon-2">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M3 12H21M3 6H21M3 18H21" stroke-linecap="round" stroke-linejoin="round"/>
                                                 </svg>
                                             </span>
-                                        </a> -->
-
+                                        </a>
                                     </div>
                                 </div>
                             </div>

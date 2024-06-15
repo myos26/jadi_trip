@@ -8,7 +8,8 @@
     <meta name="keywords" content="blog, blogging, blogger, articles, posts, content, writing, writers, blogosphere, online journal, web log, topics, ideas, tips, advice">
     <meta name="author" content="themeperch">
     <title>Jadi Trip</title>
-    <link rel="shortcut icon" type="images/png" href="assets/images/fav-icon/favicon.png">
+    <link rel="icon" href="{{asset('assets/logo/logo.ico')}}" type="image/x-icon">
+
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,8 +37,8 @@
                     <nav class="navbar navbar-expand-xl hover-menu">
                         <div class="d-flex w-100 justify-content-between align-items-center">
                             <a class="navbar-brand" href="/" aria-label="nav-brands">
-                                <img src="assets/images/logo-white.png" class="logo-light img-fluid" alt="logo">
-                                <!-- <img src="assets/images/global/logo-dark.png" class="logo-dark" alt="logo"> -->
+                                <img src="assets/logo/Jadi Trip Bhitam.png" style="height: 70px" class="logo-light img-fluid" alt="logo-white">
+                                {{-- <img src="assets/logo/Jadi Trip Bputih.png" style="height: 70px" class="logo-dark" alt="logo-dark"> --}}
                             </a>
 
                             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasmobile-menu" aria-controls="offcanvasmobile-menu" aria-expanded="false" aria-label="Toggle navigation">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Models\Blog;
 
 class HomeController extends Controller
 {
@@ -12,7 +13,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $datas = Blog::all();
+        return view('index', compact('datas'));
     }
 
     public function verifyOtp()

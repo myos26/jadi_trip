@@ -52,7 +52,7 @@
                                 <div class="d-flex gap-70 align-items-center">
                                     <ul class="gap-20 navbar-nav mb-2 me-2 mb-lg-0">
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow" aria-current="page" href="{{ route('blog', ['kategori'=>'destinasi']) }}" aria-label="nav-links">
+                                            <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow" aria-current="page" href="{{ route('blog', ['kategori'=>'Destinasi']) }}" aria-label="nav-links">
                                                 Destinasi
                                             </a>
                                         </li>
@@ -72,10 +72,10 @@
                                             </a>
                                             <ul class="dropdown-menu">
                                                 <li>
-                                                    <a class="dropdown-item" href="{{ route('blog', ['kategori'=>'kuliner','banyuwangi']) }}" rel="nofollow" aria-label="single-pages">Banyuwangi</a>
+                                                    <a class="dropdown-item" href="{{ route('blog', ['kategori'=>'kuliner banyuwangi']) }}" rel="nofollow" aria-label="single-pages">Banyuwangi</a>
                                                 </li>
                                                 <li>
-                                                    <a class="dropdown-item" href="{{ route('blog', ['kategori'=>'kuliner','malang']) }}" rel="nofollow" aria-label="single-pages">Malang</a>
+                                                    <a class="dropdown-item" href="{{ route('blog', ['kategori'=>'kuliner malang']) }}" rel="nofollow" aria-label="single-pages">Malang</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -729,29 +729,29 @@
                                 <h2 class="section-title mb-lg-60  mb-md-40 md-20">Postingan Terbaru</h2>
                                 <div class="row custom-row-gap">
 
+                                @foreach($datas as $data)
                                     <div class="col-lg-12 col-xl-6">
                                         <!-- single card -->
                                         <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp" data-wow-delay="0.4s">
-                                            @foreach($datas as $data)
                                             <div class="card-image-wrapper">
                                                 <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/blog/explore-image-17.jpg" class="card-img-top" alt="Discovering"></a>
                                             </div>
 
                                             <div class="card-body">
                                                 <div class="card-header text-uppercase">
-                                                    <a href="/category">{{ $data->kategori }}</a>
+                                                    <a href="/category">{{ $data->kategori->name }}</a>
                                                 </div>
-                                                <h5 class="fs-4 card-title"><a href="/article" class="blog-title">{{ $data->judul }}</a></h5>
+                                                <h6 class="fs-4 card-title"><a href="/article" class="blog-title">{{ $data->judul }}</a></h6>
                                                 <ul class="list-unstyled card-meta  align-items-center">
                                                     <li>By <a href="author-1" class="blog-author fw-bold">Mike Aiden</a></li>
                                                     <li>January 26, <span class="dynamic-year"> </span>.</li>
-                                                    </ul>
+                                                </ul>
 
-                                                    <p class="card-text small">Unearth the mysteries of ancient cities with "Historic Gems," where each cobblestone and ruin tells tales of bygone eras. Embark on a journey...</p>
-                                                    </div>
-                                                    </div>
-                                                    </div>
-                                                    @endforeach
+                                                <p class="card-text small">Unearth the mysteries of ancient cities with "Historic Gems," where each cobblestone and ruin tells tales of bygone eras. Embark on a journey...</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
 
                                     <div class="col-lg-12 col-xl-6" >
                                         <!-- single card -->

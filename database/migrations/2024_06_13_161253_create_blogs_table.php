@@ -14,12 +14,14 @@ return new class extends Migration
         Schema::create('blogs', function (Blueprint $table) {
             $table->id();
             $table->text('image');
-            $table->string('judul',70);
+            $table->string('judul', 70);
             $table->text('artikel');
-            $table->enum('kategori',['Destinasi','Aktifitas',]);
-            $table->enum('status',['Public','Draft']);
+            $table->BigInteger('kategori_id');
+            $table->enum('status', ['Public', 'Draft']);
             $table->timestamps();
             $table->softDeletes();
+
+            // $table->foreign('kategori_id')->references('id')->on('kategoris')->onDelete('cascade');
         });
     }
 

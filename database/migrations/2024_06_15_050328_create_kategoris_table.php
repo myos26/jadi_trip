@@ -6,14 +6,17 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    // protected $fillable = ['Judul','artikel','kategori','status'];
-
     /**
      * Run the migrations.
      */
     public function up(): void
     {
-
+        Schema::create('kategoris', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->timestamps();
+            $table->SoftDeletes();
+        });
     }
 
     /**
@@ -21,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('kategoris');
     }
 };

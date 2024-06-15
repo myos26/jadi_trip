@@ -14,15 +14,17 @@
 <body>
 
     <div class="wrapper wrapper2">
-        <form action="">
+        <form action="{{ url('/verified') }}" method="POST">
             <h1>Verifikasi Your Email</h1>
 
             <div class="input-box">
-                <h3>#We have sent a code to your email, check it and enter it below</h3>
+                <h3>Kami telah mengirimkan kode verifikasi ke jaditrip@gmail.com, silahkan masukkan kode anda</h3>
                 <div class="input-field">
-                    <input type="number" name="kode_otp" placeholder="Kode OTP" required>
+                    <input type="number" name="token" placeholder="Kode OTP" required>
                     <i class='bx bxs-lock-alt'></i>
                 </div>
+                <h3>Belum mendapatkan kode? <span style="color: red;">kirim ulang kode</span></h3>
+
             </div>
             {{-- <label>
                 <input type="checkbox">Saya menyatakan bahwa informasi yang diberikan di atas adalah benar dan tepat

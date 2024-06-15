@@ -32,11 +32,11 @@
                 </div>
                 <div class="input-field">
                     <input type="password" name="password" placeholder="password" required>
-                    <i class='bx bxs-user'></i>
+                    <i class='bx bxs-key'></i>
                 </div>
                 <div class="input-field">
                     <input type="password" name="password_reType" placeholder="Re-Type Password" required>
-                    <i class='bx bxs-envelope'></i>
+                    <i class='bx bxs-key'></i>
                     <span id="error-message" class="error-message" style="display: none;">Password tidak sama</span>
                 </div>
 

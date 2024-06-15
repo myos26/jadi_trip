@@ -16,20 +16,20 @@ use App\Http\Controllers\AdminController;
 */
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/blog', function () {
-    return view('blog');
-})->name('blog');
+Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
+// Route::get('/blog/{kategori?}', function(){return view('blog');})->name('blogs');
+
 Route::get('/login', function(){
 return view('auth/login');
 });
 Route::get('/register', function(){
     return view('auth/register');
 });
-Route::get('/info', function(){
-    return view('auth/lengkap_data');
-});
 Route::get('/verify', function(){
     return view('auth/verifikasi');
+});
+Route::get('/info', function(){
+    return view('auth/lengkap_data');
 });
 Route::get('/paket', function(){
     return view('paket');

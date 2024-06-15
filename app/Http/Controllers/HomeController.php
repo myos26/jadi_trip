@@ -16,6 +16,10 @@ class HomeController extends Controller
         return view('index', compact('datas'));
     }
 
+    public function blog(){
+
+        return view('blog');
+    }
     /**
      * Store a newly created resource in storage.
      */

@@ -8,8 +8,13 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Blog extends Model
 {
-    use HasFactory,SoftDeletes;
+    use HasFactory, SoftDeletes;
 
-    protected $table = 'Blogs';
-    protected $fillable = ['image','judul','artikel','kategori','status'];
+    protected $table = 'blogs';
+    protected $fillable = ['image', 'judul', 'artikel', 'kategori_id', 'status'];
+
+    public function Kategori()
+    {
+        return $this->belongsTo(Kategori::class, 'kategori_id', 'id');
+    }
 }

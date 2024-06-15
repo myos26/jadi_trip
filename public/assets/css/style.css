@@ -9789,7 +9789,7 @@ Home page 3
 }
 
 /*
-Author card Style 
+Author card Style
 */
 @media (max-width: 991.98px) {
   .author-card-wrapper-2 {
@@ -12300,22 +12300,29 @@ a {
 }
 
 .blog-title {
-  --bs-link-color-rgb: var(--bs-heading-color-rgb);
-  --bs-link-color: var(--bs-heading-color);
-  --bs-link-hover-color: var(--bs-primary);
-  --bs-link-hover-color-rgb: var(--bs-primary-rgb);
-  position: relative;
-  display: inline-block;
-  font-weight: 800;
-  color: var(--bs-link-color);
-  overflow: hidden;
-  background: linear-gradient(to right, var(--bs-link-hover-color), var(--bs-link-hover-color) 50%, var(--bs-link-color) 50%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 200% 100%;
-  background-position: 100%;
-  transition: background-position 700ms ease;
+    --bs-link-color-rgb: var(--bs-heading-color-rgb);
+    --bs-link-color: var(--bs-heading-color);
+    --bs-link-hover-color: var(--bs-primary);
+    --bs-link-hover-color-rgb: var(--bs-primary-rgb);
+
+    position: relative;
+    display: -webkit-box;        /* Gunakan kotak fleksibel webkit */
+    -webkit-box-orient: vertical; /* Orientasi vertikal */
+    -webkit-line-clamp: 2;       /* Batas jumlah baris */
+    overflow: hidden;            /* Sembunyikan teks yang melampaui */
+    font-weight: 800;
+    color: var(--bs-link-color);
+    background: linear-gradient(to right, var(--bs-link-hover-color), var(--bs-link-hover-color) 50%, var(--bs-link-color) 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    line-height: 1.5em;          /* Tinggi baris (sesuaikan dengan kebutuhan) */
+    max-height: 3em;             /* Maksimal tinggi (2 baris x tinggi baris) */
+    transition: background-position 700ms ease;
+    text-overflow: ellipsis;     /* Tambahkan elipsis (...) di akhir teks yang terpotong */
+
 }
 .blog-title:hover {
   background-position: 0 100%;

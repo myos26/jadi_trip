@@ -21,10 +21,10 @@ class HomeController extends Controller
     {
         $get_user = User::where('email', Auth()->user()->email)->first();
 
-        if ($get_user->is_verified == 1) {
+        if ($get_user->is_activated == 1) {
             return redirect('/');
         } else {
-            return redirect('/verify-otp-page');
+            return redirect('/verify');
         }
     }
 

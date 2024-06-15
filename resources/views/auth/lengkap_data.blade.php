@@ -7,14 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="{{ asset('auth/style.css') }}" />
-    <link rel="icon" href="{{asset('assets/logo/logo.ico')}}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('assets/logo/logo.ico') }}" type="image/x-icon">
     <title>Form Registrasi</title>
 </head>
 
 <body>
 
     <div class="wrapper">
-        <form action="">
+        <form action="{{ url('/verified-info') }}" method="POST">
+            @csrf
             <h1>Registrasi</h1>
 
             <div class="input-box">
@@ -75,14 +76,14 @@
                 <input type="checkbox">Saya menyatakan bahwa informasi yang diberikan di atas adalah benar dan tepat
             </label>
 
-            <button type="submit" class="btn"><a href="/verifikasi">Simpan</a></button>
+            <button type="submit" class="btn">Simpan</button>
             <a href="/login" class="btn2">Sudah mempunyai akun? Login disini</a>
         </form>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            document.getElementById('no_telp').addEventListener('input', function (e) {
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('no_telp').addEventListener('input', function(e) {
                 var value = e.target.value;
                 e.target.value = value.replace(/[^0-9+]/g, '');
             });

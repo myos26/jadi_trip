@@ -23,6 +23,24 @@ class AuthController extends Controller
         return view('auth.register', compact('data_provinsi'));
     }
 
+    public function loginView()
+    {
+        if (Auth::check()) {
+            return redirect()->back();
+        } else {
+            return view('auth/login');
+        }
+    }
+
+    public function registerView()
+    {
+        if (Auth::check()) {
+            return redirect()->back();
+        } else {
+            return view('auth/register');
+        }
+    }
+
     public function login(Request $request)
     {
         $credentials = $request->validate([
@@ -35,7 +53,11 @@ class AuthController extends Controller
         if (Auth::attempt($credentials) && Hash::check($request->password, $user->password)) {
             $request->session()->regenerate();
 
-            return redirect('/temp-home');
+            if ($user->is_activated == 1 && $user->is_info_verified == 1) {
+                return redirect('/');
+            } else {
+                return redirect('/verify');
+            }
         }
     }
 
@@ -45,13 +67,13 @@ class AuthController extends Controller
     public function register(Request $request)
     {
         $request->validate([
-            'name' => ['required'],
+            'username' => ['required'],
             'email' => ['required', 'email'],
             'password' => ['required']
         ]);
 
         User::create([
-            'name' => $request->name,
+            'username' => $request->username,
             'email' => $request->email,
             'password' => Hash::make($request->password)
         ]);
@@ -63,7 +85,7 @@ class AuthController extends Controller
         $get_token->save();
 
         $get_user_email = $request->email;
-        $get_user_name = $request->name;
+        $get_user_name = $request->username;
         Mail::to($get_user_email)->send(new SendEmail($get_user_email, $validToken, $get_user_name));
 
         $credentials = $request->validate([
@@ -87,15 +109,50 @@ class AuthController extends Controller
             $get_token->save();
             $user = User::where('email', $get_token->email)->first();
             $user->is_activated = 1;
+            $user->email_verified_at = now();
             $user->save();
 
             $getting_token = VerifiedToken::where('token', $request->token)->first();
             $getting_token->delete();
 
-            return redirect('/');
+            return redirect('/info');
         } else {
             return redirect()->back();
         }
+    }
+
+    public function info()
+    {
+        $user = User::where('is_info_verified', Auth()->user()->is_info_verified)->first();
+
+        if ($user->is_activated == 1) {
+            if ($user->is_info_verified == 1) {
+                return redirect('/');
+            } else {
+                return view('auth/lengkap_data');
+            }
+        } else {
+            return redirect('/verify');
+        }
+    }
+
+    public function verifyInfo()
+    {
+        $get_user = User::where('email', Auth()->user()->email)->first();
+
+        if ($get_user->is_activated == 1) {
+            return redirect('/info');
+        } else {
+            return view('auth/verifikasi');
+        }
+    }
+
+    public function infoVerified(Request $request)
+    {
+        $get_user = User::where('email', Auth()->user()->email)->first();
+        $get_user->is_info_verified = 1;
+        $get_user->save();
+        return redirect('/');
     }
 
     public function logout(Request $request)
@@ -107,29 +164,5 @@ class AuthController extends Controller
         $request->session()->regenerateToken();
 
         return redirect('/');
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
     }
 }

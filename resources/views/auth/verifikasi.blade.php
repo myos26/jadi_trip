@@ -14,13 +14,14 @@
 <body>
 
     <div class="wrapper wrapper2">
-        <form action="">
+        <form action="{{ url('/verified') }}" method="POST">
+            @csrf
             <h1>Verifikasi Your Email</h1>
 
             <div class="input-box">
                 <h3>#We have sent a code to your email, check it and enter it below</h3>
                 <div class="input-field">
-                    <input type="number" name="kode_otp" placeholder="Kode OTP" required>
+                    <input type="number" name="token" placeholder="Kode OTP" required>
                     <i class='bx bxs-lock-alt'></i>
                 </div>
             </div>
@@ -28,7 +29,7 @@
                 <input type="checkbox">Saya menyatakan bahwa informasi yang diberikan di atas adalah benar dan tepat
             </label> --}}
 
-            <button type="submit" class="btn"><a href="/dashboard">Verifikasi</a></button>
+            <button type="submit" class="btn">Verifikasi</button>
             {{-- <a href="/register" class="btn2 btn3">Tidak punya akun? Daftar disini</a> --}}
         </form>
     </div>

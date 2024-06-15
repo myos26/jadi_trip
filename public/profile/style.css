@@ -1,0 +1,146 @@
+* {
+    text-decoration: none;
+    list-style: none;
+    font-family: "Poppins";
+    color: black;
+    border: none;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #c91212;
+}
+
+.top-bar {
+    /* border: 1px solid black; */
+    width: 100%;
+    border-bottom: 1px solid #686464;
+    margin: 10px;
+    padding: 10px;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb-item {
+    margin-right: 5px;
+}
+
+.breadcrumb-item:before {
+    margin-right: 5px;
+    content: "/";
+}
+
+.konten {
+    padding: 10px;
+    /* border: 1px solid black; */
+}
+
+.box-besar {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.box-image {
+    left: 0;
+    margin-right: 30px;
+}
+
+.box-image img{
+    height: 250px;
+    width: 250px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.box-data {
+    margin: 10px;
+    position: relative;
+    margin-bottom: -10px;
+    display: block;
+}
+
+.label-data {
+    text-decoration: none;
+    margin-bottom: 20px;
+    display: flex;
+    border: none;
+    color: black;
+}
+
+.item-data {
+    border: none;
+    font-size: 14px;
+    width: 120px;
+    color: black;
+}
+
+.isi-data::before {
+    content: ":";
+    margin: 0 20px;
+    color: black;
+}
+
+.isi-data {
+    color: black;
+    font-size: 14px;
+   border: none;
+}
+
+.data-wilayah{
+    background-color: transparent;
+    width: 150px;
+    margin-left: -6px;
+}
+
+.box-deskripsi{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.box-deskripsi .deskripsi{
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+    height: auto;
+    line-height: 2;
+    padding: 10px 15px;
+    margin-bottom: 30px;
+}
+
+.button a{
+    margin-left: 10px;
+    border-radius: 7px;
+    border: 1px solid rgb(10, 3, 29);
+    padding: 5px 20px;
+    font-size: 14px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.button a:hover{
+    background-color: aqua;
+}
+
+@media (max-width: 700px){
+    .box-besar{
+        display: grid;
+        justify-content: center;
+    }
+
+    .box-image{
+        justify-self: center;
+    }
+
+    .box-deskripsi .deskripsi{
+        height: auto;
+    }
+}

@@ -1036,12 +1036,12 @@
                                                 <ul class="list-unstyled card-meta  align-items-center">
                                                     <li>By <a href="author-1" class="blog-author fw-bold">Mike
                                                             Aiden</a></li>
-                                                    <li>January 26, <span class="dynamic-year"> </span>.</li>
+                                                    <li>{{ $data->created_at->DiffForHumans() }}<span>
+                                                        </span>.
+                                                    </li>
                                                 </ul>
 
-                                                <p class="card-text small">Unearth the mysteries of ancient cities with
-                                                    "Historic Gems," where each cobblestone and ruin tells tales of
-                                                    bygone eras. Embark on a journey...</p>
+                                                <p class="card-text small">{{ Str::limit($data->artikel, 100) }}</p>
                                             </div>
                                     </div>
                                 </div>

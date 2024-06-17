@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -13,6 +14,12 @@ class PostController extends Controller
     public function index()
     {
         return view('admin.page.Post.post');
+    }
+
+    public function post($slug)
+    {
+        $post = Post::with('kategori')->where('slug', $slug)->first();
+        return view('article', compact('post'));
     }
 
     public function TambahPostingan()

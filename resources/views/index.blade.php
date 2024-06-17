@@ -186,85 +186,100 @@
 
                                     {{-- LOGO PROFIL KANAN ATAS --}}
                                     {{-- PROFIL KETIKA SUDAH LOGIN SCRIPT DIBAWAH --}}
-                                    <div class="box-profile">
-                                        <img src="{{ asset('admin/images/profile-2.jpg') }}" class="user_pic"
-                                            alt="" onclick="toggleMenu()">
-                                    </div>
-
-                                    <div class="sub-menu-wrap" id="subMenu">
-                                        <div class="sub-menu">
-                                            <div class="user-info">
-                                                <h3>Skyzethh Zyro</h3>
-                                                <img src="{{ asset('admin/images/profile-2.jpg') }}">
-
-                                            </div>
-                                            <hr>
-
-                                            <div class="sub-menu-link">
-                                                <span class="material-icons-sharp sub-icon">
-                                                    account_circle
-                                                </span>
-                                                <a href="Profil">Profile</a>
-                                            </div>
-
-                                            <div class="sub-menu-link">
-                                                <span class="material-icons-sharp sub-icon">
-                                                    logout
-                                                </span>
-                                                <a href="Logout">Logout</a>
-                                            </div>
-
+                                    @if (Auth::check())
+                                        <div class="box-profile" style="width: 50px; height: 50px; overflow: hidden;">
+                                            <img src="{{ asset('admin/images/' . Auth::user()->photo) }}"
+                                                class="user_pic" alt="" id="toggle-button" width="50">
                                         </div>
-                                    </div>
 
+                                        <div class="sub-menu-wrap" id="subMenu">
+                                            <div class="sub-menu">
+                                                <div class="user-info">
+                                                    <h3>{{ Auth::user()->username }}</h3>
+                                                    <img src="{{ asset('admin/images/' . Auth::user()->photo) }}">
+
+                                                </div>
+                                                <hr>
+
+                                                <div class="sub-menu-link">
+                                                    <span class="material-icons-sharp sub-icon">
+                                                        account_circle
+                                                    </span>
+                                                    <a href="profile">Profile</a>
+                                                </div>
+
+                                                <div class="sub-menu-link">
+                                                    <span class="material-icons-sharp sub-icon">
+                                                        logout
+                                                    </span>
+                                                    <a href="logout">Logout</a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    @endif
+
+                                    @if (!Auth::check())
+                                        {{-- PROFIL KETIKA BELUM LOGIN SCRIPT DIBAWAH --}}
+                                        <div class="box-profile">
+                                            {{-- <img src="{{ asset('admin/images/noimage.webp') }}" class="user_pic"
+                                                alt="" id="toggle-button"> --}}
+                                            <div class="burger-button" id="toggle-button">
+                                                <div
+                                                    style="width: 40px; height: 5px; background-color: white; border-radius: 10px; margin: 5px 0px;">
+                                                </div>
+                                                <div
+                                                    style="width: 40px; height: 5px; background-color: white; border-radius: 10px; margin: 5px 0px;">
+                                                </div>
+                                                <div
+                                                    style="width: 40px; height: 5px; background-color: white; border-radius: 10px; margin: 5px 0px;">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="sub-menu-wrap" id="subMenu">
+                                            <div class="sub-menu">
+                                                {{-- <div class="user-info">
+                                                    <h3>Anonymous</h3>
+                                                    <img src="{{ asset('admin/images/noimage.webp') }}">
+
+                                                </div> --}}
+                                                <hr>
+
+                                                <div class="sub-menu-link">
+                                                    <span class="material-icons-sharp sub-icon">
+                                                        login
+                                                    </span>
+                                                    <a href="login">Login</a>
+
+                                                </div>
+
+                                                <div class="sub-menu-link">
+                                                    <span class="material-icons-sharp sub-icon">
+                                                        how_to_reg
+                                                    </span>
+                                                    <a href="register">Register</a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    @endif
                                     <script>
-                                        let subMenu = document.getElementById("subMenu");
+                                        document.getElementById('toggle-button').addEventListener('click', function(event) {
+                                            const menu = document.getElementById('subMenu');
+                                            menu.classList.toggle('open-menu');
+                                            event.stopPropagation();
+                                        });
 
-                                        function toggleMenu() {
-                                            subMenu.classList.toggle("open-menu");
-                                        }
+                                        document.addEventListener('click', function(event) {
+                                            const menu = document.getElementById('subMenu');
+                                            const button = document.getElementById('toggle-button');
+                                            if (!menu.classList.contains('subMenu') && !menu.contains(event.target) && !button.contains(event
+                                                    .target)) {
+                                                menu.classList.remove('open-menu');
+                                            }
+                                        });
                                     </script>
-
-                                    {{-- PROFIL KETIKA BELUM LOGIN SCRIPT DIBAWAH --}}
-                                    {{-- <div class="box-profile">
-                                        <img src="{{ asset('admin/images/noimage.webp') }}" class="user_pic"
-                                            alt="" onclick="toggleMenu()">
-                                    </div>
-
-                                    <div class="sub-menu-wrap" id="subMenu">
-                                        <div class="sub-menu">
-                                            <div class="user-info">
-                                                <h3>Anonymous</h3>
-                                                <img src="{{ asset('admin/images/noimage.webp') }}">
-
-                                            </div>
-                                            <hr>
-
-                                            <div class="sub-menu-link">
-                                                <span class="material-icons-sharp sub-icon">
-                                                    login
-                                                </span>
-                                                <a href="login">Login</a>
-
-                                            </div>
-
-                                            <div class="sub-menu-link">
-                                                <span class="material-icons-sharp sub-icon">
-                                                    how_to_reg
-                                                </span>
-                                                <a href="register">Register</a>
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                    <script>
-                                        let subMenu = document.getElementById("subMenu");
-
-                                        function toggleMenu() {
-                                            subMenu.classList.toggle("open-menu");
-                                        }
-                                    </script> --}}
 
                                     {{-- END OF PROFIL JIKA BELUM LOGIN --}}
 
@@ -1014,12 +1029,11 @@
                         <div class="col-lg-8">
                             <h2 class="section-title mb-lg-60  mb-md-40 md-20">Postingan Terbaru</h2>
                             <div class="row custom-row-gap">
-
-                                <div class="col-lg-12 col-xl-6">
-                                    <!-- single card -->
-                                    <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp"
-                                        data-wow-delay="0.4s">
-                                        @foreach ($datas as $data)
+                                @foreach ($datas as $data)
+                                    <div class="col-lg-12 col-xl-6">
+                                        <!-- single card -->
+                                        <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp"
+                                            data-wow-delay="0.4s">
                                             <div class="card-image-wrapper">
                                                 <a href="/article"><img src="assets/images/placeholder.svg"
                                                         data-src="assets/images/blog/explore-image-17.jpg"
@@ -1031,8 +1045,8 @@
                                                 <div class="card-header text-uppercase">
                                                     <a href="/category">{{ $data->kategori->name }}</a>
                                                 </div>
-                                                <h5 class="fs-4 card-title"><a href="/article"
-                                                        class="blog-title">{{ $data->judul }}</a></h5>
+                                                <h5 class="fs-4 card-title"><a href="/article/{{ $data->slug }}"
+                                                        class="blog-title">{{ $data->title }}</a></h5>
                                                 <ul class="list-unstyled card-meta  align-items-center">
                                                     <li>By <a href="author-1" class="blog-author fw-bold">Mike
                                                             Aiden</a></li>
@@ -1041,13 +1055,15 @@
                                                     </li>
                                                 </ul>
 
-                                                <p class="card-text small">{{ Str::limit($data->artikel, 100) }}</p>
+                                                <p class="card-text small">{{ Str::limit($data->content, 100) }}</p>
+                                                <a href="/article/{{ $data->slug }}">Read
+                                                    more &raquo;</a>
                                             </div>
+                                        </div>
                                     </div>
-                                </div>
                                 @endforeach
 
-                                <div class="col-lg-12 col-xl-6">
+                                {{-- <div class="col-lg-12 col-xl-6">
                                     <!-- single card -->
                                     <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp"
                                         data-wow-delay="0.4s">
@@ -1315,7 +1331,7 @@
                                                 rustling leaves orchestrate...</p>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
 
                                 <!-- BUtton -->
                                 <div class="load-more-btn pt-lg-20  pt-10 d-flex justify-content-end  wow fadeInUp"
@@ -1516,8 +1532,7 @@
                             <div class="swiper-slide">
                                 <div class="instagram-image-wrapper image-hover">
                                     <img src="assets/images/placeholder.svg"
-                                        data-src="assets/images/instagram/explore-image-16.jpg"
-                                        alt="instagram-image">
+                                        data-src="assets/images/instagram/explore-image-16.jpg" alt="instagram-image">
 
                                     <span class="d-flex justify-content-center mb-10"> <svg width="40"
                                             height="40" viewBox="0 0 40 40" fill="none"
@@ -1573,8 +1588,7 @@
                                     <!-- footer-contacts -->
 
                                     <div class="d-block d-lg-none">
-                                        <div
-                                            class="footer-subscription d-flex flex-column gap-3 gap-md-30 ms-lg-auto">
+                                        <div class="footer-subscription d-flex flex-column gap-3 gap-md-30 ms-lg-auto">
                                             <h6 class="text-white mb-0">Subscribe</h6>
                                             <form>
                                                 <div class="contact-form position-relative footer-form">

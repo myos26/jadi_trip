@@ -12,4 +12,9 @@ class Kategori extends Model
 
     protected $table = 'kategoris'; // Nama tabel seharusnya dalam huruf kecil dan jamak: 'kategoris'
     protected $fillable = ['name'];
+
+    public function posts()
+    {
+        return $this->hasOne(Post::class);
+    }
 }

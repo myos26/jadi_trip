@@ -586,67 +586,141 @@
                                 <div class="sticky-elements">
 
                                     <div class="author-card author-card-sidebar  flex-column align-items-center mb-30">
-                                        <h4 class="author-name pb-0 mb-0">Who I am</h4>
+                                        <h4 class="author-name pb-0 mb-0">Linimasa Kami</h4>
                                         <div class="author-image m-auto">
-                                            <img src="assets/images/placeholder.svg" data-src="assets/images/about-image-1.png" alt="author-image">
+                                            <img src="{{asset('assets/logo/Logo Bulat Puth.png')}}" alt="Jadi Trip">
                                         </div>
-
+    
                                         <div class="author-content">
-                                            <p class="text-center mb-lg-40 mb-10">Hello, I'm Mike Aiden, the intrepid travel blogger, weaves tales of exploration and discovery. With a passion for uncovering hidden gems and embracing diverse cultures, I invite you to join me on a journey of wanderlust and adventure. Let's traverse the globe together and share in the beauty of our world.</p>
-
-                                            <p class="text-center">Let's wander together through the pages of my travel chronicles! 🌍✈️</p>
+                                            <p class="text-center mb-lg-40 mb-10">Kami sangat senang mendengar dari Anda. Jika Anda memiliki pertanyaan, saran, atau membutuhkan informasi lebih lanjut tentang layanan kami, jangan ragu untuk menghubungi kami melalui linimasa kami dibawah</p>
+    
+                                            <p class="text-center">Mari telusuri halaman-halaman kronik perjalanan kami bersama! 🌍✈️</p>
                                         </div>
                                         <div class="author-socials">
-                                            <a href="https://www.facebook.com" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                                            <a href="https://www.instagram.com" class="instagram"><i class="fab fa-instagram"></i></a>
-                                            <a href="https://www.linkedin.com" class="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
-                                            <a href="https://www.pinterest.com" class="pinterest"><i class="fab fa-pinterest-p"></i></a>
-                                            <a href="https://www.youtube.com/" class="youtube"><i class="fa-brands fa-youtube"></i></a>
+                                            <a href="https://wa.me/6282142785442" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                                            <a href="https://www.facebook.com/jaditrip" class="facebook"><i class="fab fa-facebook"></i></a>
+                                            <a href="https://www.instagram.com/jaditrip.travel" class="instagram"><i class="fab fa-instagram"></i></a>
+                                            <a href="https://x.com/jaditrip_travel" class="x"><i class="fab fa-twitter"></i></a>
+                                            <a href="https://www.youtube.com/@jaditrip.travel" class="youtube"><i class="fa-brands fa-youtube"></i></a>
+                                            <a href="https://www.linkedin.com/company/jadi-trip/?viewAsMember=true" class="linkedin"><i class="fa-brands fa-linkedin"></i></a>
                                         </div>
-
+                                        
                                     </div>
                                 </div>
                                 <!-- author-card -->
                             </div>
                             <div class="col-xl-7  col-lg-7">
-                                <div class="about-page-content">
-                                    <h5 class="mb-20">Unveiling the World through My Lens!</h5>
-                                    <p class="mb-30">Hello, fellow wanderers! I'm Mike Aiden, the creator and explorer behind this personal travel blog. Embarking on a journey of self-discovery, I discovered a profound passion for unravelling the world's mysteries, one destination at a time.</p>
+                                <div style="text-align: justify;" class="about-page-content">
+                                    <h5 class="mb-20">Jelajahi dunia bersama JADI TRIP</h5>
+                                    <p class="mb-30">Selamat datang di Jadi Trip! Kami adalah perusahaan travel yang berfokus untuk memberikan pengalaman perjalanan yang tak terlupakan bagi Anda. Dengan komitmen yang kuat untuk kualitas dan kepuasan pelanggan, kami selalu berusaha untuk menjadi mitra perjalanan yang Anda andalkan.</p>
 
-                                    <p class="mb-lg-60 mb-30">At Jadi Trip, we believe that travel is not just about visiting new places; it's a transformative experience that leaves an indelible mark on the soul. Our mission is to inspire and guide you on your own odyssey of discovery, providing insights into hidden gems, cultural nuances, and the beauty that lies off the beaten path.</p>
+                                    <p class="mb-lg-60 mb-30">Jadi Trip didirikan pada tahun 2024 oleh sekelompok pecinta travel yang berkeinginan untuk berbagi keindahan dunia dengan orang lain. Dengan hanya berbekal semangat dan visi untuk membuat perjalanan lebih mudah dan menyenangkan, kami memulai perjalanan kami dari kantor kecil di Kota Malang. Kami berharap bahwa kedepan Jadi Trip berkembang menjadi salah satu agen perjalanan terkemuka di Indonesia dengan ratusan destinasi di seluruh dunia.</p>
 
-                                    <h5 class="mb-20">Why Jadi Trip?</h5>
-                                    <p>Jadi Trip is not just a collection of travel tales; it's a curated space where each story is a brushstroke in the vibrant painting of our global adventures. We dive into the heart of destinations, capturing the essence of diverse landscapes, local flavours, and the magic that happens when cultures collide.</p>
+                                    <h5 class="mb-20">Visi & Misi Kami</h5>
+                                    <span><strong>Visi</strong></span>
+                                    <p>Menjadi agen perjalanan yang paling dicintai dan diandalkan di Indonesia. Kami ingin dikenal sebagai pionir dalam industri travel yang selalu memberikan solusi perjalanan terbaik dan pengalaman yang luar biasa bagi semua pelanggan kami.</p>
+                                    
+                                    <span><strong>Misi</strong></span>
+                                    <p class="mb-lg-60 mb-30">Menyediakan layanan perjalanan yang inovatif, mudah diakses, dan memberikan nilai lebih bagi setiap pelanggan. Kami percaya bahwa setiap orang berhak untuk menikmati pengalaman perjalanan yang memuaskan tanpa harus menghadapi kerumitan.</p>
 
-                                    <h5 class="mb-20">What to Expect:</h5>
+                                    <h5 class="mb-20">Layanan Kami</h5>
                                     <ul class="mb-lg-60 mb-30">
                                         <li>
-                                            <p> <span class="fw-bold">Authentic Narratives:</span>
-                                             Our stories are genuine and unfiltered, sharing both the highs and lows of our travel escapades.</p>
+                                            <p> <span class="fw-bold">Paket Wisata:</span>
+                                                Kami menawarkan berbagai paket wisata yang disesuaikan dengan kebutuhan dan keinginan Anda. Mulai dari wisata lokal hingga internasional, kami memiliki berbagai pilihan paket yang mencakup destinasi populer hingga tempat-tempat tersembunyi yang jarang diketahui orang.</p>
                                         </li>
                                         <li>
-                                            <p> <span class="fw-bold">Local Insights:</span>
-                                             Beyond the tourist hotspots, we delve into the heart of communities, forging connections and celebrating the rich tapestry of global cultures.</p>
+                                            <p> <span class="fw-bold">Layanan Transportasi:</span>
+                                                Untuk memastikan kenyamanan Anda selama perjalanan, kami menyediakan berbagai layanan transportasi, termasuk sewa mobil, transfer bandara, dan transportasi antar kota. Kami bekerja sama dengan penyedia layanan transportasi terpercaya untuk menjamin keamanan dan kenyamanan Anda.</p>
                                         </li>
                                         <li>
-                                            <p> <span class="fw-bold">Practical Tips:</span>
-                                           From travel hacks to must-visit spots, we offer practical advice to enhance your journeys and make them as seamless as possible.</p>
-                                        </li>
-                                        <li>
-                                            <p> <span class="fw-bold">Photography Showcase:</span>
-                                            Immerse yourself in the visual feast of our travels. Every image is a testament to the breathtaking beauty that awaits you around the world.</p>
+                                            <p> <span class="fw-bold">Wisata Khusus dan Ekspedisi:</span>
+                                                Bagi Anda yang mencari pengalaman yang unik dan berbeda, kami juga menawarkan wisata khusus seperti trekking, diving, dan ekspedisi alam. Tim profesional kami siap untuk mengatur perjalanan yang penuh petualangan dan tantangan sesuai dengan keinginan Anda.
+                                            </p>
                                         </li>
                                     </ul>
-                                    <h5 class="mb-20">Join Our Community:</h5>
-                                    <p class="mb-20">Beyond the blog, we invite you to be a part of our travel tribe. Share your own stories, ask questions, and connect with like-minded explorers. Let's build a community that celebrates the diverse tapestry of our global adventures.</p>
-                                    <p class="mb-20">Thank you for joining us on this incredible journey. Whether you're an avid traveler or an armchair explorer, there's a place for you at [Your Blog Name]. Here's to countless more miles, experiences, and stories waiting to unfold.</p>
 
-                                    <p class="mb-20">Adventure awaits!</p>
+                                    <h5 class="mb-20">Nilai-nilai Kami</h5>
+                                    <ul class="mb-lg-60 mb-30">
+                                        <li>
+                                            <p> <span class="fw-bold">Kepuasan Pelanggan</span>
+                                                Kepuasan pelanggan adalah prioritas utama kami. Kami selalu berusaha untuk memberikan layanan terbaik dan memenuhi harapan setiap pelanggan. Dengan tim customer service yang responsif dan ramah, kami siap membantu Anda kapan saja.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p> <span class="fw-bold">Inovasi</span>
+                                                Kami percaya bahwa inovasi adalah kunci untuk terus berkembang dan memberikan yang terbaik bagi pelanggan kami. Oleh karena itu, kami selalu mencari cara baru untuk meningkatkan layanan dan menawarkan solusi perjalanan yang lebih baik.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p> <span class="fw-bold">Integritas</span>
+                                                Kami menjalankan bisnis dengan integritas tinggi. Transparansi dan kejujuran adalah prinsip utama dalam setiap aspek layanan kami. Kami berkomitmen untuk memberikan informasi yang jelas dan akurat serta menjaga kepercayaan yang telah diberikan pelanggan kepada kami.
+                                            </p>
+                                        </li>
+                                    </ul>
 
-                                    <p>Jadi Trip Creator & Explorer 🌍✈️</p>
+                                    <h5 class="mb-20">Tim Yang Profesional</h5>
+                                    <p class="mb-lg-60 mb-30">Jadi Trip memiliki tim yang terdiri dari para profesional yang berpengalaman dan berdedikasi di bidang travel. Setiap anggota tim kami memiliki pengetahuan yang mendalam tentang destinasi wisata dan siap untuk memberikan saran terbaik untuk perjalanan Anda. Kami percaya bahwa tim yang solid dan bersemangat adalah kunci sukses untuk memberikan layanan terbaik kepada pelanggan.</p>
+
+                                    <h5 class="mb-20">Tanggung Jawab Sosial</h5>
+                                    <p>Kami percaya bahwa perjalanan tidak hanya tentang eksplorasi, tetapi juga tentang memberikan dampak positif pada masyarakat dan lingkungan. Oleh karena itu, Jadi Trip aktif terlibat dalam berbagai kegiatan tanggung jawab sosial, seperti:</p>
+                                    <ul class="mb-lg-60 mb-30">
+                                        <li>
+                                            <p> <span class="fw-bold">Pelestarian Lingkungan:</span>
+                                                Kami mendukung program-program pelestarian lingkungan dengan mengajak wisatawan untuk menjaga kebersihan dan kelestarian destinasi wisata.</p>
+                                        </li>
+                                        <li>
+                                            <p> <span class="fw-bold">Pemberdayaan Komunitas Lokal:</span>
+                                                Kami bekerja sama dengan komunitas lokal untuk mendukung ekonomi setempat dengan mempromosikan produk dan layanan mereka kepada wisatawan.</p>
+                                        </li>
+                                        <li>
+                                            <p> <span class="fw-bold">Edukasi dan Kesadaran:</span>
+                                                Kami mengadakan program edukasi bagi wisatawan tentang pentingnya pariwisata berkelanjutan dan bagaimana mereka dapat berkontribusi dalam menjaga kelestarian alam dan budaya.</p>
+                                        </li>
+                                    </ul>
+
+                                    <h5 class="mb-20">Teknologi dan Inovasi</h5>
+                                    <p>Dalam era digital saat ini, teknologi memainkan peran penting dalam industri travel. Jadi Trip terus berinovasi dengan mengadopsi teknologi terbaru untuk meningkatkan layanan kami, seperti:</p>
+                                    <ul class="mb-lg-60 mb-30">
+                                        <li>
+                                            <p> <span class="fw-bold">Website dan Aplikasi Mobile:</span>
+                                                Kami memiliki platform online yang user-friendly yang memungkinkan Anda untuk mencari, membandingkan, dan memesan paket wisata, tiket pesawat, dan hotel dengan mudah.</li>
+                                        <li>
+                                            <p> <span class="fw-bold">Sistem Pembayaran Aman:</span>
+                                                Kami menyediakan berbagai opsi pembayaran yang aman dan nyaman, termasuk transfer bank, kartu kredit, dan e-wallet.</p>
+                                        </li>
+                                        <li>
+                                            <p> <span class="fw-bold">Layanan Pelanggan 24/7:</span>
+                                                Tim layanan pelanggan kami siap membantu Anda kapan saja, baik melalui telepon, email, atau chat online.</p>
+                                        </li>
+                                    </ul>
+                                    
+                                    <h5 class="mb-20">Masa Depan Kami</h5>
+                                    <p>Ke depan, kami berkomitmen untuk terus mengembangkan layanan kami dan memperluas jangkauan destinasi wisata. Kami berencana untuk:</p>
+                                    <ul class="mb-lg-60 mb-30">
+                                        <li>
+                                            <p> <span class="fw-bold">Menambah Destinasi Baru:</span>
+                                                Kami akan terus menambah destinasi wisata baru, baik domestik maupun internasional, untuk memberikan lebih banyak pilihan bagi pelanggan kami.</p>
+                                        </li>
+                                        <li>
+                                            <p> <span class="fw-bold">Meningkatkan Kualitas Layanan:</span>
+                                                Kami akan terus meningkatkan kualitas layanan dengan memberikan pelatihan kepada tim kami dan berinvestasi dalam teknologi baru.</p>
+                                        </li>
+                                        <li>
+                                            <p> <span class="fw-bold">Kemitraan Strategis:</span>
+                                                Kami akan menjalin kemitraan strategis dengan berbagai pihak untuk memberikan manfaat lebih bagi pelanggan kami, seperti diskon khusus, fasilitas tambahan, dan pengalaman eksklusif.</p>
+                                        </li>
+                                    </ul>
+                                    
+                                    <h5 class="mb-20">Nikmati Layanan Kami</h5>
+                                    <p class="mb-20">Terima kasih telah mengunjungi Jadi Trip. Kami berharap dapat menjadi bagian dari perjalanan Anda dan memberikan pengalaman yang tak terlupakan. Mari bersama-sama menjelajahi keindahan dunia dengan Jadi Trip!</p>
+
+                                    <p class="mb-20">Petualangan Menanti!</p>
+
+                                    <p>Creator & Explorer, Jadi Trip 🌍✈️</p>
                                 </div>
                             </div>
-
+                            
                         </div>
                     </div>
                     <!-- container -->

@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
+use App\Models\Iklan;
 use App\Models\User;
 use Illuminate\Http\Request;
-use App\Models\Post;
 
 class HomeController extends Controller
 {
@@ -14,13 +15,16 @@ class HomeController extends Controller
     public function index()
     {
         $datas = Post::all();
+        $datas = Post::with('kategori')->latest()->get();
         return view('index', compact('datas'));
     }
 
 
-    public function blog(){
-
-        return view('blog');
+    public function blog()
+    {
+        $iklans = Iklan::all();
+        $Datalink = Post::all();
+        return view('blog', compact('iklans','Datalink'));
     }
 
     public function verifyOtp()
@@ -32,38 +36,5 @@ class HomeController extends Controller
         } else {
             return redirect('/verify');
         }
-    }
-
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
     }
 }

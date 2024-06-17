@@ -5038,7 +5038,14 @@ textarea.form-control-lg {
   color: var(--bs-card-subtitle-color);
 }
 
-.card-text:last-child {
+/* .card-text:last-child {
+    margin-bottom: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+} */
+.card-text{
     margin-bottom: 0;
     display: -webkit-box;        /* Gunakan kotak fleksibel webkit */
     -webkit-box-orient: vertical; /* Orientasi vertikal */
@@ -7716,7 +7723,7 @@ body {
     column-gap: 26px;
   }
   .dark-mode .about-me{
-    height: 100px;
+    height: 10px;
   }
 }
 .card .card-meta li {

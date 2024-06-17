@@ -5039,7 +5039,11 @@ textarea.form-control-lg {
 }
 
 .card-text:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0;
+    display: -webkit-box;        /* Gunakan kotak fleksibel webkit */
+    -webkit-box-orient: vertical; /* Orientasi vertikal */
+    -webkit-line-clamp: 4;       /* Batas jumlah baris */
+    overflow: hidden;            /* Sembunyikan teks yang melampaui */
 }
 
 .card-link + .card-link {
@@ -7434,6 +7438,7 @@ textarea.form-control-lg {
 /******** Dark CSS ********/
 /**************************/
 .dark-mode .about-me {
+  height: 437px;
   background: #154757;
   color: #D9D9D9;
 }
@@ -7709,6 +7714,9 @@ body {
 @media (max-width: 767.98px) {
   .card .card-meta {
     column-gap: 26px;
+  }
+  .dark-mode .about-me{
+    height: 100px;
   }
 }
 .card .card-meta li {
@@ -10722,8 +10730,8 @@ Author card Style End
 
 @media (max-width: 767.98px) {
   .navbar-brand img {
-    width: 100px;
-    height: 20px;
+    width: auto;
+    height: 10%;
   }
 }
 .nav {
@@ -12973,7 +12981,7 @@ svg {
 .about-me {
   --bs-dropdown-bg: var(--bs-secondary);
   background: var(--bs-secondary);
-  padding: 50px;
+  /* padding: 50px; */
   border-radius: 1rem;
 }
 

@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/iklan.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
@@ -820,7 +821,18 @@
                             </div>
                             <div class="col-xl-4">
                                 <div class="sticky-elements">
-
+                                    {{-- Iklan 1 --}}
+                                    @foreach ($iklans as $iklan)
+                                        @foreach ($Datalink as $link)
+                                        <a href="https://wa.me/6283823538692?text=Halo,%20selamat%20datang%20di%20Jadi%20Trip!%20Terima%20kasih%20telah%20memilih%20layanan%20kami.%20Untuk%20memudahkan%20pemesanan,%20silakan%20isi%20formulir%20berikut%20ini:%0A%0ANama%20Lengkap%20%20%20%20%20%20%20%20%20%20%20%20%20:%0A%0ALayanan%20yang%20Dipesan%20%20:%20*{{ $link->judul }}*%0A%0AJumlah%20Orang%20(min-2)%20%20:%0A%0ATanggal%20Berangkat%20%20%20%20%20%20%20:%0A%0AAlamat%20Penjemputan%20%20%20:%20" target="_blank">
+                                                <div class="about-me wow fadeInUp" data-wow-delay="0.4s">
+                                                    <img id="iklan1-1" src="assets/images/iklan/explore-image-15.jpg" alt="">
+                                                    <img id="iklan1-2" src="assets/images/iklan/explore-image-1.jpg" alt="">
+                                                </div>
+                                            </a>
+                                        @endforeach
+                                    @endforeach
+                                    {{-- end iklan 1 --}}
                                     <!-- socials widget -->
                                     <div class="widget widget-style-2 mb-lg-60 mb-0 wow fadeInUp" data-wow-delay="0.4s">
                                         <h4 class="fs-1 mb-3 mb-lg-20 text-white text-center">Social Link</h4>

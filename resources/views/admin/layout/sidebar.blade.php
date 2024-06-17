@@ -2,8 +2,8 @@
 <aside>
     <div class="toggle">
         <div class="logo">
-            <img src="{{ asset('admin/images/logo.png') }}" />
-            <h2>Asmr<span class="danger">Prog</span></h2>
+            <img src="{{ asset('assets/logo/Jadi Trip Bputih.png') }}" />
+            {{-- <h2>Asmr<span class="danger">Prog</span></h2> --}}
         </div>
         <div class="close" id="close-btn">
             <span class="material-icons-sharp"> close </span>

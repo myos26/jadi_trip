@@ -646,15 +646,13 @@
                                 <div class="sticky-elements">
                                     <div class="d-flex flex-column gap-40">
 
-                                        <!-- About Me -->
-                                        <div class="about-me wow fadeInUp" data-wow-delay="0.4s">
-                                            <div class="text-center">
-                                                <h5 class="fs-1 mb-30">About us</h5>
-                                                <a href="about"><img src="assets/images/placeholder.svg" data-src="assets/images/about-image-1.png" class="about-image-1 mb-20" alt="about-image"></a>
-                                                <p class="dropdown-text mb-30">Hi there, my name is Mike Aiden and I am a travelholic. Let's explore the world together. Welcome to my blog!</p>
-                                                <a href="author-1" class="btn btn-primary">Read More</a>
+                                        <!-- Iklan 1 -->
+                                        <a href="https://www.serbatau.web.id" target="_blank">
+                                            <div class="about-me wow fadeInUp" data-wow-delay="0.4s">
+                                                <img id="iklan1-1" src="assets/images/iklan/explore-image-15.jpg" alt="">
+                                                <img id="iklan1-2" src="assets/images/iklan/explore-image-1.jpg" alt="">
                                             </div>
-                                        </div>
+                                        </a>
                                         <!-- Socials -->
                                         <div class="widget widget-style-2 mb-10 wow fadeInUp" data-wow-delay="0.4s">
                                             <h4 class="fs-1 mb-3 mb-lg-20 text-white text-center">Social Link</h4>
@@ -734,26 +732,26 @@
                                         <!-- single card -->
                                         <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp" data-wow-delay="0.4s">
                                             <div class="card-image-wrapper">
-                                                <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/blog/explore-image-17.jpg" class="card-img-top" alt="Discovering"></a>
+                                                <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/blog/{{ $data->thumbnail }}" class="card-img-top" alt="Discovering"></a>
                                             </div>
 
                                             <div class="card-body">
                                                 <div class="card-header text-uppercase">
                                                     <a href="/category">{{ $data->kategori->name }}</a>
                                                 </div>
-                                                <h6 class="fs-4 card-title"><a href="/article" class="blog-title">{{ $data->judul }}</a></h6>
+                                                <h6 class="fs-4 card-title"><a href="/article" class="blog-title">{{ $data->title }}</a></h6>
                                                 <ul class="list-unstyled card-meta  align-items-center">
-                                                    <li>By <a href="author-1" class="blog-author fw-bold">Mike Aiden</a></li>
-                                                    <li>January 26, <span class="dynamic-year"> </span>.</li>
+                                                    <li>By <a href="author-1" class="blog-author fw-bold">Jadi Trip</a></li>
+                                                    <li>Juni 1, <span class="dynamic-year"> </span>.</li>
                                                 </ul>
 
-                                                <p class="card-text small">Unearth the mysteries of ancient cities with "Historic Gems," where each cobblestone and ruin tells tales of bygone eras. Embark on a journey...</p>
+                                                <p class="card-text small">{{$data->content}}</p>
                                             </div>
                                         </div>
                                     </div>
                                 @endforeach
 
-                                    <div class="col-lg-12 col-xl-6" >
+                                    {{-- <div class="col-lg-12 col-xl-6" >
                                         <!-- single card -->
                                         <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp" data-wow-delay="0.4s">
                                             <div class="card-image-wrapper">
@@ -958,7 +956,7 @@
                                                 <p class="card-text small">Nature's Healing Sanctuary invite weary souls to immerse in the enchanting embrace  ancient tree, where of the wind and rustling leaves orchestrate...</p>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> --}}
 
                                     <!-- BUtton -->
                                     <div class="load-more-btn pt-lg-20  pt-10 d-flex justify-content-end  wow fadeInUp" data-wow-delay="0.4s">

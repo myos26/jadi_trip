@@ -5,6 +5,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 use App\Models\User;
+use App\Models\Iklan;
+use App\Models\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,11 +20,16 @@ use App\Models\User;
 */
 
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/dashboard', function(){
+    return view('admin.index');
+});
 
 Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
 
 Route::get('/blog', function () {
-    return view('blog');
+    $iklans = Iklan::all();
+    $Datalink = Post::all();
+    return view('blog', compact('iklans','Datalink'));
 })->name('blog');
 
 Route::get('/temp-home', [HomeController::class, 'verifyOtp']);

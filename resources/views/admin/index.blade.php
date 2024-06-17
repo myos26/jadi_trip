@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="{{ asset('admin/css/style.css') }}" />
     <link rel="stylesheet" href="{{ asset('admin/css/personal.css') }}" />
     <title>Responsive Dashboard Design #1 | AsmrProg</title>
+    <link rel="icon" href="{{asset('assets/logo/logo.ico')}}" type="image/x-icon">
+
 </head>
 
 <body>

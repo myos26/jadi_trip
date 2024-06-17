@@ -1,7 +1,7 @@
 .clickHere{
     width: 25%;
     padding: 2% 0;
-    /* border: 1px solid red; */
+    border: 2px solid white;
     border-radius: 20px;
     background-color: rgb(17, 213, 161);
     margin: 0;
@@ -17,6 +17,7 @@
     transition: 0.3s;
 }
 #lihat{
+    border: 2px solid rgb(255, 255, 255);
     /* display: flex; */
     color: white;
     width: 50px;
@@ -24,9 +25,47 @@
     border-radius: 20px;
     background-color: rgb(17, 213, 161);
     font-weight: 600;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 #lihat:hover{
     background-color: rgb(187, 245, 72);
-    transition: 0.3s;
+    transition: 0.2s;
+}
+.about-me{
+    height: 437px;
+}
+#iklan1-1{
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+#iklan1-2{
+    display: none;
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+@media(max-width: 788px){
+    .clickHere{
+        width: 40%;
+  font-family: var(--bs-font-family-style-1);
+    }
+
+    #lihat{
+        font-size: 18pt;
+        font-weight: 600;
+  font-family: var(--bs-font-family-style-1);
+  padding: 2% 3%;
+    }
+    #iklan1-1{
+        display: none;
+    }
+    #iklan1-2{
+        display: inline;
+    }
+    .about-me{
+        height: 100px;
+    }
 }

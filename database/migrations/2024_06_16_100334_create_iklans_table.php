@@ -11,17 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('blogs', function (Blueprint $table) {
+        Schema::create('iklans', function (Blueprint $table) {
             $table->id();
             $table->text('image');
-            $table->string('judul', 70);
-            $table->text('artikel');
-            $table->BigInteger('kategori_id');
-            $table->enum('status', ['Public', 'Draft']);
+            $table->string('company');
+            $table->text('link');
+            $table->enum('type', ['Iklan 1','Iklan 2','Iklan 3']);
+            $table->enum('status', ['Enable','Disable'])->default('Disable');
             $table->timestamps();
             $table->softDeletes();
-
-            // $table->foreign('kategori_id')->references('id')->on('kategoris')->onDelete('cascade');
         });
     }
 
@@ -30,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('blogs');
+        Schema::dropIfExists('iklans');
     }
 };

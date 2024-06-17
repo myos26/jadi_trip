@@ -7,6 +7,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('admin/css/style.css') }}" />
     <title>Responsive Dashboard Design #1 | AsmrProg</title>
+    <link rel="icon" href="{{asset('assets/logo/logo.ico')}}" type="image/x-icon">
+
 </head>
 
 <body>

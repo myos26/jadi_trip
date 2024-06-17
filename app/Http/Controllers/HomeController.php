@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-use App\Models\Blog;
+use App\Models\Post;
 
 class HomeController extends Controller
 {
@@ -13,7 +13,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $datas = Blog::all();
+        $datas = Post::all();
         return view('index', compact('datas'));
     }
 

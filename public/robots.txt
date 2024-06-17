@@ -1,3 +1,3 @@
 User-agent: *
-Disallow: /admin  # Melarang mesin pencari mengakses folder admin
+Disallow: /dashboard  # Melarang mesin pencari mengakses folder admin
 Disallow: /private-page  # Melarang mesin pencari mengakses halaman tertentu

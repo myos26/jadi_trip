@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('username');
+            $table->text('photo')->default('noimage.webp');
             $table->string('email')->unique();
             $table->boolean('is_activated')->default(0);
             $table->boolean('is_info_verified')->default(0);

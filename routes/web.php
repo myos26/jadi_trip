@@ -8,6 +8,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use App\Models\Post;
 use App\Models\User;
+use Illuminate\Routing\RouteGroup;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,7 +39,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/verify', [AuthController::class, 'verifyInfo']);
     Route::get('/info', [AuthController::class, 'info']);
     Route::get('/logout', [AuthController::class, 'logout']);
+});
 
+Route::middleware(['auth', 'admin'])->group(function () {
     // ADMIN ROUTES
     Route::get('/Dashboard', [AdminController::class, 'Dashboard']);
     Route::get('/profil', [ProfileController::class, 'index']);

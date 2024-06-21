@@ -8,7 +8,7 @@
     <meta name="keywords" content="blog, blogging, blogger, articles, posts, content, writing, writers, blogosphere, online journal, web log, topics, ideas, tips, advice">
     <meta name="author" content="themeperch">
     <title>Jadi Trip</title>
-    <link rel="icon" href="{{asset('assets/logo/logo.ico')}}" type="image/x-icon">
+    <link rel="icon" href="{{url('assets/logo/logo.ico')}}" type="image/x-icon">
 
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,16 +16,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,700;1,900&family=Lovers+Quarrel&family=Meddon&display=swap" rel="stylesheet">
 
     <!-- css -->
-    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-    <link rel="stylesheet" href="assets/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/odometer.min.css">
-    <link rel="stylesheet" href="assets/css/venobox.min.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="assets/css/iklan.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="{{ url('assets/css/fontawesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url('assets/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ url('assets/css/odometer.min.css') }}">
+    <link rel="stylesheet" href="{{ url('assets/css/venobox.min.css') }}">
+    <link rel="stylesheet" href="{{ url('assets/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ url('assets/css/swiper-bundle.min.css') }}">
+    <link rel="stylesheet" href="{{ url('assets/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url('assets/css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{ url('assets/css/iklan.css') }}">
+    <link rel="stylesheet" href="{{ url('assets/css/new.css') }}">
+    <link rel="stylesheet" href="{{ url('assets/css/style.css') }}">
 
 </head>
 
@@ -38,8 +39,8 @@
                     <nav class="navbar navbar-expand-xl hover-menu">
                         <div class="d-flex w-100 justify-content-between align-items-center">
                             <a class="navbar-brand dark-light-logo" href="/" aria-label="nav-brands">
-                                <img src="assets/logo/Jadi Trip Bhitam.png" style="height: 70px" class="logo-light img-fluid" alt="logo-white">
-                                <img src="assets/logo/Jadi Trip Bputih.png" style="height: 70px" class="logo-dark" alt="logo-dark">
+                                <img src="{{ url('assets/logo/Jadi Trip Bhitam.png') }}" style="height: 70px" class="logo-light img-fluid" alt="logo-white">
+                                <img src="{{ url('assets/logo/Jadi Trip Bputih.png') }}" style="height: 70px" class="logo-dark" alt="logo-dark">
                             </a>
 
                              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasmobile-menu" aria-controls="offcanvasmobile-menu" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,18 +57,18 @@
                                 <div class="d-flex gap-70 align-items-center">
                                     <ul class="gap-20 navbar-nav mb-2 me-2 mb-lg-0">
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="/blog" aria-label="nav-links">
+                                            <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="{{ url('blog', ['kategori' => 'Destinasi']) }}" aria-label="nav-links">
                                                 Destinasi
                                             </a>
                                         </li>
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="/blog" aria-label="nav-links">
+                                            <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="{{ url('blog', ['kategori' => 'Aktifitas']) }}" aria-label="nav-links">
                                                 Aktifitas
                                             </a>
 
                                         </li>
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="/blog" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
                                                 Kuliner
                                                 <span class="dropdown-icon">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
@@ -77,15 +78,15 @@
                                             </a>
                                             <ul class="dropdown-menu">
                                                 <li>
-                                                    <a class="dropdown-item" href="/blog" aria-label="single-pages">Open Trip</a>
+                                                    <a class="dropdown-item" href="{{ url('blog', ['kategori' => 'Kuliner Banyuwangi']) }}" aria-label="single-pages">Banyuwangi</a>
                                                 </li>
                                                 <li>
-                                                    <a class="dropdown-item" href="/blog" aria-label="single-pages">Paket Wisata</a>
+                                                    <a class="dropdown-item" href="{{ url('blog', ['kategori' => 'Kuliner Malang']) }}" aria-label="single-pages">Malang</a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="/blog" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
                                                 Paket
                                                 <span class="dropdown-icon">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
@@ -95,10 +96,10 @@
                                             </a>
                                             <ul class="dropdown-menu">
                                                 <li>
-                                                    <a class="dropdown-item" href="/blog" aria-label="single-pages">Open Trip</a>
+                                                    <a class="dropdown-item" href="{{ url('paket', ['kategori' => 'Open Trip']) }}" aria-label="single-pages">Open Trip</a>
                                                 </li>
                                                 <li>
-                                                    <a class="dropdown-item" href="/blog" aria-label="single-pages">Paket Wisata</a>
+                                                    <a class="dropdown-item" href="{{ url('paket', ['kategori' => 'Paket Wisata']) }}" aria-label="single-pages">Paket Wisata</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -113,7 +114,7 @@
                                             </a>
                                             <ul class="dropdown-menu">
                                                 <li>
-                                                    <a class="dropdown-item" href="/blog" aria-label="single-pages">Blog 1</a>
+                                                    <a class="dropdown-item" href="{{ url('blog') }}" aria-label="single-pages">Tips & Trick</a>
                                                 </li>
 
                                             </ul>
@@ -124,31 +125,133 @@
                                             </a>
                                         </li>
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="/contact" aria-label="nav-links">
+                                            <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center" aria-current="page" href="/kontak" aria-label="nav-links">
                                                 Kontak
                                             </a>
                                         </li>
 
                                     </ul>
-                                    <div class="d-flex align-items-center gap-20">
-                                        <!-- serch-icon -->
-                                        <a class="serch-icon-style-2"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasserch" aria-controls="offcanvasserch">
+                                    <div class="d-flex gap-20 align-items-center">
 
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M19 19L13.0001 13M15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <a class="serch-icon px-2" data-bs-toggle="offcanvas"
+                                            data-bs-target="#offcanvasserch" aria-controls="offcanvasserch">
+
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M19 19L13.0001 13M15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8Z"
+                                                    stroke="" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
                                             </svg>
-                                        </a>
-                                        <!-- menu icon -->
-                                        <!-- <a href="#"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasDesktop" aria-controls="offcanvasDesktop">
 
-                                            <span class="menu-icon">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M3 12H21M3 6H21M3 18H21" stroke-linecap="round" stroke-linejoin="round"/>
-                                                </svg>
-                                            </span>
-                                        </a> -->
+                                        </a>
+
+                                        {{-- LOGO PROFIL KANAN ATAS --}}
+                                        {{-- PROFIL KETIKA SUDAH LOGIN SCRIPT DIBAWAH --}}
+                                        @if (Auth::check())
+                                            <div class="box-profile" style="width: 40px; height: 40px; overflow: hidden;">
+                                                <img width="40" src="{{ asset('admin/images/' . Auth::user()->photo) }}"
+                                                    class="user_pic" alt="" id="toggle-button" width="50">
+                                            </div>
+
+                                            <div class="sub-menu-wrap" id="subMenu">
+                                                <div class="sub-menu">
+                                                    <div class="user-info">
+                                                        <h3>{{ Auth::user()->username }}</h3>
+                                                        <img src="{{ asset('admin/images/' . Auth::user()->photo) }}">
+
+                                                    </div>
+                                                    <hr>
+
+                                                    <div class="sub-menu-link">
+                                                        <span class="material-icons-sharp sub-icon">
+                                                            account_circle
+                                                        </span>
+                                                        <a href="profile">Profile</a>
+                                                    </div>
+                                                    <div class="sub-menu-link">
+                                                        <span class="material-icons-sharp sub-icon">
+                                                            account_circle
+                                                        </span>
+                                                        <a href="dashboard">Dashboard</a>
+                                                    </div>
+
+                                                    <div class="sub-menu-link">
+                                                        <span class="material-icons-sharp sub-icon">
+                                                            logout
+                                                        </span>
+                                                        <a href="logout">Logout</a>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        @endif
+
+                                        @if (!Auth::check())
+                                            {{-- PROFIL KETIKA BELUM LOGIN SCRIPT DIBAWAH --}}
+                                            <div class="box-profile" style="width: 40px; height: 40px; overflow: hidden;">
+                                                <img width="40" src="{{ asset('admin/images/noimage.webp') }}" class="user_pic"
+                                                    alt="" id="toggle-button">
+                                            </div>
+
+                                            <div class="sub-menu-wrap" id="subMenu">
+                                                <div class="sub-menu">
+                                                    {{-- <div class="user-info">
+                                                        <h3>Anonymous</h3>
+                                                        <img src="{{ asset('admin/images/noimage.webp') }}">
+
+                                                    </div> --}}
+                                                    <hr>
+
+                                                    <div class="sub-menu-link">
+                                                        <span class="material-icons-sharp sub-icon">
+                                                            login
+                                                        </span>
+                                                        <a href="{{ url('login') }}">Login</a>
+
+                                                    </div>
+
+                                                    <div class="sub-menu-link">
+                                                        <span class="material-icons-sharp sub-icon">
+                                                            how_to_reg
+                                                        </span>
+                                                        <a href="{{ url('register') }}">Register</a>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        @endif
+                                        <script>
+                                            document.getElementById('toggle-button').addEventListener('click', function(event) {
+                                                const menu = document.getElementById('subMenu');
+                                                menu.classList.toggle('open-menu');
+                                                event.stopPropagation();
+                                            });
+
+                                            document.addEventListener('click', function(event) {
+                                                const menu = document.getElementById('subMenu');
+                                                const button = document.getElementById('toggle-button');
+                                                if (!menu.classList.contains('subMenu') && !menu.contains(event.target) && !button.contains(event
+                                                        .target)) {
+                                                    menu.classList.remove('open-menu');
+                                                }
+                                            });
+                                        </script>
+
+                                        {{-- END OF PROFIL JIKA BELUM LOGIN --}}
+
+                                        {{-- <a class="menu-icon"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasDesktop" aria-controls="offcanvasDesktop">
+                                                            <span class="menu-icon-2">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3 12H21M3 6H21M3 18H21" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </span>
+                                            </a> --}}
+
+
 
                                     </div>
+
                                 </div>
                             </div>
                         </div>
@@ -167,7 +270,7 @@
                     <div class="author-about mb-40 ">
                         <div class="text-center">
                             <div class="author-iamge">
-                                <a href="author-1"><img src="assets/images/placeholder.svg" data-src="assets/images/about-image-1.png" alt="author-iamge"></a>
+                                <a href="author-1"><img src="{{ url('assets/images/placeholder.svg') }}" data-src="{{ url('assets/images/about-image-1.png') }}" alt="author-iamge"></a>
                             </div>
                             <h5><a  class="author-name" href="author-1">Mike Aiden</a></h5>
                             <p class=" text-center">I’m a intrepid travel blogger, weaves tales of exploration and discovery. Let's traverse the globe together and share in the beauty of our world.</p>
@@ -192,7 +295,7 @@
 
                     <!-- sidebar-gallery -->
                     <div class="sidebar-gallery mb-40">
-                        <div class="div1 image-hover"><img src="assets/images/placeholder.svg" data-src="assets/images/instagram/instagram-1.png" alt="instagram">
+                        <div class="div1 image-hover"><img src="{{ url('assets/images/placeholder.svg') }}" data-src="{{ url('assets/images/instagram/instagram-1.png') }}" alt="instagram">
                             <span class="d-flex justify-content-center mb-10">
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.4396 18H5.56042C2.49391 18 0 15.5061 0 12.4396V5.56042C0 2.49391 2.49391 0 5.56042 0H12.4396C15.5061 0 18 2.49391 18 5.56042V12.4396C18.0016 15.5061 15.5061 18 12.4396 18ZM5.56042 2.00648C3.60126 2.00648 2.00648 3.60126 2.00648 5.56042V12.4396C2.00648 14.3987 3.60126 15.9935 5.56042 15.9935H12.4396C14.3987 15.9935 15.9935 14.3987 15.9935 12.4396V5.56042C15.9935 3.60126 14.3987 2.00648 12.4396 2.00648H5.56042Z" fill="white"/>
@@ -202,7 +305,7 @@
 
                             </span>
                         </div>
-                        <div class="div2 image-hover"><img src="assets/images/placeholder.svg" data-src="assets/images/instagram/instagram-4.png" alt="instagram">
+                        <div class="div2 image-hover"><img src="{{ url('assets/images/placeholder.svg') }}" data-src="{{ url('assets/images/instagram/instagram-4.png') }}" alt="instagram">
                             <span class="d-flex justify-content-center mb-10">
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.4396 18H5.56042C2.49391 18 0 15.5061 0 12.4396V5.56042C0 2.49391 2.49391 0 5.56042 0H12.4396C15.5061 0 18 2.49391 18 5.56042V12.4396C18.0016 15.5061 15.5061 18 12.4396 18ZM5.56042 2.00648C3.60126 2.00648 2.00648 3.60126 2.00648 5.56042V12.4396C2.00648 14.3987 3.60126 15.9935 5.56042 15.9935H12.4396C14.3987 15.9935 15.9935 14.3987 15.9935 12.4396V5.56042C15.9935 3.60126 14.3987 2.00648 12.4396 2.00648H5.56042Z" fill="white"/>
@@ -212,7 +315,7 @@
 
                             </span>
                         </div>
-                        <div class="div3 image-hover"><img src="assets/images/placeholder.svg" data-src="assets/images/instagram/instagram-7.png" alt="instagram">
+                        <div class="div3 image-hover"><img src="{{ asset ('assets/images/placeholder.svg') }}" data-src="{{ url('assets/images/instagram/instagram-7.png') }}" alt="instagram">
                             <span class="d-flex justify-content-center mb-10">
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.4396 18H5.56042C2.49391 18 0 15.5061 0 12.4396V5.56042C0 2.49391 2.49391 0 5.56042 0H12.4396C15.5061 0 18 2.49391 18 5.56042V12.4396C18.0016 15.5061 15.5061 18 12.4396 18ZM5.56042 2.00648C3.60126 2.00648 2.00648 3.60126 2.00648 5.56042V12.4396C2.00648 14.3987 3.60126 15.9935 5.56042 15.9935H12.4396C14.3987 15.9935 15.9935 14.3987 15.9935 12.4396V5.56042C15.9935 3.60126 14.3987 2.00648 12.4396 2.00648H5.56042Z" fill="white"/>
@@ -222,7 +325,7 @@
 
                             </span>
                         </div>
-                        <div class="div4 image-hover"><img src="assets/images/placeholder.svg" data-src="assets/images/instagram/instagram-3.png" alt="instagram">
+                        <div class="div4 image-hover"><img src="{{ url('assets/images/placeholder.svg') }}" data-src="{{ url('assets/images/instagram/instagram-3.png') }}" alt="instagram">
                             <span class="d-flex justify-content-center mb-10">
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.4396 18H5.56042C2.49391 18 0 15.5061 0 12.4396V5.56042C0 2.49391 2.49391 0 5.56042 0H12.4396C15.5061 0 18 2.49391 18 5.56042V12.4396C18.0016 15.5061 15.5061 18 12.4396 18ZM5.56042 2.00648C3.60126 2.00648 2.00648 3.60126 2.00648 5.56042V12.4396C2.00648 14.3987 3.60126 15.9935 5.56042 15.9935H12.4396C14.3987 15.9935 15.9935 14.3987 15.9935 12.4396V5.56042C15.9935 3.60126 14.3987 2.00648 12.4396 2.00648H5.56042Z" fill="white"/>
@@ -232,7 +335,7 @@
 
                             </span>
                         </div>
-                        <div class="div5 image-hover"><img src="assets/images/placeholder.svg" data-src="assets/images/instagram/instagram-8.png" alt="instagram">
+                        <div class="div5 image-hover"><img src="{{ url('assets/images/placeholder.svg') }}" data-src="{{ url('assets/images/instagram/instagram-8.png') }}" alt="instagram">
                             <span class="d-flex justify-content-center mb-10">
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.4396 18H5.56042C2.49391 18 0 15.5061 0 12.4396V5.56042C0 2.49391 2.49391 0 5.56042 0H12.4396C15.5061 0 18 2.49391 18 5.56042V12.4396C18.0016 15.5061 15.5061 18 12.4396 18ZM5.56042 2.00648C3.60126 2.00648 2.00648 3.60126 2.00648 5.56042V12.4396C2.00648 14.3987 3.60126 15.9935 5.56042 15.9935H12.4396C14.3987 15.9935 15.9935 14.3987 15.9935 12.4396V5.56042C15.9935 3.60126 14.3987 2.00648 12.4396 2.00648H5.56042Z" fill="white"/>
@@ -263,116 +366,164 @@
             <!-- offcanvs desktop -->
 
             <!-- of canvas Mobile menu start -->
-            <div class="offcanvas offcanvas-end offcanvasmobile-menu" id="offcanvasmobile-menu" data-bs-backdrop="static" tabindex="-1">
-                <div class="offcanvas-header pb-30">
-                    <a class="navbar-brand dark-light-logo" href="/" aria-label="nav-brands">
-                        <img src="assets/images/placeholder.svg" data-src="assets/images/logo-dark.png" class="logo-dark img-fluid" alt="logo">
-                        <img src="assets/images/placeholder.svg" data-src="assets/images/logo-white.png" class="logo-light img-fluid" alt="logo">
+        <div class="offcanvas offcanvas-end offcanvasmobile-menu" id="offcanvasmobile-menu" data-bs-backdrop="static"
+        tabindex="-1">
+        <div class="offcanvas-header pb-30">
+            <a class="navbar-brand dark-light-logo" href="/" aria-label="nav-brands">
+                <img src="{{ url('assets/logo/Jadi Trip Bputih.png') }}" data-src="{{ url('assets/logo/Jadi Trip Bputih.png') }}"
+                    class="logo-dark gambar-logo" alt="jadi trip">
+                <img src="{{ url('assets/logo/Jadi Trip Bhitam.png') }}" data-src="{{ url('assets/logo/Jadi Trip Bhitam.png') }}"
+                    class="logo-light gambar-logo" alt="jadi trip">
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex justify-content-start">
+            <ul class="navbar-nav custom-navbar-nav mb-2  mb-lg-0 hover-menu">
+                <li class="nav-item dropdown">
+                    <a class="nav-link active d-flex gap-2 align-items-center" aria-current="page" href="{{ url('blog', ['kategori' => 'Destinasi']) }}"
+                        aria-label="nav-links">
+                        Destinasi
                     </a>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body d-flex justify-content-start">
-                    <ul class="navbar-nav custom-navbar-nav mb-2  mb-lg-0 hover-menu">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link active d-flex gap-2 align-items-center" aria-current="page" href="/blog" aria-label="nav-links">
-                                Destinasi
-                            </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link d-flex gap-2 align-items-center" href="{{ url('blog', ['kategori' => 'Aktifitas']) }}" aria-label="nav-links"
+                        data-bs-toggle="dropdown" aria-expanded="true">
+                        Aktifitas
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="blog"
+                        aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                        Kuliner
+                        <span class="dropdown-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="{{ url('blog', ['kategori' => 'Kuliner Banyuwangi']) }}" aria-label="single-pages">Banyuwangi</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link d-flex gap-2 align-items-center"  href="/blog" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="true">
-                                Aktifitas
-                            </a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="/blog" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
-                                Kuliner
-                                <span class="dropdown-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
-                                    </svg>
-                                </span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" href="/blog" aria-label="single-pages">Malang</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="/blog" aria-label="single-pages">Banyuwangi</a>
-                                </li>
-                            </ul>
-                        </li>
-
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="/blog" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
-                                Paket
-                                <span class="dropdown-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
-                                    </svg>
-                                </span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" href="/blog" aria-label="single-pages">Contact 1</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="/blog" aria-label="single-pages">Contact 2</a>
-                                </li>
-
-                            </ul>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="/blog" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
-                                Blog
-                                <span class="dropdown-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
-                                    </svg>
-                                </span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" href="/article" aria-label="single-pages">Article 1</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="/article" aria-label="single-pages">Article 2</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="/about" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
-                                About
-                            </a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="/contact" aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
-                                Kontak
-                            </a>
+                        <li>
+                            <a class="dropdown-item" href="{{ url('blog', ['kategori' => 'Kuliner Malang']) }}" aria-label="single-pages">Malang</a>
                         </li>
                     </ul>
+                </li>
 
 
-                </div>
+                <li class="nav-item dropdown">
+                    <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="blog"
+                        aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                        Paket
+                        <span class="dropdown-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="{{ url('blog', ['kategori' => 'Open Trip']) }}" aria-label="single-pages">Open Trip</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ url('blog', ['kategori' => 'Paket Wisata']) }}" aria-label="single-pages">Paket Wisata</a>
+                        </li>
 
-                <div class="text-center d-flex justify-content-center px-30">
+                    </ul>
+                </li>
 
-                    <!-- author-socials -->
-                    <div class="author-socials">
-                        <a href="https://www.facebook.com" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com" class="instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com" class="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="https://www.youtube.com" class="youtube"><i class="fab fa-youtube"></i></a>
-                        <a href="https://www.pinterest.com" class="pinterest"><i class="fab fa-pinterest-p"></i></a>
-                       <a href="https://twitter.com" class="twitter"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M15.8092 15.98H11.1569L6.89801 9.78339L1.56807 15.98H0.19043L6.28619 8.89157L0.19043 0.0195312H4.84276L8.87486 5.88989L13.9234 0.0195312H15.301L9.48808 6.77751L15.8092 15.98ZM11.8079 14.9929H13.9234L4.18054 1.05696H2.06508L11.8079 14.9929Z"></path>
-                                </svg>
-                            </a>
-                    </div>
-                </div>
-            </div>
-            <!-- of canvas Mobile menu End -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="blog"
+                        aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                        Blog
+                        <span class="dropdown-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="{{ url('blog', ['kategori' => 'Tips & Trick']) }}" aria-label="single-pages">Tips & Trick</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="{{ url('about') }}"
+                        aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                        About
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="{{ url('kontak') }}"
+                        aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                        Kontak
+                    </a>
+                </li>
+                {{-- MENU JIKA BELUM LOGIN --}}
+                @if(!Auth::check())
+                <li class="nav-item dropdown link-setting">
+                    <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="blog"
+                        aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                        Masuk
+                        <span class="dropdown-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="/login" aria-label="single-pages">Login</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="/register" aria-label="single-pages">Daftar</a>
+                        </li>
+                    </ul>
+                </li>
+                @endif
+
+                {{-- MENU KETIKA SUDAH LOGIN --}}
+                @if(Auth::check())
+                <li class="nav-item dropdown">
+                    <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="blog"
+                        aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                        Setting
+                        <span class="dropdown-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="{{ url('profil') }}" aria-label="single-pages">Profile</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ url('logout') }}" aria-label="single-pages">Logout</a>
+                        </li>
+                    </ul>
+                </li>
+                @endif
+            </ul>
+
+
+        </div>
+
+
+    </div>
+    <!-- of canvas Mobile menu End -->
 
             <!-- Offcanvas Serch -->
             <div class="offcanvas offcanvas-top offcanvasserch py-lg-100 py-40" data-bs-scroll="false" tabindex="-1" id="offcanvasserch" data-bs-backdrop="false">
@@ -410,7 +561,7 @@
                                 <!-- mini-card-style -->
                                 <div class="mini-card-style mb-lg-40 mb-30">
                                     <div class="card-image-wrapper">
-                                        <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/feature-images/feature-image-1.jpg" class="card-img-top" alt="Breakfast"> </a>
+                                        <a href="/article"><img src="{{ url('assets/images/placeholder.svg') }}" data-src="{{ url('assets/images/feature-images/feature-image-1.jpg') }}" class="card-img-top" alt="Breakfast"> </a>
                                     </div>
 
                                     <div class="card-body">
@@ -425,7 +576,7 @@
                                 <!-- mini-card-style -->
                                 <div class="mini-card-style mb-lg-40 mb-30">
                                     <div class="card-image-wrapper">
-                                        <a href="/article"> <img src="assets/images/placeholder.svg" data-src="assets/images/feature-images/feature-image-7.jpg" class="card-img-top" alt="Stories"> </a>
+                                        <a href="/article"> <img src="{{ url('assets/images/placeholder.svg') }}" data-src="{{ url('assets/images/feature-images/feature-image-7.jpg') }}" class="card-img-top" alt="Stories"> </a>
                                     </div>
 
                                     <div class="card-body">
@@ -443,7 +594,7 @@
                                 <!-- mini-card-style -->
                                 <div class="mini-card-style mb-lg-40 mb-30">
                                     <div class="card-image-wrapper">
-                                        <a href="/article"> <img src="assets/images/placeholder.svg" data-src="assets/images/feature-images/feature-image-3.jpg" class="card-img-top" alt="Stories"> </a>
+                                        <a href="/article"> <img src="{{ url('assets/images/placeholder.svg') }}" data-src="{{ url('assets/images/feature-images/feature-image-3.jpg') }}" class="card-img-top" alt="Stories"> </a>
                                     </div>
 
                                     <div class="card-body">
@@ -458,7 +609,7 @@
                                 <!-- mini-card-style -->
                                 <div class="mini-card-style mb-lg-40 mb-30">
                                     <div class="card-image-wrapper">
-                                        <a href="/article"> <img src="assets/images/placeholder.svg" data-src="assets/images/feature-images/feature-image-4.jpg" class="card-img-top" alt="Stories"> </a>
+                                        <a href="/article"> <img src="{{ url('assets/images/placeholder.svg') }}" data-src="{{ url('assets/images/feature-images/feature-image-4.jpg') }}" class="card-img-top" alt="Stories"> </a>
                                     </div>
 
                                     <div class="card-body">
@@ -476,7 +627,7 @@
                                     <!-- mini-card-style -->
                                 <div class="mini-card-style mb-lg-40 mb-30">
                                     <div class="card-image-wrapper">
-                                        <a href="/article"> <img src="assets/images/placeholder.svg" data-src="assets/images/feature-images/feature-image-5.jpg" class="card-img-top" alt="Stories"> </a>
+                                        <a href="/article"> <img src="{{ url('assets/images/placeholder.svg') }}" data-src="{{ url('assets/images/feature-images/feature-image-5.jpg') }}" class="card-img-top" alt="Stories"> </a>
                                     </div>
 
                                     <div class="card-body">
@@ -492,7 +643,7 @@
                                 <!-- mini-card-style -->
                                 <div class="mini-card-style mb-lg-40 mb-30">
                                     <div class="card-image-wrapper">
-                                        <a href="/article"> <img src="assets/images/placeholder.svg" data-src="assets/images/feature-images/feature-image-3.jpg" class="card-img-top" alt="Stories"> </a>
+                                        <a href="/article"> <img src="{{ url('assets/images/placeholder.svg') }}" data-src="{{ url('assets/images/feature-images/feature-image-3.jpg') }}" class="card-img-top" alt="Stories"> </a>
                                     </div>
 
                                     <div class="card-body">
@@ -539,11 +690,19 @@
                     <div class="breadcrumb-wrapper pb-0">
                         <div class="container">
                             <nav aria-label="breadcrumb-nav">
-                                <ol class="breadcrumb breadcrumb-style-2 mt-20 mb-0 ">
-                                  <li class="breadcrumb-item breadcrumb-item-style-2"><a href="/">Home</a></li>
-                                  <li class="breadcrumb-item breadcrumb-item-style-2"><a href="/blog">blog</a></li>
-                                  <li class="breadcrumb-item breadcrumb-item-style-2 active" aria-current="page">"ikut nama kategori"</li>
-                                </ol>
+                                @if (Request::is('blog'))
+    <ol class="breadcrumb breadcrumb-style-2 mt-20 mb-0 ">
+        <li class="breadcrumb-item breadcrumb-item-style-2"><a href="/">Home</a></li>
+        <li class="breadcrumb-item breadcrumb-item-style-2"><a href="/blog">blog</a></li>
+    </ol>
+@elseif (Request::is('blog/*'))
+    <ol class="breadcrumb breadcrumb-style-2 mt-20 mb-0 ">
+        <li class="breadcrumb-item breadcrumb-item-style-2"><a href="/">Home</a></li>
+        <li class="breadcrumb-item breadcrumb-item-style-2"><a href="/blog">blog</a></li>
+        <li class="breadcrumb-item breadcrumb-item-style-2 active" aria-current="page">{{ Request::segment(2) }}</li>
+    </ol>
+@endif
+
                             </nav>
 
                         </div>
@@ -559,260 +718,30 @@
                             <div class="col-lg-8">
                                 <div class="row custom-row-gap">
                                     <!-- single card -->
-                                    <div class="col-xl-6">
-                                        <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp" data-wow-delay="0.4s">
-                                            <div class="card-image-wrapper">
-                                                <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/blog/explore-image-29.jpg" class="card-img-top" alt="Wonders"></a>
-                                            </div>
-
-                                            <div class="card-body">
-                                                <div class="card-header text-uppercase">
-                                                    <a href="/category">Lake</a>
+                                    @foreach ( $Posting as $post )
+                                        <div class="col-xl-6">
+                                            <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp" data-wow-delay="0.4s">
+                                                <div class="card-image-wrapper">
+                                                    <a href="/article"><img src="{{ url('assets/images/placeholder.svg') }}" data-src="{{ url('assets/images/blog/'.$post->thumbnail) }}" class="card-img-top" alt="Wonders"></a>
                                                 </div>
-                                                <h5 class="fs-4 card-title"><a href="/article" class="blog-title">Lakeside Wonders: Nature's Peaceful Miracles</a></h5>
 
-                                                 <ul class="list-unstyled card-meta lead  small">
-                                                    <li>By <a href="author-1" class="blog-author fw-bold">Mike Aiden</a></li>
-                                                    <li>January 27, <span class="dynamic-year"> </span>.</li>
-                                                </ul>
+                                                <div class="card-body">
+                                                    <div class="card-header text-uppercase">
+                                                        <a href="/category">{{ $post->kategori->name }}</a>
+                                                    </div>
+                                                    <h5 class="fs-4 card-title"><a href="/article/{{ $post->slug }}" class="blog-title">{{ $post->title }}</a></h5>
 
-                                                <p class="card-text small">Nature's Peaceful Miracles captivate with serene reflections, gentle ripples, and harmonious symphony. A tranquil haven where beauty meets...</p>
+                                                    <ul class="list-unstyled card-meta lead  small">
+                                                        <li>By <a href="author-1" class="blog-author fw-bold">Jadi Trip</a></li>
+                                                        <li>{{ $post->created_at->DiffForHumans() }}</li>
+                                                    </ul>
+
+                                                    <p class="card-text small">{{ $post->content }}</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!-- single card -->
-                                    <div class="col-xl-6">
-                                        <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp" data-wow-delay="0.4s">
-                                            <div class="card-image-wrapper">
-                                                <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/blog/explore-image-30.jpg" class="card-img-top" alt="Sanctuary"></a>
-                                            </div>
+                                    @endforeach
 
-                                            <div class="card-body">
-                                                <div class="card-header text-uppercase">
-                                                    <a href="/category">Forest</a>
-                                                </div>
-                                                <h5 class="fs-4 card-title"><a href="/article" class="blog-title">The Mystic Woods: Nature's Healing Sanctuary</a></h5>
-
-                                                 <ul class="list-unstyled card-meta lead  small">
-                                                    <li>By <a href="author-1" class="blog-author fw-bold">Mike Aiden</a></li>
-                                                    <li>January 25, <span class="dynamic-year"> </span>.</li>
-                                                </ul>
-                                                <p class="card-text small">Nature's Healing invite weary souls to immerse in the enchanting embrace  ancient tree, where whispers of the wind and rustling leaves orchestrate...</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- single card -->
-                                    <div class="col-xl-6">
-                                        <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp" data-wow-delay="0.4s">
-                                            <div class="card-image-wrapper">
-                                                <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/blog/explore-image-13.jpg" class="card-img-top" alt="Paradises"></a>
-                                            </div>
-
-                                            <div class="card-body">
-                                                <div class="card-header text-uppercase">
-                                                    <a href="/category">Beach</a>
-                                                </div>
-                                                <h5 class="fs-4 card-title"><a href="/article" class="blog-title">Waves of Wonder: Exploring Coastal Paradises</a></h5>
-
-                                                 <ul class="list-unstyled card-meta lead  small">
-                                                    <li>By <a href="author-1" class="blog-author fw-bold">Mike Aiden</a></li>
-                                                    <li>January 23, <span class="dynamic-year"> </span>.</li>
-                                                </ul>
-                                                <p class="card-text small">Exploring Coastal Paradises" invites you to embrace mesmerizing allure of coastal beauty. Immerse yourself in the rhythmic dance of waves, discovere...</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- single card -->
-                                    <div class="col-xl-6">
-                                        <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp" data-wow-delay="0.4s">
-                                           <div class="card-image-wrapper">
-                                                <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/blog/explore-image-30.jpg" class="card-img-top" alt="Sanctuary"></a>
-                                            </div>
-
-                                            <div class="card-body">
-                                                <div class="card-header text-uppercase">
-                                                    <a href="/category">Hiking</a>
-                                                </div>
-                                               <h5 class="fs-4 card-title"><a href="/article" class="blog-title">Into the Wilderness: Hiking for Mind, Body, and Soul</a></h5>
-
-                                                 <ul class="list-unstyled card-meta lead  small">
-                                                    <li>By <a href="author-1" class="blog-author fw-bold">Mike Aiden</a></li>
-                                                    <li>January 22, <span class="dynamic-year"> </span>.</li>
-                                                </ul>
-                                                <p class="card-text small">Embark on a transformative journey with 'Into the Wilderness: Hiking for Mind, Body, and Soul.' This immersive experience reconnects you...</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- single card -->
-                                    <div class="col-xl-6">
-                                        <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp" data-wow-delay="0.4s">
-                                            <div class="card-image-wrapper">
-                                                <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/blog/explore-image-19.jpg" class="card-img-top" alt="Breakfast"></a>
-                                            </div>
-
-                                            <div class="card-body">
-                                                <div class="card-header text-uppercase">
-                                                    <a href="/category">Forest</a>
-                                                </div>
-                                                <h5 class="fs-4 card-title"><a href="/article" class="blog-title">Forest Dreams: Escaping into Nature's Embrace</a></h5>
-
-                                                 <ul class="list-unstyled card-meta lead  small">
-                                                    <li>By <a href="author-1" class="blog-author fw-bold">Mike Aiden</a></li>
-                                                    <li>January 21, <span class="dynamic-year"> </span>.</li>
-                                                </ul>
-                                                <p class="card-text small">Escaping into The Nature's Embrace" invites readers on a poetic journey through lush canopies and whispering leaves. Immerse yourself in the serenity...</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- single card -->
-                                    <div class="col-xl-6">
-                                        <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp" data-wow-delay="0.4s">
-                                            <div class="card-image-wrapper">
-                                                <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/categories/category3.jpg" class="card-img-top" alt="img-Tales"></a>
-                                            </div>
-
-                                            <div class="card-body">
-                                                <div class="card-header text-uppercase">
-                                                    <a href="/category">Desert</a>
-                                                </div>
-                                                <h5 class="fs-4 card-title"><a href="/article" class="blog-title">Mirages & Realities: Tales from the Desert Wilderness</a></h5>
-
-                                                 <ul class="list-unstyled card-meta lead  small">
-                                                    <li>By <a href="author-1" class="blog-author fw-bold">Mike Aiden</a></li>
-                                                    <li>January 19, <span class="dynamic-year"> </span>.</li>
-                                                </ul>
-                                                <p class="card-text small">Tales from the Desert Wilderness'' immerses readers in a captivating journey through shifting sands, weaving a tapestry of mirages that blur the lines...</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- single card -->
-                                    <div class="col-xl-6">
-                                        <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp" data-wow-delay="0.4s">
-                                            <div class="card-image-wrapper">
-                                                <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/categories/category.jpg" class="card-img-top" alt="January"></a>
-                                            </div>
-
-                                            <div class="card-body">
-                                                <div class="card-header text-uppercase">
-                                                    <a href="/category">Camping</a>
-                                                </div>
-                                                 <h5 class="fs-4 card-title"><a href="/article" class="blog-title">Campfire Chronicles: Stories from Nature's Cozy Embrace</a></h5>
-
-                                                 <ul class="list-unstyled card-meta lead  small">
-                                                    <li>By <a href="author-1" class="blog-author fw-bold">Mike Aiden</a></li>
-                                                    <li>January 17, <span class="dynamic-year"> </span>.</li>
-                                                </ul>
-                                                <p class="card-text small">Stories from Nature's Cozy Embrace'' weaves tales of the great outdoors, capturing the warmth of a campfire's glow and the enchanting embrace of...</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- single card -->
-                                    <div class="col-xl-6">
-                                        <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp" data-wow-delay="0.4s">
-                                            <div class="card-image-wrapper">
-                                                <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/categories/category1.jpg" class="card-img-top" alt="img-top"></a>
-                                            </div>
-
-                                            <div class="card-body">
-                                                <div class="card-header text-uppercase">
-                                                    <a href="/category">Beach</a>
-                                                </div>
-                                                <h5 class="fs-4 card-title"><a href="/article" class="blog-title">Seabound Journeys: Exploring Coastal Frontiers</a></h5>
-
-                                                <ul class="list-unstyled card-meta lead  small">
-                                                    <li>By <a href="author-1" class="blog-author fw-bold">Mike Aiden</a></li>
-                                                    <li>January 14, <span class="dynamic-year"> </span>.</li>
-                                                </ul>
-                                                <p class="card-text small">Embark on Seabound Journeys, a captivating exploration of coastal frontiers where the rhythmic dance of waves meets untamed landscapes. Immerse...</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- single card -->
-                                    <div class="col-xl-6">
-                                        <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp" data-wow-delay="0.4s">
-                                            <div class="card-image-wrapper">
-                                                <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/blog/explore-image-16.jpg" class="card-img-top" alt="Hiking"></a>
-                                            </div>
-
-                                            <div class="card-body">
-                                                <div class="card-header text-uppercase">
-                                                    <a href="/category">Hiking</a>
-                                                </div>
-                                                <h5 class="fs-4 card-title"><a href="/article" class="blog-title">Trail Treasure: Unveiling Nature's Hidden Hiking Gems</a></h5>
-
-                                                <ul class="list-unstyled card-meta lead  small">
-                                                    <li>By <a href="author-1" class="blog-author fw-bold">Mike Aiden</a></li>
-                                                    <li>January 13, <span class="dynamic-year"> </span>.</li>
-                                                </ul>
-                                                <p class="card-text small">Embark on a journey of discovery with "Trail Treasure," where each step reveals nature's hidden gems. This hiking experience unveils the enchanting...</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- single card -->
-                                    <div class="col-xl-6">
-                                        <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp" data-wow-delay="0.4s">
-                                            <div class="card-image-wrapper">
-                                                <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/categories/category.jpg" class="card-img-top" alt="Camping-Sleeping"></a>
-                                            </div>
-
-                                            <div class="card-body">
-                                                <div class="card-header text-uppercase">
-                                                    <a href="/category">Camping</a>
-                                                </div>
-                                                <h5 class="fs-4 card-title"><a href="/article" class="blog-title">Sleeping Under: A Guide to Night time Camping Delights</a></h5>
-
-                                                <ul class="list-unstyled card-meta lead  small">
-                                                    <li>By <a href="author-1" class="blog-author fw-bold">Mike Aiden</a></li>
-                                                    <li>January 09, <span class="dynamic-year"> </span>.</li>
-                                                </ul>
-                                                <p class="card-text small">Discover the magic of nature's night sky with 'Sleeping Under Stars: A Guide to Night time Camping Delights.' This enchanting guide offers tips, stories...</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- single card -->
-                                    <div class="col-xl-6">
-                                        <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp" data-wow-delay="0.4s">
-                                            <div class="card-image-wrapper">
-                                                <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/categories/category5.jpg" class="card-img-top" alt="img-top"></a>
-                                            </div>
-
-                                            <div class="card-body">
-                                               <div class="card-header text-uppercase">
-                                                    <a href="/category">Desert</a>
-                                                </div>
-                                                <h5 class="fs-4 card-title"><a href="/article" class="blog-title">Finding Refreshment in to the Arid Environments</a></h5>
-
-                                                <ul class="list-unstyled card-meta lead  small">
-                                                    <li>By <a href="author-1" class="blog-author fw-bold">Mike Aiden</a></li>
-                                                    <li>January 05, <span class="dynamic-year"> </span>.</li>
-                                                </ul>
-                                                <p class="card-text small">Discovering solace in arid landscapes, one can find unexpected refreshment amidst the harsh beauty of deserts. The subtle hues of sand and the...</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- single card -->
-                                    <div class="col-xl-6">
-                                        <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp" data-wow-delay="0.4s">
-                                            <div class="card-image-wrapper">
-                                                <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/blog/explore-image-17.jpg" class="card-img-top" alt="Discovering"></a>
-                                            </div>
-
-                                            <div class="card-body">
-                                                <div class="card-header text-uppercase">
-                                                    <a href="/category">Ancient</a>
-                                                </div>
-                                                <h5 class="fs-4 card-title"><a href="/article" class="blog-title">Historic Gems: Discovering Ancient City Secrets</a></h5>
-
-                                                <ul class="list-unstyled card-meta lead  small">
-                                                    <li>By <a href="author-1" class="blog-author fw-bold">Mike Aiden</a></li>
-                                                    <li>January 04, <span class="dynamic-year"> </span>.</li>
-                                                </ul>
-                                                <p class="card-text small">Unearth the mysteries of ancient cities with "Historic Gems," where each cobblestone and ruin tells tales of bygone eras. Embark on a journey...</p>
-                                            </div>
-                                        </div>
-                                    </div>
 
                                     <div class="load-more-btn mb-40 mb-lg-0 pt-20  wow fadeInUp" data-wow-delay="0.4s">
                                         <a href="#" class="btn btn-secondary" >Load More</a>
@@ -823,15 +752,16 @@
                                 <div class="sticky-elements">
                                     {{-- Iklan 1 --}}
                                     @foreach ($iklans as $iklan)
-                                        @foreach ($Datalink as $link)
-                                        <a href="https://wa.me/6283823538692?text=Halo,%20selamat%20datang%20di%20Jadi%20Trip!%20Terima%20kasih%20telah%20memilih%20layanan%20kami.%20Untuk%20memudahkan%20pemesanan,%20silakan%20isi%20formulir%20berikut%20ini:%0A%0ANama%20Lengkap%20%20%20%20%20%20%20%20%20%20%20%20%20:%0A%0ALayanan%20yang%20Dipesan%20%20:%20*{{ $link->judul }}*%0A%0AJumlah%20Orang%20(min-2)%20%20:%0A%0ATanggal%20Berangkat%20%20%20%20%20%20%20:%0A%0AAlamat%20Penjemputan%20%20%20:%20" target="_blank">
-                                                <div class="about-me wow fadeInUp" data-wow-delay="0.4s">
-                                                    <img id="iklan1-1" src="assets/images/iklan/explore-image-15.jpg" alt="">
-                                                    <img id="iklan1-2" src="assets/images/iklan/explore-image-1.jpg" alt="">
+                                        @if ($iklan->type == "Iklan 1")
+                                            <a href="{{ $iklan->link }}" rel="nofollow" target="_blank">
+                                                <div class="dark-mode about-me wow fadeInUp" title="{{ $iklan->company }}" data-wow-delay="0.4s">
+                                                    <img id="iklan1-1" src="{{ url('assets/images/iklan/' . $iklan->image) }}" alt="{{ $iklan->company }}">
+                                                    <img id="iklan1-2" src="{{ url('assets/images/iklan/' . $iklan->image) }}" alt="{{ $iklan->company }}">
                                                 </div>
                                             </a>
-                                        @endforeach
+                                        @endif
                                     @endforeach
+
                                     {{-- end iklan 1 --}}
                                     <!-- socials widget -->
                                     <div class="widget widget-style-2 mb-lg-60 mb-0 wow fadeInUp" data-wow-delay="0.4s">
@@ -894,10 +824,15 @@
                                         </div>
                                         <!-- social-icons -->
                                     </div>
-
-                                    <div class="add-iamge d-none d-xl-block wow fadeInUp" data-wow-delay="0.4s">
-                                        <a href="#"><img src="assets/images/add.png" class="img-fluid" alt="img"></a>
-                                    </div>
+                                    {{-- Iklan 2 --}}
+                                    @foreach ($iklans as $iklan)
+                                        @if ($iklan->type == 'Iklan 2')
+                                            <div class="add-image d-none d-xl-block wow fadeInUp" title="{{ $iklan->company }}" data-wow-delay="0.4s">
+                                                <a href="{{ $iklan->link }}" rel="nofollow" target="_blank"><img src="{{ url('assets/images/iklan/'.$iklan->image) }}" class="img-iklan2" alt="{{ $iklan->company }}"></a>
+                                            </div>
+                                        @endif
+                                    @endforeach
+                                    {{-- Iklan 2 end --}}
                                 </div>
 
                             </div>
@@ -935,7 +870,7 @@
             <!-- main -->
 
             <!--Footer Section ======================-->
-                        <footer class="section-footer section-footer-2  parallax pt-40 pt-md-60 pt-lg-130">
+                <footer class="section-footer section-footer-2  parallax pt-40 pt-md-60 pt-lg-130">
                 <div class="footer-wrapper position-relative py-20 py-lg-60 py-xl-100">
                     <div class="container">
                         <div class="footer-top-contents pb-30">
@@ -1031,7 +966,7 @@
                                 <div class="d-flex justify-content-center gap-10">
                                     <p class="mb-0 lead">A product of</p>
                                     <a class="footer-logo" href="/" aria-label="nav-brands">
-                                        <img src="assets/images/placeholder.svg" data-src="assets/images/logo-primary.png" class="logo-light img-fluid" alt="footer-logo-two">
+                                        <img src="{{ url('assets/images/placeholder.svg') }}" data-src="{{ url('assets/images/logo-primary.png') }}" class="logo-light img-fluid" alt="footer-logo-two">
                                     </a>
                                 </div>
                                 <p class="mb-0 text-center lead">&copy; <span class="dynamic-year"> </span>. Jadi Trip. All rights reserved</p>
@@ -1050,20 +985,20 @@
 		<!-- page -->
 
         <!-- js link -->
-        <script src="assets/js/jquery-3.7.0.min.js"></script>
-        <script src="assets/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/js/swiper-bundle.min.js"></script>
-        <script src="assets/js/wow.js"></script>
-        <script src="assets/js/venobox.min.js"></script>
-        <script src="assets/js/odometer.min.js"></script>
-        <script src="assets/js/owl.carousel.min.js"></script>
-        <script src="assets/js/gsap/gsap.min.js"></script>
-        <script src="assets/js/gsap/SplitText.min.js"></script>
-        <script src="assets/js/gsap/ScrollTrigger.min.js"></script>
-        <script src="assets/js/gsap/split-type-0.3.3.min.js"></script>
-        <script src="assets/js/appear.min.js"></script>
-        <script src="assets/js/lazy.image.js"></script>
-        <script src="assets/js/script.js"></script>
+        <script src="{{ url('assets/js/jquery-3.7.0.min.js') }}"></script>
+        <script src="{{ url('assets/js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ url('assets/js/swiper-bundle.min.js') }}"></script>
+        <script src="{{ url('assets/js/wow.js') }}"></script>
+        <script src="{{ url('assets/js/venobox.min.js') }}"></script>
+        <script src="{{ url('assets/js/odometer.min.js') }}"></script>
+        <script src="{{ url('assets/js/owl.carousel.min.js') }}"></script>
+        <script src="{{ url('assets/js/gsap/gsap.min.js') }}"></script>
+        <script src="{{ url('assets/js/gsap/SplitText.min.js') }}"></script>
+        <script src="{{ url('assets/js/gsap/ScrollTrigger.min.js') }}"></script>
+        <script src="{{ url('assets/js/gsap/split-type-0.3.3.min.js') }}"></script>
+        <script src="{{ url('assets/js/appear.min.js') }}"></script>
+        <script src="{{ url('assets/js/lazy.image.js') }}"></script>
+        <script src="{{ url('assets/js/script.js') }}"></script>
 
 
 	</body>

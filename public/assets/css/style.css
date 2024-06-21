@@ -733,6 +733,10 @@ progress {
   max-width: 100%;
   height: auto;
 }
+.gambar-logo {
+    max-width: 60%;
+    height: auto;
+  }
 
 .img-thumbnail {
   padding: 0.25rem;
@@ -7445,7 +7449,8 @@ textarea.form-control-lg {
 /******** Dark CSS ********/
 /**************************/
 .dark-mode .about-me {
-  height: 437px;
+  display: flex;
+  height: 400px;
   background: #154757;
   color: #D9D9D9;
 }
@@ -10599,8 +10604,8 @@ Author card Style End
 .offcanvas .offcanvas-header .btn-close {
   background: var(--bs-primary);
   border: 1px solid var(--bs-primary);
-  width: 24px;
-  height: 24px;
+  width: 100px;
+  height: 20px;
   border-radius: 50%;
   opacity: 1;
   position: relative;
@@ -13208,11 +13213,13 @@ End  Instragram Section
  Start add-image 2  Section
 ========================
 */
-.add-image-2 {
-  height: 90px;
-  width: 100%;
+.add-image {
+    margin-top: -10%;
+    height: 300px;
+    width: 100%;
+    border-radius: 1rem;
 }
-.add-image-2 img {
+.add-image img {
   width: 100%;
   height: 100%;
 }
@@ -23239,6 +23246,104 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   .d-print-none {
     display: none !important;
   }
+}
+
+.box-profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    /* margin-bottom: 10px; */
+}
+
+.sub-menu-wrap{
+    position: absolute;
+    top: 100%;
+    margin-top: -20px;
+    right: -20px;
+    width: 280px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.sub-menu-wrap.open-menu{
+    max-height: 400px;
+}
+
+.sub-menu{
+    background-color: #fafafa;
+    border-radius: 5px;
+    padding: 20px 30px;
+    margin: 10px;
+}
+
+.user-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-info img{
+    width: 55px;
+    height: 55px;
+    /* margin-right: 15px; */
+    border-radius: 50%;
+}
+
+.user-info h3{
+    font-weight: bold;
+    font-family: cursive;
+    font-size: 18px;
+    color: #525252;
+}
+
+.sub-menu hr{
+    margin-bottom: 10px;
+}
+
+.sub-menu-link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #525252;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+.sub-menu-link a{
+    color: #525252;
+    font-size: 16px;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: .7px;
+}
+
+.sub-menu-link .sub-icon{
+    width: 40px;
+    background: #e5e5e5;
+    padding: 8px;
+    border-radius: 50%;
+    margin-right: 15px;
+
+}
+
+.sub-menu-link .sponsor{
+    font-size: 22px;
+    margin-bottom: 1.5px;
+    transition: transform 0.5s ease;
+}
+
+.sub-menu-link:hover .sponsor{
+    transform: translateX(5px);
+}
+
+.sub-menu-link:hover a{
+    font-weight: 600;
+}
+
+.link-setting{
+    margin-top: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */

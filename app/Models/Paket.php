@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Iklan extends Model
+class Paket extends Model
 {
     use HasFactory,SoftDeletes;
 
-    protected $table = "iklans";
-    protected $fillable = ['image','company','link','type','status'];
+    protected $table = 'pakets';
+    protected $fillable = ['thumbnail','title','deskripsi','harga','benefit','alur','type'];
 }

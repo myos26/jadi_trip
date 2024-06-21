@@ -8,7 +8,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use App\Models\Post;
 use App\Models\User;
-use App\Models\Iklan;
+use App\Models\iklan;
 use Illuminate\Routing\RouteGroup;
 
 
@@ -25,7 +25,10 @@ use Illuminate\Routing\RouteGroup;
 
 Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
+Route::get('/blog/{Kategori?}', [HomeController::class, 'blog']);
+Route::get('/blog', [HomeController::class, 'blog']);
+
+
 
 
 Route::get('/temp-home', [HomeController::class, 'verifyOtp']);
@@ -56,8 +59,9 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
 
 // route blog
-Route::get('/paket', function () {
-    return view('paket');
+Route::get('/paket/{kategori?}', function () {
+
+        return view('paket');
 });
 Route::get('/about', function () {
     return view('about');
@@ -65,7 +69,7 @@ Route::get('/about', function () {
 Route::get('/category', function () {
     return view('category');
 });
-Route::get('/contact', function () {
+Route::get('/kontak', function () {
     return view('contact');
 });
 Route::get('/article/{slug}', [PostController::class, 'post']);

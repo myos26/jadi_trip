@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
-use App\Models\Iklan;
+use App\Models\iklan;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -16,15 +16,16 @@ class HomeController extends Controller
     {
         $datas = Post::all();
         $datas = Post::with('kategori')->latest()->get();
-        return view('index', compact('datas'));
+        $iklans = iklan::all();
+        return view('index', compact('datas','iklans'));
     }
 
 
     public function blog()
     {
-        $iklans = Iklan::all();
-        $Datalink = Post::all();
-        return view('blog', compact('iklans','Datalink'));
+        $iklans = iklan::all();
+        $Posting = Post::all();
+        return view('blog', compact('iklans','Posting'));
     }
 
     public function verifyOtp()

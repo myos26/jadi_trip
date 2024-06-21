@@ -588,12 +588,12 @@
                                     <div class="author-card author-card-sidebar  flex-column align-items-center mb-30">
                                         <h4 class="author-name pb-0 mb-0">Linimasa Kami</h4>
                                         <div class="author-image m-auto">
-                                            <img src="{{asset('assets/logo/Logo Bulat Puth.png')}}" alt="Jadi Trip">
+                                            <img src="{{asset('assets/logo/Logo Bulat Putih.png')}}" alt="Jadi Trip">
                                         </div>
-    
+
                                         <div class="author-content">
                                             <p class="text-center mb-lg-40 mb-10">Kami sangat senang mendengar dari Anda. Jika Anda memiliki pertanyaan, saran, atau membutuhkan informasi lebih lanjut tentang layanan kami, jangan ragu untuk menghubungi kami melalui linimasa kami dibawah</p>
-    
+
                                             <p class="text-center">Mari telusuri halaman-halaman kronik perjalanan kami bersama! 🌍✈️</p>
                                         </div>
                                         <div class="author-socials">
@@ -604,7 +604,7 @@
                                             <a href="https://www.youtube.com/@jaditrip.travel" class="youtube"><i class="fa-brands fa-youtube"></i></a>
                                             <a href="https://www.linkedin.com/company/jadi-trip/?viewAsMember=true" class="linkedin"><i class="fa-brands fa-linkedin"></i></a>
                                         </div>
-                                        
+
                                     </div>
                                 </div>
                                 <!-- author-card -->
@@ -619,7 +619,7 @@
                                     <h5 class="mb-20">Visi & Misi Kami</h5>
                                     <span><strong>Visi</strong></span>
                                     <p>Menjadi agen perjalanan yang paling dicintai dan diandalkan di Indonesia. Kami ingin dikenal sebagai pionir dalam industri travel yang selalu memberikan solusi perjalanan terbaik dan pengalaman yang luar biasa bagi semua pelanggan kami.</p>
-                                    
+
                                     <span><strong>Misi</strong></span>
                                     <p class="mb-lg-60 mb-30">Menyediakan layanan perjalanan yang inovatif, mudah diakses, dan memberikan nilai lebih bagi setiap pelanggan. Kami percaya bahwa setiap orang berhak untuk menikmati pengalaman perjalanan yang memuaskan tanpa harus menghadapi kerumitan.</p>
 
@@ -694,7 +694,7 @@
                                                 Tim layanan pelanggan kami siap membantu Anda kapan saja, baik melalui telepon, email, atau chat online.</p>
                                         </li>
                                     </ul>
-                                    
+
                                     <h5 class="mb-20">Masa Depan Kami</h5>
                                     <p>Ke depan, kami berkomitmen untuk terus mengembangkan layanan kami dan memperluas jangkauan destinasi wisata. Kami berencana untuk:</p>
                                     <ul class="mb-lg-60 mb-30">
@@ -711,7 +711,7 @@
                                                 Kami akan menjalin kemitraan strategis dengan berbagai pihak untuk memberikan manfaat lebih bagi pelanggan kami, seperti diskon khusus, fasilitas tambahan, dan pengalaman eksklusif.</p>
                                         </li>
                                     </ul>
-                                    
+
                                     <h5 class="mb-20">Nikmati Layanan Kami</h5>
                                     <p class="mb-20">Terima kasih telah mengunjungi Jadi Trip. Kami berharap dapat menjadi bagian dari perjalanan Anda dan memberikan pengalaman yang tak terlupakan. Mari bersama-sama menjelajahi keindahan dunia dengan Jadi Trip!</p>
 
@@ -720,7 +720,7 @@
                                     <p>Creator & Explorer, Jadi Trip 🌍✈️</p>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                     <!-- container -->

@@ -10,7 +10,7 @@
         content="blog, blogging, blogger, articles, posts, content, writing, writers, blogosphere, online journal, web log, topics, ideas, tips, advice">
     <meta name="author" content="themeperch">
     <title>Jadi Trip</title>
-    <link rel="icon" href="{{ asset('assets/logo/logo.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ url('assets/logo/logo.ico') }}" type="image/x-icon">
 
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,10 +36,10 @@
             <div class="container">
                 <nav class="navbar navbar-expand-xl hover-menu">
                     <div class="d-flex w-100 justify-content-between align-items-center">
-                        <a class="navbar-brand" href="/" aria-label="nav-brands">
+                        <a class="navbar-brand dark-light-logo" href="/" aria-label="nav-brands">
                             <img src="assets/logo/Jadi Trip Bhitam.png" style="height: 70px"
                                 class="logo-light img-fluid" alt="logo-white">
-                            {{-- <img src="assets/logo/Jadi Trip Bputih.png" style="height: 70px" class="logo-dark" alt="logo-dark"> --}}
+                            <img src="assets/logo/Jadi Trip Bputih.png" style="height: 70px" class="logo-dark" alt="logo-dark">
                         </a>
 
                         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
@@ -59,21 +59,21 @@
                                 <ul class="gap-20 navbar-nav mb-2 me-2 mb-lg-0">
                                     <li class="nav-item dropdown">
                                         <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"
-                                            aria-current="page" href="{{ route('blog', ['kategori' => 'destinasi']) }}"
+                                            aria-current="page" href="{{ url('blog', ['kategori' => 'Destinasi']) }}"
                                             aria-label="nav-links">
                                             Destinasi
                                         </a>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"
-                                            aria-current="page" href="{{ route('blog', ['kategori' => 'aktifitas']) }}"
+                                            aria-current="page" href="{{ url('blog', ['kategori' => 'Aktifitas']) }}"
                                             aria-label="nav-links">
                                             Aktifitas
                                         </a>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"
-                                            href="{{ route('blog', ['kategori' => 'kuliner']) }}" aria-label="nav-links"
+                                            href="{{ url('blog', ['kategori' => 'kuliner']) }}" aria-label="nav-links"
                                             data-bs-toggle="dropdown" aria-expanded="true">
                                             Kuliner
                                             <span class="dropdown-icon">
@@ -87,12 +87,12 @@
                                         <ul class="dropdown-menu">
                                             <li>
                                                 <a class="dropdown-item"
-                                                    href="{{ route('blog', ['kategori' => 'kuliner', 'banyuwangi']) }}"
+                                                    href="{{ url('blog', ['kategori' => 'Kuliner Banyuwangi']) }}"
                                                     rel="nofollow" aria-label="single-pages">Banyuwangi</a>
                                             </li>
                                             <li>
                                                 <a class="dropdown-item"
-                                                    href="{{ route('blog', ['kategori' => 'kuliner', 'malang']) }}"
+                                                    href="{{ url('blog', ['kategori' => 'Kuliner Malang']) }}"
                                                     rel="nofollow" aria-label="single-pages">Malang</a>
                                             </li>
                                         </ul>
@@ -114,11 +114,11 @@
                                         </a>
                                         <ul class="dropdown-menu">
                                             <li>
-                                                <a class="dropdown-item" href="blog" rel="nofollow"
+                                                <a class="dropdown-item" href="{{ url('paket', ['kategori' => 'Open Trip']) }}" rel="nofollow"
                                                     aria-label="single-pages">Open Trip</a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" href="blog" rel="nofollow"
+                                                <a class="dropdown-item" href="{{ url('paket', ['kategori' => 'Paket Wisata']) }}" rel="nofollow"
                                                     aria-label="single-pages">Paket Wisata</a>
                                             </li>
                                         </ul>
@@ -139,22 +139,22 @@
                                         </a>
                                         <ul class="dropdown-menu">
                                             <li>
-                                                <a class="dropdown-item" href="{{ route('blog') }}" rel="nofollow"
-                                                    aria-label="single-pages">Blog 1</a>
+                                                <a class="dropdown-item" href="{{ url('blog', ['kategori' => 'Tips & Trick']) }}" rel="nofollow"
+                                                    aria-label="single-pages">Tips & Trick</a>
                                             </li>
 
                                         </ul>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"
-                                            aria-current="page" href="about" aria-label="nav-links">
+                                            aria-current="page" href="{{ url('about') }}" aria-label="nav-links">
                                             About
                                         </a>
                                     </li>
 
                                     <li class="nav-item dropdown">
                                         <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"
-                                            aria-current="page" href="contact" aria-label="nav-links">
+                                            aria-current="page" href="{{ url('kontak') }}" aria-label="nav-links">
                                             Kontak
                                         </a>
                                     </li>
@@ -176,19 +176,11 @@
 
                                     </a>
 
-                                    {{-- <a class="menu-icon"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasDesktop" aria-controls="offcanvasDesktop">
-                                                        <span class="menu-icon-2">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M3 12H21M3 6H21M3 18H21" stroke-linecap="round" stroke-linejoin="round"/>
-                                                </svg>
-                                            </span>
-                                        </a> --}}
-
                                     {{-- LOGO PROFIL KANAN ATAS --}}
                                     {{-- PROFIL KETIKA SUDAH LOGIN SCRIPT DIBAWAH --}}
                                     @if (Auth::check())
-                                        <div class="box-profile" style="width: 50px; height: 50px; overflow: hidden;">
-                                            <img src="{{ asset('admin/images/' . Auth::user()->photo) }}"
+                                        <div class="box-profile" style="width: 40px; height: 40px; overflow: hidden;">
+                                            <img width="40" src="{{ asset('admin/images/' . Auth::user()->photo) }}"
                                                 class="user_pic" alt="" id="toggle-button" width="50">
                                         </div>
 
@@ -207,6 +199,12 @@
                                                     </span>
                                                     <a href="profile">Profile</a>
                                                 </div>
+                                                <div class="sub-menu-link">
+                                                    <span class="material-icons-sharp sub-icon">
+                                                        account_circle
+                                                    </span>
+                                                    <a href="dashboard">Dashboard</a>
+                                                </div>
 
                                                 <div class="sub-menu-link">
                                                     <span class="material-icons-sharp sub-icon">
@@ -221,20 +219,9 @@
 
                                     @if (!Auth::check())
                                         {{-- PROFIL KETIKA BELUM LOGIN SCRIPT DIBAWAH --}}
-                                        <div class="box-profile">
-                                            {{-- <img src="{{ asset('admin/images/noimage.webp') }}" class="user_pic"
-                                                alt="" id="toggle-button"> --}}
-                                            <div class="burger-button" id="toggle-button">
-                                                <div
-                                                    style="width: 40px; height: 5px; background-color: white; border-radius: 10px; margin: 5px 0px;">
-                                                </div>
-                                                <div
-                                                    style="width: 40px; height: 5px; background-color: white; border-radius: 10px; margin: 5px 0px;">
-                                                </div>
-                                                <div
-                                                    style="width: 40px; height: 5px; background-color: white; border-radius: 10px; margin: 5px 0px;">
-                                                </div>
-                                            </div>
+                                        <div class="box-profile" style="width: 40px; height: 40px; overflow: hidden;">
+                                            <img width="40" src="{{ asset('admin/images/noimage.webp') }}" class="user_pic"
+                                                alt="" id="toggle-button">
                                         </div>
 
                                         <div class="sub-menu-wrap" id="subMenu">
@@ -283,6 +270,16 @@
 
                                     {{-- END OF PROFIL JIKA BELUM LOGIN --}}
 
+                                    {{-- <a class="menu-icon"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasDesktop" aria-controls="offcanvasDesktop">
+                                                        <span class="menu-icon-2">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3 12H21M3 6H21M3 18H21" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </span>
+                                        </a> --}}
+
+
+
                                 </div>
                             </div>
                         </div>
@@ -297,24 +294,23 @@
             tabindex="-1">
             <div class="offcanvas-header pb-30">
                 <a class="navbar-brand dark-light-logo" href="/" aria-label="nav-brands">
-                    <img src="assets/images/placeholder.svg" data-src="assets/images/logo-dark.png"
-                        class="logo-dark img-fluid" alt="logo">
-                    <img src="assets/images/placeholder.svg" data-src="assets/images/logo-white.png"
-                        class="logo-light img-fluid" alt="logo">
+                    <img src="assets/logo/Jadi Trip Bhitam.png" data-src="assets/logo/Jadi Trip Bputih.png"
+                        class="logo-dark gambar-logo" alt="jadi trip">
+                    <img src="assets/logo/Jadi Trip Bhitam.png" data-src="assets/logo/Jadi Trip Bhitam.png"
+                        class="logo-light gambar-logo" alt="jadi trip">
                 </a>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body d-flex justify-content-start">
                 <ul class="navbar-nav custom-navbar-nav mb-2  mb-lg-0 hover-menu">
                     <li class="nav-item dropdown">
-                        <a class="nav-link active d-flex gap-2 align-items-center" aria-current="page" href="blog"
+                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="{{ url('blog', ['kategori' => 'Destinasi']) }}"
                             aria-label="nav-links">
                             Destinasi
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link d-flex gap-2 align-items-center" href="blog" aria-label="nav-links"
-                            data-bs-toggle="dropdown" aria-expanded="true">
+                        <a class="nav-link d-flex gap-2 align-items-center" href="{{ url('blog', ['kategori' => 'Aktifitas']) }}" aria-label="nav-links">
                             Aktifitas
                         </a>
                     </li>
@@ -332,10 +328,10 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a class="dropdown-item" href="blog" aria-label="single-pages">Malang</a>
+                                <a class="dropdown-item" href="{{ url('blog', ['kategori' => 'Kuliner Banyuwangi']) }}" aria-label="single-pages">Banyuwangi</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="blog" aria-label="single-pages">Banyuwangi</a>
+                                <a class="dropdown-item" href="{{ url('blog', ['kategori' => 'Kuliner Malang']) }}" aria-label="single-pages">Malang</a>
                             </li>
                         </ul>
                     </li>
@@ -355,10 +351,10 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a class="dropdown-item" href="blog" aria-label="single-pages">Contact 1</a>
+                                <a class="dropdown-item" href="{{ url('paket', ['kategori' => 'Open Trip']) }}" aria-label="single-pages">Open Trip</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="blog" aria-label="single-pages">Contact 2</a>
+                                <a class="dropdown-item" href="{{ url('paket', ['kategori' => 'Paket Wisata']) }}" aria-label="single-pages">Paket Wisata</a>
                             </li>
 
                         </ul>
@@ -378,27 +374,25 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a class="dropdown-item" href="/article" aria-label="single-pages">Article 1</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="/article" aria-label="single-pages">Article 2</a>
+                                <a class="dropdown-item" href="{{ url('blog', ['kategori' => 'Tips & Trick']) }}" aria-label="single-pages">Tips & Trick</a>
                             </li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="about"
+                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="{{ url('about') }}"
                             aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
                             About
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="contact"
+                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="{{ url('kontak') }}"
                             aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
                             Kontak
                         </a>
                     </li>
                     {{-- MENU JIKA BELUM LOGIN --}}
-                    {{-- <li class="nav-item dropdown link-setting">
+                    @if(!Auth::check())
+                    <li class="nav-item dropdown link-setting">
                         <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="blog"
                             aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
                             Masuk
@@ -418,9 +412,11 @@
                                 <a class="dropdown-item" href="/register" aria-label="single-pages">Daftar</a>
                             </li>
                         </ul>
-                    </li> --}}
+                    </li>
+                    @endif
 
                     {{-- MENU KETIKA SUDAH LOGIN --}}
+                    @if(Auth::check())
                     <li class="nav-item dropdown">
                         <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="blog"
                             aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
@@ -435,21 +431,21 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a class="dropdown-item" href="/profil" aria-label="single-pages">Profile</a>
+                                <a class="dropdown-item" href="{{ url('profil') }}" aria-label="single-pages">Profile</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="/logout" aria-label="single-pages">Logout</a>
+                                <a class="dropdown-item" href="{{ url('logout') }}" aria-label="single-pages">Logout</a>
                             </li>
                         </ul>
                     </li>
+                    @endif
                 </ul>
 
 
             </div>
 
-            <div class="text-center d-flex justify-content-center px-30">
+            <!-- <div class="text-center d-flex justify-content-center px-30">
 
-                <!-- author-socials -->
                 <div class="author-socials">
                     <a href="https://www.facebook.com" class="facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com" class="instagram"><i class="fab fa-instagram"></i></a>
@@ -464,7 +460,7 @@
                         </svg>
                     </a>
                 </div>
-            </div>
+            </div> -->
         </div>
         <!-- of canvas Mobile menu End -->
 
@@ -846,7 +842,7 @@
                                                 class="text-white blog-title">3 Hari 2 Malam</a></h6>
                                         <ul class="list-unstyled card-meta-style-3 mb-0 justify-content-center">
                                             <div class="clickHere">
-                                                <a href="/paket">Lihat Paket</a>
+                                                <a href="{{ url('paket', ['type' => 'Rekomendasi']) }}">Lihat Paket</a>
                                             </div>
                                             {{-- <li><a class="fw-bold" href="about">Jadi Trip</a></li>
                                                 <li>January 25, <span class="dynamic-year"> </span>.</li> --}}
@@ -868,7 +864,7 @@
                                                 class="text-white blog-title">3 Hari 2 Malam</a></h6>
                                         <ul class="list-unstyled card-meta-style-3 mb-0 justify-content-center">
                                             <div class="clickHere">
-                                                <a href="/paket">Lihat Paket</a>
+                                                <a href="{{ url('paket', ['type' => 'Rekomendasi']) }}">Lihat Paket</a>
                                             </div>
                                             {{-- <li><a class="fw-bold" href="about">Serba Tau</a></li>
                                                 <li>January 20, <span class="dynamic-year"> </span>.</li> --}}
@@ -894,7 +890,7 @@
                                             class="text-white blog-title">3 Hari 2 Malam</a></h6>
                                     <ul class="list-unstyled card-meta-style-3 mb-0 justify-content-center">
                                         <div class="clickHere">
-                                            <a href="/article">Lihat Paket</a>
+                                            <a href="{{ url('paket', ['type' => 'Rekomendasi']) }}">Lihat Paket</a>
                                         </div>
                                         {{-- <li><a class="fw-bold" href="about">Serba Tau</a></li>
                                             <li>January 12, <span class="dynamic-year"> </span>.</li> --}}
@@ -915,7 +911,7 @@
                         <div class="col-lg-4 ">
                             <div class="sticky-elements">
                                 <div class="d-flex flex-column gap-40">
-
+                                    <!-- Iklan 1 -->
                                         <!-- About Me -->
                                         <a href="https://www.serbatau.web.id" target="_blank">
                                             <div class="about-me wow fadeInUp" data-wow-delay="0.4s">
@@ -923,6 +919,8 @@
                                                 <img id="iklan1-2" src="assets/images/iklan/explore-image-1.jpg" alt="">
                                             </div>
                                         </a>
+                                    <!-- Iklan 1 End -->
+
                                         <!-- Socials -->
                                         <div class="widget widget-style-2 mb-10 wow fadeInUp" data-wow-delay="0.4s">
                                             <h4 class="fs-1 mb-3 mb-lg-20 text-white text-center">Social Link</h4>
@@ -1010,12 +1008,15 @@
                                         </div>
                                         <!-- social-icons -->
                                     </div>
-
-                                    <div class="add-iamge d-none d-xl-block ml-auto wow fadeInUp"
-                                        data-wow-delay="0.4s">
-                                        <a href="#"><img src="assets/images/add.png" class="img-fluid"
-                                                alt="add-image"></a>
-                                    </div>
+                                    <!-- Iklan 2 -->
+                                    @foreach ($iklans as $iklan)
+                                        @if ($iklan->type == 'Iklan 2')
+                                            <div class="add-image d-none d-xl-block ml-auto wow fadeInUp" title="{{ $iklan->company }}" data-wow-delay="0.4s">
+                                                <a href="{{ $iklan->link }}" rel="nofollow" target="__blank"><img style="border-radius: 1rem;" src="assets/images/iklan/{{ $iklan->image }}" class="img-fluid" alt="{{ $iklan->company }}"></a>
+                                            </div>
+                                        @endif
+                                    @endforeach
+                                    <!-- Iklan 2 End -->
                                 </div>
                             </div>
 
@@ -1037,7 +1038,7 @@
                                                 <div class="card-header text-uppercase">
                                                     <a href="/category">{{ $data->kategori->name }}</a>
                                                 </div>
-                                                <h6 class="fs-4 card-title"><a href="/article" class="blog-title">{{ $data->title }}</a></h6>
+                                                <h6 class="fs-4 card-title"><a href="/article/{{ $data->slug }}" class="blog-title">{{ $data->title }}</a></h6>
                                                 <ul class="list-unstyled card-meta  align-items-center">
                                                     <li>By <a href="author-1" class="blog-author fw-bold">Jadi Trip</a></li>
                                                     <li>{{ $data->created_at->DiffForHumans() }}</li>
@@ -1473,6 +1474,7 @@
 
     </div>
     <!-- page -->
+
 
 
     <!-- js link -->

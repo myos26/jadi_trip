@@ -79,3 +79,6 @@ Route::get('/article/{slug}', [PostController::class, 'post']);
 
 Route::get('/auth', [AuthController::class, 'handleAuth']);
 
+Route::get('/bacadata', function () {
+    return view('auth/lengkap_data');
+});

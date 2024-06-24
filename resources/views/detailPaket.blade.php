@@ -20,16 +20,16 @@
         rel="stylesheet">
 
     <!-- css -->
-    <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/all.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/odometer.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/venobox.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/swiper-bundle.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/owl.theme.default.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/new.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ url('assets/css/fontawesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url('assets/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ url('assets/css/odometer.min.css') }}">
+    <link rel="stylesheet" href="{{ url('assets/css/venobox.min.css') }}">
+    <link rel="stylesheet" href="{{ url('assets/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ url('assets/css/swiper-bundle.min.css') }}">
+    <link rel="stylesheet" href="{{ url('assets/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url('assets/css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{ url('assets/css/new.css') }}">
+    <link rel="stylesheet" href="{{ url('assets/css/style.css') }}">
 </head>
 
 
@@ -754,7 +754,7 @@
                             <div class="article-blog-content mb-lg-0 mb-20">
                                 <p class="mb-30 mb-lg-60">Deskripsi Paket</p>
 
-                                
+
                                 <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0"
                                     data-bs-smooth-scroll="true" tabindex="0">
                                     <h3 id="benefit" class="mb-10 article-post-heading ">Benefit</h3>
@@ -807,28 +807,6 @@
                                                 class="border-rarius-14" alt="img-top">
                                         </div>
 
-                                    </div>
-                                    <!-- quote -->
-                                    <div class="quote mb-10 mb-lg-30 ">
-                                        <p><b>Baca Juga:</b> Menyibak Pesona Gunung Ijen: Keindahan yang Tiada Tara</p>
-                                        <span class="quote-icon">
-                                            <svg width="70" height="56" viewBox="0 0 70 56" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <g clip-path="url(#clip0_1_17489)">
-                                                    <path
-                                                        d="M69.9997 40.3661C69.9025 48.8919 62.9853 55.8666 54.4855 55.9979C48.1182 56.0954 42.6026 52.4079 40.0241 47.0279C39.6318 46.2103 39.3099 45.3557 39.0618 44.4675C33.1773 25.4374 54.9951 5.98009 61.6944 0.553026C62.7372 -0.291483 64.2628 -0.153535 65.1412 0.862567C65.9325 1.77437 65.9594 3.1202 65.2083 4.06564C57.8519 13.3216 55.317 19.8287 55.3573 24.4079C63.5989 24.9866 70.0936 31.9243 69.9997 40.3661Z"
-                                                        fill="#4C9BB3" fill-opacity="0.4" />
-                                                    <path
-                                                        d="M31.9333 40.3661C31.8395 48.8919 24.9189 55.8666 16.4225 55.9979C10.0552 56.0954 4.53621 52.4079 1.95777 47.0279C1.56883 46.2103 1.24359 45.3557 0.99547 44.4675C-4.88564 25.4374 16.9288 5.98009 23.628 0.553026C24.6742 -0.291483 26.1964 -0.153535 27.0782 0.862567C27.8662 1.77437 27.893 3.1202 27.1453 4.06564C19.7889 13.3216 17.254 19.8287 17.2943 24.4079C25.5359 24.9866 32.0272 31.9243 31.9333 40.3661Z"
-                                                        fill="#4C9BB3" fill-opacity="0.4" />
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_1_17489">
-                                                        <rect width="70" height="56" fill="white" />
-                                                    </clipPath>
-                                                </defs>
-                                            </svg>
-                                        </span>
                                     </div>
 
                                     <!-- single-article-post-style -->

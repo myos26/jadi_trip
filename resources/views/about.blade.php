@@ -599,8 +599,8 @@
                                         <div class="author-socials">
                                             <a href="https://wa.me/6282142785442" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
                                             <a href="https://www.facebook.com/jaditrip" class="facebook"><i class="fab fa-facebook"></i></a>
-                                            <a href="https://www.instagram.com/jaditrip.travel" class="instagram"><i class="fab fa-instagram"></i></a>
-                                            <a href="https://x.com/jaditrip_travel" class="x"><i class="fab fa-twitter"></i></a>
+                                            <a href="https://www.instagram.com/jaditrip_travel" class="instagram"><i class="fab fa-instagram"></i></a>
+                                            <a href="https://x.com/jaditrip_travel" class="x"><i class="fa-brands fa-x-twitter"></i></a>
                                             <a href="https://www.youtube.com/@jaditrip.travel" class="youtube"><i class="fa-brands fa-youtube"></i></a>
                                             <a href="https://www.linkedin.com/company/jadi-trip/?viewAsMember=true" class="linkedin"><i class="fa-brands fa-linkedin"></i></a>
                                         </div>
@@ -896,6 +896,7 @@
         <script src="assets/js/appear.min.js"></script>
         <script src="assets/js/lazy.image.js"></script>
         <script src="assets/js/script.js"></script>
+        <script src="https://kit.fontawesome.com/d0f71bfae3.js" crossorigin="anonymous"></script>
 
 
 	</body>

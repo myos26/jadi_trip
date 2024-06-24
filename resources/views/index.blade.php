@@ -36,10 +36,10 @@
             <div class="container">
                 <nav class="navbar navbar-expand-xl hover-menu">
                     <div class="d-flex w-100 justify-content-between align-items-center">
-                        <a class="navbar-brand dark-light-logo" href="/" aria-label="nav-brands">
+                        <a class="navbar-brand" href="/" aria-label="nav-brands">
                             <img src="assets/logo/Jadi Trip Bhitam.png" style="height: 70px"
                                 class="logo-light img-fluid" alt="logo-white">
-                            <img src="assets/logo/Jadi Trip Bputih.png" style="height: 70px" class="logo-dark" alt="logo-dark">
+                            {{-- <img src="assets/logo/Jadi Trip Bputih.png" style="height: 70px" class="logo-dark" alt="logo-dark"> --}}
                         </a>
 
                         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
@@ -842,7 +842,7 @@
                                                 class="text-white blog-title">3 Hari 2 Malam</a></h6>
                                         <ul class="list-unstyled card-meta-style-3 mb-0 justify-content-center">
                                             <div class="clickHere">
-                                                <a href="{{ url('paket', ['type' => 'Rekomendasi']) }}">Lihat Paket</a>
+                                                <a href="{{ url('detail paket', ['type' => 'Rekomendasi']) }}">Lihat Paket</a>
                                             </div>
                                             {{-- <li><a class="fw-bold" href="about">Jadi Trip</a></li>
                                                 <li>January 25, <span class="dynamic-year"> </span>.</li> --}}
@@ -864,7 +864,7 @@
                                                 class="text-white blog-title">3 Hari 2 Malam</a></h6>
                                         <ul class="list-unstyled card-meta-style-3 mb-0 justify-content-center">
                                             <div class="clickHere">
-                                                <a href="{{ url('paket', ['type' => 'Rekomendasi']) }}">Lihat Paket</a>
+                                                <a href="{{ url('detail paket', ['type' => 'Rekomendasi']) }}">Lihat Paket</a>
                                             </div>
                                             {{-- <li><a class="fw-bold" href="about">Serba Tau</a></li>
                                                 <li>January 20, <span class="dynamic-year"> </span>.</li> --}}
@@ -890,7 +890,7 @@
                                             class="text-white blog-title">3 Hari 2 Malam</a></h6>
                                     <ul class="list-unstyled card-meta-style-3 mb-0 justify-content-center">
                                         <div class="clickHere">
-                                            <a href="{{ url('paket', ['type' => 'Rekomendasi']) }}">Lihat Paket</a>
+                                            <a href="{{ url('detail paket', ['type' => 'Rekomendasi']) }}">Lihat Paket</a>
                                         </div>
                                         {{-- <li><a class="fw-bold" href="about">Serba Tau</a></li>
                                             <li>January 12, <span class="dynamic-year"> </span>.</li> --}}
@@ -1110,171 +1110,36 @@
                     <div class=" swiper instagram-slider   wow fadeInUp" data-wow-delay="0.4s">
                         <div class="swiper-wrapper">
 
-                            <div class="swiper-slide">
-                                <div class="instagram-image-wrapper image-hover">
-                                    <img src="assets/images/placeholder.svg"
-                                        data-src="assets/images/instagram/instagram-1.png" alt="instagram-image">
+                            @foreach ($mediaData as $media)
+                                <div class="swiper-slide">
+                                    <a href="{{ $media['permalink'] }}" target="__blank">
+                                        <div class="instagram-image-wrapper image-hover">
+                                            <img src="assets/images/placeholder.svg"
+                                                data-src="{{ $media['media_url'] }}" alt="instagram-image">
 
-                                    <span class="d-flex justify-content-center mb-10"> <svg width="40"
-                                            height="40" viewBox="0 0 40 40" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M27.6435 40H12.3565C5.54201 40 0 34.458 0 27.6435V12.3565C0 5.54202 5.54201 0 12.3565 0H27.6435C34.4579 0 40 5.54202 40 12.3565V27.6435C40.0035 34.458 34.4579 40 27.6435 40ZM12.3565 4.45884C8.0028 4.45884 4.45884 8.0028 4.45884 12.3565V27.6435C4.45884 31.9972 8.0028 35.5412 12.3565 35.5412H27.6435C31.9972 35.5412 35.5411 31.9972 35.5411 27.6435V12.3565C35.5411 8.0028 31.9972 4.45884 27.6435 4.45884H12.3565Z"
-                                                fill="#363636" />
-                                            <path
-                                                d="M20.0029 30.2168C14.3663 30.2168 9.78125 25.6318 9.78125 19.9951C9.78125 14.3585 14.3663 9.77344 20.0029 9.77344C25.6396 9.77344 30.2246 14.3585 30.2246 19.9951C30.2246 25.6318 25.6396 30.2168 20.0029 30.2168ZM20.0029 13.7836C16.5782 13.7836 13.7914 16.5704 13.7914 19.9951C13.7914 23.4199 16.5782 26.2066 20.0029 26.2066C23.4277 26.2066 26.2145 23.4199 26.2145 19.9951C26.2145 16.5704 23.4277 13.7836 20.0029 13.7836Z"
-                                                fill="#363636" />
-                                            <path
-                                                d="M32.4758 9.18126C32.4758 10.1347 31.7011 10.9095 30.7477 10.9095C29.7942 10.9095 29.0195 10.1347 29.0195 9.18126C29.0195 8.22779 29.7942 7.45312 30.7477 7.45312C31.7011 7.45312 32.4758 8.22429 32.4758 9.18126Z"
-                                                fill="#fff" />
-                                        </svg>
-                                    </span>
+                                            <span class="d-flex justify-content-center mb-10"> <svg width="40"
+                                                    height="40" viewBox="0 0 40 40" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M27.6435 40H12.3565C5.54201 40 0 34.458 0 27.6435V12.3565C0 5.54202 5.54201 0 12.3565 0H27.6435C34.4579 0 40 5.54202 40 12.3565V27.6435C40.0035 34.458 34.4579 40 27.6435 40ZM12.3565 4.45884C8.0028 4.45884 4.45884 8.0028 4.45884 12.3565V27.6435C4.45884 31.9972 8.0028 35.5412 12.3565 35.5412H27.6435C31.9972 35.5412 35.5411 31.9972 35.5411 27.6435V12.3565C35.5411 8.0028 31.9972 4.45884 27.6435 4.45884H12.3565Z"
+                                                        fill="#363636" />
+                                                    <path
+                                                        d="M20.0029 30.2168C14.3663 30.2168 9.78125 25.6318 9.78125 19.9951C9.78125 14.3585 14.3663 9.77344 20.0029 9.77344C25.6396 9.77344 30.2246 14.3585 30.2246 19.9951C30.2246 25.6318 25.6396 30.2168 20.0029 30.2168ZM20.0029 13.7836C16.5782 13.7836 13.7914 16.5704 13.7914 19.9951C13.7914 23.4199 16.5782 26.2066 20.0029 26.2066C23.4277 26.2066 26.2145 23.4199 26.2145 19.9951C26.2145 16.5704 23.4277 13.7836 20.0029 13.7836Z"
+                                                        fill="#363636" />
+                                                    <path
+                                                        d="M32.4758 9.18126C32.4758 10.1347 31.7011 10.9095 30.7477 10.9095C29.7942 10.9095 29.0195 10.1347 29.0195 9.18126C29.0195 8.22779 29.7942 7.45312 30.7477 7.45312C31.7011 7.45312 32.4758 8.22429 32.4758 9.18126Z"
+                                                        fill="#fff" />
+                                                </svg>
+                                            </span>
 
 
+                                        </div>
+                                    </a>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="instagram-image-wrapper image-hover">
-                                    <img src="assets/images/placeholder.svg"
-                                        data-src="assets/images/instagram/instagram-2.png" alt="instagram-image">
-
-                                    <span class="d-flex justify-content-center mb-10"> <svg width="40"
-                                            height="40" viewBox="0 0 40 40" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M27.6435 40H12.3565C5.54201 40 0 34.458 0 27.6435V12.3565C0 5.54202 5.54201 0 12.3565 0H27.6435C34.4579 0 40 5.54202 40 12.3565V27.6435C40.0035 34.458 34.4579 40 27.6435 40ZM12.3565 4.45884C8.0028 4.45884 4.45884 8.0028 4.45884 12.3565V27.6435C4.45884 31.9972 8.0028 35.5412 12.3565 35.5412H27.6435C31.9972 35.5412 35.5411 31.9972 35.5411 27.6435V12.3565C35.5411 8.0028 31.9972 4.45884 27.6435 4.45884H12.3565Z"
-                                                fill="#363636" />
-                                            <path
-                                                d="M20.0029 30.2168C14.3663 30.2168 9.78125 25.6318 9.78125 19.9951C9.78125 14.3585 14.3663 9.77344 20.0029 9.77344C25.6396 9.77344 30.2246 14.3585 30.2246 19.9951C30.2246 25.6318 25.6396 30.2168 20.0029 30.2168ZM20.0029 13.7836C16.5782 13.7836 13.7914 16.5704 13.7914 19.9951C13.7914 23.4199 16.5782 26.2066 20.0029 26.2066C23.4277 26.2066 26.2145 23.4199 26.2145 19.9951C26.2145 16.5704 23.4277 13.7836 20.0029 13.7836Z"
-                                                fill="#363636" />
-                                            <path
-                                                d="M32.4758 9.18126C32.4758 10.1347 31.7011 10.9095 30.7477 10.9095C29.7942 10.9095 29.0195 10.1347 29.0195 9.18126C29.0195 8.22779 29.7942 7.45312 30.7477 7.45312C31.7011 7.45312 32.4758 8.22429 32.4758 9.18126Z"
-                                                fill="#fff" />
-                                        </svg>
-                                    </span>
-
-
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="instagram-image-wrapper image-hover">
-                                    <img src="assets/images/placeholder.svg"
-                                        data-src="assets/images/instagram/instagram-3.png" alt="instagram-image">
-
-                                    <span class="d-flex justify-content-center mb-10"> <svg width="40"
-                                            height="40" viewBox="0 0 40 40" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M27.6435 40H12.3565C5.54201 40 0 34.458 0 27.6435V12.3565C0 5.54202 5.54201 0 12.3565 0H27.6435C34.4579 0 40 5.54202 40 12.3565V27.6435C40.0035 34.458 34.4579 40 27.6435 40ZM12.3565 4.45884C8.0028 4.45884 4.45884 8.0028 4.45884 12.3565V27.6435C4.45884 31.9972 8.0028 35.5412 12.3565 35.5412H27.6435C31.9972 35.5412 35.5411 31.9972 35.5411 27.6435V12.3565C35.5411 8.0028 31.9972 4.45884 27.6435 4.45884H12.3565Z"
-                                                fill="#363636" />
-                                            <path
-                                                d="M20.0029 30.2168C14.3663 30.2168 9.78125 25.6318 9.78125 19.9951C9.78125 14.3585 14.3663 9.77344 20.0029 9.77344C25.6396 9.77344 30.2246 14.3585 30.2246 19.9951C30.2246 25.6318 25.6396 30.2168 20.0029 30.2168ZM20.0029 13.7836C16.5782 13.7836 13.7914 16.5704 13.7914 19.9951C13.7914 23.4199 16.5782 26.2066 20.0029 26.2066C23.4277 26.2066 26.2145 23.4199 26.2145 19.9951C26.2145 16.5704 23.4277 13.7836 20.0029 13.7836Z"
-                                                fill="#363636" />
-                                            <path
-                                                d="M32.4758 9.18126C32.4758 10.1347 31.7011 10.9095 30.7477 10.9095C29.7942 10.9095 29.0195 10.1347 29.0195 9.18126C29.0195 8.22779 29.7942 7.45312 30.7477 7.45312C31.7011 7.45312 32.4758 8.22429 32.4758 9.18126Z"
-                                                fill="#fff" />
-                                        </svg>
-                                    </span>
-
-
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="instagram-image-wrapper image-hover">
-                                    <img src="assets/images/placeholder.svg"
-                                        data-src="assets/images/instagram/instagram-4.png" alt="instagram-image">
-
-                                    <span class="d-flex justify-content-center mb-10"> <svg width="40"
-                                            height="40" viewBox="0 0 40 40" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M27.6435 40H12.3565C5.54201 40 0 34.458 0 27.6435V12.3565C0 5.54202 5.54201 0 12.3565 0H27.6435C34.4579 0 40 5.54202 40 12.3565V27.6435C40.0035 34.458 34.4579 40 27.6435 40ZM12.3565 4.45884C8.0028 4.45884 4.45884 8.0028 4.45884 12.3565V27.6435C4.45884 31.9972 8.0028 35.5412 12.3565 35.5412H27.6435C31.9972 35.5412 35.5411 31.9972 35.5411 27.6435V12.3565C35.5411 8.0028 31.9972 4.45884 27.6435 4.45884H12.3565Z"
-                                                fill="#363636" />
-                                            <path
-                                                d="M20.0029 30.2168C14.3663 30.2168 9.78125 25.6318 9.78125 19.9951C9.78125 14.3585 14.3663 9.77344 20.0029 9.77344C25.6396 9.77344 30.2246 14.3585 30.2246 19.9951C30.2246 25.6318 25.6396 30.2168 20.0029 30.2168ZM20.0029 13.7836C16.5782 13.7836 13.7914 16.5704 13.7914 19.9951C13.7914 23.4199 16.5782 26.2066 20.0029 26.2066C23.4277 26.2066 26.2145 23.4199 26.2145 19.9951C26.2145 16.5704 23.4277 13.7836 20.0029 13.7836Z"
-                                                fill="#363636" />
-                                            <path
-                                                d="M32.4758 9.18126C32.4758 10.1347 31.7011 10.9095 30.7477 10.9095C29.7942 10.9095 29.0195 10.1347 29.0195 9.18126C29.0195 8.22779 29.7942 7.45312 30.7477 7.45312C31.7011 7.45312 32.4758 8.22429 32.4758 9.18126Z"
-                                                fill="#fff" />
-                                        </svg>
-                                    </span>
-
-
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="instagram-image-wrapper image-hover">
-                                    <img src="assets/images/placeholder.svg"
-                                        data-src="assets/images/instagram/instagram-5.png" alt="instagram-image">
-
-                                    <span class="d-flex justify-content-center mb-10"> <svg width="40"
-                                            height="40" viewBox="0 0 40 40" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M27.6435 40H12.3565C5.54201 40 0 34.458 0 27.6435V12.3565C0 5.54202 5.54201 0 12.3565 0H27.6435C34.4579 0 40 5.54202 40 12.3565V27.6435C40.0035 34.458 34.4579 40 27.6435 40ZM12.3565 4.45884C8.0028 4.45884 4.45884 8.0028 4.45884 12.3565V27.6435C4.45884 31.9972 8.0028 35.5412 12.3565 35.5412H27.6435C31.9972 35.5412 35.5411 31.9972 35.5411 27.6435V12.3565C35.5411 8.0028 31.9972 4.45884 27.6435 4.45884H12.3565Z"
-                                                fill="#363636" />
-                                            <path
-                                                d="M20.0029 30.2168C14.3663 30.2168 9.78125 25.6318 9.78125 19.9951C9.78125 14.3585 14.3663 9.77344 20.0029 9.77344C25.6396 9.77344 30.2246 14.3585 30.2246 19.9951C30.2246 25.6318 25.6396 30.2168 20.0029 30.2168ZM20.0029 13.7836C16.5782 13.7836 13.7914 16.5704 13.7914 19.9951C13.7914 23.4199 16.5782 26.2066 20.0029 26.2066C23.4277 26.2066 26.2145 23.4199 26.2145 19.9951C26.2145 16.5704 23.4277 13.7836 20.0029 13.7836Z"
-                                                fill="#363636" />
-                                            <path
-                                                d="M32.4758 9.18126C32.4758 10.1347 31.7011 10.9095 30.7477 10.9095C29.7942 10.9095 29.0195 10.1347 29.0195 9.18126C29.0195 8.22779 29.7942 7.45312 30.7477 7.45312C31.7011 7.45312 32.4758 8.22429 32.4758 9.18126Z"
-                                                fill="#fff" />
-                                        </svg>
-                                    </span>
-
-
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="instagram-image-wrapper image-hover">
-                                    <img src="assets/images/placeholder.svg"
-                                        data-src="assets/images/instagram/instagram-6.png" alt="instagram-image">
-
-                                    <span class="d-flex justify-content-center mb-10"> <svg width="40"
-                                            height="40" viewBox="0 0 40 40" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M27.6435 40H12.3565C5.54201 40 0 34.458 0 27.6435V12.3565C0 5.54202 5.54201 0 12.3565 0H27.6435C34.4579 0 40 5.54202 40 12.3565V27.6435C40.0035 34.458 34.4579 40 27.6435 40ZM12.3565 4.45884C8.0028 4.45884 4.45884 8.0028 4.45884 12.3565V27.6435C4.45884 31.9972 8.0028 35.5412 12.3565 35.5412H27.6435C31.9972 35.5412 35.5411 31.9972 35.5411 27.6435V12.3565C35.5411 8.0028 31.9972 4.45884 27.6435 4.45884H12.3565Z"
-                                                fill="#363636" />
-                                            <path
-                                                d="M20.0029 30.2168C14.3663 30.2168 9.78125 25.6318 9.78125 19.9951C9.78125 14.3585 14.3663 9.77344 20.0029 9.77344C25.6396 9.77344 30.2246 14.3585 30.2246 19.9951C30.2246 25.6318 25.6396 30.2168 20.0029 30.2168ZM20.0029 13.7836C16.5782 13.7836 13.7914 16.5704 13.7914 19.9951C13.7914 23.4199 16.5782 26.2066 20.0029 26.2066C23.4277 26.2066 26.2145 23.4199 26.2145 19.9951C26.2145 16.5704 23.4277 13.7836 20.0029 13.7836Z"
-                                                fill="#363636" />
-                                            <path
-                                                d="M32.4758 9.18126C32.4758 10.1347 31.7011 10.9095 30.7477 10.9095C29.7942 10.9095 29.0195 10.1347 29.0195 9.18126C29.0195 8.22779 29.7942 7.45312 30.7477 7.45312C31.7011 7.45312 32.4758 8.22429 32.4758 9.18126Z"
-                                                fill="#fff" />
-                                        </svg>
-                                    </span>
-
-
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="instagram-image-wrapper image-hover">
-                                    <img src="assets/images/placeholder.svg"
-                                        data-src="assets/images/instagram/explore-image-16.jpg" alt="instagram-image">
-
-                                    <span class="d-flex justify-content-center mb-10"> <svg width="40"
-                                            height="40" viewBox="0 0 40 40" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M27.6435 40H12.3565C5.54201 40 0 34.458 0 27.6435V12.3565C0 5.54202 5.54201 0 12.3565 0H27.6435C34.4579 0 40 5.54202 40 12.3565V27.6435C40.0035 34.458 34.4579 40 27.6435 40ZM12.3565 4.45884C8.0028 4.45884 4.45884 8.0028 4.45884 12.3565V27.6435C4.45884 31.9972 8.0028 35.5412 12.3565 35.5412H27.6435C31.9972 35.5412 35.5411 31.9972 35.5411 27.6435V12.3565C35.5411 8.0028 31.9972 4.45884 27.6435 4.45884H12.3565Z"
-                                                fill="#363636" />
-                                            <path
-                                                d="M20.0029 30.2168C14.3663 30.2168 9.78125 25.6318 9.78125 19.9951C9.78125 14.3585 14.3663 9.77344 20.0029 9.77344C25.6396 9.77344 30.2246 14.3585 30.2246 19.9951C30.2246 25.6318 25.6396 30.2168 20.0029 30.2168ZM20.0029 13.7836C16.5782 13.7836 13.7914 16.5704 13.7914 19.9951C13.7914 23.4199 16.5782 26.2066 20.0029 26.2066C23.4277 26.2066 26.2145 23.4199 26.2145 19.9951C26.2145 16.5704 23.4277 13.7836 20.0029 13.7836Z"
-                                                fill="#363636" />
-                                            <path
-                                                d="M32.4758 9.18126C32.4758 10.1347 31.7011 10.9095 30.7477 10.9095C29.7942 10.9095 29.0195 10.1347 29.0195 9.18126C29.0195 8.22779 29.7942 7.45312 30.7477 7.45312C31.7011 7.45312 32.4758 8.22429 32.4758 9.18126Z"
-                                                fill="#fff" />
-                                        </svg>
-                                    </span>
-
-                                </div>
-                            </div>
-
-
+                            @endforeach
                         </div>
 
-                        <span class="text-white follow-txt">Follow Me</span>
+                        <a href="https://www.instagram.com/jaditrip_travel" target="__blank"><span class="text-white follow-txt">Follow Me</span></a>
                     </div>
 
                 </div>

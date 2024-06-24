@@ -38,10 +38,10 @@
                 <div class="container">
                     <nav class="navbar navbar-expand-xl hover-menu">
                         <div class="d-flex w-100 justify-content-between align-items-center">
-                            <a class="navbar-brand dark-light-logo" href="/" aria-label="nav-brands">
+                            <a class="navbar-brand" href="/" aria-label="nav-brands">
                                 <img src="{{ url('assets/logo/Jadi Trip Bhitam.png') }}" style="height: 70px"
                                     class="logo-light img-fluid" alt="logo-white">
-                                <img src="{{ url('assets/logo/Jadi Trip Bputih.png') }}" style="height: 70px" class="logo-dark" alt="logo-dark">
+                                {{-- <img src="{{ url('assets/logo/Jadi Trip Bputih.png') }}" style="height: 70px" class="logo-dark" alt="logo-dark"> --}}
                             </a>
 
                             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
@@ -731,7 +731,7 @@
 
                                         <p class="card-text small">Embark on a journey of awe and wonder with 'Mountain Magic: A Hiker's Guide to Scenic Views.' This captivating guidebook unveils the secrets of...</p>
                                         <div class="clickHere">
-                                            <a href="{{ url('paket') }}">Lihat Paket</a>
+                                            <a href="{{ url('detail%20paket/paket') }}">Lihat Paket</a>
                                         </div>
                                     </div>
                                 </div>

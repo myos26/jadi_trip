@@ -201,12 +201,21 @@
                                                 </div>
                                                 <hr>
 
-                                                <div class="sub-menu-link">
-                                                    <span class="material-icons-sharp sub-icon">
-                                                        account_circle
-                                                    </span>
-                                                    <a href="profile">Profile</a>
-                                                </div>
+                                                @if (Auth::user()->is_admin == 1)
+                                                    <div class="sub-menu-link">
+                                                        <span class="material-icons-sharp sub-icon">
+                                                            account_circle
+                                                        </span>
+                                                        <a href="{{ url('/Dashboard') }}">Dashboard</a>
+                                                    </div>
+                                                @else
+                                                    <div class="sub-menu-link">
+                                                        <span class="material-icons-sharp sub-icon">
+                                                            account_circle
+                                                        </span>
+                                                        <a href="profile">Profile</a>
+                                                    </div>
+                                                @endif
 
                                                 <div class="sub-menu-link">
                                                     <span class="material-icons-sharp sub-icon">
@@ -1035,8 +1044,9 @@
                                         <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp"
                                             data-wow-delay="0.4s">
                                             <div class="card-image-wrapper">
-                                                <a href="/article"><img src="assets/images/placeholder.svg"
-                                                        data-src="assets/images/blog/explore-image-17.jpg"
+                                                <a href="/article/{{ $data->slug }}"><img
+                                                        src="{{ asset('post_media/' . $data->thumbnail) }}"
+                                                        data-src="{{ asset('post_media/' . $data->thumbnail) }}"
                                                         class="card-img-top" alt="Discovering"></a>
 
                                             </div>
@@ -1048,14 +1058,15 @@
                                                 <h5 class="fs-4 card-title"><a href="/article/{{ $data->slug }}"
                                                         class="blog-title">{{ $data->title }}</a></h5>
                                                 <ul class="list-unstyled card-meta  align-items-center">
-                                                    <li>By <a href="author-1" class="blog-author fw-bold">Mike
-                                                            Aiden</a></li>
+                                                    <li>By <a href="author-1" class="blog-author fw-bold">Jadi
+                                                            Trip</a></li>
                                                     <li>{{ $data->created_at->DiffForHumans() }}<span>
                                                         </span>.
                                                     </li>
                                                 </ul>
 
-                                                <p class="card-text small">{{ Str::limit($data->content, 100) }}</p>
+                                                <p class="card-text small">
+                                                    {{ Str::limit($data->description, 100, '...') }}</p>
                                                 <a href="/article/{{ $data->slug }}">Read
                                                     more &raquo;</a>
                                             </div>

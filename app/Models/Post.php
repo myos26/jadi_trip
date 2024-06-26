@@ -13,7 +13,8 @@ class Post extends Model
 
     protected $fillable = [
         'thumbnail',
-        'judul',
+        'title',
+        'description',
         'slug',
         'content',
         'kategori_id',

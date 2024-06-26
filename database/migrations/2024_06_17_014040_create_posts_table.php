@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->text('thumbnail');
             $table->string('title', 100);
+            $table->text('description');
             $table->string('slug');
             $table->longText('content');
             $table->foreignId('kategori_id')->constrained();

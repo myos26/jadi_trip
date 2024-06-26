@@ -1,3 +1,7 @@
+<?php
+use App\Models\Post;
+?>
+
 <!-- Sidebar Section -->
 <aside>
     <div class="toggle">
@@ -26,7 +30,7 @@
                 post_add
             </span>
             <h3>Post</h3>
-            <span class="message-count">1</span>
+            <span class="message-count">{{ count(Post::all()) }}</span>
         </a>
         <a href="paket_wisata" class="{{ Request::is('paket_wisata') ? 'active' : '' }}">
             <span class="material-icons-sharp">

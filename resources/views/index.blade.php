@@ -235,6 +235,7 @@
                                                         </span>
                                                         <a href="profile">Profile</a>
                                                     </div>
+                                                @endif
 
                                                 <div class="sub-menu-link">
                                                     <span class="material-icons-sharp sub-icon">
@@ -242,7 +243,6 @@
                                                     </span>
                                                     <a href="logout">Logout</a>
                                                 </div>
-
                                             </div>
                                         </div>
                                     @endif

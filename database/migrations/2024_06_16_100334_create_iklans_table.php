@@ -11,17 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('iklans', function (Blueprint $table) {
             $table->id();
-            $table->text('thumbnail');
-            $table->string('title', 100);
-            $table->text('description');
-            $table->string('slug');
-            $table->longText('content');
-            $table->foreignId('kategori_id')->constrained();
-            $table->enum('status', ['Public', 'Draft']);
+            $table->text('image');
+            $table->string('company');
+            $table->text('link');
+            $table->enum('type', ['Iklan 1','Iklan 2','Iklan 3']);
+            $table->enum('status', ['Enable','Disable'])->default('Disable');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -30,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('iklans');
     }
 };

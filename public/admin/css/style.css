@@ -138,8 +138,9 @@ aside .toggle .logo{
 }
 
 aside .toggle .logo img{
-    width: 2rem;
-    height: 2rem;
+    /* width: 2rem; */
+    height: 4rem;
+    margin-left: 30%;
 }
 
 aside .toggle .close{
@@ -613,7 +614,7 @@ main .recent-orders a{
     @keyframes showMenu {
        to{
         left: 0;
-       } 
+       }
     }
 
     aside .logo{

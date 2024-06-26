@@ -11,17 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('sosmeds', function (Blueprint $table) {
             $table->id();
-            $table->text('thumbnail');
-            $table->string('title', 100);
-            $table->text('description');
-            $table->string('slug');
-            $table->longText('content');
-            $table->foreignId('kategori_id')->constrained();
-            $table->enum('status', ['Public', 'Draft']);
+            $table->string('platform', 20);
+            $table->string('link',255);
+            $table->enum('status',['Public','Maintenance'])->default('Public');
             $table->timestamps();
+            $table->SoftDeletes();
         });
     }
 
@@ -30,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('sosmeds');
     }
 };

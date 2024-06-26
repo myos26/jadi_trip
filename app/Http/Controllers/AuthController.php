@@ -190,4 +190,15 @@ class AuthController extends Controller
 
         return redirect('/');
     }
+
+    public function handleAuth(Request $request)
+    {
+        if ($request->has('code')) {
+            $authCode = $request->input('code');
+            // Lakukan sesuatu dengan kode otorisasi, misalnya menyimpannya di sesi atau database
+            return view('auth', ['authCode' => $authCode]);
+        } else {
+            return view('auth', ['message' => 'Tidak ada kode otorisasi yang ditemukan.']);
+        }
+    }
 }

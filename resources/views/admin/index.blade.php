@@ -11,6 +11,8 @@
     @yield('head')
 
     <title>Admin | Jadi Trip</title>
+    <link rel="icon" href="{{asset('assets/logo/logo.ico')}}" type="image/x-icon">
+
 </head>
 
 <body>

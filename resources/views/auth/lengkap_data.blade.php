@@ -16,7 +16,7 @@
     <div class="wrapper">
         <form action="{{ url('/verified-info') }}" method="POST">
             @csrf
-            <h1>Registrasi</h1>
+            <h1>Lengkapi Profil</h1>
 
             <div class="input-box">
                 <div class="input-field">
@@ -72,12 +72,8 @@
                     <i class='bx bxs-city'></i>
                 </div>
             </div>
-            <label>
-                <input type="checkbox">Saya menyatakan bahwa informasi yang diberikan di atas adalah benar dan tepat
-            </label>
 
             <button type="submit" class="btn">Simpan</button>
-            <a href="/login" class="btn2">Sudah mempunyai akun? Login disini</a>
         </form>
     </div>
 

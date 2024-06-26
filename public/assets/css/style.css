@@ -314,6 +314,68 @@ address {
   line-height: inherit;
 }
 
+.box-search{
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #e1e7ec;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    opacity: 30%;
+    position: absolute;
+    padding: 5px 10px;
+    width: 20%;
+    right: 10%;
+    /* bottom: -20px; */
+    top: 85%;
+    opacity: 0;
+    transform: translateX(15px);
+    transition: opacity 1s ease;
+}
+
+/* .box-content{
+    background-color: #f8f9fa;
+    border: 1px solid #e1e7ec;
+    padding-left: 5px;
+} */
+
+.box-search.active{
+    top: 30%;
+    opacity: 1;
+    border: 1px solid #e1e7ec;
+    transition: opacity 1s ease;
+    animation: geserDariAtas .5s forwards;
+}
+
+@keyframes geserDariAtas {
+    to {
+        opacity: 1;
+        transform: translateX(5px);
+    }
+}
+
+.box-search form i{
+    position: absolute;
+    cursor: pointer;
+    top: 20%;
+    margin-left: -3px;
+    color: #3d3c3c;
+    font-size: 25px;
+}
+
+.box-search form input{
+    margin-left: 25px;
+    background: none;
+    color: #3d3c3c;
+    border: none;
+    outline: none;
+}
+
+.box-search form input::placeholder{
+    color: #3d3c3c;
+    font-family: 'Lato';
+    font-size: 15px;
+}
+
 ol,
 ul {
   padding-left: 2rem;
@@ -733,6 +795,10 @@ progress {
   max-width: 100%;
   height: auto;
 }
+.gambar-logo {
+    max-width: 60%;
+    height: auto;
+  }
 
 .img-thumbnail {
   padding: 0.25rem;
@@ -5038,8 +5104,19 @@ textarea.form-control-lg {
   color: var(--bs-card-subtitle-color);
 }
 
-.card-text:last-child {
-  margin-bottom: 0;
+/* .card-text:last-child {
+    margin-bottom: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+} */
+.card-text{
+    margin-bottom: 0;
+    display: -webkit-box;        /* Gunakan kotak fleksibel webkit */
+    -webkit-box-orient: vertical; /* Orientasi vertikal */
+    -webkit-line-clamp: 4;       /* Batas jumlah baris */
+    overflow: hidden;            /* Sembunyikan teks yang melampaui */
 }
 
 .card-link + .card-link {
@@ -7434,6 +7511,8 @@ textarea.form-control-lg {
 /******** Dark CSS ********/
 /**************************/
 .dark-mode .about-me {
+  display: flex;
+  height: 400px;
   background: #154757;
   color: #D9D9D9;
 }
@@ -7709,6 +7788,9 @@ body {
 @media (max-width: 767.98px) {
   .card .card-meta {
     column-gap: 26px;
+  }
+  .dark-mode .about-me{
+    height: 100px;
   }
 }
 .card .card-meta li {
@@ -10584,8 +10666,8 @@ Author card Style End
 .offcanvas .offcanvas-header .btn-close {
   background: var(--bs-primary);
   border: 1px solid var(--bs-primary);
-  width: 24px;
-  height: 24px;
+  width: 100px;
+  height: 20px;
   border-radius: 50%;
   opacity: 1;
   position: relative;
@@ -10722,8 +10804,8 @@ Author card Style End
 
 @media (max-width: 767.98px) {
   .navbar-brand img {
-    width: 100px;
-    height: 20px;
+    width: auto;
+    height: 10%;
   }
 }
 .nav {
@@ -12300,24 +12382,30 @@ a {
 }
 
 .blog-title {
-  --bs-link-color-rgb: var(--bs-heading-color-rgb);
-  --bs-link-color: var(--bs-heading-color);
-  --bs-link-hover-color: var(--bs-primary);
-  --bs-link-hover-color-rgb: var(--bs-primary-rgb);
-  position: relative;
-  display: inline-block;
-  font-weight: 800;
-  color: var(--bs-link-color);
-  overflow: hidden;
-  background: linear-gradient(to right, var(--bs-link-hover-color), var(--bs-link-hover-color) 50%, var(--bs-link-color) 50%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 200% 100%;
-  background-position: 100%;
-  transition: background-position 700ms ease;
-}
+    --bs-link-color-rgb: var(--bs-heading-color-rgb);
+    --bs-link-color: var(--bs-heading-color);
+    --bs-link-hover-color: var(--bs-primary);
+    --bs-link-hover-color-rgb: var(--bs-primary-rgb);
 
+    position: relative;
+    display: -webkit-box;        /* Gunakan kotak fleksibel webkit */
+    -webkit-box-orient: vertical; /* Orientasi vertikal */
+    -webkit-line-clamp: 2;       /* Batas jumlah baris */
+    overflow: hidden;            /* Sembunyikan teks yang melampaui */
+    font-weight: 800;
+    color: var(--bs-link-color);
+    background: linear-gradient(to right, var(--bs-link-hover-color), var(--bs-link-hover-color) 50%, var(--bs-link-color) 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    line-height: 1.5em;          /* Tinggi baris (sesuaikan dengan kebutuhan) */
+    max-height: 3em;             /* Maksimal tinggi (2 baris x tinggi baris) */
+    transition: background-position 700ms ease;
+    text-overflow: ellipsis;     /* Tambahkan elipsis (...) di akhir teks yang terpotong */
+
+}
 .blog-title:hover {
   background-position: 0 100%;
 }
@@ -12967,7 +13055,7 @@ svg {
 .about-me {
   --bs-dropdown-bg: var(--bs-secondary);
   background: var(--bs-secondary);
-  padding: 50px;
+  /* padding: 50px; */
   border-radius: 1rem;
 }
 
@@ -13187,13 +13275,22 @@ End  Instragram Section
  Start add-image 2  Section
 ========================
 */
-.add-image-2 {
-  height: 90px;
-  width: 100%;
+.add-image {
+    margin-top: -10%;
+    height: 300px;
+    width: 100%;
+    border-radius: 1rem;
 }
-.add-image-2 img {
+.add-image img {
   width: 100%;
   height: 100%;
+}
+
+@media (max-width: 767.98px){
+    .add-image{
+        height: 50px;
+        margin-top: 20px;
+    }
 }
 
 /*
@@ -23220,8 +23317,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
-/* LOGO PROFILE KANAN ATAS */
 .box-profile {
     width: 40px;
     height: 40px;
@@ -23317,5 +23412,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .link-setting{
-    margin-top: 40px;
+    margin-top: 40px;
 }
+
+/*# sourceMappingURL=style.css.map */

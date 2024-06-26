@@ -11,17 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('pakets', function (Blueprint $table) {
             $table->id();
             $table->text('thumbnail');
-            $table->string('title', 100);
-            $table->text('description');
-            $table->string('slug');
-            $table->longText('content');
-            $table->foreignId('kategori_id')->constrained();
-            $table->enum('status', ['Public', 'Draft']);
+            $table->string('title', 70);
+            $table->longText('deskripsi');
+            $table->bigInteger('harga');
+            $table->longText('benefit');
+            $table->longText('alur');
+            $table->enum('type', ['Umum','Recommended']);
             $table->timestamps();
+            $table->SoftDeletes();
         });
     }
 
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('pakets');
     }
 };

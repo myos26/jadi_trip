@@ -11,16 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('instagram_tokens', function (Blueprint $table) {
             $table->id();
-            $table->text('thumbnail');
-            $table->string('title', 100);
-            $table->text('description');
-            $table->string('slug');
-            $table->longText('content');
-            $table->foreignId('kategori_id')->constrained();
-            $table->enum('status', ['Public', 'Draft']);
+            $table->string('access_token');
+            $table->string('token_type');
+            $table->integer('expires_in');
             $table->timestamps();
         });
     }
@@ -30,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('instagram_tokens');
     }
 };

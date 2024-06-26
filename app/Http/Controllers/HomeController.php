@@ -32,12 +32,12 @@ class HomeController extends Controller
         $instagramToken = InstagramToken::select('access_token')->latest()->first();
         $accessToken = env('INSTAGRAM_TOKEN');
 
-        if($instagramToken->access_token){
+        if ($instagramToken->access_token) {
             $accessToken = $instagramToken->access_token;
         }
 
         $params = array(
-            'fields' => implode(',', array('id','caption','permalink','media_url','media_type','thumbnail_url','is_shared_to_feed','username','timestamps')),
+            'fields' => implode(',', array('id', 'caption', 'permalink', 'media_url', 'media_type', 'thumbnail_url', 'is_shared_to_feed', 'username', 'timestamps')),
             'access_token' => $accessToken,
             'limit' => 9
         );
@@ -65,7 +65,7 @@ class HomeController extends Controller
     {
         $iklans = iklan::all();
         $Posting = Post::all();
-        return view('blog', compact('iklans','Posting'));
+        return view('blog', compact('iklans', 'Posting'));
     }
 
     public function verifyOtp()

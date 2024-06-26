@@ -7,7 +7,10 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('admin/css/style.css') }}" />
     <link rel="stylesheet" href="{{ asset('admin/css/personal.css') }}" />
-    <title>Responsive Dashboard Design #1 | AsmrProg</title>
+
+    @yield('head')
+
+    <title>Admin | Jadi Trip</title>
     <link rel="icon" href="{{asset('assets/logo/logo.ico')}}" type="image/x-icon">
 
 </head>
@@ -111,6 +114,7 @@
 
     <script src="{{ asset('admin/js/orders.js') }}"></script>
     <script src="{{ asset('admin/js/index.js') }}"></script>
+    @yield('js')
 
 </body>
 

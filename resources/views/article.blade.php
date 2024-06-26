@@ -752,7 +752,7 @@
                         <div class="col-xl-7">
                             <!-- Start article-blog-content -->
                             <div class="article-blog-content mb-lg-0 mb-20">
-                                <p class="mb-30 mb-lg-60">{{ $post->content }}</p>
+                                <p class="mb-30 mb-lg-60">{!! $post->content !!}</p>
 
                                 <div class="table-of-content table-of-content-style-2">
                                     <div class="accordion accordion-flush" id="accordionFlushExample">

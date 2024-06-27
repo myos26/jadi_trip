@@ -83,6 +83,9 @@ Route::get('/category', function () {
 Route::get('/kontak', function () {
     return view('contact');
 });
+Route::get('/contact', function () {
+    return view('contact');
+});
 Route::get('/detail paket/{type?}', function () {
     return view('detailPaket');
 });

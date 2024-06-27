@@ -18,7 +18,8 @@ class Post extends Model
         'slug',
         'content',
         'kategori_id',
-        'status'
+        'status',
+        'popularity'
     ];
 
     public function kategori()

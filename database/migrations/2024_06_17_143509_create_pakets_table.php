@@ -15,11 +15,12 @@ return new class extends Migration
             $table->id();
             $table->text('thumbnail');
             $table->string('title', 70);
+            $table->string('slug', 100);
             $table->longText('deskripsi');
             $table->bigInteger('harga');
             $table->longText('benefit');
             $table->longText('alur');
-            $table->enum('type', ['Umum','Recommended']);
+            $table->enum('type', ['Umum', 'Recommended']);
             $table->timestamps();
             $table->SoftDeletes();
         });

@@ -859,8 +859,8 @@
                                             <div class="card-image-wrapper">
                                                 <a href="/article"><img
                                                         src="{{ url('assets/images/placeholder.svg') }}"
-                                                        data-src="{{ url('assets/images/blog/' . $post->thumbnail) }}"
-                                                        class="card-img-top" alt="Wonders"></a>
+                                                        data-src="{{ url('post_media/' . $post->thumbnail) }}"
+                                                        class="card-img-top" alt=""></a>
                                             </div>
 
                                             <div class="card-body">
@@ -876,7 +876,8 @@
                                                     <li>{{ $post->created_at->DiffForHumans() }}</li>
                                                 </ul>
 
-                                                <p class="card-text small">{{ $post->content }}</p>
+                                                <p class="card-text small">{{ $post->description }}</p>
+                                                <a href="/article/{{ $post->slug }}">Read more &raquo;</a>
                                             </div>
                                         </div>
                                     </div>

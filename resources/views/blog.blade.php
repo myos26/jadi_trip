@@ -190,7 +190,7 @@
                                     @if (Auth::check())
                                         <div class="box-profile" style="width: 40px; height: 40px; overflow: hidden;">
                                             <img width="40"
-                                                src="{{ asset('admin/images/' . Auth::user()->photo) }}"
+                                                src="{{ asset('profile/images/' . Auth::user()->photo) }}"
                                                 class="user_pic" alt="" id="toggle-button" width="50">
                                         </div>
 
@@ -198,23 +198,26 @@
                                             <div class="sub-menu">
                                                 <div class="user-info">
                                                     <h3>{{ Auth::user()->username }}</h3>
-                                                    <img src="{{ asset('admin/images/' . Auth::user()->photo) }}">
+                                                    <img src="{{ asset('profile/images/' . Auth::user()->photo) }}">
 
                                                 </div>
                                                 <hr>
 
-                                                <div class="sub-menu-link">
-                                                    <span class="material-icons-sharp sub-icon">
-                                                        account_circle
-                                                    </span>
-                                                    <a href="profile">Profile</a>
-                                                </div>
-                                                <div class="sub-menu-link">
-                                                    <span class="material-icons-sharp sub-icon">
-                                                        account_circle
-                                                    </span>
-                                                    <a href="dashboard">Dashboard</a>
-                                                </div>
+                                                @if (Auth::user()->is_admin == 1)
+                                                    <div class="sub-menu-link">
+                                                        <span class="material-icons-sharp sub-icon">
+                                                            account_circle
+                                                        </span>
+                                                        <a href="{{ url('/Dashboard') }}">Dashboard</a>
+                                                    </div>
+                                                @else
+                                                    <div class="sub-menu-link">
+                                                        <span class="material-icons-sharp sub-icon">
+                                                            account_circle
+                                                        </span>
+                                                        <a href="profile">Profile</a>
+                                                    </div>
+                                                @endif
 
                                                 <div class="sub-menu-link">
                                                     <span class="material-icons-sharp sub-icon">
@@ -222,7 +225,6 @@
                                                     </span>
                                                     <a href="logout">Logout</a>
                                                 </div>
-
                                             </div>
                                         </div>
                                     @endif
@@ -566,8 +568,9 @@
                             Kontak
                         </a>
                     </li>
+
                     {{-- MENU JIKA BELUM LOGIN --}}
-                    @if (!Auth::check())
+                    {{-- @if (!Auth::check())
                         <li class="nav-item dropdown link-setting">
                             <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="blog"
                                 aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
@@ -589,10 +592,10 @@
                                 </li>
                             </ul>
                         </li>
-                    @endif
+                    @endif --}}
 
                     {{-- MENU KETIKA SUDAH LOGIN --}}
-                    @if (Auth::check())
+                    {{-- @if (Auth::check())
                         <li class="nav-item dropdown">
                             <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="blog"
                                 aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
@@ -616,7 +619,7 @@
                                 </li>
                             </ul>
                         </li>
-                    @endif
+                    @endif --}}
                 </ul>
 
 

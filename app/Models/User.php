@@ -24,7 +24,12 @@ class User extends Authenticatable
         'is_activated',
         'is_info_verified',
         'password',
-        'is_admin'
+        'is_admin',
+        'nomor_hp',
+        'provinsi',
+        'kabupaten/kota',
+        'kecamatan',
+        'kelurahan/desa'
     ];
 
     /**

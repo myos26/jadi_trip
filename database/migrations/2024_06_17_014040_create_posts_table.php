@@ -21,7 +21,7 @@ return new class extends Migration
             $table->longText('content');
             $table->foreignId('kategori_id')->constrained();
             $table->enum('status', ['Public', 'Draft']);
-            $table->double('popularity', 0, 0, true);
+            $table->double('popularity');
             $table->timestamps();
         });
     }

@@ -5,11 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
-        content="Jadi Trip is your ultimate destination for travel inspiration, tips, and guides. Discover hidden gems, plan your next adventure, and make the most out of your travels with our expertly curated content. Join our community of wanderers and explore the world with Jadi Trip.">
+        content="Temukan panduan wisata, rental mobil, dan paket tur yang lengkap untuk menjelajahi destinasi impian Anda. Nikmati pengalaman traveling yang tak terlupakan bersama Jadi Trip">
     <meta name="keywords"
-        content="blog, blogging, blogger, articles, posts, content, writing, writers, blogosphere, online journal, web log, topics, ideas, tips, advice">
-    <meta name="author" content="themeperch">
-    <title>Jadi Trip</title>
+        content="jadi trip, tour guide, jasa tour guide, tour guide, private tour guide banyuwangi, bali tour guide service, tour guide lombok, car rental banyuwangi, rent car banyuwangi, self-drive car rental, travel packages, family travel packages, tour guide pribadi, layanan tour guide bali, tour guide lombok, sewa mobil bali, sewa mobil banyuwangi, sewa mobil lepas kunci, paket perjalanan, paket perjalanan keluarga">
+    <meta name="jadi trip" content="themeperch">
+    <title>Jadi Trip | Layanan perjalanan terbaik se-Indonesia</title>
     <link rel="icon" href="{{ url('assets/logo/logo.ico') }}" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -208,7 +208,7 @@
                                     @if (Auth::check())
                                         <div class="box-profile" style="width: 40px; height: 40px; overflow: hidden;">
                                             <img width="40"
-                                                src="{{ asset('admin/images/' . Auth::user()->photo) }}"
+                                                src="{{ asset('profile/images/' . Auth::user()->photo) }}"
                                                 class="user_pic" alt="" id="toggle-button" width="50">
                                         </div>
 
@@ -216,7 +216,7 @@
                                             <div class="sub-menu">
                                                 <div class="user-info">
                                                     <h3>{{ Auth::user()->username }}</h3>
-                                                    <img src="{{ asset('admin/images/' . Auth::user()->photo) }}">
+                                                    <img src="{{ asset('profile/images/' . Auth::user()->photo) }}">
 
                                                 </div>
                                                 <hr>
@@ -250,19 +250,12 @@
                                     @if (!Auth::check())
                                         {{-- PROFIL KETIKA BELUM LOGIN SCRIPT DIBAWAH --}}
                                         <div class="box-profile" style="width: 40px; height: 40px; overflow: hidden;">
-                                            <img width="40" src="{{ asset('admin/images/noimage.webp') }}"
+                                            <img width="40" src="{{ asset('profile/images/noprofile.jpeg') }}"
                                                 class="user_pic" alt="" id="toggle-button">
                                         </div>
 
                                         <div class="sub-menu-wrap" id="subMenu">
                                             <div class="sub-menu">
-                                                {{-- <div class="user-info">
-                                                    <h3>Anonymous</h3>
-                                                    <img src="{{ asset('admin/images/noimage.webp') }}">
-
-                                                </div> --}}
-                                                <hr>
-
                                                 <div class="sub-menu-link">
                                                     <span class="material-icons-sharp sub-icon">
                                                         login
@@ -429,57 +422,6 @@
                             Kontak
                         </a>
                     </li>
-                    {{-- MENU JIKA BELUM LOGIN --}}
-                    @if (!Auth::check())
-                        <li class="nav-item dropdown link-setting">
-                            <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="blog"
-                                aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
-                                Masuk
-                                <span class="dropdown-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                        fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd"
-                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" href="/login" aria-label="single-pages">Login</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="/register" aria-label="single-pages">Daftar</a>
-                                </li>
-                            </ul>
-                        </li>
-                    @endif
-
-                    {{-- MENU KETIKA SUDAH LOGIN --}}
-                    @if (Auth::check())
-                        <li class="nav-item dropdown">
-                            <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="blog"
-                                aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
-                                Setting
-                                <span class="dropdown-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                        fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd"
-                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" href="{{ url('profil') }}"
-                                        aria-label="single-pages">Profile</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="{{ url('logout') }}"
-                                        aria-label="single-pages">Logout</a>
-                                </li>
-                            </ul>
-                        </li>
-                    @endif
                 </ul>
 
 
@@ -1199,7 +1141,8 @@
                             @endforeach
                         </div>
 
-                        <a href="https://www.instagram.com/jaditrip_travel" target="__blank"><span class="text-white follow-txt">Follow Me</span></a>
+                        <a href="https://www.instagram.com/jaditrip_travel" target="__blank"><span
+                                class="text-white follow-txt">Follow Me</span></a>
                     </div>
 
                 </div>

@@ -61,7 +61,7 @@ use App\Models\Post;
             </span>
             <h3>Account</h3>
         </a>
-        <a href="#">
+        <a href="{{ url('/logout') }}">
             <span class="material-icons-sharp"> logout </span>
             <h3>Logout</h3>
         </a>

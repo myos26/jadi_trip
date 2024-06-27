@@ -11,7 +11,7 @@
     @yield('head')
 
     <title>Admin | Jadi Trip</title>
-    <link rel="icon" href="{{asset('assets/logo/logo.ico')}}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('assets/logo/logo.ico') }}" type="image/x-icon">
 
 </head>
 
@@ -40,8 +40,12 @@
 
                 <div class="profile">
                     <div class="info">
-                        <p>Hey, <b>Reza</b></p>
-                        <small class="text-muted">Admin</small>
+                        <p>Hey, <b>{{ Auth::user()->username }}</b></p>
+                        @if (Auth::user()->is_admin == 1)
+                            <small class="text-muted">Admin</small>
+                        @else
+                            <small class="text-muted">User</small>
+                        @endif
                     </div>
                     <div class="profile-photo">
                         <img src="{{ asset('admin/images/profile-1.jpg') }}" />
@@ -53,8 +57,12 @@
             <div class="user-profile">
                 <div class="logo">
                     <img src="{{ asset('admin/images/logo.png') }}" />
-                    <h2>AsmrProg</h2>
-                    <p>Fullstack Web Developer</p>
+                    <h2>{{ Auth::user()->username }}</h2>
+                    @if (Auth::user()->is_admin == 1)
+                        <p class="text-muted">Admin</p>
+                    @else
+                        <p class="text-muted">User</p>
+                    @endif
                 </div>
             </div>
 

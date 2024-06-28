@@ -10,7 +10,10 @@ use App\Http\Controllers\IklanController;
 use App\Models\Post;
 use App\Models\User;
 use App\Models\iklan;
+use App\Models\Kategori;
 use Illuminate\Routing\RouteGroup;
+use Spatie\Sitemap\Sitemap;
+use Spatie\Sitemap\Tags\Url;
 
 
 /*
@@ -96,6 +99,31 @@ Route::get('/detail paket/{type?}', function () {
 Route::get('/article/{slug}', [PostController::class, 'post']);
 
 Route::get('/auth', [AuthController::class, 'handleAuth']);
+
+Route::get('/sitemap.xml', function(){
+    $sitemap = Sitemap::create()
+    ->add(Url::create('/')->setLastModificationDate(now())->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)->setPriority(1.0))
+    ->add(Url::create('/blog')->setLastModificationDate(now())->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)->setPriority(0.8));
+
+    $posts = Post::all();
+    foreach ($posts as $post) {
+        $sitemap->add(Url::create("/article/{$post->slug}")->setLastModificationDate(now())->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)->setPriority(0.9));
+    }
+
+
+    $categories = Kategori::all();
+    foreach ($categories as $category) {
+        $sitemap->add(Url::create("/category/{$category->name}")->setLastModificationDate(now())->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)->setPriority(0.5));
+    }
+
+
+    // $packages = Paket::all();
+    // foreach ($packages as $package) {
+    //     $sitemap->add(Url::create("/paket/{$package->slug}")->setPriority(0.7));
+    // }
+
+    return $sitemap->toResponse(request());
+});
 
 Route::get('/bacadata', function () {
     return view('auth/lengkap_data');

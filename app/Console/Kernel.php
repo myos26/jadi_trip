@@ -15,6 +15,7 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')->hourly();
         $schedule->command('instagram:refresh')->weekly();
+        $schedule->command('sitemap:generate')->daily();
 
     }
 

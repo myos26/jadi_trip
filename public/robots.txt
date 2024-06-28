@@ -1,3 +1,17 @@
 User-agent: *
 Disallow: /dashboard  # Melarang mesin pencari mengakses folder admin
 Disallow: /private-page  # Melarang mesin pencari mengakses halaman tertentu
+Disallow: /temp-home
+Disallow: /login
+Disallow: /register
+Disallow: /verified
+Disallow: /verified-info
+Disallow: /verify
+Disallow: /info
+Disallow: /logout
+Disallow: /Dashboard
+Disallow: /profil
+Disallow: /postingan
+Disallow: /tambahpostingan
+Disallow: /upload
+Sitemap: http://127.0.0.1:8000/sitemap.xml

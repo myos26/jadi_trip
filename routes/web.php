@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\IklanController;
 use App\Models\Post;
 use App\Models\User;
 use App\Models\iklan;
@@ -66,6 +67,9 @@ Route::middleware(['auth', 'admin'])->group(function () {
     // kategori routes
     Route::post('/kategori', [PostController::class, 'storeKategori']);
     Route::get('/kategori/delete/{id}', [PostController::class, 'deleteKategori']);
+
+    // iklan routes
+    Route::get('/iklan', [IklanController::class, 'iklan']);
 });
 
 

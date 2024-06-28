@@ -15,10 +15,10 @@ use App\Models\Post;
     </div>
 
     <div class="sidebar">
-        <a href="/Dashboard" id="dashboard" class="{{ Request::is('Dashboard') ? 'active' : '' }}">
+        {{-- <a href="/Dashboard" id="dashboard" class="{{ Request::is('Dashboard') ? 'active' : '' }}">
             <span class="material-icons-sharp"> dashboard </span>
             <h3>Dashboard</h3>
-        </a>
+        </a> --}}
         <a href="/profil" id="profile" class="{{ Request::is('profil') ? 'active' : '' }}">
             <span class="material-icons-sharp">
                 person_outline
@@ -36,19 +36,12 @@ use App\Models\Post;
             <span class="material-icons-sharp">
                 card_travel
             </span>
-            <h3>Paket Wisata</h3>
+            <h3>Layanan</h3>
         </a>
-        <a href="statistik" class="{{ Request::is('statistik') ? 'active' : '' }}">
+        {{-- <a href="statistik" class="{{ Request::is('statistik') ? 'active' : '' }}">
             <span class="material-icons-sharp"> insights </span>
             <h3>Statistik</h3>
-        </a>
-
-        <a href="open_trip" class="{{ Request::is('open_trip') ? 'active' : '' }}">
-            <span class="material-icons-sharp">
-                flight
-            </span>
-            <h3>Open Trip</h3>
-        </a>
+        </a> --}}
         <a href="iklan" class="{{ Request::is('iklan') ? 'active' : '' }}">
             <span class="material-icons-sharp">
                 format_align_left

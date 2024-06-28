@@ -20,12 +20,12 @@
         </div>
 
         @foreach ($posts as $post)
-            <div class="box-besar" onclick="target({{ $post->id }})">
+            <div class="box-besar">
                 <div class="box-image">
                     <img src="{{ asset('/post_media/' . $post->thumbnail) }}" alt="" srcset="">
                 </div>
                 <div class="box-content">
-                    <h2>{{ Str::limit($post->title, 30, '...') }}</h2>
+                    <h2 onclick="target({{ $post->id }})">{{ Str::limit($post->title, 30, '...') }}</h2>
                     <div class="box-detail">
                         <h4>{{ $post->created_at->diffForHumans() }}</h4>
                         <h5>{{ $post->kategori->name }}</h5>
@@ -38,21 +38,25 @@
                             @csrf
                             <input type="hidden" name="id" value="{{ $post->id }}">
                         </form> --}}
-                        {{-- <button onclick="hapus()"
-                            style="background: transparent; border: 1px solid black; cursor: pointer; z-index: 5;">Hapus</button> --}}
+                        {{-- <a href="{{ url('/article/' . $post->slug) }}">Lihat</a> --}}
+                        <a href="#" onclick="lihat('{{ $post->slug }}')">Lihat</a>
+                        {{-- <button >Lihat</button> --}}
                         <a href="{{ url('/delete/' . $post->slug) }}">Hapus</a>
+
                     </div>
                 </div>
+
             </div>
-            <a target="_blank" href="{{ url('/article/' . $post->slug) }}">Lihat</a>
         @endforeach
 
         <script>
             const target = (id) => {
-                window.location.href = "/update/" + id;
+                window.location = "/update/" + id;
+                // window.open("/update/" + id);
             }
-            const hapus = () => {
-                document.getElementById('#hapus').submit();
+
+            const lihat = (slug) => {
+                window.open("/article/" + slug, "_blank");
             }
         </script>
 

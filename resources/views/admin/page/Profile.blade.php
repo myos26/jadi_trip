@@ -43,7 +43,7 @@
                         <label class="item-data">Provinsi</label>
                         <label class="isi-data">
                             <select class="data-wilayah" name="provinsi" id="provinsi" disabled>
-                                <option value="{{ Auth::user()->provinsi }}">{{ Auth::user()->provinsi }}</option>
+                                <option value="">Pilih</option>
                             </select>
                         </label>
                     </div>
@@ -112,26 +112,27 @@
             desc.disabled = false;
             pro.style.display = 'block';
 
-        }
-        // mengambil semua data kabuaten
-        fetch(`https://bayik4.github.io/api-wilayah-indonesia/api/provinces.json`)
-            .then(response => response.json())
-            .then(regencies => {
-                for (const value in regencies) {
-                    if (Object.hasOwnProperty.call(regencies, value)) {
-                        const element = regencies[value];
+            // mengambil semua data kabuaten
+            fetch(`https://bayik4.github.io/api-wilayah-indonesia/api/provinces.json`)
+                .then(response => response.json())
+                .then(regencies => {
+                    for (const value in regencies) {
+                        if (Object.hasOwnProperty.call(regencies, value)) {
+                            const element = regencies[value];
 
-                        // membuat element option kabupaten
-                        const opt = document.createElement('option');
-                        const text = document.createTextNode(element.name);
-                        opt.appendChild(text);
-                        opt.value = element.id;
-                        prov.appendChild(opt);
+                            // membuat element option kabupaten
+                            const opt = document.createElement('option');
+                            const text = document.createTextNode(element.name);
+                            opt.appendChild(text);
+                            opt.value = element.id;
+                            prov.appendChild(opt);
 
-                        //console.log(element.id, element.name);
+                            //console.log(element.id, element.name);
+                        }
                     }
-                }
-            });
+                });
+
+        }
 
         prov.addEventListener('change', function() {
             // mereset semua elemen option di dalam select dengan id kabupaten

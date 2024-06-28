@@ -14,7 +14,7 @@ class PostController extends Controller
 {
     public function index()
     {
-        $posts = Post::with('kategori')->where('status', 'Public')->get();
+        $posts = Post::with('kategori')->get();
 
         return view('admin.page.Post.post', compact('posts'));
     }

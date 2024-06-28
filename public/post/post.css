@@ -46,6 +46,7 @@ body {
     padding: 10px 20px;
     border: 1px solid rgba(194, 194, 194, 0.877);
     border-radius: 5px;
+    background-color: #FFF;
     margin: 10px 0;
     height: 120px;
 }
@@ -85,7 +86,7 @@ body {
 .box-content{
     /* border: 1px solid black; */
     padding: 10px 5px;
-    width: 80%;
+    width: 60%;
     letter-spacing: 1;
 }
 
@@ -120,6 +121,7 @@ body {
 .box-action{
     display: block;
     padding: 10px 5px;
+    /* border: 1px solid black; */
     margin: 2px 0;
     text-align: center;
 }
@@ -133,6 +135,10 @@ body {
 
 .box-action .action{
     padding: 10px;
+}
+
+.box-action .action a{
+    margin-right: 5px;
 }
 
 .box-action h5{

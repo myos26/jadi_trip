@@ -31,12 +31,12 @@
                 <button id="menu-btn">
                     <span class="material-icons-sharp"> menu </span>
                 </button>
-                <div class="dark-mode">
+                {{-- <div class="dark-mode">
                     <span class="material-icons-sharp active">
                         light_mode
                     </span>
                     <span class="material-icons-sharp"> dark_mode </span>
-                </div>
+                </div> --}}
 
                 <div class="profile">
                     <div class="info">
@@ -66,7 +66,7 @@
                 </div>
             </div>
 
-            <div class="reminders">
+            {{-- <div class="reminders">
                 <div class="header">
                     <h2>Reminders</h2>
                     <span class="material-icons-sharp">
@@ -116,7 +116,7 @@
                         <h3>Add Reminder</h3>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 

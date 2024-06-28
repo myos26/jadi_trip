@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('slug');
             $table->longText('content');
             $table->foreignId('kategori_id')->constrained();
-            $table->enum('status', ['Public', 'Draft']);
+            $table->enum('status', ['Publish', 'Draft']);
             $table->double('popularity');
             $table->timestamps();
         });

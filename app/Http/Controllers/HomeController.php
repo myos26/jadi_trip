@@ -47,9 +47,7 @@ class HomeController extends Controller
 
         // return response()->json($result);
 
-
-        $datas = Post::all();
-        $datas = Post::with('kategori')->latest()->get();
+        $datas = Post::with('kategori')->where('status', 'Public')->latest()->get();
         $iklans = iklan::all();
 
         return view('index', [

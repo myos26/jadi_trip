@@ -1,3 +1,7 @@
+<?php
+use App\Models\Post;
+?>
+
 <!-- Sidebar Section -->
 <aside>
     <div class="toggle">
@@ -11,10 +15,10 @@
     </div>
 
     <div class="sidebar">
-        <a href="/Dashboard" id="dashboard" class="{{ Request::is('Dashboard') ? 'active' : '' }}">
+        {{-- <a href="/Dashboard" id="dashboard" class="{{ Request::is('Dashboard') ? 'active' : '' }}">
             <span class="material-icons-sharp"> dashboard </span>
             <h3>Dashboard</h3>
-        </a>
+        </a> --}}
         <a href="/profil" id="profile" class="{{ Request::is('profil') ? 'active' : '' }}">
             <span class="material-icons-sharp">
                 person_outline
@@ -26,25 +30,18 @@
                 post_add
             </span>
             <h3>Post</h3>
-            <span class="message-count">1</span>
+            <span class="message-count">{{ count(Post::all()) }}</span>
         </a>
         <a href="paket_wisata" class="{{ Request::is('paket_wisata') ? 'active' : '' }}">
             <span class="material-icons-sharp">
                 card_travel
             </span>
-            <h3>Paket Wisata</h3>
+            <h3>Layanan</h3>
         </a>
-        <a href="statistik" class="{{ Request::is('statistik') ? 'active' : '' }}">
+        {{-- <a href="statistik" class="{{ Request::is('statistik') ? 'active' : '' }}">
             <span class="material-icons-sharp"> insights </span>
             <h3>Statistik</h3>
-        </a>
-
-        <a href="open_trip" class="{{ Request::is('open_trip') ? 'active' : '' }}">
-            <span class="material-icons-sharp">
-                flight
-            </span>
-            <h3>Open Trip</h3>
-        </a>
+        </a> --}}
         <a href="iklan" class="{{ Request::is('iklan') ? 'active' : '' }}">
             <span class="material-icons-sharp">
                 format_align_left
@@ -57,7 +54,7 @@
             </span>
             <h3>Account</h3>
         </a>
-        <a href="#">
+        <a href="{{ url('/logout') }}">
             <span class="material-icons-sharp"> logout </span>
             <h3>Logout</h3>
         </a>

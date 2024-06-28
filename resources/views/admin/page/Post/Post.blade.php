@@ -16,81 +16,45 @@
     </section>
     <section class="konten" id="konten">
         <div class="button">
-            <a href="tambahpostingan">Tambah Postingan</a>
+            <a href="{{ url('/create') }}">Add Post</a>
         </div>
 
-        <div class="box-besar">
-            <div class="box-image">
-                <img src="{{ asset('post/images/trip.jpg') }}" alt="" srcset="">
-            </div>
-            <div class="box-content">
-                <h2>Judul Postingan</h2>
-                <div class="box-detail">
-                    <h4>Tanggal dan waktu rilis</h4>
-                    <h5>Category</h5>
+        @foreach ($posts as $post)
+            <div class="box-besar" onclick="target({{ $post->id }})">
+                <div class="box-image">
+                    <img src="{{ asset('/post_media/' . $post->thumbnail) }}" alt="" srcset="">
+                </div>
+                <div class="box-content">
+                    <h2>{{ Str::limit($post->title, 30, '...') }}</h2>
+                    <div class="box-detail">
+                        <h4>{{ $post->created_at->diffForHumans() }}</h4>
+                        <h5>{{ $post->kategori->name }}</h5>
+                    </div>
+                </div>
+                <div class="box-action">
+                    <div class="action">
+                        <h5>{{ $post->status }}</h5>
+                        {{-- <form action="{{ url('/delete/' . $post->id) }}" method="post" id="hapus">
+                            @csrf
+                            <input type="hidden" name="id" value="{{ $post->id }}">
+                        </form> --}}
+                        {{-- <button onclick="hapus()"
+                            style="background: transparent; border: 1px solid black; cursor: pointer; z-index: 5;">Hapus</button> --}}
+                        <a href="{{ url('/delete/' . $post->slug) }}">Hapus</a>
+                    </div>
                 </div>
             </div>
-            <div class="box-action">
-                <div class="action">
-                    <h5>Status</h5>
-                    <a href="#">Hapus</a>
-                </div>
-            </div>
-        </div>
-        <div class="box-besar">
-            <div class="box-image">
-                <img src="{{ asset('post/images/trip.jpg') }}" alt="" srcset="">
-            </div>
-            <div class="box-content">
-                <h2>Judul Postingan</h2>
-                <div class="box-detail">
-                    <h4>Tanggal dan waktu rilis</h4>
-                    <h5>Category</h5>
-                </div>
-            </div>
-            <div class="box-action">
-                <div class="action">
-                    <h5>Status</h5>
-                    <a href="#">Hapus</a>
-                </div>
-            </div>
-        </div>
-        <div class="box-besar">
-            <div class="box-image">
-                <img src="{{ asset('post/images/trip.jpg') }}" alt="" srcset="">
-            </div>
-            <div class="box-content">
-                <h2>Judul Postingan</h2>
-                <div class="box-detail">
-                    <h4>Tanggal dan waktu rilis</h4>
-                    <h5>Category</h5>
-                </div>
-            </div>
-            <div class="box-action">
-                <div class="action">
-                    <h5>Status</h5>
-                    <a href="#">Hapus</a>
-                </div>
-            </div>
-        </div>
-        <div class="box-besar">
-            <div class="box-image">
-                <img src="{{ asset('post/images/trip.jpg') }}" alt="" srcset="">
-            </div>
-            <div class="box-content">
-                <h2>Judul Postingan</h2>
-                <div class="box-detail">
-                    <h4>Tanggal dan waktu rilis</h4>
-                    <h5>Category</h5>
-                </div>
-            </div>
-            <div class="box-action">
-                <div class="action">
-                    <h5>Status</h5>
-                    <a href="#">Hapus</a>
-                </div>
-            </div>
-        </div>
+            <a target="_blank" href="{{ url('/article/' . $post->slug) }}">Lihat</a>
+        @endforeach
+
+        <script>
+            const target = (id) => {
+                window.location.href = "/update/" + id;
+            }
+            const hapus = () => {
+                document.getElementById('#hapus').submit();
+            }
+        </script>
 
     </section>
 @endsection

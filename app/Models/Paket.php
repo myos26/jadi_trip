@@ -8,8 +8,17 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Paket extends Model
 {
-    use HasFactory,SoftDeletes;
+    use HasFactory, SoftDeletes;
 
     protected $table = 'pakets';
-    protected $fillable = ['thumbnail','title','deskripsi','harga','benefit','alur','type'];
+    protected $fillable = [
+        'thumbnail',
+        'title',
+        'slug',
+        'deskripsi',
+        'harga',
+        'benefit',
+        'alur',
+        'type'
+    ];
 }

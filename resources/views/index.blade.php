@@ -5,12 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
-        content="Jadi Trip is your ultimate destination for travel inspiration, tips, and guides. Discover hidden gems, plan your next adventure, and make the most out of your travels with our expertly curated content. Join our community of wanderers and explore the world with Jadi Trip.">
+        content="Temukan panduan wisata, rental mobil, dan paket tur yang lengkap untuk menjelajahi destinasi impian Anda. Nikmati pengalaman traveling yang tak terlupakan bersama Jadi Trip">
     <meta name="keywords"
-        content="blog, blogging, blogger, articles, posts, content, writing, writers, blogosphere, online journal, web log, topics, ideas, tips, advice">
-    <meta name="author" content="themeperch">
-    <title>Jadi Trip</title>
+        content="jadi trip, tour guide, jasa tour guide, tour guide, private tour guide banyuwangi, bali tour guide service, tour guide lombok, car rental banyuwangi, rent car banyuwangi, self-drive car rental, travel packages, family travel packages, tour guide pribadi, layanan tour guide bali, tour guide lombok, sewa mobil bali, sewa mobil banyuwangi, sewa mobil lepas kunci, paket perjalanan, paket perjalanan keluarga">
+    <meta name="jadi trip" content="themeperch">
+    <title>Jadi Trip | Layanan perjalanan terbaik se-Indonesia</title>
     <link rel="icon" href="{{ url('assets/logo/logo.ico') }}" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,10 +37,11 @@
             <div class="container">
                 <nav class="navbar navbar-expand-xl hover-menu">
                     <div class="d-flex w-100 justify-content-between align-items-center">
-                        <a class="navbar-brand" href="/" aria-label="nav-brands">
+                        <a class="navbar-brand dark-light-logo" href="/" aria-label="nav-brands">
                             <img src="assets/logo/Jadi Trip Bhitam.png" style="height: 70px"
                                 class="logo-light img-fluid" alt="logo-white">
-                            {{-- <img src="assets/logo/Jadi Trip Bputih.png" style="height: 70px" class="logo-dark" alt="logo-dark"> --}}
+                            <img src="assets/logo/Jadi Trip Bputih.png" style="height: 70px" class="logo-dark"
+                                alt="logo-dark">
                         </a>
 
                         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
@@ -114,12 +116,14 @@
                                         </a>
                                         <ul class="dropdown-menu">
                                             <li>
-                                                <a class="dropdown-item" href="{{ url('paket', ['kategori' => 'Open Trip']) }}" rel="nofollow"
-                                                    aria-label="single-pages">Open Trip</a>
+                                                <a class="dropdown-item"
+                                                    href="{{ url('paket', ['kategori' => 'Open Trip']) }}"
+                                                    rel="nofollow" aria-label="single-pages">Open Trip</a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" href="{{ url('paket', ['kategori' => 'Paket Wisata']) }}" rel="nofollow"
-                                                    aria-label="single-pages">Paket Wisata</a>
+                                                <a class="dropdown-item"
+                                                    href="{{ url('paket', ['kategori' => 'Paket Wisata']) }}"
+                                                    rel="nofollow" aria-label="single-pages">Paket Wisata</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -139,8 +143,9 @@
                                         </a>
                                         <ul class="dropdown-menu">
                                             <li>
-                                                <a class="dropdown-item" href="{{ url('blog', ['kategori' => 'Tips & Trick']) }}" rel="nofollow"
-                                                    aria-label="single-pages">Tips & Trick</a>
+                                                <a class="dropdown-item"
+                                                    href="{{ url('blog', ['kategori' => 'Tips & Trick']) }}"
+                                                    rel="nofollow" aria-label="single-pages">Tips & Trick</a>
                                             </li>
 
                                         </ul>
@@ -160,11 +165,20 @@
                                     </li>
                                 </ul>
 
+                                {{-- SEARCH MANUAL --}}
+                                <div class="box-search" id="box-search">
+                                    <form action='#' id='search'>
+                                        {{-- <i class='bx bx-search'></i> --}}
+                                        <i class='bx bx-x' id="close-search"></i>
+                                        <input aria-label='ketik lalu tekan ENTER' autocomplete='off'
+                                            id='search-input' name='q' placeholder='ketik lalu tekan ENTER'
+                                            type='text' value='' />
+                                    </form>
+                                </div>
 
                                 <div class="d-flex gap-20 align-items-center">
 
-                                    <a class="serch-icon px-2" data-bs-toggle="offcanvas"
-                                        data-bs-target="#offcanvasserch" aria-controls="offcanvasserch">
+                                    <a class="serch-icon px-2" id="show-search">
 
                                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -176,11 +190,25 @@
 
                                     </a>
 
+                                    {{-- <a class="serch-icon px-2" data-bs-toggle="search-input"
+                                        data-bs-target="#search-input" aria-controls="search-input">
+
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M19 19L13.0001 13M15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8Z"
+                                                stroke="" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+
+                                    </a> --}}
+
                                     {{-- LOGO PROFIL KANAN ATAS --}}
                                     {{-- PROFIL KETIKA SUDAH LOGIN SCRIPT DIBAWAH --}}
                                     @if (Auth::check())
                                         <div class="box-profile" style="width: 40px; height: 40px; overflow: hidden;">
-                                            <img width="40" src="{{ asset('admin/images/' . Auth::user()->photo) }}"
+                                            <img width="40"
+                                                src="{{ asset('profile/images/' . Auth::user()->photo) }}"
                                                 class="user_pic" alt="" id="toggle-button" width="50">
                                         </div>
 
@@ -188,23 +216,26 @@
                                             <div class="sub-menu">
                                                 <div class="user-info">
                                                     <h3>{{ Auth::user()->username }}</h3>
-                                                    <img src="{{ asset('admin/images/' . Auth::user()->photo) }}">
+                                                    <img src="{{ asset('profile/images/' . Auth::user()->photo) }}">
 
                                                 </div>
                                                 <hr>
 
-                                                <div class="sub-menu-link">
-                                                    <span class="material-icons-sharp sub-icon">
-                                                        account_circle
-                                                    </span>
-                                                    <a href="profile">Profile</a>
-                                                </div>
-                                                <div class="sub-menu-link">
-                                                    <span class="material-icons-sharp sub-icon">
-                                                        account_circle
-                                                    </span>
-                                                    <a href="dashboard">Dashboard</a>
-                                                </div>
+                                                @if (Auth::user()->is_admin == 1)
+                                                    <div class="sub-menu-link">
+                                                        <span class="material-icons-sharp sub-icon">
+                                                            account_circle
+                                                        </span>
+                                                        <a href="{{ url('/Dashboard') }}">Dashboard</a>
+                                                    </div>
+                                                @else
+                                                    <div class="sub-menu-link">
+                                                        <span class="material-icons-sharp sub-icon">
+                                                            account_circle
+                                                        </span>
+                                                        <a href="profile">Profile</a>
+                                                    </div>
+                                                @endif
 
                                                 <div class="sub-menu-link">
                                                     <span class="material-icons-sharp sub-icon">
@@ -212,7 +243,6 @@
                                                     </span>
                                                     <a href="logout">Logout</a>
                                                 </div>
-
                                             </div>
                                         </div>
                                     @endif
@@ -220,19 +250,12 @@
                                     @if (!Auth::check())
                                         {{-- PROFIL KETIKA BELUM LOGIN SCRIPT DIBAWAH --}}
                                         <div class="box-profile" style="width: 40px; height: 40px; overflow: hidden;">
-                                            <img width="40" src="{{ asset('admin/images/noimage.webp') }}" class="user_pic"
-                                                alt="" id="toggle-button">
+                                            <img width="40" src="{{ asset('profile/images/noprofile.jpeg') }}"
+                                                class="user_pic" alt="" id="toggle-button">
                                         </div>
 
                                         <div class="sub-menu-wrap" id="subMenu">
                                             <div class="sub-menu">
-                                                {{-- <div class="user-info">
-                                                    <h3>Anonymous</h3>
-                                                    <img src="{{ asset('admin/images/noimage.webp') }}">
-
-                                                </div> --}}
-                                                <hr>
-
                                                 <div class="sub-menu-link">
                                                     <span class="material-icons-sharp sub-icon">
                                                         login
@@ -304,13 +327,14 @@
             <div class="offcanvas-body d-flex justify-content-start">
                 <ul class="navbar-nav custom-navbar-nav mb-2  mb-lg-0 hover-menu">
                     <li class="nav-item dropdown">
-                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="{{ url('blog', ['kategori' => 'Destinasi']) }}"
-                            aria-label="nav-links">
+                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page"
+                            href="{{ url('blog', ['kategori' => 'Destinasi']) }}" aria-label="nav-links">
                             Destinasi
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link d-flex gap-2 align-items-center" href="{{ url('blog', ['kategori' => 'Aktifitas']) }}" aria-label="nav-links">
+                        <a class="nav-link d-flex gap-2 align-items-center"
+                            href="{{ url('blog', ['kategori' => 'Aktifitas']) }}" aria-label="nav-links">
                             Aktifitas
                         </a>
                     </li>
@@ -328,10 +352,13 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a class="dropdown-item" href="{{ url('blog', ['kategori' => 'Kuliner Banyuwangi']) }}" aria-label="single-pages">Banyuwangi</a>
+                                <a class="dropdown-item"
+                                    href="{{ url('blog', ['kategori' => 'Kuliner Banyuwangi']) }}"
+                                    aria-label="single-pages">Banyuwangi</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="{{ url('blog', ['kategori' => 'Kuliner Malang']) }}" aria-label="single-pages">Malang</a>
+                                <a class="dropdown-item" href="{{ url('blog', ['kategori' => 'Kuliner Malang']) }}"
+                                    aria-label="single-pages">Malang</a>
                             </li>
                         </ul>
                     </li>
@@ -351,10 +378,12 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a class="dropdown-item" href="{{ url('paket', ['kategori' => 'Open Trip']) }}" aria-label="single-pages">Open Trip</a>
+                                <a class="dropdown-item" href="{{ url('paket', ['kategori' => 'Open Trip']) }}"
+                                    aria-label="single-pages">Open Trip</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="{{ url('paket', ['kategori' => 'Paket Wisata']) }}" aria-label="single-pages">Paket Wisata</a>
+                                <a class="dropdown-item" href="{{ url('paket', ['kategori' => 'Paket Wisata']) }}"
+                                    aria-label="single-pages">Paket Wisata</a>
                             </li>
 
                         </ul>
@@ -374,71 +403,25 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a class="dropdown-item" href="{{ url('blog', ['kategori' => 'Tips & Trick']) }}" aria-label="single-pages">Tips & Trick</a>
+                                <a class="dropdown-item" href="{{ url('blog', ['kategori' => 'Tips & Trick']) }}"
+                                    aria-label="single-pages">Tips & Trick</a>
                             </li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="{{ url('about') }}"
-                            aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page"
+                            href="{{ url('about') }}" aria-label="nav-links" data-bs-toggle="dropdown"
+                            aria-expanded="false">
                             About
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="{{ url('kontak') }}"
-                            aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page"
+                            href="{{ url('kontak') }}" aria-label="nav-links" data-bs-toggle="dropdown"
+                            aria-expanded="false">
                             Kontak
                         </a>
                     </li>
-                    {{-- MENU JIKA BELUM LOGIN --}}
-                    @if(!Auth::check())
-                    <li class="nav-item dropdown link-setting">
-                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="blog"
-                            aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
-                            Masuk
-                            <span class="dropdown-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
-                                </svg>
-                            </span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a class="dropdown-item" href="/login" aria-label="single-pages">Login</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="/register" aria-label="single-pages">Daftar</a>
-                            </li>
-                        </ul>
-                    </li>
-                    @endif
-
-                    {{-- MENU KETIKA SUDAH LOGIN --}}
-                    @if(Auth::check())
-                    <li class="nav-item dropdown">
-                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="blog"
-                            aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
-                            Setting
-                            <span class="dropdown-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
-                                </svg>
-                            </span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a class="dropdown-item" href="{{ url('profil') }}" aria-label="single-pages">Profile</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="{{ url('logout') }}" aria-label="single-pages">Logout</a>
-                            </li>
-                        </ul>
-                    </li>
-                    @endif
                 </ul>
 
 
@@ -465,7 +448,7 @@
         <!-- of canvas Mobile menu End -->
 
         <!-- Offcanvas Serch -->
-        <div class="offcanvas offcanvas-top offcanvasserch py-lg-100 py-40" data-bs-scroll="false" tabindex="-1"
+        {{-- <div class="offcanvas offcanvas-top offcanvasserch py-lg-100 py-40" data-bs-scroll="false" tabindex="-1"
             id="offcanvasserch" data-bs-backdrop="false">
             <div class="offcanvas-header py-0 justify-content-end">
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
@@ -625,7 +608,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
+
+
         <!-- Offcanvas Serch -->
 
         <!-- start to top button -->
@@ -842,7 +827,8 @@
                                                 class="text-white blog-title">3 Hari 2 Malam</a></h6>
                                         <ul class="list-unstyled card-meta-style-3 mb-0 justify-content-center">
                                             <div class="clickHere">
-                                                <a href="{{ url('detail paket', ['type' => 'Rekomendasi']) }}">Lihat Paket</a>
+                                                <a href="{{ url('paket', ['type' => 'Rekomendasi']) }}">Lihat
+                                                    Paket</a>
                                             </div>
                                             {{-- <li><a class="fw-bold" href="about">Jadi Trip</a></li>
                                                 <li>January 25, <span class="dynamic-year"> </span>.</li> --}}
@@ -864,7 +850,8 @@
                                                 class="text-white blog-title">3 Hari 2 Malam</a></h6>
                                         <ul class="list-unstyled card-meta-style-3 mb-0 justify-content-center">
                                             <div class="clickHere">
-                                                <a href="{{ url('detail paket', ['type' => 'Rekomendasi']) }}">Lihat Paket</a>
+                                                <a href="{{ url('paket', ['type' => 'Rekomendasi']) }}">Lihat
+                                                    Paket</a>
                                             </div>
                                             {{-- <li><a class="fw-bold" href="about">Serba Tau</a></li>
                                                 <li>January 20, <span class="dynamic-year"> </span>.</li> --}}
@@ -890,7 +877,7 @@
                                             class="text-white blog-title">3 Hari 2 Malam</a></h6>
                                     <ul class="list-unstyled card-meta-style-3 mb-0 justify-content-center">
                                         <div class="clickHere">
-                                            <a href="{{ url('detail paket', ['type' => 'Rekomendasi']) }}">Lihat Paket</a>
+                                            <a href="{{ url('paket', ['type' => 'Rekomendasi']) }}">Lihat Paket</a>
                                         </div>
                                         {{-- <li><a class="fw-bold" href="about">Serba Tau</a></li>
                                             <li>January 12, <span class="dynamic-year"> </span>.</li> --}}
@@ -912,19 +899,21 @@
                             <div class="sticky-elements">
                                 <div class="d-flex flex-column gap-40">
                                     <!-- Iklan 1 -->
-                                        <!-- About Me -->
-                                        <a href="https://www.serbatau.web.id" target="_blank">
-                                            <div class="about-me wow fadeInUp" data-wow-delay="0.4s">
-                                                <img id="iklan1-1" src="assets/images/iklan/explore-image-15.jpg" alt="">
-                                                <img id="iklan1-2" src="assets/images/iklan/explore-image-1.jpg" alt="">
-                                            </div>
-                                        </a>
+                                    <!-- About Me -->
+                                    <a href="https://www.serbatau.web.id" target="_blank">
+                                        <div class="about-me wow fadeInUp" data-wow-delay="0.4s">
+                                            <img id="iklan1-1" src="assets/images/iklan/explore-image-15.jpg"
+                                                alt="">
+                                            <img id="iklan1-2" src="assets/images/iklan/explore-image-1.jpg"
+                                                alt="">
+                                        </div>
+                                    </a>
                                     <!-- Iklan 1 End -->
 
-                                        <!-- Socials -->
-                                        <div class="widget widget-style-2 mb-10 wow fadeInUp" data-wow-delay="0.4s">
-                                            <h4 class="fs-1 mb-3 mb-lg-20 text-white text-center">Social Link</h4>
-                                            <p class="mb-20 mb-lg-30 text-white text-center">Follow Me On Social Media</p>
+                                    <!-- Socials -->
+                                    <div class="widget widget-style-2 mb-10 wow fadeInUp" data-wow-delay="0.4s">
+                                        <h4 class="fs-1 mb-3 mb-lg-20 text-white text-center">Social Link</h4>
+                                        <p class="mb-20 mb-lg-30 text-white text-center">Follow Me On Social Media</p>
 
                                         <div
                                             class="social-icons d-flex align-items-center justify-content-center flex-wrap gap-20">
@@ -1011,8 +1000,12 @@
                                     <!-- Iklan 2 -->
                                     @foreach ($iklans as $iklan)
                                         @if ($iklan->type == 'Iklan 2')
-                                            <div class="add-image d-none d-xl-block ml-auto wow fadeInUp" title="{{ $iklan->company }}" data-wow-delay="0.4s">
-                                                <a href="{{ $iklan->link }}" rel="nofollow" target="__blank"><img style="border-radius: 1rem;" src="assets/images/iklan/{{ $iklan->image }}" class="img-fluid" alt="{{ $iklan->company }}"></a>
+                                            <div class="add-image d-none d-xl-block ml-auto wow fadeInUp"
+                                                title="{{ $iklan->company }}" data-wow-delay="0.4s">
+                                                <a href="{{ $iklan->link }}" rel="nofollow" target="__blank"><img
+                                                        style="border-radius: 1rem;"
+                                                        src="assets/images/iklan/{{ $iklan->image }}"
+                                                        class="img-fluid" alt="{{ $iklan->company }}"></a>
                                             </div>
                                         @endif
                                     @endforeach
@@ -1031,20 +1024,29 @@
                                         <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp"
                                             data-wow-delay="0.4s">
                                             <div class="card-image-wrapper">
-                                                <a href="/article"><img src="assets/images/placeholder.svg" data-src="assets/images/blog/explore-image-17.jpg" class="card-img-top" alt="Discovering"></a>
+                                                <a href="/article/{{ $data->slug }}"><img
+                                                        src="{{ asset('post_media/' . $data->thumbnail) }}"
+                                                        data-src="{{ asset('post_media/' . $data->thumbnail) }}"
+                                                        class="card-img-top" alt="Discovering"></a>
                                             </div>
 
                                             <div class="card-body">
                                                 <div class="card-header text-uppercase">
                                                     <a href="/category">{{ $data->kategori->name }}</a>
                                                 </div>
-                                                <h6 class="fs-4 card-title"><a href="/article/{{ $data->slug }}" class="blog-title">{{ $data->title }}</a></h6>
+                                                <h6 class="fs-4 card-title"><a href="/article/{{ $data->slug }}"
+                                                        class="blog-title">{{ $data->title }}</a></h6>
                                                 <ul class="list-unstyled card-meta  align-items-center">
-                                                    <li>By <a href="author-1" class="blog-author fw-bold">Jadi Trip</a></li>
-                                                    <li>{{ $data->created_at->DiffForHumans() }}</li>
+                                                    <li>By <a href="author-1" class="blog-author fw-bold">Jadi
+                                                            Trip</a></li>
+                                                    <li>{{ $data->created_at->DiffForHumans() }}<span>
+                                                        </span>.
+                                                    </li>
                                                 </ul>
 
-                                                <p class="card-text small">{{ $data->content }}</p>
+                                                <p class="card-text small">
+                                                    {{ Str::limit($data->description, 100, '...') }}</p>
+                                                </ul>
                                                 <a href="/article/{{ $data->slug }}">Read
                                                     more &raquo;</a>
                                             </div>
@@ -1139,7 +1141,8 @@
                             @endforeach
                         </div>
 
-                        <a href="https://www.instagram.com/jaditrip_travel" target="__blank"><span class="text-white follow-txt">Follow Me</span></a>
+                        <a href="https://www.instagram.com/jaditrip_travel" target="__blank"><span
+                                class="text-white follow-txt">Follow Me</span></a>
                     </div>
 
                 </div>
@@ -1357,7 +1360,7 @@
     <script src="assets/js/appear.min.js"></script>
     <script src="assets/js/lazy.image.js"></script>
     <script src="assets/js/script.js"></script>
-
+    <script src="assets/js/search.js"></script>
 
 
 </body>

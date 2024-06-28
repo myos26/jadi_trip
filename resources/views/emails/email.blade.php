@@ -9,10 +9,15 @@
 </head>
 
 <body>
-    <p>Hello, {{ $get_user_name }} yhank's for join with us</p>
-    <p>This is your otp-code verification</p>
-    <h1>{{ $validToken }}</h1>
-    <h3>=========================================================</h3>
+    <h1>Halo {{ $get_user_name }} 🌟,</h1>
+    <h2>Terima kasih telah mendaftar di Jadi Trip! 😊</h2>
+
+    <p>🔑 Kode OTP Anda adalah
+    <h2>{{ $validToken }}</h2>Mohon masukkan kode ini untuk memverifikasi data Anda.</p>
+
+    <p>⚠ Harap jangan berikan kode OTP ini kepada siapapun demi menjaga keamanan akun Anda.</p>
+
+    <h3>Terima kasih! 🌴✈</h3>
 </body>
 
 </html>

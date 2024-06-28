@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\IklanController;
 use App\Models\Post;
 use App\Models\User;
 use App\Models\iklan;
@@ -48,6 +49,7 @@ Route::post('/verified-info', [AuthController::class, 'infoVerified']);
 Route::middleware(['auth'])->group(function () {
     Route::get('/verify', [AuthController::class, 'verifyInfo']);
     Route::get('/info', [AuthController::class, 'info']);
+    Route::post('/resend-code', [AuthController::class, 'resendCode']);
     Route::get('/logout', [AuthController::class, 'logout']);
 });
 
@@ -56,8 +58,21 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/Dashboard', [AdminController::class, 'Dashboard']);
     Route::get('/profil', [ProfileController::class, 'index']);
     Route::get('/postingan', [PostController::class, 'index']);
-    Route::get('/tambahpostingan', [PostController::class, 'TambahPostingan']);
-    Route::post('/upload', [PostController::class, 'upload'])->name('ckeditor.upload');
+
+    // post routes
+    Route::get('/create', [PostController::class, 'create']);
+    Route::post('/upload', [PostController::class, 'upload']);
+    Route::post('/save-post', [PostController::class, 'store']);
+    Route::get('/update/{id}', [PostController::class, 'updateView']);
+    Route::post('/update-post/{id}', [PostController::class, 'update']);
+    Route::get('/delete/{id}', [PostController::class, 'destroy']);
+
+    // kategori routes
+    Route::post('/kategori', [PostController::class, 'storeKategori']);
+    Route::get('/kategori/delete/{id}', [PostController::class, 'deleteKategori']);
+
+    // iklan routes
+    Route::get('/iklan', [IklanController::class, 'iklan']);
 });
 
 
@@ -73,6 +88,9 @@ Route::get('/category', function () {
     return view('category');
 });
 Route::get('/kontak', function () {
+    return view('contact');
+});
+Route::get('/contact', function () {
     return view('contact');
 });
 Route::get('/detail paket/{type?}', function () {
@@ -107,3 +125,6 @@ Route::get('/sitemap.xml', function(){
     return $sitemap->toResponse(request());
 });
 
+Route::get('/bacadata', function () {
+    return view('auth/lengkap_data');
+});

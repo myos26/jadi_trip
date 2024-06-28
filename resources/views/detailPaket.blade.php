@@ -14,6 +14,7 @@
 
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,700;1,900&family=Lovers+Quarrel&family=Meddon&display=swap"
@@ -186,6 +187,100 @@
                                             </svg>
                                         </span>
                                     </a>
+                                    {{-- LOGO PROFIL KANAN ATAS --}}
+                                    {{-- PROFIL KETIKA SUDAH LOGIN SCRIPT DIBAWAH --}}
+                                    @if (Auth::check())
+                                        <div class="box-profile" style="width: 40px; height: 40px; overflow: hidden;">
+                                            <img width="40"
+                                                src="{{ asset('admin/images/' . Auth::user()->photo) }}"
+                                                class="user_pic" alt="" id="toggle-button" width="50">
+                                        </div>
+
+                                        <div class="sub-menu-wrap" id="subMenu">
+                                            <div class="sub-menu">
+                                                <div class="user-info">
+                                                    <h3>{{ Auth::user()->username }}</h3>
+                                                    <img src="{{ asset('admin/images/' . Auth::user()->photo) }}">
+
+                                                </div>
+                                                <hr>
+
+                                                <div class="sub-menu-link">
+                                                    <span class="material-icons-sharp sub-icon">
+                                                        account_circle
+                                                    </span>
+                                                    <a href="profile">Profile</a>
+                                                </div>
+                                                <div class="sub-menu-link">
+                                                    <span class="material-icons-sharp sub-icon">
+                                                        account_circle
+                                                    </span>
+                                                    <a href="dashboard">Dashboard</a>
+                                                </div>
+
+                                                <div class="sub-menu-link">
+                                                    <span class="material-icons-sharp sub-icon">
+                                                        logout
+                                                    </span>
+                                                    <a href="logout">Logout</a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    @endif
+
+                                    @if (!Auth::check())
+                                        {{-- PROFIL KETIKA BELUM LOGIN SCRIPT DIBAWAH --}}
+                                        <div class="box-profile" style="width: 40px; height: 40px; overflow: hidden;">
+                                            <img width="40" src="{{ asset('admin/images/noimage.webp') }}"
+                                                class="user_pic" alt="" id="toggle-button">
+                                        </div>
+
+                                        <div class="sub-menu-wrap" id="subMenu">
+                                            <div class="sub-menu">
+                                                {{-- <div class="user-info">
+                                                    <h3>Anonymous</h3>
+                                                    <img src="{{ asset('admin/images/noimage.webp') }}">
+
+                                                </div> --}}
+                                                <hr>
+
+                                                <div class="sub-menu-link">
+                                                    <span class="material-icons-sharp sub-icon">
+                                                        login
+                                                    </span>
+                                                    <a href="login">Login</a>
+
+                                                </div>
+
+                                                <div class="sub-menu-link">
+                                                    <span class="material-icons-sharp sub-icon">
+                                                        how_to_reg
+                                                    </span>
+                                                    <a href="register">Register</a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    @endif
+                                    <script>
+                                        document.getElementById('toggle-button').addEventListener('click', function(event) {
+                                            const menu = document.getElementById('subMenu');
+                                            menu.classList.toggle('open-menu');
+                                            event.stopPropagation();
+                                        });
+
+                                        document.addEventListener('click', function(event) {
+                                            const menu = document.getElementById('subMenu');
+                                            const button = document.getElementById('toggle-button');
+                                            if (!menu.classList.contains('subMenu') && !menu.contains(event.target) && !button.contains(event
+                                                    .target)) {
+                                                menu.classList.remove('open-menu');
+                                            }
+                                        });
+                                    </script>
+
+                                    {{-- END OF PROFIL JIKA BELUM LOGIN --}}
                                 </div>
                             </div>
                         </div>
@@ -690,8 +785,7 @@
                                     <h2 class="section-banner-title text-white pb-30 ">Judul Paket</h2>
                                     <div class="d-flex gap-20 flex-wrap justify-content-center">
                                         <span class="text-white">3 Comments</span>
-                                        <span class="text-white">Tanggal upload<span
-                                                class="">
+                                        <span class="text-white">Tanggal upload<span class="">
                                             </span>.</span>
                                     </div>
                                 </div>

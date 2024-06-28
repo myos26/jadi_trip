@@ -15,6 +15,7 @@
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,700;1,900&family=Lovers+Quarrel&family=Meddon&display=swap"
         rel="stylesheet">
@@ -186,6 +187,99 @@
                                             </svg>
                                         </span>
                                     </a>
+
+                                    {{-- LOGO PROFIL KANAN ATAS --}}
+                                    {{-- PROFIL KETIKA SUDAH LOGIN SCRIPT DIBAWAH --}}
+                                    @if (Auth::check())
+                                        <div class="box-profile" style="width: 40px; height: 40px; overflow: hidden;">
+                                            <img width="40"
+                                                src="{{ asset('admin/images/' . Auth::user()->photo) }}"
+                                                class="user_pic" alt="" id="toggle-button" width="50">
+                                        </div>
+
+                                        <div class="sub-menu-wrap" id="subMenu">
+                                            <div class="sub-menu">
+                                                <div class="user-info">
+                                                    <h3>{{ Auth::user()->username }}</h3>
+                                                    <img src="{{ asset('admin/images/' . Auth::user()->photo) }}">
+
+                                                </div>
+                                                <hr>
+
+                                                <div class="sub-menu-link">
+                                                    <span class="material-icons-sharp sub-icon">
+                                                        account_circle
+                                                    </span>
+                                                    <a href="profile">Profile</a>
+                                                </div>
+                                                <div class="sub-menu-link">
+                                                    <span class="material-icons-sharp sub-icon">
+                                                        account_circle
+                                                    </span>
+                                                    <a href="dashboard">Dashboard</a>
+                                                </div>
+
+                                                <div class="sub-menu-link">
+                                                    <span class="material-icons-sharp sub-icon">
+                                                        logout
+                                                    </span>
+                                                    <a href="logout">Logout</a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    @endif
+
+                                    @if (!Auth::check())
+                                        {{-- PROFIL KETIKA BELUM LOGIN SCRIPT DIBAWAH --}}
+                                        <div class="box-profile" style="width: 40px; height: 40px; overflow: hidden;">
+                                            <img width="40" src="{{ asset('admin/images/noimage.webp') }}"
+                                                class="user_pic" alt="" id="toggle-button">
+                                        </div>
+
+                                        <div class="sub-menu-wrap" id="subMenu">
+                                            <div class="sub-menu">
+                                                {{-- <div class="user-info">
+                                                    <h3>Anonymous</h3>
+                                                    <img src="{{ asset('admin/images/noimage.webp') }}">
+
+                                                </div> --}}
+                                                <hr>
+
+                                                <div class="sub-menu-link">
+                                                    <span class="material-icons-sharp sub-icon">
+                                                        login
+                                                    </span>
+                                                    <a href="login">Login</a>
+
+                                                </div>
+
+                                                <div class="sub-menu-link">
+                                                    <span class="material-icons-sharp sub-icon">
+                                                        how_to_reg
+                                                    </span>
+                                                    <a href="register">Register</a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    @endif
+                                    <script>
+                                        document.getElementById('toggle-button').addEventListener('click', function(event) {
+                                            const menu = document.getElementById('subMenu');
+                                            menu.classList.toggle('open-menu');
+                                            event.stopPropagation();
+                                        });
+
+                                        document.addEventListener('click', function(event) {
+                                            const menu = document.getElementById('subMenu');
+                                            const button = document.getElementById('toggle-button');
+                                            if (!menu.classList.contains('subMenu') && !menu.contains(event.target) && !button.contains(event
+                                                    .target)) {
+                                                menu.classList.remove('open-menu');
+                                            }
+                                        });
+                                    </script>
                                 </div>
                             </div>
                         </div>
@@ -746,13 +840,13 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
 
                         <div class="col-xl-7">
                             <!-- Start article-blog-content -->
-                            <div class="article-blog-content mb-lg-0 mb-20">
-                                <p class="mb-30 mb-lg-60">{{ $post->content }}</p>
+                            <div class="article-blog-content mb-lg-0 mb-20"
+                                style="overflow: hidden; word-wrap: break-word;">
+                                {!! $post->content !!}
 
                                 <div class="table-of-content table-of-content-style-2">
                                     <div class="accordion accordion-flush" id="accordionFlushExample">

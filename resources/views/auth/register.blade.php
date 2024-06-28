@@ -43,10 +43,13 @@
 
             </div>
             <label>
-                <input type="checkbox">Saya menyatakan bahwa informasi yang diberikan di atas adalah benar dan tepat
+                <input type="checkbox" id="checkbox" name="term">Saya menyatakan bahwa informasi yang diberikan di
+                atas
+                adalah
+                benar dan tepat
             </label>
 
-            <button type="submit" class="btn">Register</button>
+            <button type="submit" class="btn" id="register">Register</button>
             <a href="{{ url('/login') }}" class="btn2">Sudah mempunyai akun? Login disini</a>
         </form>
     </div>

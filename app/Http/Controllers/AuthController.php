@@ -64,9 +64,7 @@ class AuthController extends Controller
         }
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+
     public function register(Request $request)
     {
         $request->validate([
@@ -75,11 +73,42 @@ class AuthController extends Controller
             'password' => ['required']
         ]);
 
-        User::create([
-            'username' => $request->username,
-            'email' => $request->email,
-            'password' => Hash::make($request->password)
-        ]);
+        if ($request->term == "on") {
+            User::create([
+                'username' => $request->username,
+                'email' => $request->email,
+                'password' => Hash::make($request->password)
+            ]);
+
+            $validToken = rand(1000, 9999);
+            $get_token = new VerifiedToken();
+            $get_token->token = $validToken;
+            $get_token->email = $request->email;
+            $get_token->save();
+
+            $get_user_email = $request->email;
+            $get_user_name = $request->username;
+            Mail::to($get_user_email)->send(new SendEmail($get_user_email, $validToken, $get_user_name));
+
+            $credentials = $request->validate([
+                'email' => ['required', 'email'],
+                'password' => ['required'],
+            ]);
+
+            if (Auth::attempt($credentials)) {
+                $request->session()->regenerate();
+
+                return redirect('/temp-home');
+            }
+        }
+
+        return redirect()->back()->with('failed', 'Failed register user');
+    }
+
+    public function resendCode(Request $request)
+    {
+        $getting_token = VerifiedToken::where('email', $request->email)->first();
+        $getting_token->delete();
 
         $validToken = rand(1000, 9999);
         $get_token = new VerifiedToken();
@@ -91,16 +120,7 @@ class AuthController extends Controller
         $get_user_name = $request->username;
         Mail::to($get_user_email)->send(new SendEmail($get_user_email, $validToken, $get_user_name));
 
-        $credentials = $request->validate([
-            'email' => ['required', 'email'],
-            'password' => ['required'],
-        ]);
-
-        if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
-
-            return redirect('/temp-home');
-        }
+        return redirect()->back()->with('success', 'Success resend code');
     }
 
     public function verified(Request $request)

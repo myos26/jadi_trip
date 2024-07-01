@@ -24,9 +24,9 @@ return new class extends Migration
             $table->text('deskripsi')->nullable();
             $table->string('nomor_hp')->nullable();
             $table->string('provinsi')->nullable();
-            $table->string('kabupaten/kota')->nullable();
+            $table->string('kabupaten_kota')->nullable();
             $table->string('kecamatan')->nullable();
-            $table->string('kelurahan/desa')->nullable();
+            $table->string('kelurahan_desa')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

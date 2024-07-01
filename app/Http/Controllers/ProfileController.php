@@ -77,8 +77,10 @@ class ProfileController extends Controller
             } else {
                 if (!$request->hasFile('photo')) {
                     if ($request->old_photo == 'noprofile.png') {
-                        if (File::exists(public_path('/profile/images/' . Auth::user()->photo))) {
-                            File::delete(public_path('/profile/images/' . Auth::user()->photo));
+                        if ($request->old_photo != Auth::user()->photo) {
+                            if (File::exists(public_path('/profile/images/' . Auth::user()->photo))) {
+                                File::delete(public_path('/profile/images/' . Auth::user()->photo));
+                            }
                         }
                     }
                 }
@@ -100,7 +102,8 @@ class ProfileController extends Controller
             return redirect()->back()->with('success', 'Profile berhasil disimpan');
         } catch (\Exception $e) {
             DB::rollback();
-            return redirect() - back()->with('failed', 'Profile gagal disimpan');
+            // return redirect()->back()->with('failed', 'Profile gagal disimpan');
+            dd($e);
         }
     }
 

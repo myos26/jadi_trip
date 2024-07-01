@@ -94,7 +94,7 @@
     {{-- end modal --}}
 
     <div class="container" style="margin-top: 20px;">
-        <form action="{{ url('/store') }}" method="post" id="post-form" enctype="multipart/form-data">
+        <form action="{{ url('/layanan/store') }}" method="post" id="post-form" enctype="multipart/form-data">
             @csrf
             <div class="card">
                 <div class="card-body">

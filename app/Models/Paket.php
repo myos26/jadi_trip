@@ -18,7 +18,9 @@ class Paket extends Model
         'deskripsi',
         'harga',
         'benefit',
-        'alur',
-        'type'
+        'konten',
+        'tipe',
+        'kategori',
+        'status'
     ];
 }

@@ -77,12 +77,12 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
     // layanan routes
     Route::get('/layanan', [LayananController::class, 'index']);
-    Route::get('/create', [LayananController::class, 'create']);
-    Route::post('/store', [LayananController::class, 'store']);
-    Route::get('/update/{slug}', [LayananController::class, 'show']);
-    Route::put('/update/{id}', [LayananController::class, 'update']);
+    Route::get('/layanan/create', [LayananController::class, 'create']);
+    Route::post('/layanan/store', [LayananController::class, 'store']);
+    Route::get('/layanan/update/{slug}', [LayananController::class, 'show']);
+    Route::put('/layanan/update/{id}', [LayananController::class, 'update']);
     Route::get('/layanan/delete/{slug}', [LayananController::class, 'destroy']);
-  
+
     // profile routes
     Route::put('/update/profile/{id}', [ProfileController::class, 'update']);
 });

@@ -94,7 +94,8 @@ class LayananController extends Controller
             return redirect('/layanan')->with('success', 'Layanan berhasil ditambahkan');
         } catch (\Exception $e) {
             DB::rollback();
-            return redirect()->back()->with('failed', 'Layanan gagal ditambahkan');
+            // return redirect()->back()->with('failed', 'Layanan gagal ditambahkan');
+            dd($e);
         }
     }
 
@@ -105,6 +106,7 @@ class LayananController extends Controller
     {
         $pakets = Paket::where('slug', $slug)->get();
 
+        // dd($pakets);
         return view('admin.page.layanan.edit', compact('pakets'));
     }
 

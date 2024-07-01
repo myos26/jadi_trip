@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Create Layanan</title>
+    <title>Edit Layanan</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,66 +36,11 @@
     <div class="container"
         style="margin-top: 20px; background-color: white; padding: 10px; border-radius: 10px; box-shadow: 1px 1px 20px -10px black;">
         <a href="{{ url('/layanan') }}" onclick="draft()" class="btn btn-md btn-primary">Kembali</a>
-        <!-- Button trigger modal -->
-        {{-- <button type="button" class="btn btn-md btn-primary" data-toggle="modal" data-target="#kategori">
-            + Kategori
-        </button> --}}
     </div>
-
-    <!-- Modal -->
-    {{-- <form action="{{ url('/kategori') }}" method="post">
-        @csrf
-        <div class="modal fade modal-dialog-centered" id="kategori" data-backdrop="static" data-keyboard="false"
-            tabindex="-1" aria-labelledby="kategoriLabel" aria-hidden="true">
-            <div class="modal-dialog modal-md">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="kategoriLabel">Kategori</h5>
-                    </div>
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label for="input-kategori">Tambah Kategori : </label>
-                            <input type="text" class="form-control" id="input-kategori" name="name"
-                                placeholder="Masukkan nama kategori">
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-sm btn-primary">Simpan</button>
-                        </div>
-                        <hr>
-                        <div class="kategoris" style="height: 200px; overflow-y: scroll;">
-                            <table class="table table-md table-hover">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Id</th>
-                                        <th scope="col">Kategori</th>
-                                        <th scope="col">Aksi</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($kategoris as $kategori)
-                                        <tr>
-                                            <td scope="row">{{ $kategori->id }}</td>
-                                            <td>{{ $kategori->name }}</td>
-                                            <td><a href="{{ url('kategori/delete/' . $kategori->id) }}"
-                                                    class="btn btn-sm btn-danger">Hapus</a></td>
-                                        </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-md btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </form> --}}
-    {{-- end modal --}}
 
     <div class="container" style="margin-top: 20px;">
         @foreach ($pakets as $paket)
-            <form action="{{ url('/update/' . $paket->id) }}" method="post" id="post-form"
+            <form action="{{ url('/layanan/update/' . $paket->id) }}" method="post" id="post-form"
                 enctype="multipart/form-data">
                 @method('put')
                 @csrf

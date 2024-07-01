@@ -17,7 +17,7 @@
     </section>
     <section class="konten">
         <div class="button">
-            <a href="{{ url('/create') }}">Add Layanan</a>
+            <a href="{{ url('/layanan/create') }}">Add Layanan</a>
         </div>
 
         @foreach ($pakets as $paket)
@@ -44,8 +44,8 @@
         @endforeach
 
         <script>
-            const target = (id) => {
-                window.location = "/update/" + id;
+            const target = (slug) => {
+                window.location = "/layanan/update/" + slug;
             }
 
             const lihat = (slug) => {

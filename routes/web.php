@@ -82,6 +82,9 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/update/{slug}', [LayananController::class, 'show']);
     Route::put('/update/{id}', [LayananController::class, 'update']);
     Route::get('/layanan/delete/{slug}', [LayananController::class, 'destroy']);
+  
+    // profile routes
+    Route::put('/update/profile/{id}', [ProfileController::class, 'update']);
 });
 
 
@@ -112,6 +115,7 @@ Route::get('/auth', [AuthController::class, 'handleAuth']);
 Route::get('/sitemap.xml', function () {
     $sitemap = Sitemap::create()
         ->add(Url::create('/')->setLastModificationDate(now())->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)->setPriority(1.0))
+        ->add(ManifestUrl::create('/')->setLastModificationDate(now())->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)->setPriority(1.0))
         ->add(Url::create('/blog')->setLastModificationDate(now())->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)->setPriority(0.8));
 
     $posts = Post::all();

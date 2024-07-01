@@ -199,9 +199,10 @@ class PostController extends Controller
 
             if (File::exists(public_path($path))) {
                 File::delete(public_path('/post_media/' . substr($path, 12)));
-                File::delete(public_path('/post_media/' . $post->thumbnail));
             }
         }
+
+        File::delete(public_path('/post_media/' . $post->thumbnail));
 
         $post->delete();
 

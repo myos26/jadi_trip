@@ -25,6 +25,7 @@ class User extends Authenticatable
         'is_info_verified',
         'password',
         'is_admin',
+        'deskripsi',
         'nomor_hp',
         'provinsi',
         'kabupaten/kota',

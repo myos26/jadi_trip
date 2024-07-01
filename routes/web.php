@@ -73,13 +73,16 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
     // iklan routes
     Route::get('/iklan', [IklanController::class, 'iklan']);
+
+    // profile routes
+    Route::put('/update/profile/{id}', [ProfileController::class, 'update']);
 });
 
 
 // route blog
 Route::get('/paket/{kategori?}', function () {
 
-        return view('paket');
+    return view('paket');
 });
 Route::get('/about', function () {
     return view('about');
@@ -100,10 +103,10 @@ Route::get('/article/{slug}', [PostController::class, 'post']);
 
 Route::get('/auth', [AuthController::class, 'handleAuth']);
 
-Route::get('/sitemap.xml', function(){
+Route::get('/sitemap.xml', function () {
     $sitemap = Sitemap::create()
-    ->add(Url::create('/')->setLastModificationDate(now())->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)->setPriority(1.0))
-    ->add(Url::create('/blog')->setLastModificationDate(now())->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)->setPriority(0.8));
+        ->add(ManifestUrl::create('/')->setLastModificationDate(now())->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)->setPriority(1.0))
+        ->add(Url::create('/blog')->setLastModificationDate(now())->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)->setPriority(0.8));
 
     $posts = Post::all();
     foreach ($posts as $post) {

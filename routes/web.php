@@ -7,6 +7,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\IklanController;
+use App\Http\Controllers\LayananController;
 use App\Models\Post;
 use App\Models\User;
 use App\Models\iklan;
@@ -74,6 +75,14 @@ Route::middleware(['auth', 'admin'])->group(function () {
     // iklan routes
     Route::get('/iklan', [IklanController::class, 'iklan']);
 
+    // layanan routes
+    Route::get('/layanan', [LayananController::class, 'index']);
+    Route::get('/create', [LayananController::class, 'create']);
+    Route::post('/store', [LayananController::class, 'store']);
+    Route::get('/update/{slug}', [LayananController::class, 'show']);
+    Route::put('/update/{id}', [LayananController::class, 'update']);
+    Route::get('/layanan/delete/{slug}', [LayananController::class, 'destroy']);
+  
     // profile routes
     Route::put('/update/profile/{id}', [ProfileController::class, 'update']);
 });
@@ -105,6 +114,7 @@ Route::get('/auth', [AuthController::class, 'handleAuth']);
 
 Route::get('/sitemap.xml', function () {
     $sitemap = Sitemap::create()
+        ->add(Url::create('/')->setLastModificationDate(now())->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)->setPriority(1.0))
         ->add(ManifestUrl::create('/')->setLastModificationDate(now())->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)->setPriority(1.0))
         ->add(Url::create('/blog')->setLastModificationDate(now())->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)->setPriority(0.8));
 

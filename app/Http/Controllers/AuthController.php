@@ -61,6 +61,8 @@ class AuthController extends Controller
             } else {
                 return redirect('/verify');
             }
+        } else {
+            return redirect()->back()->with('failed', 'Email atau password yang anda masukkan salah!!');
         }
     }
 

@@ -18,9 +18,11 @@ return new class extends Migration
             $table->string('slug', 100);
             $table->longText('deskripsi');
             $table->bigInteger('harga');
-            $table->longText('benefit');
-            $table->longText('alur');
-            $table->enum('type', ['recommended','open trip','paket wisata','rental mobil']);
+            $table->longText('benefit'); //hilangkan
+            $table->longText('konten'); //hilangkan
+            $table->enum('kategori', ['Paket Wisata', 'Open Trip', 'Rental Mobil']);
+            $table->enum('tipe', ['Umum', 'Rekomendasi']);
+            $table->enum('status', ['Public', 'Draft']);
             $table->timestamps();
             $table->SoftDeletes();
         });

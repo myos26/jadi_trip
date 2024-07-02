@@ -5,6 +5,7 @@ namespace App\Console;
 use Illuminate\Console\Scheduling\Schedule;
 use App\Models\InstagramToken;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use App\Console\Commands\UpdateAdStatuses;
 
 class Kernel extends ConsoleKernel
 {
@@ -16,7 +17,6 @@ class Kernel extends ConsoleKernel
         // $schedule->command('inspire')->hourly();
         $schedule->command('instagram:refresh')->weekly();
         $schedule->command('sitemap:generate')->daily();
-
     }
 
     /**

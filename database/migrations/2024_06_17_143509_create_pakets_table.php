@@ -20,7 +20,7 @@ return new class extends Migration
             $table->bigInteger('harga');
             $table->longText('benefit');
             $table->longText('alur');
-            $table->enum('type', ['Umum', 'Recommended']);
+            $table->enum('type', ['recommended','open trip','paket wisata','rental mobil']);
             $table->timestamps();
             $table->SoftDeletes();
         });

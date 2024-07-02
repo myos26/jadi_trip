@@ -209,7 +209,7 @@
                                                     <span class="material-icons-sharp sub-icon">
                                                         account_circle
                                                     </span>
-                                                    <a href="profile">Profile</a>
+                                                    <a href="profil">Profile</a>
                                                 </div>
                                                 <div class="sub-menu-link">
                                                     <span class="material-icons-sharp sub-icon">

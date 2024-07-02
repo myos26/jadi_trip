@@ -19,7 +19,6 @@
     <section class="konten" id="konten">
         <form action="" method="post" enctype="multipart/form-data">
             @csrf
-            <h1>PROFILE</h1>
             <div class="box-besar">
                 <div class="box-image">
                     <img src="{{ asset('profile/images/' . Auth::user()->photo) }}" alt="" srcset="">

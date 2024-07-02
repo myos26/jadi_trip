@@ -209,14 +209,14 @@
                                                         <span class="material-icons-sharp sub-icon">
                                                             account_circle
                                                         </span>
-                                                        <a href="{{ url('/Dashboard') }}">Dashboard</a>
+                                                        <a href="{{ url('/dashboard') }}">Dashboard</a>
                                                     </div>
                                                 @else
                                                     <div class="sub-menu-link">
                                                         <span class="material-icons-sharp sub-icon">
                                                             account_circle
                                                         </span>
-                                                        <a href="profile">Profile</a>
+                                                        <a href="profil">Profile</a>
                                                     </div>
                                                 @endif
 
@@ -896,7 +896,7 @@
                         <div class="col-xl-4">
                             <div class="sticky-elements">
                                 {{-- Iklan 1 --}}
-                                @foreach ($iklans as $iklan)
+                                {{-- @foreach ($iklans as $iklan)
                                     @if ($iklan->type == 'Iklan 1')
                                         <a href="{{ $iklan->link }}" rel="nofollow" target="_blank">
                                             <div class="dark-mode about-me wow fadeInUp"
@@ -910,7 +910,7 @@
                                             </div>
                                         </a>
                                     @endif
-                                @endforeach
+                                @endforeach --}}
 
                                 {{-- end iklan 1 --}}
                                 <!-- socials widget -->
@@ -1000,7 +1000,7 @@
                                     <!-- social-icons -->
                                 </div>
                                 {{-- Iklan 2 --}}
-                                @foreach ($iklans as $iklan)
+                                {{-- @foreach ($iklans as $iklan)
                                     @if ($iklan->type == 'Iklan 2')
                                         <div class="add-image d-xl-block wow iklan2 fadeInUp"
                                             title="{{ $iklan->company }}" data-wow-delay="0.4s">
@@ -1009,7 +1009,7 @@
                                                     class="img-iklan2" alt="{{ $iklan->company }}"></a>
                                         </div>
                                     @endif
-                                @endforeach
+                                @endforeach --}}
                                 {{-- Iklan 2 end --}}
                             </div>
 

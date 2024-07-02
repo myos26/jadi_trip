@@ -1,5 +1,5 @@
 @extends('admin.index')
-<link rel="stylesheet" href="{{ asset('pages/Iklan/iklan.css') }}">
+<link rel="stylesheet" href="{{ asset('pages/akun.css') }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
@@ -16,40 +16,6 @@
     </section>
 
     <section class="konten" id="konten">
-        <div class="box-besar">
-            <div class="box-input">
-                <div class="input-content">
-                    <form action="{{ url('/inputIklan') }}" method="post" enctype="multipart/form-data">
-                        @csrf
-                        <div class="putInput">
-                            <label for="company">Perusahaan &nbsp;&nbsp;:</label>
-                            <input class="form-control" id="input1" type="text" name="perusahaan">
-                        </div>
-
-                        <div class="putInput">
-                            <label for="thumbnail">Sampul &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
-                            <input class="form-control" id="input3" type="file" name="sampul">
-                        </div>
-
-                        <div class="putInput">
-                            <label for="link">Tautan &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
-                            <input class="form-control" id="input2" type="url" name="tautan">
-                        </div>
-
-                        <div class="putInput">
-                            <label for="type">Tipe &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
-                            <select class="form-control" name="type" id="type">
-                                <option value="iklan1">Iklan 1</option>
-                                <option value="iklan2">Iklan 2</option>
-                            </select>
-                        </div>
-                        <div class="button">
-                            <button type="submit" class="btn">POSTING</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
         <div class="search-container">
             <label for="search-term">Cari :</label>
             <input type="text" id="search-term" placeholder="Kata Kunci">
@@ -59,11 +25,11 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Kode</th>
-                        <th>Tanggal</th>
-                        <th>Perusahaan</th>
-                        <th>Link</th>
-                        <th>Type</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Hp/WA</th>
+                        <th>Level</th>
+                        <th>Aksi</th>
                         <th>Status</th>
                     </tr>
                 </thead>
@@ -71,19 +37,21 @@
                     $c = 1;
                 @endphp
                 <tbody>
-                    {{-- @foreach ($iklan as $ad)
+                    @for ($td=1; $td<21; $td++)
                     <tr>
                         <td>{{ $c++ }}</td>
-                        <td>{{ $ad->kode }}</td>
-                        <td>{{ $ad->tanggal }}</td>
-                        <td>{{ $ad->perusahaan }}</td>
-                        <td>{{ $ad->tautan }}</td>
-                        <td>{{ $ad->type }}</td>
-                        <td>
-                            on
+                        <td>@faruks</td>
+                        <td>alfaruk2629@gmail.com</td>
+                        <td>081235846565</td>
+                        <td>Admin</td>
+                        <td id="aksi">
+                            <a href="detailData">Detail</a> |
+                            <a href="editAkun">Edit</a>&nbsp;
+                            <a href="hapus">Hapus</a>
                         </td>
+                        <td>Pasif</td>
                     </tr>
-                    @endforeach --}}
+                    @endfor
                 </tbody>
                 <tfoot>
                     <tr>

@@ -4,15 +4,17 @@ use App\Models\Post;
 
 <!-- Sidebar Section -->
 <aside>
-    <div class="toggle">
-        <div class="logo">
-            <img src="{{ asset('assets/logo/Jadi Trip Bputih.png') }}" />
-            {{-- <h2>Asmr<span class="danger">Prog</span></h2> --}}
+    <a href="/">
+        <div class="toggle">
+            <div class="logo">
+                <img src="{{ asset('assets/logo/Jadi Trip Bputih.png') }}" />
+                {{-- <h2>Asmr<span class="danger">Prog</span></h2> --}}
+            </div>
+            <div class="close" id="close-btn">
+                <span class="material-icons-sharp"> close </span>
+            </div>
         </div>
-        <div class="close" id="close-btn">
-            <span class="material-icons-sharp"> close </span>
-        </div>
-    </div>
+    </a>
 
     <div class="sidebar">
         {{-- <a href="/Dashboard" id="dashboard" class="{{ Request::is('Dashboard') ? 'active' : '' }}">
@@ -25,6 +27,7 @@ use App\Models\Post;
             </span>
             <h3>Profile</h3>
         </a>
+        @if (Auth::User()->is_admin == 1)
         <a href="postingan" id="postingan" class="{{ Request::is('postingan', 'tambahpostingan') ? 'active' : '' }}">
             <span class="material-icons-sharp">
                 post_add
@@ -32,7 +35,7 @@ use App\Models\Post;
             <h3>Post</h3>
             <span class="message-count">{{ count(Post::all()) }}</span>
         </a>
-        <a href="paket_wisata" class="{{ Request::is('paket_wisata') ? 'active' : '' }}">
+        <a href="layanan" class="{{ Request::is('layanan') ? 'active' : '' }}">
             <span class="material-icons-sharp">
                 card_travel
             </span>
@@ -48,12 +51,13 @@ use App\Models\Post;
             </span>
             <h3>Iklan</h3>
         </a>
-        <a href="contact" class="{{ Request::is('contact') ? 'active' : '' }}">
+        <a href="/akun" class="{{ Request::is('akun') ? 'active' : '' }}">
             <span class="material-icons-sharp">
                 contacts
             </span>
-            <h3>Account</h3>
+            <h3>Akun</h3>
         </a>
+        @endif
         <a href="{{ url('/logout') }}">
             <span class="material-icons-sharp"> logout </span>
             <h3>Logout</h3>

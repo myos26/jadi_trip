@@ -31,71 +31,75 @@ class LayananController extends Controller
      */
     public function store(Request $request)
     {
-        // upload thumbnail
-        $thumb_name = $request->file('thumbnail')->getClientOriginalName();
-        $thumb_exten = $request->file('thumbnail')->getClientOriginalExtension();
-        $thumb_name = 'thumbail-' . time() . '.' . $thumb_exten;
+        if ($request->hasFile('thumbnail')) {
+            // upload thumbnail
+            $thumb_name = $request->file('thumbnail')->getClientOriginalName();
+            $thumb_exten = $request->file('thumbnail')->getClientOriginalExtension();
+            $thumb_name = 'thumbail-' . time() . '.' . $thumb_exten;
 
-        $request->file('thumbnail')->move(public_path('/post_media'), $thumb_name);
+            $request->file('thumbnail')->move(public_path('/post_media'), $thumb_name);
 
-        //menyimpan konten
-        $content = $request->konten;
+            //menyimpan konten
+            $content = $request->konten;
 
-        $dom = new DOMDocument();
-        $dom->loadHTML($content, 9);
+            $dom = new DOMDocument();
+            $dom->loadHTML($content, 9);
 
-        $images = $dom->getElementsByTagName('img');
+            $images = $dom->getElementsByTagName('img');
 
-        foreach ($images as $key => $img) {
-            $data = base64_decode(explode(',', explode(';', $img->getAttribute('src'))[1])[1]);
-            $image_name = 'media-' . time() . $key . '.' . 'png';
-            file_put_contents($image_name, $data);
-            File::move(public_path('/') . $image_name, public_path('/post_media/') . $image_name);
+            foreach ($images as $key => $img) {
+                $data = base64_decode(explode(',', explode(';', $img->getAttribute('src'))[1])[1]);
+                $image_name = 'media-' . time() . $key . '.' . 'png';
+                file_put_contents($image_name, $data);
+                File::move(public_path('/') . $image_name, public_path('/post_media/') . $image_name);
 
-            $img->removeAttribute('src');
-            $img->setAttribute('src', '/post_media/' . $image_name);
-        }
-
-        $content = $dom->saveHTML();
-
-        // menyimpan ke database
-        DB::beginTransaction();
-        try {
-
-            if ($request->slug != '') {
-                Paket::create([
-                    'thumbnail' => $thumb_name,
-                    'title' => $request->title,
-                    'deskripsi' => $request->description,
-                    'slug' => Str::slug(Str::lower($request->slug)),
-                    'konten' => $content,
-                    'kategori' => $request->kategori,
-                    'status' => $request->status,
-                    'harga' => $request->harga,
-                    'benefit' => $request->benefit,
-                    'tipe' => $request->tipe
-                ]);
-            } else {
-                Paket::create([
-                    'thumbnail' => $thumb_name,
-                    'title' => $request->title,
-                    'deskripsi' => $request->description,
-                    'slug' => Str::slug(Str::lower($request->title)),
-                    'konten' => $content,
-                    'kategori' => $request->kategori,
-                    'status' => $request->status,
-                    'harga' => $request->harga,
-                    'benefit' => $request->benefit,
-                    'tipe' => $request->tipe
-                ]);
+                $img->removeAttribute('src');
+                $img->setAttribute('src', '/post_media/' . $image_name);
             }
 
-            DB::commit();
-            return redirect('/layanan')->with('success', 'Layanan berhasil ditambahkan');
-        } catch (\Exception $e) {
-            DB::rollback();
-            // return redirect()->back()->with('failed', 'Layanan gagal ditambahkan');
-            dd($e);
+            $content = $dom->saveHTML();
+
+            // menyimpan ke database
+            DB::beginTransaction();
+            try {
+
+                if ($request->slug != '') {
+                    Paket::create([
+                        'thumbnail' => $thumb_name,
+                        'title' => $request->title,
+                        'deskripsi' => $request->description,
+                        'slug' => Str::slug(Str::lower($request->slug)),
+                        'konten' => $content,
+                        'kategori' => $request->kategori,
+                        'status' => $request->status,
+                        'harga' => $request->harga,
+                        'benefit' => $request->benefit,
+                        'tipe' => $request->tipe
+                    ]);
+                } else {
+                    Paket::create([
+                        'thumbnail' => $thumb_name,
+                        'title' => $request->title,
+                        'deskripsi' => $request->description,
+                        'slug' => Str::slug(Str::lower($request->title)),
+                        'konten' => $content,
+                        'kategori' => $request->kategori,
+                        'status' => $request->status,
+                        'harga' => $request->harga,
+                        'benefit' => $request->benefit,
+                        'tipe' => $request->tipe
+                    ]);
+                }
+
+                DB::commit();
+                return redirect('/layanan')->with('success', 'Layanan berhasil ditambahkan');
+            } catch (\Exception $e) {
+                DB::rollback();
+                return redirect()->back()->with('failed', 'Layanan gagal ditambahkan');
+                // dd($e);
+            }
+        } else {
+            return redirect()->back()->with('failed', 'Thumbnail harus di isi');
         }
     }
 
@@ -219,6 +223,6 @@ class LayananController extends Controller
         File::delete(public_path('/post_media/' . $paket->thumbnail));
 
         $paket->delete();
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Layanan berhasil dihapus');
     }
 }

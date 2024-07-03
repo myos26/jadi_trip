@@ -48,7 +48,7 @@
                         @endif
                     </div>
                     <div class="profile-photo">
-                        <img src="{{ asset('admin/images/profile-1.jpg') }}" />
+                        <img src="{{ asset('profile/images/' . Auth::user()->photo) }}" />
                     </div>
                 </div>
             </div>
@@ -56,7 +56,7 @@
 
             <div class="user-profile">
                 <div class="logo">
-                    <img src="{{ asset('admin/images/logo.png') }}" />
+                    <img src="{{ asset('profile/images/' . Auth::user()->photo) }}" />
                     <h2>{{ Auth::user()->username }}</h2>
                     @if (Auth::user()->is_admin == 1)
                         <p class="text-muted">Admin</p>

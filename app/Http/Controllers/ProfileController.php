@@ -71,8 +71,7 @@ class ProfileController extends Controller
                     'provinsi' => $request->provinsi,
                     'kabupaten_kota' => $request->kabupaten_kota,
                     'kecamatan' => $request->kecamatan,
-                    'kelurahan_desa' => $request->kelurahan_desa,
-                    'deskripsi' => $request->deskripsi
+                    'kelurahan_desa' => $request->kelurahan_desa
                 ]);
             } else {
                 if (!$request->hasFile('photo')) {
@@ -92,8 +91,7 @@ class ProfileController extends Controller
                     'provinsi' => $request->provinsi,
                     'kabupaten_kota' => $request->kabupaten_kota,
                     'kecamatan' => $request->kecamatan,
-                    'kelurahan_desa' => $request->kelurahan_desa,
-                    'deskripsi' => $request->deskripsi
+                    'kelurahan_desa' => $request->kelurahan_desa
                 ]);
             }
 

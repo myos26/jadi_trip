@@ -169,6 +169,8 @@
         </form>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script>
         $(document).ready(function() {
             $('#summernote').summernote({
@@ -194,6 +196,15 @@
         // const publish = () => {
         //     perma.value = document.querySelector('#title').value;
         // }
+
+        @if (@session('failed'))
+            let msg = @json(session()->pull('failed'));
+            Swal.fire({
+                title: "Gagal!!",
+                text: msg,
+                icon: "error"
+            });
+        @endif
     </script>
 </body>
 

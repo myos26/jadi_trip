@@ -20,54 +20,34 @@
 
             <div class="input-box">
                 <div class="input-field">
-                    <input type="text" name="fullname" placeholder="Full Name" required>
-                    <i class='bx bxs-user'></i>
-                </div>
-                {{-- <div class="input-field">
                     <input type="text" name="username" placeholder="Username" required>
                     <i class='bx bxs-user'></i>
                 </div>
                 <div class="input-field">
-                    <input type="email" name="email" placeholder="Email" required>
-                    <i class='bx bxs-envelope'></i>
-                </div> --}}
-                <div class="input-field">
-                    <input type="text" id="no_telp" name="no_telp" placeholder="Nomor Telepon" required>
+                    <input type="text" id="nomor_hp" name="nomor_hp" placeholder="Nomor Telepon" required>
                     <i class='bx bxs-phone'></i>
                 </div>
                 <div class="input-field">
-                    <select name="provinsi" id="provinsi" class="dropdown-field">
-                        <option value="#">Provinsi</option>
-                        <option value="jawabarat">Jawa Barat</option>
-                        <option value="jawatengah">Jawa Tengah</option>
-                        <option value="jawatimur">Jawa Timur</option>
+                    <select name="provinsi" id="provinsi" class="dropdown-field" required>
+                        <option value="">Provinsi</option>
                     </select>
                     <i class='bx bxs-business'></i>
                 </div>
                 <div class="input-field">
-                    <select name="kabupaten" id="kabupaten" class="dropdown-field">
-                        <option value="#">Kabupaten</option>
-                        <option value="bangkalan">Bangkalan</option>
-                        <option value="blitar">Blitar</option>
-                        <option value="bojonegoro">Banyuwangi</option>
+                    <select name="kabupaten_kota" id="kabupaten" class="dropdown-field" required disabled>
+                        <option value="">Kabupaten/Kota</option>
                     </select>
                     <i class='bx bx-buildings'></i>
                 </div>
                 <div class="input-field">
-                    <select name="kecamatan" id="kecamatan" class="dropdown-field">
-                        <option value="#">Kecamatan</option>
-                        <option value="klojen">Klojen</option>
-                        <option value="lowokwaru">Lowokwaru</option>
-                        <option value="sukun">Sukun</option>
+                    <select name="kecamatan" id="kecamatan" class="dropdown-field" required disabled>
+                        <option value="">Kecamatan</option>
                     </select>
                     <i class='bx bx-buildings'></i>
                 </div>
                 <div class="input-field">
-                    <select name="kota" id="kota" class="dropdown-field">
-                        <option value="#">Kota</option>
-                        <option value="bangkalan">Bangkalan</option>
-                        <option value="blitar">Blitar</option>
-                        <option value="malang">Malang</option>
+                    <select name="kelurahan_desa" id="desa" class="dropdown-field" required disabled>
+                        <option value="">Kelurahan/Desa</option>
                     </select>
                     <i class='bx bxs-city'></i>
                 </div>
@@ -77,9 +57,11 @@
         </form>
     </div>
 
+    <script src="{{ asset('auth/js/api-wilayah.js') }}"></script>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('no_telp').addEventListener('input', function(e) {
+            document.getElementById('nomor_hp').addEventListener('input', function(e) {
                 var value = e.target.value;
                 e.target.value = value.replace(/[^0-9+]/g, '');
             });

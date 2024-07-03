@@ -43,6 +43,8 @@
             </div>
         @endforeach
 
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
         <script>
             const target = (slug) => {
                 window.location = "/layanan/update/" + slug;
@@ -51,6 +53,15 @@
             const lihat = (slug) => {
                 window.open("/article/" + slug, "_blank");
             }
+
+            @if (@session('success'))
+                let msg = @json(session()->pull('success'));
+                Swal.fire({
+                    title: "Success!!",
+                    text: msg,
+                    icon: "success"
+                });
+            @endif
         </script>
     </section>
 @endsection

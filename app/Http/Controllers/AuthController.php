@@ -75,36 +75,42 @@ class AuthController extends Controller
             'password' => ['required']
         ]);
 
+        $is_user_exist = User::where('email', $request->email)->first();
+
         if ($request->term == "on") {
-            User::create([
-                'username' => $request->username,
-                'email' => $request->email,
-                'password' => Hash::make($request->password)
-            ]);
+            if ($is_user_exist) {
+                return redirect()->back()->with('failed', 'Maaf, alamat email sudah digunakan');
+            } else {
+                User::create([
+                    'username' => $request->username,
+                    'email' => $request->email,
+                    'password' => Hash::make($request->password)
+                ]);
 
-            $validToken = rand(1000, 9999);
-            $get_token = new VerifiedToken();
-            $get_token->token = $validToken;
-            $get_token->email = $request->email;
-            $get_token->save();
+                $validToken = rand(1000, 9999);
+                $get_token = new VerifiedToken();
+                $get_token->token = $validToken;
+                $get_token->email = $request->email;
+                $get_token->save();
 
-            $get_user_email = $request->email;
-            $get_user_name = $request->username;
-            Mail::to($get_user_email)->send(new SendEmail($get_user_email, $validToken, $get_user_name));
+                $get_user_email = $request->email;
+                $get_user_name = $request->username;
+                Mail::to($get_user_email)->send(new SendEmail($get_user_email, $validToken, $get_user_name));
 
-            $credentials = $request->validate([
-                'email' => ['required', 'email'],
-                'password' => ['required'],
-            ]);
+                $credentials = $request->validate([
+                    'email' => ['required', 'email'],
+                    'password' => ['required'],
+                ]);
 
-            if (Auth::attempt($credentials)) {
-                $request->session()->regenerate();
+                if (Auth::attempt($credentials)) {
+                    $request->session()->regenerate();
 
-                return redirect('/temp-home');
+                    return redirect('/temp-home');
+                }
             }
         }
 
-        return redirect()->back()->with('failed', 'Failed register user');
+        return redirect()->back()->with('failed', 'Gagal registrasi user');
     }
 
     public function resendCode(Request $request)
@@ -122,7 +128,7 @@ class AuthController extends Controller
         $get_user_name = $request->username;
         Mail::to($get_user_email)->send(new SendEmail($get_user_email, $validToken, $get_user_name));
 
-        return redirect()->back()->with('success', 'Success resend code');
+        return redirect()->back()->with('success', 'Sukses mengirim ulang kode');
     }
 
     public function verified(Request $request)
@@ -142,7 +148,7 @@ class AuthController extends Controller
 
             return redirect('/info');
         } else {
-            return redirect()->back();
+            return redirect()->back()->with('failed', 'Kode yang anda masukkan salah!');
         }
     }
 
@@ -174,10 +180,25 @@ class AuthController extends Controller
 
     public function infoVerified(Request $request)
     {
+        $request->validate([
+            'username' => ['required'],
+            'nomor_hp' => ['required', 'numeric'],
+            'provinsi' => ['required'],
+            'kabupaten_kota' => ['required'],
+            'kecamatan' => ['required'],
+            'kelurahan_desa' => ['required']
+        ]);
+
         $get_user = User::where('email', Auth()->user()->email)->first();
+        $get_user->username = $request->username;
+        $get_user->nomor_hp = $request->nomor_hp;
+        $get_user->provinsi = $request->provinsi;
+        $get_user->kabupaten_kota = $request->kabupaten_kota;
+        $get_user->kecamatan = $request->kecamatan;
+        $get_user->kelurahan_desa = $request->kelurahan_desa;
         $get_user->is_info_verified = 1;
         $get_user->save();
-        return redirect('/');
+        return redirect('/')->with('success', 'Data anda berhasil disimpan');
     }
 
     public function logout(Request $request)

@@ -50,7 +50,7 @@ use App\Models\Paket;
             </span>
             <h3>Iklan</h3>
         </a>
-        <a href="contact" class="{{ Request::is('contact') ? 'active' : '' }}">
+        <a href="akun" class="{{ Request::is('akun') ? 'active' : '' }}">
             <span class="material-icons-sharp">
                 contacts
             </span>

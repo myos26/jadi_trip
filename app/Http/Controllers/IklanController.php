@@ -12,7 +12,11 @@ class IklanController extends Controller
 {
     public function index()
     {
-        $iklans = DB::table('iklans')->get();
+        $iklans = DB::table('iklans')
+                ->orderByRaw("CASE WHEN status = 'On' THEN 1 ELSE 0 END DESC")
+                ->orderBy('id', 'desc')
+                ->get();
+
         // $iklans = DB::table('iklans')->orderBy('tanggal','desc')->get();
 
         return view('admin.page.Iklan.iklan', compact('iklans'));
@@ -30,7 +34,7 @@ class IklanController extends Controller
     if ($request->hasFile('sampul')) {
         $image = $request->file('sampul');
         $imageName = time() . '_' . $image->getClientOriginalName();
-        $image->move(public_path('images'), $imageName);
+        $image->move(public_path('assets/images/iklan/'), $imageName);
     }
 
     $iklan = new Iklan();

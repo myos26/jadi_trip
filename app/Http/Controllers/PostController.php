@@ -34,36 +34,37 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
-        // upload thumbnail
-        $thumb_name = $request->file('thumbnail')->getClientOriginalName();
-        $thumb_exten = $request->file('thumbnail')->getClientOriginalExtension();
-        $thumb_name = 'thumbail-' . time() . '.' . $thumb_exten;
-
-        $request->file('thumbnail')->move(public_path('/post_media'), $thumb_name);
-
-        //menyimpan konten
-        $content = $request->content;
-
-        $dom = new DOMDocument();
-        $dom->loadHTML($content, 9);
-
-        $images = $dom->getElementsByTagName('img');
-
-        foreach ($images as $key => $img) {
-            $data = base64_decode(explode(',', explode(';', $img->getAttribute('src'))[1])[1]);
-            $image_name = 'media-' . time() . $key . '.' . 'png';
-            file_put_contents($image_name, $data);
-            File::move(public_path('/') . $image_name, public_path('/post_media/') . $image_name);
-
-            $img->removeAttribute('src');
-            $img->setAttribute('src', '/post_media/' . $image_name);
-        }
-
-        $content = $dom->saveHTML();
 
         // menyimpan ke database
         DB::beginTransaction();
         try {
+
+            // upload thumbnail
+            $thumb_name = $request->file('thumbnail')->getClientOriginalName();
+            $thumb_exten = $request->file('thumbnail')->getClientOriginalExtension();
+            $thumb_name = 'thumbail-' . time() . '.' . $thumb_exten;
+
+            $request->file('thumbnail')->move(public_path('/post_media'), $thumb_name);
+
+            //menyimpan konten
+            $content = $request->content;
+
+            $dom = new DOMDocument();
+            $dom->loadHTML($content, 9);
+
+            $images = $dom->getElementsByTagName('img');
+
+            foreach ($images as $key => $img) {
+                $data = base64_decode(explode(',', explode(';', $img->getAttribute('src'))[1])[1]);
+                $image_name = 'media-' . time() . $key . '.' . 'png';
+                file_put_contents($image_name, $data);
+                File::move(public_path('/') . $image_name, public_path('/post_media/') . $image_name);
+
+                $img->removeAttribute('src');
+                $img->setAttribute('src', '/post_media/' . $image_name);
+            }
+
+            $content = $dom->saveHTML();
 
             if ($request->slug != '') {
                 Post::create([
@@ -92,6 +93,7 @@ class PostController extends Controller
         } catch (\Exception $e) {
             DB::rollback();
             return redirect()->back()->with('failed', 'Gagal memposting artikel');
+            // dd($e);
         }
     }
 
@@ -160,10 +162,10 @@ class PostController extends Controller
                 ]);
 
                 db::commit();
-                return redirect('/postingan');
+                return redirect('/postingan')->with('success', 'Artikel berhasil diedit');
             } catch (\Exception $e) {
-                db::rollBack();
-                dd($e);
+                DB::rollBack();
+                return redirect()->back()->with('failed', 'Edit artikel gagal diproses');
             }
         } else {
 
@@ -178,9 +180,10 @@ class PostController extends Controller
                     'status' => $request->status
                 ]);
                 DB::commit();
-                return redirect('/postingan');
+                return redirect('/postingan')->with('success', 'Artikel berhasil diedit');
             } catch (\Exception $e) {
-                dd($e);
+                DB::rollback();
+                return redirect()->back()->with('failed', 'Edit artikel gagal diproses');
             }
         }
     }
@@ -199,9 +202,10 @@ class PostController extends Controller
 
             if (File::exists(public_path($path))) {
                 File::delete(public_path('/post_media/' . substr($path, 12)));
-                File::delete(public_path('/post_media/' . $post->thumbnail));
             }
         }
+
+        File::delete(public_path('/post_media/' . $post->thumbnail));
 
         $post->delete();
 
@@ -221,7 +225,7 @@ class PostController extends Controller
             return redirect()->back()->with('success', 'Berhasil menambah kategori');
         } catch (\Exception $e) {
             db::rollBack();
-            return redirect()->back('failed', 'Gagal menambah kategori');
+            return redirect()->back()->with('failed', 'Gagal menambah kategori');
         }
     }
 

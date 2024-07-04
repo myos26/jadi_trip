@@ -1,5 +1,6 @@
 <?php
 use App\Models\Post;
+use App\Models\Paket;
 ?>
 
 <!-- Sidebar Section -->
@@ -33,13 +34,14 @@ use App\Models\Post;
                 post_add
             </span>
             <h3>Post</h3>
-            <span class="message-count">{{ count(Post::all()) }}</span>
+            <span class="message-count" style="color: white;">{{ count(Post::all()) }}</span>
         </a>
-        <a href="layanan" class="{{ Request::is('layanan') ? 'active' : '' }}">
+        <a href="{{ url('/layanan') }}" class="{{ Request::is('layanan') ? 'active' : '' }}">
             <span class="material-icons-sharp">
                 card_travel
             </span>
             <h3>Layanan</h3>
+            <span class="message-count" style="color: white;">{{ count(Paket::all()) }}</span>
         </a>
         {{-- <a href="statistik" class="{{ Request::is('statistik') ? 'active' : '' }}">
             <span class="material-icons-sharp"> insights </span>
@@ -51,7 +53,7 @@ use App\Models\Post;
             </span>
             <h3>Iklan</h3>
         </a>
-        <a href="/akun" class="{{ Request::is('akun') ? 'active' : '' }}">
+        <a href="akun" class="{{ Request::is('contact') ? 'active' : '' }}">
             <span class="material-icons-sharp">
                 contacts
             </span>

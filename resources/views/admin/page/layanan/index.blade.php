@@ -1,4 +1,5 @@
 @extends('admin.index')
+{{-- <link rel="stylesheet" href="{{ asset('profile/style.css') }}"> --}}
 <link rel="stylesheet" href="{{ asset('post/post.css') }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,39 +11,32 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="dashboard">Home</a></li>
-                <li class="breadcrumb-item"><a href="postingan">Postingan</a></li>
+                <li class="breadcrumb-item"><a href="">Layanan</a></li>
             </ol>
         </nav>
     </section>
-    <section class="konten" id="konten">
+    <section class="konten">
         <div class="button">
-            <a href="{{ url('/create') }}">Add Post</a>
+            <a href="{{ url('/layanan/create') }}">Add Layanan</a>
         </div>
 
-        @foreach ($posts as $post)
+        @foreach ($pakets as $paket)
             <div class="box-besar">
                 <div class="box-image">
-                    <img src="{{ asset('/post_media/' . $post->thumbnail) }}" alt="" srcset="">
+                    <img src="{{ asset('/post_media/' . $paket->thumbnail) }}" alt="" srcset="">
                 </div>
                 <div class="box-content">
-                    <h2 onclick="target({{ $post->id }})">{{ Str::limit($post->title, 30, '...') }}</h2>
+                    <h2 onclick="target('{{ $paket->slug }}')">{{ Str::limit($paket->title, 30, '...') }}</h2>
                     <div class="box-detail">
-                        <h4>{{ $post->created_at->diffForHumans() }}</h4>
-                        <h5>{{ $post->kategori->name }}</h5>
+                        <h4>{{ $paket->created_at->diffForHumans() }}</h4>
+                        <h5>{{ $paket->kategori }}</h5>
                     </div>
                 </div>
                 <div class="box-action">
                     <div class="action">
-                        <h5>{{ $post->status }}</h5>
-                        {{-- <form action="{{ url('/delete/' . $post->id) }}" method="post" id="hapus">
-                            @csrf
-                            <input type="hidden" name="id" value="{{ $post->id }}">
-                        </form> --}}
-                        {{-- <a href="{{ url('/article/' . $post->slug) }}">Lihat</a> --}}
-                        <a href="#" onclick="lihat('{{ $post->slug }}')">Lihat</a>
-                        {{-- <button >Lihat</button> --}}
-                        <a href="{{ url('/delete/' . $post->slug) }}">Hapus</a>
-
+                        <h5>{{ $paket->status }}</h5>
+                        <a href="#" onclick="lihat('{{ $paket->slug }}')">Lihat</a>
+                        <a href="{{ url('/layanan/delete/' . $paket->id) }}">Hapus</a>
                     </div>
                 </div>
 
@@ -52,9 +46,8 @@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
         <script>
-            const target = (id) => {
-                window.location = "/update/" + id;
-                // window.open("/update/" + id);
+            const target = (slug) => {
+                window.location = "/layanan/update/" + slug;
             }
 
             const lihat = (slug) => {
@@ -64,12 +57,11 @@
             @if (@session('success'))
                 let msg = @json(session()->pull('success'));
                 Swal.fire({
-                    title: "Success",
+                    title: "Success!!",
                     text: msg,
                     icon: "success"
                 });
             @endif
         </script>
-
     </section>
 @endsection

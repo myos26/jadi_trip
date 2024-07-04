@@ -67,7 +67,7 @@
                             <div class="flex" style="display: flex; margin-top: 34px; margin-bottom: 13px;">
                                 <select name="status" id="status" class="form-control" style="margin: 0px 20px">
                                     <option value="{{ $post->status }}">{{ $post->status }}</option>
-                                    <option value="Public">Public</option>
+                                    <option value="Publish">Publish</option>
                                     <option value="Draft">Draft</option>
                                 </select>
                                 <button class="btn btn-md btn-primary m-10" style="width: 250px;" type="submit"
@@ -96,6 +96,8 @@
         </form>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script>
         $(document).ready(function() {
             $('#summernote').summernote({
@@ -116,6 +118,15 @@
         // const publish = () => {
         //     perma.value = document.querySelector('#title').value;
         // }
+
+        @if (@session('failed'))
+            let msg = @json(session()->pull('failed'));
+            Swal.fire({
+                title: "Gagal!!",
+                text: msg,
+                icon: "error"
+            });
+        @endif
     </script>
 </body>
 

@@ -250,7 +250,7 @@
                                     @if (!Auth::check())
                                         {{-- PROFIL KETIKA BELUM LOGIN SCRIPT DIBAWAH --}}
                                         <div class="box-profile" style="width: 40px; height: 40px; overflow: hidden;">
-                                            <img width="40" src="{{ asset('profile/images/noprofile.jpeg') }}"
+                                            <img width="40" src="{{ asset('profile/images/noprofile.png') }}"
                                                 class="user_pic" alt="" id="toggle-button">
                                         </div>
 

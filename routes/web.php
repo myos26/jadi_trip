@@ -109,6 +109,8 @@ Route::middleware(['auth','admin'])->group(function () {
         // iklan routes
         Route::get('/iklan', [IklanController::class, 'index']);
         Route::post('/inputIklan', [IklanController::class, 'store']);
+        Route::post('/iklan/updateStatus/{id}', [IklanController::class, 'updateStatus'])->name('iklan.updateStatus');
+        Route::post('/iklan/expireAd/{id}', [IklanController::class, 'expireAd'])->name('iklan.expireAd');
 });
 
 // route blog

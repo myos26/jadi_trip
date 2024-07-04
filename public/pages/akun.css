@@ -37,9 +37,10 @@ body {
 .konten {
     padding: 10px;
     color: black;
-    height: 90%;
+    height: 83vh;
+    width: 78vw;
     /* border: 1px solid red; */
-    margin-top: 5%;
+    margin-top: 3%;
     background-color: #fff;
     border-radius: 15px;
 }
@@ -126,6 +127,9 @@ tfoot td{
     text-align: left;
     padding-left: 1%;
 }
+.table1 tbody tr td{
+    padding: 0.5% 1%;
+}
 .search-container{
     display: flex;
     /* justify-content: center; */
@@ -161,15 +165,29 @@ tfoot td{
     border-right: 1px solid #a5a5a5 !important;
     border-bottom: 1px solid #a5a5a5 !important;
 }
-#aksi a:nth-child(1){
+#aksi a:nth-child(1) i{
+    font-size: 14pt;
     color: #033ff1;
 }
-#aksi a:nth-child(2){
+#aksi a:nth-child(2) i{
+    font-size: 14pt;
     color: #f3d202;
 }
-#aksi a:nth-child(3){
+#aksi a:nth-child(3) i{
+    font-size: 14pt;
     color: rgb(201, 3, 3);
 }
+
+#aksi a:nth-child(1) i:hover{
+    color: #295fff;
+}
+#aksi a:nth-child(2) i:hover{
+    color: #ffe224;
+}
+#aksi a:nth-child(3) i:hover{
+    color: rgb(255, 19, 19);
+}
+
 #footer{
     font-size: 9pt;
     padding: 2px 0;

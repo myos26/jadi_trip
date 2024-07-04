@@ -5,6 +5,8 @@
 <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
+
+<script src="https://kit.fontawesome.com/b2117167da.js" crossorigin="anonymous"></script>
 @section('content')
     <section class="top-bar" id="top-bar">
         <nav aria-label="breadcrumb">
@@ -45,9 +47,9 @@
                         <td>081235846565</td>
                         <td>Admin</td>
                         <td id="aksi">
-                            <a href="detailData">Detail</a> |
-                            <a href="editAkun">Edit</a>&nbsp;
-                            <a href="hapus">Hapus</a>
+                            <a href="detailData"><i class="fa-solid fa-circle-info"></i></a>&nbsp; | &nbsp;
+                            <a href="editAkun"><i class="fa-solid fa-pen-to-square"></i></a>&nbsp; | &nbsp;
+                            <a href="hapus"><i class="fa-solid fa-trash"></i></a>
                         </td>
                         <td>Pasif</td>
                     </tr>

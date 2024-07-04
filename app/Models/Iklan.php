@@ -11,5 +11,5 @@ class Iklan extends Model
     use HasFactory,SoftDeletes;
 
     protected $table = "iklans";
-    protected $fillable = ['image','company','link','type','status'];
+    protected $fillable = ['perusahaan', 'tautan', 'type', 'sampul', 'status', 'tanggal', 'time', 'delete_at'];
 }

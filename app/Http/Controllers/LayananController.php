@@ -73,7 +73,6 @@ class LayananController extends Controller
                         'kategori' => $request->kategori,
                         'status' => $request->status,
                         'harga' => $request->harga,
-                        'benefit' => $request->benefit,
                         'tipe' => $request->tipe
                     ]);
                 } else {
@@ -86,7 +85,6 @@ class LayananController extends Controller
                         'kategori' => $request->kategori,
                         'status' => $request->status,
                         'harga' => $request->harga,
-                        'benefit' => $request->benefit,
                         'tipe' => $request->tipe
                     ]);
                 }
@@ -168,7 +166,6 @@ class LayananController extends Controller
                     'kategori' => $request->kategori,
                     'status' => $request->status,
                     'harga' => $request->harga,
-                    'benefit' => $request->benefit,
                     'tipe' => $request->tipe
                 ]);
 
@@ -190,7 +187,6 @@ class LayananController extends Controller
                     'kategori' => $request->kategori,
                     'status' => $request->status,
                     'harga' => $request->harga,
-                    'benefit' => $request->benefit,
                     'tipe' => $request->tipe
                 ]);
                 DB::commit();

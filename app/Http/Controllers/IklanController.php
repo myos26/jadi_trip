@@ -6,67 +6,74 @@ use App\Models\Iklan;
 use App\Services\IklanService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\DB;
 
 class IklanController extends Controller
 {
     public function index()
     {
-        // $iklan = Iklan::withTrashed()->orderBy('created_at', 'desc')->get();
-        // foreach ($iklan as $ad) {
-        //     if ($ad->status == 'active') {
-        //         $ad->time_remaining = $this->iklanService->getTimeRemaining($ad->expires_at);
-        //     }
-        // }
+        $iklans = DB::table('iklans')->get();
+        // $iklans = DB::table('iklans')->orderBy('tanggal','desc')->get();
 
-        return view('admin.page.Iklan.iklan');
+        return view('admin.page.Iklan.iklan', compact('iklans'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
-    {
-        // $data = $request->validate([
-        //     'perusahaan' => 'required|string',
-        //     'sampul' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        //     'tautan' => 'required|string',
-        //     'type' => 'required|in:iklan1,iklan2',
-        // ]);
+{
+    $request->validate([
+        'perusahaan' => 'required|string|max:255',
+        'tautan' => 'required|url',
+        'type' => 'required|in:Iklan 1,Iklan 2',
+        'sampul' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+    ]);
 
-        // if ($request->hasFile('sampul')) {
-        //     $image = $request->file('sampul');
-        //     $imageName = time().'.'.$image->getClientOriginalExtension();
-        //     $path = $image->storeAs('assets/images/iklan/', $imageName, 'public');
-        //     $data['sampul'] = $path;
-        // }
-
-
-        // $this->iklanService->createIklan($data);
-
-        // return redirect('/iklan')->with('success', 'Iklan created successfully');
+    if ($request->hasFile('sampul')) {
+        $image = $request->file('sampul');
+        $imageName = time() . '_' . $image->getClientOriginalName();
+        $image->move(public_path('images'), $imageName);
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
+    $iklan = new Iklan();
+    $iklan->perusahaan = $request->perusahaan;
+    $iklan->tautan = $request->tautan;
+    $iklan->type = $request->type;
+    $iklan->sampul = $imageName;
+    $iklan->status = 'Off';
+    $iklan->tanggal = now()->format('h-m-Y');
+    $iklan->save();
+
+    return redirect('/iklan')->with('success', 'Data iklan berhasil disimpan.');
+}
+
+public function updateStatus(Request $request, $id)
+{
+    $iklan = Iklan::findOrFail($id);
+
+    if ($request->status === 'On') {
+        $iklan->time = now(); // Simpan waktu mulai
+    } else {
+        $iklan->time = null; // Reset waktu mulai
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
+    $iklan->status = $request->status;
+    $iklan->save();
+
+    return response()->json(['message' => 'Status iklan berhasil diperbarui']);
+}
+
+public function expireAd(Request $request, $id)
+{
+    $iklan = Iklan::where('id', $id)->where('status', 'On')->first();
+
+    if ($iklan) {
+        $iklan->status = 'Expired';
+        $iklan->time = now(); // Simpan waktu expired
+        $iklan->deleted_at = now()->format('d-m-Y H:i');
+        $iklan->save();
+
+        return response()->json(['expired_at' => $iklan->time->format('d-m-Y, H:i')]);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
+    return response()->json(['message' => 'Tidak ada iklan yang aktif dengan tipe tersebut'], 404);
+}
 }

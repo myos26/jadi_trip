@@ -7,6 +7,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\IklanController;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\LayananController;
 use App\Models\Post;
 use App\Models\User;
@@ -52,11 +53,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/info', [AuthController::class, 'info']);
     Route::post('/resend-code', [AuthController::class, 'resendCode']);
     Route::get('/logout', [AuthController::class, 'logout']);
-});
 
-Route::middleware(['auth', 'admin'])->group(function () {
-    // ADMIN ROUTES
-    Route::get('/Dashboard', [AdminController::class, 'Dashboard']);
+    Route::get('/dashboard', [AdminController::class, 'Dashboard']);
     Route::get('/profil', [ProfileController::class, 'index']);
     Route::get('/postingan', [PostController::class, 'index']);
 
@@ -87,10 +85,36 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::put('/update/profile/{id}', [ProfileController::class, 'update']);
 });
 
+Route::middleware(['auth','admin'])->group(function () {
+    // ADMIN ROUTES
+
+    // if(Auth::check() && Auth::user()->is_admin == 1){
+        Route::get('/dashboard', [AdminController::class, 'Dashboard']);
+        Route::get('/Dashboard', [AdminController::class, 'Dashboard']);
+        Route::get('/profil', [ProfileController::class, 'index']);
+
+        // post routes
+        Route::get('/postingan', [PostController::class, 'index']);
+        Route::get('/create', [PostController::class, 'create']);
+        Route::post('/upload', [PostController::class, 'upload']);
+        Route::post('/save-post', [PostController::class, 'store']);
+        Route::get('/update/{id}', [PostController::class, 'updateView']);
+        Route::post('/update-post/{id}', [PostController::class, 'update']);
+        Route::get('/delete/{id}', [PostController::class, 'destroy']);
+
+        // kategori routes
+        Route::post('/kategori', [PostController::class, 'storeKategori']);
+        Route::get('/kategori/delete/{id}', [PostController::class, 'deleteKategori']);
+
+        // iklan routes
+        Route::get('/iklan', [IklanController::class, 'index']);
+        Route::post('/inputIklan', [IklanController::class, 'store']);
+        Route::post('/iklan/updateStatus/{id}', [IklanController::class, 'updateStatus'])->name('iklan.updateStatus');
+        Route::post('/iklan/expireAd/{id}', [IklanController::class, 'expireAd'])->name('iklan.expireAd');
+});
 
 // route blog
 Route::get('/paket/{kategori?}', function () {
-
     return view('paket');
 });
 Route::get('/about', function () {
@@ -102,8 +126,8 @@ Route::get('/category', function () {
 Route::get('/kontak', function () {
     return view('contact');
 });
-Route::get('/contact', function () {
-    return view('contact');
+Route::get('/akun', function () {
+    return view('admin.page.Akun');
 });
 Route::get('/detail paket/{type?}', function () {
     return view('detailPaket');
@@ -112,7 +136,9 @@ Route::get('/article/{slug}', [PostController::class, 'post']);
 
 Route::get('/auth', [AuthController::class, 'handleAuth']);
 
-Route::get('/sitemap.xml', function () {
+// ------------------------------------------SITEMAP--------------------------------------------------
+// ---------------------------------------------------------------------------------------------------
+Route::get('/sitemap.xml', function() {
     $sitemap = Sitemap::create()
         ->add(Url::create('/')->setLastModificationDate(now())->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)->setPriority(1.0))
         ->add(ManifestUrl::create('/')->setLastModificationDate(now())->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)->setPriority(1.0))
@@ -136,8 +162,4 @@ Route::get('/sitemap.xml', function () {
     // }
 
     return $sitemap->toResponse(request());
-});
-
-Route::get('/bacadata', function () {
-    return view('auth/lengkap_data');
 });

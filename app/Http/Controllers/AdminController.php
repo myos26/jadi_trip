@@ -11,7 +11,7 @@ class AdminController extends Controller
      */
     public function Dashboard()
     {
-        return view('admin.page.Dashboard');
+        return Redirect('/profil');
     }
 
     /**
@@ -37,6 +37,7 @@ class AdminController extends Controller
     {
         //
     }
+
 
     /**
      * Remove the specified resource from storage.

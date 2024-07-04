@@ -55,7 +55,7 @@ class AuthController extends Controller
 
             if ($user->is_activated == 1 && $user->is_info_verified == 1) {
                 if ($user->is_admin == 1) {
-                    return redirect('/Dashboard');
+                    return redirect('/dashboard');
                 }
                 return redirect('/');
             } else {

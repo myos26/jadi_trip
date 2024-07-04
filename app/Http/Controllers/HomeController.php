@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
-use App\Models\iklan;
+use App\Models\Iklan;
 use App\Models\User;
 use App\Models\InstagramToken;
 use Illuminate\Http\Request;
@@ -48,22 +48,23 @@ class HomeController extends Controller
         // return response()->json($result);
 
         $datas = Post::with('kategori')->where('status', 'Public')->latest()->get();
-        $iklans = iklan::all();
+
+
+        // $iklans = Iklan::all();
 
         return view('index', [
             'mediaData' => $result['data'],
             'paging' => $result['paging'],
-            'datas' => $datas,
-            'iklans' => $iklans
+            'datas' => $datas
         ]);
     }
 
 
     public function blog()
     {
-        $iklans = iklan::all();
+        // $iklans = Iklan::all();
         $Posting = Post::all();
-        return view('blog', compact('iklans', 'Posting'));
+        return view('blog', compact('Posting'));
     }
 
     public function verifyOtp()

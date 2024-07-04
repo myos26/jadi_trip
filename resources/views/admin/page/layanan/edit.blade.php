@@ -104,11 +104,6 @@
                                         placeholder="Masukkan harga" min="0" value="{{ $paket->harga }}">
                                 </div>
                                 <div class="form-group">
-                                    <label for="benefit" style="font-size: 20px;">Benefit</label>
-                                    <textarea name="benefit" id="benefit" class="form-control" cols="10" rows="3"
-                                        placeholder="Benefit layanan">{{ $paket->benefit }}</textarea>
-                                </div>
-                                <div class="form-group">
                                     <label for="description" style="font-size: 20px;">Deskripsi</label>
                                     <textarea class="form-control" name="description" id="description" cols="30" rows="8" minlength="50"
                                         maxlength="200" placeholder="Masukkan minimal 50 karakter">{{ $paket->deskripsi }}</textarea>

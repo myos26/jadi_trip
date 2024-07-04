@@ -13,13 +13,15 @@ return new class extends Migration
     {
         Schema::create('iklans', function (Blueprint $table) {
             $table->id();
-            $table->text('image');
-            $table->string('company');
-            $table->text('link');
-            $table->enum('type', ['Iklan 1','Iklan 2','Iklan 3']);
-            $table->enum('status', ['Enable','Disable'])->default('Disable');
+            $table->string('perusahaan');
+            $table->string('tautan');
+            $table->string('type');
+            $table->string('sampul');
+            $table->string('status')->default('Off');
+            $table->timestamp('tanggal');
+            $table->timestamp('time')->nullable(); // Waktu terakhir status On
+            $table->timestamp('delete_at')->nullable(); // Waktu status Expired
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 

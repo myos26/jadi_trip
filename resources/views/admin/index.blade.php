@@ -54,7 +54,7 @@
             </div>
             <!-- End of Nav -->
 
-            <div class="user-profile">
+            {{-- <div class="user-profile">
                 <div class="logo">
                     <img src="{{ asset('profile/images/' . Auth::user()->photo) }}" />
                     <h2>{{ Auth::user()->username }}</h2>
@@ -64,7 +64,7 @@
                         <p class="text-muted">User</p>
                     @endif
                 </div>
-            </div>
+            </div> --}}
 
             {{-- <div class="reminders">
                 <div class="header">

@@ -17,7 +17,6 @@ class Paket extends Model
         'slug',
         'deskripsi',
         'harga',
-        'benefit',
         'konten',
         'tipe',
         'kategori',

@@ -30,7 +30,8 @@ class User extends Authenticatable
         'provinsi',
         'kabupaten/kota',
         'kecamatan',
-        'kelurahan/desa'
+        'kelurahan/desa',
+        'status'
     ];
 
     /**

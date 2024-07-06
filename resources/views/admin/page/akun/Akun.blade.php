@@ -17,6 +17,7 @@
         </nav>
     </section>
 
+
     <section class="konten" id="konten">
         <div class="search-container">
             <label for="search-term">Cari :</label>
@@ -39,25 +40,42 @@
                     $c = 1;
                 @endphp
                 <tbody>
-                    @for ($td=1; $td<21; $td++)
-                    <tr>
-                        <td>{{ $c++ }}</td>
-                        <td>@faruks</td>
-                        <td>alfaruk2629@gmail.com</td>
-                        <td>081235846565</td>
-                        <td>Admin</td>
-                        <td id="aksi">
-                            <a href="detailData"><i class="fa-solid fa-circle-info"></i></a>&nbsp; | &nbsp;
-                            <a href="editAkun"><i class="fa-solid fa-pen-to-square"></i></a>&nbsp; | &nbsp;
-                            <a href="hapus"><i class="fa-solid fa-trash"></i></a>
-                        </td>
-                        <td>Pasif</td>
-                    </tr>
-                    @endfor
+                    @foreach ($users as $user)
+                        <tr>
+                            <td>{{ $c++ }}</td>
+                            <td>{{ $user->username }}</td>
+                            <td>{{ $user->email }}</td>
+                            <td>{{ $user->nomor_hp }}</td>
+                            @if ($user->is_admin == 1)
+                                <td>Admin</td>
+                            @else
+                                <td>User</td>
+                            @endif
+                            <td id="aksi">
+                                <a href="{{ url('/akun-detail/' . $user->id) }}"><i
+                                        class="fa-solid fa-circle-info"></i></a>&nbsp; | &nbsp;
+                                <a href="{{ url('/akun-edit/' . $user->id) }}"><i
+                                        class="fa-solid fa-pen-to-square"></i></a>&nbsp; |
+                                &nbsp;
+                                <button onclick="hapus({{ $user->id }})" class="btn red"><i
+                                        class="fa-solid fa-trash red"></i></button>
+                            </td>
+                            <td>{{ $user->status }}</td>
+                        </tr>
+                        <form action="{{ url('/akun-delete/' . $user->id) }}" method="POST"
+                            id="delete-akun{{ $user->id }}">
+                            @method('delete')
+                            @csrf
+                            <input type="hidden" name="tipe" value="permanen">
+                            <input type="hidden" name="user_id" value="{{ $user->id }}">
+                        </form>
+                    @endforeach
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="7" id="footer"><i><b>Jadi Trip</b></i> | Layanan perjalanan terbaik se-Indonesia</td>
+                        <td colspan="7" id="footer"><i><b>Jadi Trip</b></i> | Layanan perjalanan terbaik
+                            se-Indonesia
+                        </td>
                     </tr>
                 </tfoot>
             </table>
@@ -81,7 +99,9 @@
                     var perusahaanValue = perusahaan.textContent || perusahaan.innerText;
                     var linkValue = link.textContent || link.innerText;
                     var tipeValue = tipe.textContent || tipe.innerText;
-                    if (kodeValue.toLowerCase().indexOf(filter) > -1 || tanggalValue.toLowerCase().indexOf(filter) > -1 || perusahaanValue.toLowerCase().indexOf(filter) > -1 || linkValue.toLowerCase().indexOf(filter) > -1 || tipeValue.toLowerCase().indexOf(filter) > -1) {
+                    if (kodeValue.toLowerCase().indexOf(filter) > -1 || tanggalValue.toLowerCase().indexOf(filter) >
+                        -1 || perusahaanValue.toLowerCase().indexOf(filter) > -1 || linkValue.toLowerCase().indexOf(
+                            filter) > -1 || tipeValue.toLowerCase().indexOf(filter) > -1) {
                         tr[i].style.display = '';
                     } else {
                         tr[i].style.display = 'none';
@@ -89,5 +109,11 @@
                 }
             }
         });
+
+        // aksi hapus
+        const hapus = (id) => {
+            document.getElementById('delete-akun' + id).submit();
+            // alert(id)
+        }
     </script>
 @endsection

@@ -10,7 +10,7 @@
         content="blog, blogging, blogger, articles, posts, content, writing, writers, blogosphere, online journal, web log, topics, ideas, tips, advice">
     <meta name="author" content="themeperch">
     <title>Jadi Trip</title>
-    <link rel="icon" href="{{ asset('assets/logo/logo.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ url('assets/logo/logo.ico') }}" type="image/x-icon">
 
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,7 +29,8 @@
     <link rel="stylesheet" href="{{ asset('assets/css/swiper-bundle.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/owl.theme.default.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/new.css') }}">
+    <link rel="stylesheet" href="{{ url('assets/css/iklan.css') }}">
+    <link rel="stylesheet" href="{{ url('assets/css/new.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 </head>
 
@@ -64,98 +65,48 @@
                                 <ul class="gap-20 navbar-nav mb-2 me-2 mb-lg-0">
                                     <li class="nav-item dropdown">
                                         <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"
-                                            aria-current="page" href="/blog" aria-label="nav-links">
+                                            aria-current="page" href="{{ url('blog', ['kategori' => 'destinasi']) }}" aria-label="nav-links">
                                             Destinasi
                                         </a>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"
-                                            aria-current="page" href="blog" aria-label="nav-links">
+                                            aria-current="page" href="{{ url('blog', ['kategori' => 'aktifitas']) }}" aria-label="nav-links">
                                             Aktifitas
                                         </a>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"
-                                            href="blog" aria-label="nav-links" data-bs-toggle="dropdown"
+                                            href="{{ url('blog', ['kategori' => 'kuliner']) }}" aria-label="nav-links"
                                             aria-expanded="true">
                                             Kuliner
-                                            <span class="dropdown-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                                    <path fill-rule="evenodd"
-                                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
-                                                </svg>
-                                            </span>
                                         </a>
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <a class="dropdown-item" href="blog" rel="nofollow"
-                                                    aria-label="single-pages">Open Trip</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="blog" rel="nofollow"
-                                                    aria-label="single-pages">Paket Wisata</a>
-                                            </li>
-                                        </ul>
                                     </li>
 
                                     <li class="nav-item dropdown">
                                         <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"
-                                            href="blog" aria-label="nav-links" data-bs-toggle="dropdown"
+                                            href="{{ url('paket') }}" aria-label="nav-links"
                                             aria-expanded="true">
                                             Paket
-                                            <span class="dropdown-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="currentColor" class="bi bi-chevron-down"
-                                                    viewBox="0 0 16 16">
-                                                    <path fill-rule="evenodd"
-                                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
-                                                </svg>
-                                            </span>
                                         </a>
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <a class="dropdown-item" href="blog" rel="nofollow"
-                                                    aria-label="single-pages">Open Trip</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="blog" rel="nofollow"
-                                                    aria-label="single-pages">Paket Wisata</a>
-                                            </li>
-                                        </ul>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"
-                                            href="blog" aria-label="nav-links" data-bs-toggle="dropdown"
+                                            href="{{ url('blog') }}" aria-label="nav-links"
                                             aria-expanded="true">
                                             Blog
-                                            <span class="dropdown-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="currentColor" class="bi bi-chevron-down"
-                                                    viewBox="0 0 16 16">
-                                                    <path fill-rule="evenodd"
-                                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
-                                                </svg>
-                                            </span>
                                         </a>
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <a class="dropdown-item" href="blog" rel="nofollow"
-                                                    aria-label="single-pages">Blog 1</a>
-                                            </li>
-
-                                        </ul>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"
-                                            aria-current="page" href="about" aria-label="nav-links">
+                                            aria-current="page" href="{{ url('about') }}" aria-label="nav-links">
                                             About
                                         </a>
                                     </li>
 
                                     <li class="nav-item dropdown">
                                         <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"
-                                            aria-current="page" href="contact" aria-label="nav-links">
+                                            aria-current="page" href="{{ url('kontak') }}" aria-label="nav-links">
                                             Kontak
                                         </a>
                                     </li>
@@ -165,7 +116,7 @@
                                 <div class="d-flex gap-20 align-items-center">
 
                                     <a class="serch-icon px-2" data-bs-toggle="offcanvas"
-                                        data-bs-target="#offcanvasserch" aria-controls="offcanvasserch">
+                                        data-bs-target="#offcanvasserch" aria-controls="offcanvasserch" rel="nofollow">
 
                                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -290,163 +241,13 @@
         <!-- Header ======================-->
 
         <!-- off canvas Desktop -->
-        <div class="offcanvas d-none d-lg-block offcanvas-end" data-bs-scroll="false" tabindex="-1"
-            id="offcanvasDesktop">
 
-            <div class="offcanvas-header justify-content-end">
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                    aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-
-                <div class="author-about mb-40 ">
-                    <div class="text-center">
-                        <div class="author-iamge">
-                            <a href="about"><img src="{{ asset('assets/images/placeholder.svg') }}"
-                                    data-src="{{ asset('assets/images/about-image-1.png') }}" alt="author-iamge"></a>
-                        </div>
-                        <h5><a class="author-name" href="about">Mike Aiden</a></h5>
-                        <p class=" text-center">I’m a intrepid travel blogger, weaves tales of exploration and
-                            discovery. Let's traverse the globe together and share in the beauty of our world.</p>
-                    </div>
-                </div>
-
-                <div class="socials-wrapper">
-                    <h4 class="offcanvas-title mb-30">Follow Me</h4>
-                    <!-- author-socials -->
-                    <div class="author-socials mb-30">
-                        <a href="https://www.facebook.com" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com" class="instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com" class="linkedin"><i
-                                class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="https://www.youtube.com" class="youtube"><i class="fab fa-youtube"></i></a>
-                        <a href="https://www.pinterest.com" class="pinterest"><i class="fab fa-pinterest-p"></i></a>
-                        <a href="https://twitter.com" class="twitter"><svg width="16" height="14"
-                                viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M15.8092 15.98H11.1569L6.89801 9.78339L1.56807 15.98H0.19043L6.28619 8.89157L0.19043 0.0195312H4.84276L8.87486 5.88989L13.9234 0.0195312H15.301L9.48808 6.77751L15.8092 15.98ZM11.8079 14.9929H13.9234L4.18054 1.05696H2.06508L11.8079 14.9929Z">
-                                </path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- sidebar-gallery -->
-                <div class="sidebar-gallery mb-40">
-                    <div class="div1 image-hover"><img src="{{ asset('assets/images/placeholder.svg') }}"
-                            data-src="{{ asset('assets/images/instagram/instagram-1.png') }}" alt="instagram">
-                        <span class="d-flex justify-content-center mb-10">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M12.4396 18H5.56042C2.49391 18 0 15.5061 0 12.4396V5.56042C0 2.49391 2.49391 0 5.56042 0H12.4396C15.5061 0 18 2.49391 18 5.56042V12.4396C18.0016 15.5061 15.5061 18 12.4396 18ZM5.56042 2.00648C3.60126 2.00648 2.00648 3.60126 2.00648 5.56042V12.4396C2.00648 14.3987 3.60126 15.9935 5.56042 15.9935H12.4396C14.3987 15.9935 15.9935 14.3987 15.9935 12.4396V5.56042C15.9935 3.60126 14.3987 2.00648 12.4396 2.00648H5.56042Z"
-                                    fill="white" />
-                                <path
-                                    d="M9.0021 13.5979C6.4656 13.5979 4.40234 11.5347 4.40234 8.99819C4.40234 6.46169 6.4656 4.39844 9.0021 4.39844C11.5386 4.39844 13.6019 6.46169 13.6019 8.99819C13.6019 11.5347 11.5386 13.5979 9.0021 13.5979ZM9.0021 6.203C7.46095 6.203 6.20691 7.45705 6.20691 8.99819C6.20691 10.5393 7.46095 11.7934 9.0021 11.7934C10.5432 11.7934 11.7973 10.5393 11.7973 8.99819C11.7973 7.45705 10.5432 6.203 9.0021 6.203Z"
-                                    fill="white" />
-                                <path
-                                    d="M14.6139 4.13508C14.6139 4.56414 14.2653 4.91278 13.8363 4.91278C13.4072 4.91278 13.0586 4.56414 13.0586 4.13508C13.0586 3.70602 13.4072 3.35742 13.8363 3.35742C14.2653 3.35742 14.6139 3.70444 14.6139 4.13508Z"
-                                    fill="white" />
-                            </svg>
-
-                        </span>
-                    </div>
-                    <div class="div2 image-hover"><img src="{{ asset('assets/images/placeholder.svg') }}"
-                            data-src="{{ asset('assets/images/instagram/instagram-4.png') }}" alt="instagram">
-                        <span class="d-flex justify-content-center mb-10">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M12.4396 18H5.56042C2.49391 18 0 15.5061 0 12.4396V5.56042C0 2.49391 2.49391 0 5.56042 0H12.4396C15.5061 0 18 2.49391 18 5.56042V12.4396C18.0016 15.5061 15.5061 18 12.4396 18ZM5.56042 2.00648C3.60126 2.00648 2.00648 3.60126 2.00648 5.56042V12.4396C2.00648 14.3987 3.60126 15.9935 5.56042 15.9935H12.4396C14.3987 15.9935 15.9935 14.3987 15.9935 12.4396V5.56042C15.9935 3.60126 14.3987 2.00648 12.4396 2.00648H5.56042Z"
-                                    fill="white" />
-                                <path
-                                    d="M9.0021 13.5979C6.4656 13.5979 4.40234 11.5347 4.40234 8.99819C4.40234 6.46169 6.4656 4.39844 9.0021 4.39844C11.5386 4.39844 13.6019 6.46169 13.6019 8.99819C13.6019 11.5347 11.5386 13.5979 9.0021 13.5979ZM9.0021 6.203C7.46095 6.203 6.20691 7.45705 6.20691 8.99819C6.20691 10.5393 7.46095 11.7934 9.0021 11.7934C10.5432 11.7934 11.7973 10.5393 11.7973 8.99819C11.7973 7.45705 10.5432 6.203 9.0021 6.203Z"
-                                    fill="white" />
-                                <path
-                                    d="M14.6139 4.13508C14.6139 4.56414 14.2653 4.91278 13.8363 4.91278C13.4072 4.91278 13.0586 4.56414 13.0586 4.13508C13.0586 3.70602 13.4072 3.35742 13.8363 3.35742C14.2653 3.35742 14.6139 3.70444 14.6139 4.13508Z"
-                                    fill="white" />
-                            </svg>
-
-                        </span>
-                    </div>
-                    <div class="div3 image-hover"><img src="{{ asset('assets/images/placeholder.svg') }}"
-                            data-src="{{ asset('assets/images/instagram/instagram-7.png') }}" alt="instagram">
-                        <span class="d-flex justify-content-center mb-10">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M12.4396 18H5.56042C2.49391 18 0 15.5061 0 12.4396V5.56042C0 2.49391 2.49391 0 5.56042 0H12.4396C15.5061 0 18 2.49391 18 5.56042V12.4396C18.0016 15.5061 15.5061 18 12.4396 18ZM5.56042 2.00648C3.60126 2.00648 2.00648 3.60126 2.00648 5.56042V12.4396C2.00648 14.3987 3.60126 15.9935 5.56042 15.9935H12.4396C14.3987 15.9935 15.9935 14.3987 15.9935 12.4396V5.56042C15.9935 3.60126 14.3987 2.00648 12.4396 2.00648H5.56042Z"
-                                    fill="white" />
-                                <path
-                                    d="M9.0021 13.5979C6.4656 13.5979 4.40234 11.5347 4.40234 8.99819C4.40234 6.46169 6.4656 4.39844 9.0021 4.39844C11.5386 4.39844 13.6019 6.46169 13.6019 8.99819C13.6019 11.5347 11.5386 13.5979 9.0021 13.5979ZM9.0021 6.203C7.46095 6.203 6.20691 7.45705 6.20691 8.99819C6.20691 10.5393 7.46095 11.7934 9.0021 11.7934C10.5432 11.7934 11.7973 10.5393 11.7973 8.99819C11.7973 7.45705 10.5432 6.203 9.0021 6.203Z"
-                                    fill="white" />
-                                <path
-                                    d="M14.6139 4.13508C14.6139 4.56414 14.2653 4.91278 13.8363 4.91278C13.4072 4.91278 13.0586 4.56414 13.0586 4.13508C13.0586 3.70602 13.4072 3.35742 13.8363 3.35742C14.2653 3.35742 14.6139 3.70444 14.6139 4.13508Z"
-                                    fill="white" />
-                            </svg>
-
-                        </span>
-                    </div>
-                    <div class="div4 image-hover"><img src="{{ asset('assets/images/placeholder.svg') }}"
-                            data-src="{{ asset('assets/images/instagram/instagram-3.png') }}" alt="instagram">
-                        <span class="d-flex justify-content-center mb-10">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M12.4396 18H5.56042C2.49391 18 0 15.5061 0 12.4396V5.56042C0 2.49391 2.49391 0 5.56042 0H12.4396C15.5061 0 18 2.49391 18 5.56042V12.4396C18.0016 15.5061 15.5061 18 12.4396 18ZM5.56042 2.00648C3.60126 2.00648 2.00648 3.60126 2.00648 5.56042V12.4396C2.00648 14.3987 3.60126 15.9935 5.56042 15.9935H12.4396C14.3987 15.9935 15.9935 14.3987 15.9935 12.4396V5.56042C15.9935 3.60126 14.3987 2.00648 12.4396 2.00648H5.56042Z"
-                                    fill="white" />
-                                <path
-                                    d="M9.0021 13.5979C6.4656 13.5979 4.40234 11.5347 4.40234 8.99819C4.40234 6.46169 6.4656 4.39844 9.0021 4.39844C11.5386 4.39844 13.6019 6.46169 13.6019 8.99819C13.6019 11.5347 11.5386 13.5979 9.0021 13.5979ZM9.0021 6.203C7.46095 6.203 6.20691 7.45705 6.20691 8.99819C6.20691 10.5393 7.46095 11.7934 9.0021 11.7934C10.5432 11.7934 11.7973 10.5393 11.7973 8.99819C11.7973 7.45705 10.5432 6.203 9.0021 6.203Z"
-                                    fill="white" />
-                                <path
-                                    d="M14.6139 4.13508C14.6139 4.56414 14.2653 4.91278 13.8363 4.91278C13.4072 4.91278 13.0586 4.56414 13.0586 4.13508C13.0586 3.70602 13.4072 3.35742 13.8363 3.35742C14.2653 3.35742 14.6139 3.70444 14.6139 4.13508Z"
-                                    fill="white" />
-                            </svg>
-
-                        </span>
-                    </div>
-                    <div class="div5 image-hover"><img src="{{ asset('assets/images/placeholder.svg') }}"
-                            data-src="{{ asset('assets/images/instagram/instagram-8.png') }}" alt="instagram">
-                        <span class="d-flex justify-content-center mb-10">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M12.4396 18H5.56042C2.49391 18 0 15.5061 0 12.4396V5.56042C0 2.49391 2.49391 0 5.56042 0H12.4396C15.5061 0 18 2.49391 18 5.56042V12.4396C18.0016 15.5061 15.5061 18 12.4396 18ZM5.56042 2.00648C3.60126 2.00648 2.00648 3.60126 2.00648 5.56042V12.4396C2.00648 14.3987 3.60126 15.9935 5.56042 15.9935H12.4396C14.3987 15.9935 15.9935 14.3987 15.9935 12.4396V5.56042C15.9935 3.60126 14.3987 2.00648 12.4396 2.00648H5.56042Z"
-                                    fill="white" />
-                                <path
-                                    d="M9.0021 13.5979C6.4656 13.5979 4.40234 11.5347 4.40234 8.99819C4.40234 6.46169 6.4656 4.39844 9.0021 4.39844C11.5386 4.39844 13.6019 6.46169 13.6019 8.99819C13.6019 11.5347 11.5386 13.5979 9.0021 13.5979ZM9.0021 6.203C7.46095 6.203 6.20691 7.45705 6.20691 8.99819C6.20691 10.5393 7.46095 11.7934 9.0021 11.7934C10.5432 11.7934 11.7973 10.5393 11.7973 8.99819C11.7973 7.45705 10.5432 6.203 9.0021 6.203Z"
-                                    fill="white" />
-                                <path
-                                    d="M14.6139 4.13508C14.6139 4.56414 14.2653 4.91278 13.8363 4.91278C13.4072 4.91278 13.0586 4.56414 13.0586 4.13508C13.0586 3.70602 13.4072 3.35742 13.8363 3.35742C14.2653 3.35742 14.6139 3.70444 14.6139 4.13508Z"
-                                    fill="white" />
-                            </svg>
-
-                        </span>
-                    </div>
-                </div>
-
-                <div class="catagory mb-30">
-                    <h3 class="offcanvas-title  mb-40">Category</h3>
-                    <div class="catagory-tag">
-                        <a href="category">Hiking <span class="catagory-count">10</span></a>
-                        <a href="category">Camping <span class="catagory-count">08</span></a>
-                        <a href="category">Desert <span class="catagory-count">12</span></a>
-                        <a href="category">Beach <span class="catagory-count">22</span></a>
-                        <a href="category">Forest <span class="catagory-count">15</span></a>
-                        <a href="category">Ancient <span class="catagory-count">07</span></a>
-                        <a href="category">City <span class="catagory-count">18</span></a>
-                        <a href="category">Lake <span class="catagory-count">09</span></a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
 
         <!-- of canvas Mobile menu start -->
         <div class="offcanvas offcanvas-end offcanvasmobile-menu" id="offcanvasmobile-menu" data-bs-backdrop="static"
             tabindex="-1">
             <div class="offcanvas-header pb-30">
-                <a class="navbar-brand dark-light-logo" href="/" aria-label="nav-brands">
+                <a class="navbar-brand dark-light-logo" href="/" aria-label="nav-brands" rel="nofollow">
                     <img src="{{ asset('assets/images/placeholder.svg') }}"
                         data-src="{{ asset('assets/images/logo-dark.png') }}" class="logo-dark img-fluid"
                         alt="logo">
@@ -459,93 +260,45 @@
             <div class="offcanvas-body d-flex justify-content-start">
                 <ul class="navbar-nav custom-navbar-nav mb-2  mb-lg-0 hover-menu">
                     <li class="nav-item dropdown">
-                        <a class="nav-link active d-flex gap-2 align-items-center" aria-current="page" href="blog"
-                            aria-label="nav-links">
+                        <a class="nav-link active d-flex gap-2 align-items-center" aria-current="page" href="{{ url('blog', ['Kategori' => 'destinasi']) }}"
+                            aria-label="nav-links" rel="nofollow">
                             Destinasi
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link d-flex gap-2 align-items-center" href="blog" aria-label="nav-links"
-                            data-bs-toggle="dropdown" aria-expanded="true">
+                        <a class="nav-link d-flex gap-2 align-items-center" href="{{ url('blog', ['Kategori' => 'aktifitas']) }}" aria-label="nav-links"
+                            data-bs-toggle="dropdown" aria-expanded="true" rel="nofollow">
                             Aktifitas
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="blog"
-                            aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="{{ url('blog', ['Kategori' => 'kuliner']) }}"
+                            aria-label="nav-links" aria-expanded="false" rel="nofollow">
                             Kuliner
-                            <span class="dropdown-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
-                                </svg>
-                            </span>
                         </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a class="dropdown-item" href="blog" aria-label="single-pages">Malang</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="blog" aria-label="single-pages">Banyuwangi</a>
-                            </li>
-                        </ul>
                     </li>
-
-
                     <li class="nav-item dropdown">
-                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="blog"
-                            aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="{{ url('paket') }}"
+                            aria-label="nav-links" aria-expanded="false" rel="nofollow">
                             Paket
-                            <span class="dropdown-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
-                                </svg>
-                            </span>
                         </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a class="dropdown-item" href="blog" aria-label="single-pages">Contact 1</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="blog" aria-label="single-pages">Contact 2</a>
-                            </li>
-
-                        </ul>
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="blog"
-                            aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="{{ url('blog') }}"
+                            aria-label="nav-links" aria-expanded="false" rel="nofollow">
                             Blog
-                            <span class="dropdown-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
-                                </svg>
-                            </span>
                         </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a class="dropdown-item" href="article" aria-label="single-pages">Article 1</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="article" aria-label="single-pages">Article 2</a>
-                            </li>
-                        </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="about"
-                            aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="{{ url('about') }}"
+                            aria-label="nav-links" aria-expanded="false" rel="nofollow">
                             About
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="contact"
-                            aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="{{ url('kontak') }}"
+                            aria-label="nav-links" aria-expanded="false" rel="nofollow">
                             Kontak
                         </a>
                     </li>
@@ -554,16 +307,16 @@
 
             </div>
 
-            <div class="text-center d-flex justify-content-center px-30">
+            {{-- <div class="text-center d-flex justify-content-center px-30">
 
                 <!-- author-socials -->
                 <div class="author-socials">
-                    <a href="https://www.facebook.com" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com" class="instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com" class="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://www.youtube.com" class="youtube"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.pinterest.com" class="pinterest"><i class="fab fa-pinterest-p"></i></a>
-                    <a href="https://twitter.com" class="twitter"><svg width="16" height="14"
+                    <a href="https://www.facebook.com" rel="nofollow" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com" rel="nofollow" class="instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com" rel="nofollow" class="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com" rel="nofollow" class="youtube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.pinterest.com" rel="nofollow" class="pinterest"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="https://twitter.com"  rel="nofollow" class="twitter"><svg width="16" height="14"
                             viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M15.8092 15.98H11.1569L6.89801 9.78339L1.56807 15.98H0.19043L6.28619 8.89157L0.19043 0.0195312H4.84276L8.87486 5.88989L13.9234 0.0195312H15.301L9.48808 6.77751L15.8092 15.98ZM11.8079 14.9929H13.9234L4.18054 1.05696H2.06508L11.8079 14.9929Z">
@@ -571,12 +324,12 @@
                         </svg>
                     </a>
                 </div>
-            </div>
+            </div> --}}
         </div>
         <!-- of canvas Mobile menu End -->
 
         <!-- Offcanvas Serch -->
-        <div class="offcanvas offcanvas-top offcanvasserch py-lg-100 py-40" data-bs-scroll="false" tabindex="-1"
+        {{-- <div class="offcanvas offcanvas-top offcanvasserch py-lg-100 py-40" data-bs-scroll="false" tabindex="-1"
             id="offcanvasserch" data-bs-backdrop="false">
             <div class="offcanvas-header py-0 justify-content-end">
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
@@ -736,7 +489,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- Offcanvas Serch -->
 
         <!-- start to top button -->
@@ -766,7 +519,7 @@
 
             <!--Banner Section ======================-->
             <section class="section-banner article-1 position-relative">
-                <div class="article-wrapper article-wrapper-1 mx-auto position-relative parallax">
+                <div class="article-wrapper article-wrapper-1 mx-auto position-relative parallax" id="article-wrapper" data-thumbnail="{{ asset('post_media/' . $post->thumbnail) }}">
                     <div class="container">
 
                         <nav aria-label="breadcrumb">
@@ -783,10 +536,10 @@
                                 <div class="text-center py-30">
                                     <h2 class="section-banner-title text-white pb-30 ">{{ $post->title }}</h2>
                                     <div class="d-flex gap-20 flex-wrap justify-content-center">
-                                        <span class="text-white">3 Comments</span>
-                                        <span class="text-white">{{ $post->created_at->DiffForHumans() }}<span
+                                        {{-- <span class="text-white">3 Comments</span> --}}
+                                        <span class="text-white">{{ \Carbon\Carbon::parse($post->created_at)->format('F d, Y') }}<span
                                                 class="">
-                                            </span>.</span>
+                                            </span></span>
                                     </div>
                                 </div>
                             </div>
@@ -811,25 +564,25 @@
                                 <div class="sidebar-style d-none d-xl-block">
                                     <div class="author-details mb-lg-60 mb-40">
                                         <p class="text-end mb-0 ">Jadi Trip?</p>
-                                        <h6 class="text-end"><a href="about" class="author-name">Jadi Dong!!</a>
+                                        <h6 class="text-end"><a href="{{ url('about') }}" class="author-name" rel="nofollow">Jadi Dong!!</a>
                                         </h6>
                                         <div class="author-image">
                                             <img src="{{ asset('assets/images/placeholder.svg') }}"
-                                                data-src="{{ asset('assets/images/about-image-1.png') }}"
+                                                data-src="{{ asset('assets/logo/down-arrow2.gif') }}"
                                                 alt="about-image">
                                         </div>
                                     </div>
                                     <div class="sidebar-social">
-                                        <span>SHARE THIS ARTICLE</span>
-                                        <a href="https://www.facebook.com" class="facebook"><i
+                                        <span>BAGIKAN ARTIKEL</span>
+                                        <a href="https://www.facebook.com" class="facebook" rel="nofollow"><i
                                                 class="fa-brands fa-facebook-f"></i></a>
-                                        <a href="https://www.instagram.com" class="instagram"><i
+                                        <a href="https://www.instagram.com" class="instagram" rel="nofollow"><i
                                                 class="fa-brands fa-instagram"></i></a>
-                                        <a href="https://www.linkedin.com" class="linkedin"><i
+                                        <a href="https://www.linkedin.com" class="linkedin" rel="nofollow"><i
                                                 class="fa-brands fa-linkedin"></i></a>
-                                        <a href="https://www.pinterest.com" class="pinterest"><i
+                                        <a href="https://www.pinterest.com" class="pinterest" rel="nofollow"><i
                                                 class="fa-brands fa-pinterest-p"></i></a>
-                                        <a href="https://twitter.com" class="twitter"><svg width="16"
+                                        <a href="https://twitter.com" class="twitter" rel="nofollow"><svg width="16"
                                                 height="14" viewBox="0 0 16 14" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -848,7 +601,7 @@
                                 style="overflow: hidden; word-wrap: break-word;">
                                 {!! $post->content !!}
 
-                                <div class="table-of-content table-of-content-style-2">
+                                {{-- <div class="table-of-content table-of-content-style-2">
                                     <div class="accordion accordion-flush" id="accordionFlushExample">
                                         <div class="accordion-item">
                                             <h2 class="table-of-content-heading">
@@ -919,18 +672,18 @@
                                         </div>
 
                                     </div>
-                                </div>
+                                </div> --}}
                                 <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0"
                                     data-bs-smooth-scroll="true" tabindex="0">
-                                    <h3 id="introduction" class="mb-10 article-post-heading ">Introduction</h3>
+                                    {{-- <h3 id="introduction" class="mb-10 article-post-heading ">Introduction</h3>
                                     <p class="pb-20 pb-lg-30 ">This summer, I offered the third-ever Bearfoot Theory
                                         group adventure. This time, myself and a group of Bearfoot Theory readers
                                         ventured into the Alaskan wilderness for 10 days of backpac. Led by our guides
                                         from <a href="#">Alaska Alpine Adventures,</a> our trip in Lake Clark
-                                        offered a true Alaska experience in every sense.</p>
+                                        offered a true Alaska experience in every sense.</p> --}}
 
                                     <!-- quote -->
-                                    <div class="quote mb-10 mb-lg-30 ">
+                                    {{-- <div class="quote mb-10 mb-lg-30 ">
                                         <p>You can design and create, and build the most wonderful place in the world.
                                             But it takes people to make the dream a reality.</p>
                                         <span class="quote-author">Walt Disney </span>
@@ -952,16 +705,16 @@
                                                 </defs>
                                             </svg>
                                         </span>
-                                    </div>
+                                    </div> --}}
 
-                                    <p class="pb-20 pb-lg-30 ">In this blog post, I share all that we got to see, do,
+                                    {{-- <p class="pb-20 pb-lg-30 ">In this blog post, I share all that we got to see, do,
                                         and learn on this epic adventure, as well as a review of Alaska Alpine
-                                        Adventures for those of you looking to explore Alaska’s backcountry.</p>
+                                        Adventures for those of you looking to explore Alaska’s backcountry.</p> --}}
 
 
                                     <!-- article blog list -->
 
-                                    <h3 id="traveltipsandhacks" class="mb-10 article-post-heading ">Travel Tips and
+                                    {{-- <h3 id="traveltipsandhacks" class="mb-10 article-post-heading ">Travel Tips and
                                         Hacks</h3>
                                     <ul class="">
                                         <li>
@@ -989,8 +742,8 @@
                                     </ul>
                                     <p class="mb-20 mb-lg-30">By following these travel tips and hacks, you'll be
                                         well-prepared to be immerse yourself in the natural beauty and tranquillity of
-                                        Lake Clark, creating memories that will last a lifetime.</p>
-                                    <div class="single-blog  pb-20">
+                                        Lake Clark, creating memories that will last a lifetime.</p> --}}
+                                    {{-- <div class="single-blog  pb-20">
                                         <!-- single blog -->
                                         <div class="blog-image border-rarius-14">
                                             <img src="{{ asset('assets/images/placeholder.svg') }}"
@@ -1052,12 +805,12 @@
                                         the Shores - Sleeping Under the Alaskan Stars</h4>
                                     <p class="pb-20 ">Experience the magic of camping along Lake Clark's pristine
                                         shores. Set up your tent under Alaskan sky, where the midnight sun illuminates
-                                        rugged landscapes, creating unforgettable lakeside memories.</p>
+                                        rugged landscapes, creating unforgettable lakeside memories.</p> --}}
 
                                     <!-- Photo and Video Gallery -->
 
                                     <!-- article post gallery -->
-                                    <div class="article-post-gallery-grid pb-30">
+                                    {{-- <div class="article-post-gallery-grid pb-30">
                                         <div class="div1 image-hover-effect">
                                             <img src="{{ asset('assets/images/placeholder.svg') }}"
                                                 data-src="{{ asset('assets/images/categories/category-1.jpg') }}"
@@ -1092,9 +845,9 @@
                                         wilderness. From kayaking pristine waters to know summiting majestic peaks, it's
                                         an untamed adventure etched in enduring memories.</p>
                                     <h6 id="photography-and-videography" class="mb-lg-20 mb-10 article-post-heading ">
-                                        Photo and Video Gallery</h6>
+                                        Photo and Video Gallery</h6> --}}
                                     <!-- article-slider -->
-                                    <div class="article-slider-wrapper-main">
+                                    {{-- <div class="article-slider-wrapper-main">
 
                                         <div class="swiper article-slider-wrapper">
                                             <div class="swiper-wrapper">
@@ -1202,10 +955,10 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     <!-- article-slider -->
 
-                                    <h3 id="accommodation-reviews" class="mb-10 article-post-heading ">Accommodation
+                                    {{-- <h3 id="accommodation-reviews" class="mb-10 article-post-heading ">Accommodation
                                         Reviews</h3>
                                     <p class="mb-lg-30  mb-10">The Lake Clark's accommodation options blend comfort
                                         with the untamed Alaskan wilderness. Lakeside retreats offer panoramic views,
@@ -1223,25 +976,25 @@
                                                 data-src="{{ asset('assets/images/blog/explore-image-54.jpg') }}"
                                                 class=" full-image border-rarius-14" alt="img-top">
                                         </div>
-                                    </div>
+                                    </div> --}}
 
-                                    <p class="mb-lg-60  mb-md-30 mb-10">Camping by the shores offers a more immersive
+                                    {{-- <p class="mb-lg-60  mb-md-30 mb-10">Camping by the shores offers a more immersive
                                         experience under the midnight sun or dancing Northern Lights. Whether opting for
                                         luxury lodges or embracing the simplicity of camping, Lake Clark ensures a
                                         harmonious coexistence with nature, making each night's stay an integral part of
-                                        the broader Alaskan adventure.</p>
+                                        the broader Alaskan adventure.</p> --}}
 
-                                    <h3 id="destination" class="article-post-heading mb-lg-20 mb-10 ">Destination
+                                    {{-- <h3 id="destination" class="article-post-heading mb-lg-20 mb-10 ">Destination
                                         Guides</h3>
                                     <div class="google-map pb-40">
                                         <iframe
                                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9341.018597461838!2d-4.432307619358653!3d54.175565819955594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486384adaa7f6fd3%3A0x1fe2385732f12c3a!2sGroudle%20Beach!5e0!3m2!1sen!2sbd!4v1711792810684!5m2!1sen!2sbd"
                                             allowfullscreen="" loading="lazy"
                                             referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                    </div>
+                                    </div> --}}
 
 
-                                    <h3 id="travelchallenges" class="article-post-heading mb-lg-20">Travel Challenges
+                                    {{-- <h3 id="travelchallenges" class="article-post-heading mb-lg-20">Travel Challenges
                                     </h3>
                                     <p class="mb-lg-20 mb-10">Embarking on the Lake Clark travel challenge unveils both
                                         the beauty and demands of Alaska's wilderness. Navigating its untamed landscape
@@ -1261,7 +1014,7 @@
                                         venture here to become part of its tale. The adventure transcends a mere trip;
                                         it's a transformative experience, a communion with nature's grandeur that leaves
                                         travelers with a profound appreciation for the raw and unyielding beauty of
-                                        Alaska's Lake Clark National Park and Preserve.</p>
+                                        Alaska's Lake Clark National Park and Preserve.</p> --}}
 
                                 </div>
                                 <!-- article content -->
@@ -1272,118 +1025,27 @@
                         <div class="col-xl-4">
                             <div class="sticky-elements">
                                 <div class="d-flex flex-column gap-lg-60 gap-30">
-                                    <div class="widget">
-                                        <h4 class="fs-1 mb-40">Featured Article</h4>
-                                        <div class="d-flex flex-column gap-3 gap-xl-30">
-
-                                            <!-- mini-card-style -->
-                                            <div class="mini-card-style wow fadeInUp" data-wow-delay="0.4s">
-                                                <div class="card-image-wrapper">
-                                                    <a href="article"><img
-                                                            src="{{ asset('assets/images/placeholder.svg') }}"
-                                                            data-src="{{ asset('assets/images/feature-images/feature-image-1.jpg') }}"
-                                                            class="card-img-top" alt="Breakfast"> </a>
-                                                </div>
-
-                                                <div class="card-body">
-                                                    <h5 class="card-title lead fw-extrabold mb-0"><a href="article"
-                                                            class="blog-title">Quick and Easy Flaky Pastry for Tasty
-                                                            Breakfast</a></h5>
-                                                    <ul class="list-unstyled card-meta-style-2 mb-0 extra-small">
-                                                        <li>By <a href="about" class="fw-bold">Mike Aiden</a></li>
-                                                        <li>January 27, <span class="dynamic-year"> </span>.</li>
-                                                    </ul>
-                                                </div>
+                                    <!-- Iklan 1 -->
+                                    @foreach ($iklans as $iklan)
+                                        @if ($iklan->type === 'Iklan 1' && $iklan->status == 'On')
+                                        <a href="{{ $iklan->tautan }}" title="{{ $iklan->perusahaan }}" target="_blank">
+                                            <div class="about-me wow fadeInUp" data-wow-delay="0.4s">
+                                                <img id="iklan1-1" src="{{ url('assets/images/iklan/'.$iklan->sampul) }}"
+                                                    alt="{{ $iklan->perusahaan }}">
+                                                <img id="iklan1-2" src="{{ url('assets/images/iklan/'.$iklan->sampul) }}"
+                                                    alt="{{ $iklan->perusahaan }}">
                                             </div>
-                                            <!-- mini-card-style -->
-                                            <div class="mini-card-style wow fadeInUp" data-wow-delay="0.4s">
-                                                <div class="card-image-wrapper">
-                                                    <a href="article"> <img
-                                                            src="{{ asset('assets/images/placeholder.svg') }}"
-                                                            data-src="{{ asset('assets/images/feature-images/feature-image-7.jpg') }}"
-                                                            class="card-img-top" alt="Stories"> </a>
-                                                </div>
-
-                                                <div class="card-body">
-                                                    <h5 class="card-title lead fw-extrabold mb-0"><a href="article"
-                                                            class="blog-title">Footprints in the Wilderness: Hiking
-                                                            Stories</a></h5>
-                                                    <ul class="list-unstyled card-meta-style-2 mb-0 extra-small">
-                                                        <li>By <a href="about" class="fw-bold">Mike Aiden</a></li>
-
-                                                        <li>January 25, <span class="dynamic-year"> </span>.</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-
-                                            <!-- mini-card-style -->
-                                            <div class="mini-card-style wow fadeInUp" data-wow-delay="0.4s">
-                                                <div class="card-image-wrapper">
-                                                    <a href="article"> <img
-                                                            src="{{ asset('assets/images/placeholder.svg') }}"
-                                                            data-src="{{ asset('assets/images/feature-images/feature-image-3.jpg') }}"
-                                                            class="card-img-top" alt="Stories"> </a>
-                                                </div>
-
-                                                <div class="card-body">
-                                                    <h5 class="card-title lead fw-extrabold mb-0"><a href="article"
-                                                            class="blog-title">Lost Treasures: Top 10 Ancient City
-                                                            Sites</a></h5>
-                                                    <ul class="list-unstyled card-meta-style-2 mb-0 extra-small">
-                                                        <li>By <a href="about" class="fw-bold">Mike Aiden</a></li>
-
-                                                        <li>January 13, <span class="dynamic-year"> </span>.</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <!-- mini-card-style -->
-                                            <div class="mini-card-style wow fadeInUp" data-wow-delay="0.4s">
-                                                <div class="card-image-wrapper">
-                                                    <a href="article"> <img
-                                                            src="{{ asset('assets/images/placeholder.svg') }}"
-                                                            data-src="{{ asset('assets/images/feature-images/feature-image-4.jpg') }}"
-                                                            class="card-img-top" alt="Stories"> </a>
-                                                </div>
-
-                                                <div class="card-body">
-                                                    <h5 class="card-title lead fw-extrabold mb-0"><a href="article"
-                                                            class="blog-title">Beyond Shores: Discovering Idyllic Lake
-                                                            Paradises</a></h5>
-                                                    <ul class="list-unstyled card-meta-style-2 mb-0 extra-small">
-                                                        <li>By <a href="about" class="fw-bold">Mike Aiden</a></li>
-
-                                                        <li>January 12, <span class="dynamic-year"> </span>.</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <!-- mini-card-style -->
-                                            <div class="mini-card-style wow fadeInUp" data-wow-delay="0.4s">
-                                                <div class="card-image-wrapper">
-                                                    <a href="article"> <img
-                                                            src="{{ asset('assets/images/placeholder.svg') }}"
-                                                            data-src="{{ asset('assets/images/feature-images/feature-image-5.jpg') }}"
-                                                            class="card-img-top" alt="Stories"> </a>
-                                                </div>
-
-                                                <div class="card-body">
-                                                    <h5 class="card-title lead fw-extrabold mb-0"><a href="article"
-                                                            class="blog-title">Seaside Serenity: Beachside Beauty
-                                                            Uncovered</a></h5>
-                                                    <ul class="list-unstyled card-meta-style-2 mb-0 extra-small">
-                                                        <li>By <a href="about" class="fw-bold">Mike Aiden</a></li>
-
-                                                        <li>January 04, <span class="dynamic-year"> </span>.</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
+                                        </a>
+                                        @endif
+                                    @endforeach
+                                    <!-- Iklan 1 End -->
+                                    
                                     <!-- widget -->
 
+
                                     <!-- socials -->
-                                    <div class="widget widget-style-2 wow fadeInUp" data-wow-delay="0.4s">
-                                        <h4 class="fs-1 mb-3 mb-lg-20 text-white text-center">Social Link</h4>
+                                    {{-- <div class="widget widget-style-2 wow fadeInUp" data-wow-delay="0.4s">
+                                        <h4 class="fs-1 mb-3 mb-lg-20 text-white text-center">Sosial Media</h4>
                                         <p class="mb-20 mb-lg-30 text-white text-center">Follow Me On Social Media</p>
 
                                         <div
@@ -1467,16 +1129,14 @@
 
                                         </div>
                                         <!-- social-icons -->
-                                    </div>
+                                    </div> --}}
 
                                     <div class="catagory">
-                                        <h3 class="mb-40">Category</h3>
+                                        <h3 class="mb-40">Kategori</h3>
                                         <div class="catagory-tag">
-                                            <a href="category">HIKING <span class="catagory-count">10</span></a>
-                                            <a href="category">CAMPING <span class="catagory-count">20</span></a>
-                                            <a href="category">FOREST <span class="catagory-count">18</span></a>
-                                            <a href="category">DESERT <span class="catagory-count">14</span></a>
-                                            <a href="category">MARINE <span class="catagory-count">45</span></a>
+                                            @foreach ($kategoris as $kat)
+                                                <a style="text-transform: capitalize;" href="{{ url('blog',['kategori' => $kat->name ]) }}">{{ $kat->name }} <span class="catagory-count">{{ $kat->posts_count }}</span></a>
+                                            @endforeach
                                         </div>
                                     </div>
                                     <div class="add-iamge d-none d-xl-block wow fadeInUp" data-wow-delay="0.4s">
@@ -1488,219 +1148,7 @@
                         </div>
 
                     </div>
-                    <div class="row">
-                        <div class="col-xl-8">
-                            <!-- mini-card-slider-wrapper -->
-                            <div class="mini-card-slider-wrapper py-lg-100 py-md-60 py-30">
 
-
-                                <!-- mini-card-slider -->
-                                <div class="swiper mini-card-slider">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <!-- card card-style-10 -->
-                                            <div class="card card-style-10 card-border">
-                                                <div class="d-flex align-items-center gap-lg-20 gap-10 ">
-                                                    <div class="card-image-wrapper-style-2 image-hover-effect-2">
-                                                        <a href="article">
-                                                            <img src="{{ asset('assets/images/placeholder.svg') }}"
-                                                                data-src="{{ asset('assets/images/feature-images/feature-image-1.jpg') }}"
-                                                                alt="img-top">
-                                                        </a>
-                                                    </div>
-                                                    <div class="card-body p-0  mt-auto">
-                                                        <h5 class="card-title lead fw-extrabold"><a href="about"
-                                                                class="blog-title">Quick and Easy Flaky Pastry for
-                                                                Tasty Breakfast</a></h5>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <!-- card card-style-10 -->
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <!-- card card-style-10 -->
-                                            <div class="card card-style-10 card-border">
-                                                <div class="d-flex align-items-center gap-lg-20 gap-10 ">
-                                                    <div class="card-image-wrapper-style-2 image-hover-effect-2">
-                                                        <a href="article">
-                                                            <img src="{{ asset('assets/images/placeholder.svg') }}"
-                                                                data-src="{{ asset('assets/images/feature-images/feature-image-2.jpg') }}"
-                                                                alt="img-top">
-                                                        </a>
-                                                    </div>
-                                                    <div class="card-body p-0  mt-auto">
-                                                        <h5 class="card-title lead fw-extrabold"><a href="article"
-                                                                class="blog-title">Quick and Easy Flaky Pastry for
-                                                                Tasty Breakfast</a></h5>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- card card-style-10 -->
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <!-- card card-style-10 -->
-                                            <div class="card card-style-10 card-border">
-                                                <div class="d-flex align-items-center gap-lg-20 gap-10 ">
-                                                    <div class="card-image-wrapper-style-2 image-hover-effect-2">
-                                                        <a href="article">
-
-                                                            <img src="{{ asset('assets/images/placeholder.svg') }}"
-                                                                data-src="{{ asset('assets/images/feature-images/feature-image-4.jpg') }}"
-                                                                alt="img-top">
-                                                        </a>
-                                                    </div>
-                                                    <div class="card-body p-0  mt-auto">
-                                                        <h5 class="card-title lead fw-extrabold"><a href="article"
-                                                                class="blog-title">Quick and Easy Flaky Pastry for
-                                                                Tasty Breakfast</a></h5>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <!-- card card-style-10 -->
-                                        </div>
-
-                                    </div>
-                                    <div class="swiper-slide-button-wrapper">
-
-                                        <div class="mini-card-button-prev"><i
-                                                class="fa-solid fa-arrow-left"></i><span>Previous</span></div>
-                                        <div class="mini-card-button-next"><span>Next</span> <i
-                                                class="fa-solid fa-arrow-right"></i> </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <!-- mini-card-slider-wrapper -->
-                            <div class="comments-wrapper pb-lg-60 pb-30">
-                                <p class="fs-2 fw-bold article-post-heading mb-lg-40 mb-20">3 Comments</p>
-
-                                <!-- Main Comment -->
-                                <div class="comment">
-
-                                    <!-- Main to Comment -->
-                                    <div class="main-comment mb-30">
-                                        <div class="d-flex gap-20">
-                                            <div class="comment-iamge">
-                                                <img src="{{ asset('assets/images/placeholder.svg') }}"
-                                                    data-src="{{ asset('assets/images/man-02.jpg') }}"
-                                                    alt="image">
-                                            </div>
-                                            <div class="comment-content">
-                                                <h5><a href="#" class="comment-name">Liam Adams</a></h5>
-                                                <span class="timestamp">January 12, <span class="dynamic-year">
-                                                    </span>. at 10am</span>
-                                                <p>Your vivid descriptions and captivating storytelling make me feel
-                                                    like I'm right there, exploring each destination alongside you. Your
-                                                    travel blog is a constant source of inspiration for my own
-                                                    adventures. Keep the amazing content coming!</p>
-                                                <button type="submit" class="btn btn-reply">Reply</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Reply to Comment -->
-                                    <div class="reply mb-30">
-                                        <div class="d-flex gap-20">
-                                            <div class="comment-iamge">
-                                                <img src="{{ asset('assets/images/placeholder.svg') }}"
-                                                    data-src="{{ asset('assets/images/about-image-1.png') }}"
-                                                    alt="image">
-                                            </div>
-                                            <div class="comment-content">
-                                                <h5><a href="#" class="comment-name">Liam Adams
-                                                        <span>(Author)</span></a></h5>
-                                                <span class="timestamp">January 12, <span class="dynamic-year">
-                                                    </span>. at 10am</span>
-                                                <p>Thank you so much for your kind words! It warms my heart to know that
-                                                    my travel tales inspire your own adventures. Your support means the
-                                                    world, and I'm thrilled to continue sharing the journey with you.
-                                                    Stay tuned for more exciting experiences ahead</p>
-                                                <button type="submit" class="btn btn-reply">Reply</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Main to Comment -->
-                                    <div class="main-comment mb-30">
-                                        <div class="d-flex gap-20">
-                                            <div class="comment-iamge">
-                                                <img src="{{ asset('assets/images/placeholder.svg') }}"
-                                                    data-src="{{ asset('assets/images/man-03.jpg') }}"
-                                                    alt="image">
-                                            </div>
-                                            <div class="comment-content">
-                                                <h5><a href="#" class="comment-name">Mike Aiden</a></h5>
-                                                <span class="timestamp">January 12, <span class="dynamic-year">
-                                                    </span>. at 10am</span>
-                                                <p>Your vivid descriptions and captivating storytelling make me feel
-                                                    like I'm right there, exploring each destination alongside you. Your
-                                                    travel blog is a constant source of inspiration for my own
-                                                    adventures. Keep the amazing content coming!</p>
-                                                <button type="submit" class="btn btn-reply">Reply</button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <!-- comment from -->
-                            <div class="comment-form-wrapper">
-
-                                <p class="fs-2 fw-bold article-post-heading mb-lg-40 mb-20">Join the discussion</p>
-
-                                <form class="comment-from">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label for="Comment">Comments</label>
-                                            <textarea class="form-control" id="Comment" rows="5"></textarea>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="name">Name <svg width="10" height="10"
-                                                        viewBox="0 0 10 10" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M5 1V9M8 2L2 8M9 5H1M8 8L2 2" stroke="#4C9BB3"
-                                                            stroke-width="0.8" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </svg></label>
-                                                <input type="email" class="form-control" id="name"
-                                                    required>
-
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="email">Email <svg width="10" height="10"
-                                                        viewBox="0 0 10 10" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M5 1V9M8 2L2 8M9 5H1M8 8L2 2" stroke="#4C9BB3"
-                                                            stroke-width="0.8" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </svg></label>
-                                                <input type="email" class="form-control" id="email"
-                                                    required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="website">Website</label>
-                                                <input type="text" class="form-control" id="website">
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="form-check mb-lg-40 mb-20">
-                                        <input type="checkbox" class="form-check-input" id="Check1">
-                                        <label class="form-check-label" for="Check1">Save my name, email, and
-                                            website in this browser for the next time I comment. </label>
-                                    </div>
-
-
-
-                                    <button type="submit" class="btn btn-primary">Submit Comments</button>
-                                </form>
-                            </div>
-
-                        </div>
-                    </div>
                 </div>
                 <!-- container -->
             </section>
@@ -1708,90 +1156,36 @@
 
             <SECtion class="pb-xl-70 pb-lg-60 pb-20">
                 <div class="container">
-                    <p class=" fs-1 fw-bold mb-lg-40 mb-30">You Might Also Like</p>
+                    <p class=" fs-1 fw-bold mb-lg-40 mb-30">Mungkin Anda Juga Menyukai</p>
                     <div class="row custom-row-gap">
+                        @foreach ($bloges as $blog)
                         <div class="col-lg-4">
                             <!-- single card -->
                             <div class="card card-style-2 card-border mb-lg-40 mb-20 wow fadeInUp"
                                 data-wow-delay="0.4s">
                                 <div class="card-image-wrapper">
-                                    <a href="article"><img src="{{ asset('assets/images/placeholder.svg') }}"
-                                            data-src="{{ asset('assets/images/blog/explore-image-21.jpg') }}"
+                                    <a href="/article/{{ $blog->slug }}"><img src="{{ asset('assets/images/placeholder.svg') }}"
+                                            data-src="{{ asset('post_media/'.$blog->thumbnail) }}"
                                             class="card-img-top" alt="Lake"></a>
                                 </div>
 
                                 <div class="card-body">
                                     <div class="card-header text-uppercase">
-                                        <a href="category"> Lake</a>
+                                        <a href="category">{{ $blog->kategori->name }}</a>
                                     </div>
-                                    <h5 class="fs-4 card-title"><a href="article" class="blog-title">Lakeside
+                                    <h5 class="fs-4 card-title"><a href="/article/{{ $blog->slug }}" class="blog-title">Lakeside
                                             Wonders: Nature's Peaceful Miracles</a></h5>
 
                                     <ul class="list-unstyled card-meta lead  small">
-                                        <li>By <a href="about" class="blog-author fw-bold">Mike Aiden</a></li>
-                                        <li>January 27, <span class="dynamic-year"> </span>.</li>
+                                        <li>By <a href="about" class="blog-author fw-bold">Jadi Trip</a></li>
+                                        <li>{{ \Carbon\Carbon::parse($blog->created_at)->format('F d, Y') }}</li>
                                     </ul>
 
-                                    <p class="card-text small">Nature Peaceful Miracle captivate with serene
-                                        reflection, gentle ripples, and harmonious symphony. A tranquil haven where
-                                        beauty meets tranquility...</p>
+                                    <p class="card-text small">{{ $blog->description }}</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4">
-                            <div class="card card-style-2 card-border mb-lg-40 mb-20 wow fadeInUp"
-                                data-wow-delay="0.4s">
-                                <div class="card-image-wrapper">
-                                    <a href="blog"> <img src="{{ asset('assets/images/placeholder.svg') }}"
-                                            data-src="{{ asset('assets/images/blog/explore-image-30.jpg') }}"
-                                            class="card-img-top" alt="Forest"></a>
-                                </div>
-
-                                <div class="card-body">
-                                    <div class="card-header text-uppercase">
-                                        <a href="category">Forest</a>
-                                    </div>
-                                    <h5 class="fs-4 card-title"><a href="article" class="blog-title">The Mystic
-                                            Woods: Nature's Healing Sanctuary</a></h5>
-
-                                    <ul class="list-unstyled card-meta lead  small">
-                                        <li>By <a href="about" class="blog-author fw-bold">Mike Aiden</a></li>
-                                        <li>January 23, <span class="dynamic-year"> </span>.</li>
-                                    </ul>
-
-                                    <p class="card-text small">Nature's Healing Sanctuary invite weary souls to
-                                        immerse in the embrace ancient tree, where whispers of the wind and rustling
-                                        leaves orchestrate...</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="card card-style-2 card-border mb-lg-40 mb-20 wow fadeInUp"
-                                data-wow-delay="0.4s">
-                                <div class="card-image-wrapper">
-                                    <a href="blog"> <img src="{{ asset('assets/images/placeholder.svg') }}"
-                                            data-src="{{ asset('assets/images/blog/explore-image-47.jpg') }}"
-                                            class="card-img-top" alt="img-top"></a>
-                                </div>
-
-                                <div class="card-body">
-                                    <div class="card-header text-uppercase">
-                                        <a href="category">Beach</a>
-                                    </div>
-                                    <h5 class="fs-4 card-title"><a href="article" class="blog-title">Seaside
-                                            Serenity: Beachside Beauty Uncovered</a></h5>
-
-                                    <ul class="list-unstyled card-meta lead  small">
-                                        <li>By <a href="about" class="blog-author fw-bold">Mike Aiden</a></li>
-                                        <li>January 23, <span class="dynamic-year"> </span>.</li>
-                                    </ul>
-
-                                    <p class="card-text small">Beachside Beauty Uncovered invites you to a tranquil
-                                        escape, where the rhythmic waves meet the golden shore. Discover serenity in the
-                                        embrace...</p>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </SECtion>
@@ -1828,7 +1222,7 @@
                     <div class="footer-top-contents pb-30">
                         <div class="row align-items-center gy-30 gy-lg-0">
                             <div class="col-lg-6">
-                                <div class="footer-link-menu-style-2">
+                                {{-- <div class="footer-link-menu-style-2">
                                     <ul class="list-unstyled lead">
                                         <li>
                                             <a href="/">Home</a>
@@ -1843,7 +1237,7 @@
                                             <a href="contact">Contact</a>
                                         </li>
                                     </ul>
-                                </div>
+                                </div> --}}
 
                                 <!-- footer-links -->
                             </div>
@@ -1851,7 +1245,7 @@
 
                             <div class="col-lg-6">
                                 <div class="social-icons  d-flex align-items-center justify-content-lg-end gap-20">
-                                    <a href="https://www.facebook.com">
+                                    <a href="https://www.facebook.com" rel="nofollow">
                                         <span class="text-white">
                                             <svg width="10" height="16" viewBox="0 0 11 16"
                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1861,7 +1255,7 @@
                                         </span>
                                     </a>
 
-                                    <a href="https://www.instagram.com/">
+                                    <a href="https://www.instagram.com/" rel="nofollow">
                                         <span class="text-white">
                                             <svg width="16" height="16" viewBox="0 0 16 16"
                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1875,7 +1269,7 @@
                                         </span>
                                     </a>
 
-                                    <a href="https://twitter.com">
+                                    <a href="https://twitter.com" rel="nofollow">
                                         <span class="text-white">
                                             <svg width="16" height="16" viewBox="0 0 16 16"
                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1884,7 +1278,7 @@
                                             </svg>
                                         </span>
                                     </a>
-                                    <a href="https://www.youtube.com">
+                                    <a href="https://www.youtube.com" rel="nofollow">
                                         <span class="text-white">
                                             <svg width="18" height="12" viewBox="0 0 18 12"
                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1894,7 +1288,7 @@
                                             </svg>
                                         </span>
                                     </a>
-                                    <a href="https://www.linkedin.com">
+                                    <a href="https://www.linkedin.com" rel="nofollow">
                                         <span class="text-white">
                                             <svg width="17" height="17" viewBox="0 0 17 17"
                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1911,7 +1305,7 @@
                                         </span>
                                     </a>
 
-                                    <a href="https://www.pinterest.com">
+                                    <a href="https://www.pinterest.com" rel="nofollow">
                                         <span class="text-white">
                                             <svg width="14" height="18" viewBox="0 0 14 18"
                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1936,15 +1330,15 @@
                             class="d-flex flex-column flex-sm-row gap-3 gap-lg-0 align-items-lg-center justify-content-lg-between justify-content-center">
 
                             <div class="d-flex justify-content-center gap-10">
-                                <p class="mb-0 lead">A product of</p>
-                                <a class="footer-logo" href="/" aria-label="nav-brands">
+                                <p class="mb-0 lead">A product of <span style="color: rgb(0, 134, 157)"><b><i>Myos Studio</i></b></span></p>
+                                {{-- <a class="footer-logo" href="/" aria-label="nav-brands">
                                     <img src="{{ asset('assets/images/placeholder.svg') }}"
                                         data-src="{{ asset('assets/images/logo-primary.png') }}"
                                         class="logo-light img-fluid" alt="footer-logo-two">
-                                </a>
+                                </a> --}}
                             </div>
                             <p class="mb-0 text-center lead">&copy; <span class="dynamic-year"> </span>. Jadi Trip.
-                                All rights reserved</p>
+                                &nbsp; All rights reserved</p>
                         </div>
                     </div>
                     <!-- footer-bottom-contents -->

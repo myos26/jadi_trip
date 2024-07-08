@@ -37,11 +37,11 @@
             <div class="container">
                 <nav class="navbar navbar-expand-xl hover-menu">
                     <div class="d-flex w-100 justify-content-between align-items-center">
-                        <a class="navbar-brand dark-light-logo" href="/" aria-label="nav-brands">
+                        <a class="navbar-brand" href="/" aria-label="nav-brands" rel="nofollow">
                             <img src="assets/logo/Jadi Trip Bhitam.png" style="height: 70px"
                                 class="logo-light img-fluid" alt="logo-white">
-                            <img src="assets/logo/Jadi Trip Bputih.png" style="height: 70px" class="logo-dark"
-                                alt="logo-dark">
+                            {{-- <img src="assets/logo/Jadi Trip Bputih.png" style="height: 70px" class="logo-dark"
+                                alt="logo-dark"> --}}
                         </a>
 
                         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
@@ -61,14 +61,14 @@
                                 <ul class="gap-20 navbar-nav mb-2 me-2 mb-lg-0">
                                     <li class="nav-item dropdown">
                                         <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"
-                                            aria-current="page" href="{{ url('blog', ['kategori' => 'Destinasi']) }}"
+                                            aria-current="page" href="{{ url('blog', ['kategori' => 'destinasi']) }}"
                                             aria-label="nav-links">
                                             Destinasi
                                         </a>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"
-                                            aria-current="page" href="{{ url('blog', ['kategori' => 'Aktifitas']) }}"
+                                            aria-current="page" href="{{ url('blog', ['kategori' => 'aktifitas']) }}"
                                             aria-label="nav-links">
                                             Aktifitas
                                         </a>
@@ -76,79 +76,23 @@
                                     <li class="nav-item dropdown">
                                         <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"
                                             href="{{ url('blog', ['kategori' => 'kuliner']) }}" aria-label="nav-links"
-                                            data-bs-toggle="dropdown" aria-expanded="true">
+                                             aria-expanded="true">
                                             Kuliner
-                                            <span class="dropdown-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                                    <path fill-rule="evenodd"
-                                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
-                                                </svg>
-                                            </span>
                                         </a>
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <a class="dropdown-item"
-                                                    href="{{ url('blog', ['kategori' => 'Kuliner Banyuwangi']) }}"
-                                                    rel="nofollow" aria-label="single-pages">Banyuwangi</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item"
-                                                    href="{{ url('blog', ['kategori' => 'Kuliner Malang']) }}"
-                                                    rel="nofollow" aria-label="single-pages">Malang</a>
-                                            </li>
-                                        </ul>
                                     </li>
-
                                     <li class="nav-item dropdown">
                                         <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"
-                                            href="" aria-label="nav-links" data-bs-toggle="dropdown"
+                                            href="{{ url('paket') }}" aria-label="nav-links"
                                             aria-expanded="true">
                                             Paket
-                                            <span class="dropdown-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="currentColor" class="bi bi-chevron-down"
-                                                    viewBox="0 0 16 16">
-                                                    <path fill-rule="evenodd"
-                                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
-                                                </svg>
-                                            </span>
                                         </a>
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <a class="dropdown-item"
-                                                    href="{{ url('paket', ['kategori' => 'Open Trip']) }}"
-                                                    rel="nofollow" aria-label="single-pages">Open Trip</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item"
-                                                    href="{{ url('paket', ['kategori' => 'Paket Wisata']) }}"
-                                                    rel="nofollow" aria-label="single-pages">Paket Wisata</a>
-                                            </li>
-                                        </ul>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"
-                                            href="" aria-label="nav-links" data-bs-toggle="dropdown"
+                                            href="{{ url('blog') }}" aria-label="nav-links"
                                             aria-expanded="true">
                                             Blog
-                                            <span class="dropdown-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="currentColor" class="bi bi-chevron-down"
-                                                    viewBox="0 0 16 16">
-                                                    <path fill-rule="evenodd"
-                                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
-                                                </svg>
-                                            </span>
                                         </a>
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <a class="dropdown-item"
-                                                    href="{{ url('blog', ['kategori' => 'Tips & Trick']) }}"
-                                                    rel="nofollow" aria-label="single-pages">Tips & Trick</a>
-                                            </li>
-
-                                        </ul>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"
@@ -156,7 +100,6 @@
                                             About
                                         </a>
                                     </li>
-
                                     <li class="nav-item dropdown">
                                         <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"
                                             aria-current="page" href="{{ url('kontak') }}" aria-label="nav-links">
@@ -316,7 +259,7 @@
         <div class="offcanvas offcanvas-end offcanvasmobile-menu" id="offcanvasmobile-menu" data-bs-backdrop="static"
             tabindex="-1">
             <div class="offcanvas-header pb-30">
-                <a class="navbar-brand dark-light-logo" href="/" aria-label="nav-brands">
+                <a class="navbar-brand dark-light-logo" href="/" aria-label="nav-brands" rel="nofollow">
                     <img src="assets/logo/Jadi Trip Bhitam.png" data-src="assets/logo/Jadi Trip Bputih.png"
                         class="logo-dark gambar-logo" alt="jadi trip">
                     <img src="assets/logo/Jadi Trip Bhitam.png" data-src="assets/logo/Jadi Trip Bhitam.png"
@@ -327,97 +270,46 @@
             <div class="offcanvas-body d-flex justify-content-start">
                 <ul class="navbar-nav custom-navbar-nav mb-2  mb-lg-0 hover-menu">
                     <li class="nav-item dropdown">
-                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page"
-                            href="{{ url('blog', ['kategori' => 'Destinasi']) }}" aria-label="nav-links">
+                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" rel="nofollow"
+                            href="{{ url('blog', ['kategori' => 'destinasi']) }}" aria-label="nav-links">
                             Destinasi
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link d-flex gap-2 align-items-center"
-                            href="{{ url('blog', ['kategori' => 'Aktifitas']) }}" aria-label="nav-links">
+                        <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"
+                            href="{{ url('blog', ['kategori' => 'aktifitas']) }}" aria-label="nav-links">
                             Aktifitas
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="blog"
-                            aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow" aria-current="page"
+                        href="{{ url('blog', ['kategori' => 'kuliner']) }}"
+                            aria-label="nav-links" aria-expanded="false">
                             Kuliner
-                            <span class="dropdown-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
-                                </svg>
-                            </span>
                         </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a class="dropdown-item"
-                                    href="{{ url('blog', ['kategori' => 'Kuliner Banyuwangi']) }}"
-                                    aria-label="single-pages">Banyuwangi</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="{{ url('blog', ['kategori' => 'Kuliner Malang']) }}"
-                                    aria-label="single-pages">Malang</a>
-                            </li>
-                        </ul>
                     </li>
-
-
                     <li class="nav-item dropdown">
-                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="blog"
-                            aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow" aria-current="page"
+                        href="{{ url('paket') }}" aria-label="nav-links" aria-expanded="false">
                             Paket
-                            <span class="dropdown-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
-                                </svg>
-                            </span>
                         </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a class="dropdown-item" href="{{ url('paket', ['kategori' => 'Open Trip']) }}"
-                                    aria-label="single-pages">Open Trip</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="{{ url('paket', ['kategori' => 'Paket Wisata']) }}"
-                                    aria-label="single-pages">Paket Wisata</a>
-                            </li>
-
-                        </ul>
                     </li>
-
                     <li class="nav-item dropdown">
-                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="blog"
-                            aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow" aria-current="page"
+                        href="{{ url('blog') }}" aria-label="nav-links" aria-expanded="false">
                             Blog
-                            <span class="dropdown-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
-                                </svg>
-                            </span>
                         </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a class="dropdown-item" href="{{ url('blog', ['kategori' => 'Tips & Trick']) }}"
-                                    aria-label="single-pages">Tips & Trick</a>
-                            </li>
-                        </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page"
-                            href="{{ url('about') }}" aria-label="nav-links" data-bs-toggle="dropdown"
+                        <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow" aria-current="page"
+                            href="{{ url('about') }}" aria-label="nav-links"
                             aria-expanded="false">
                             About
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page"
-                            href="{{ url('kontak') }}" aria-label="nav-links" data-bs-toggle="dropdown"
+                        <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow" aria-current="page"
+                            href="{{ url('kontak') }}" aria-label="nav-links"
                             aria-expanded="false">
                             Kontak
                         </a>
@@ -651,7 +543,7 @@
                     </div>
 
                     <div class="card-swiper-wrapper card-swiper-wrapper-2 position-relative">
-                        <h6 style="text-align: center">KATEGORI PAKET</h6>
+                        <h6 style="text-align: center">LAYANAN KAMI</h6>
                         <div class="swiper swiper-card-3">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
@@ -662,8 +554,8 @@
                                         </div>
 
                                         <div class="card-body text-center">
-                                            <a href="/category">
-                                                <p class="small mb-0 fw-extrabold text-white text-uppercase">hiking</p>
+                                            <a href="{{ url('paket', ['kategori' => 'Open Trip']) }}">
+                                                <p class="small mb-0 fw-extrabold text-white text-uppercase">Jasa Open Trip</p>
                                             </a>
                                         </div>
                                     </div>
@@ -679,8 +571,8 @@
                                         </div>
 
                                         <div class="card-body text-center">
-                                            <a href="/category">
-                                                <p class="small mb-0 fw-extrabold text-white text-uppercase">desert</p>
+                                            <a href="{{ url('paket', ['kategori' => 'Paket Wisata']) }}">
+                                                <p class="small mb-0 fw-extrabold text-white text-uppercase">Paket Wisata</p>
                                             </a>
                                         </div>
                                     </div>
@@ -696,105 +588,14 @@
                                         </div>
 
                                         <div class="card-body text-center">
-                                            <a href="/category">
-                                                <p class="small mb-0 fw-extrabold text-white text-uppercase">camping
-                                                </p>
+                                            <a href="{{ url('paket', ['kategori' => 'Rental Mobil']) }}">
+                                                <p class="small mb-0 fw-extrabold text-white text-uppercase">Sewa Mobil</p>
                                             </a>
                                         </div>
                                     </div>
                                     <!-- card-style-18 -->
                                 </div>
                                 <!-- swiper-slide -->
-
-                                <div class="swiper-slide">
-                                    <div class="card card-style-18">
-                                        <div class="card-image-wrapper">
-                                            <img src="assets/images/card/forest.jpg" class="card-img-top"
-                                                alt="img-top">
-                                        </div>
-
-                                        <div class="card-body text-center">
-                                            <a href="/category">
-                                                <p class="small mb-0 fw-extrabold text-white text-uppercase">forest</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- card-style-18 -->
-                                </div>
-                                <!-- swiper-slide -->
-
-                                <div class="swiper-slide">
-                                    <div class="card card-style-18">
-                                        <div class="card-image-wrapper">
-                                            <img src="assets/images/card/beach.jpg" class="card-img-top"
-                                                alt="img-top">
-                                        </div>
-
-                                        <div class="card-body text-center">
-                                            <a href="category.htm">
-                                                <p class="small mb-0 fw-extrabold text-white text-uppercase">beach</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- card-style-18 -->
-                                </div>
-                                <!-- swiper-slide -->
-
-                                <div class="swiper-slide">
-                                    <div class="card card-style-18">
-                                        <div class="card-image-wrapper">
-                                            <img src="assets/images/card/hiking.jpg" class="card-img-top"
-                                                alt="img-top">
-                                        </div>
-
-                                        <div class="card-body text-center">
-                                            <a href="/category">
-                                                <p class="small mb-0 fw-extrabold text-white text-uppercase">hiking</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- card-style-18 -->
-                                </div>
-                                <!-- swiper-slide -->
-
-                                <div class="swiper-slide">
-                                    <div class="card card-style-18">
-                                        <div class="card-image-wrapper">
-                                            <img src="assets/images/card/desert.jpg" class="card-img-top"
-                                                alt="img-top">
-                                        </div>
-
-                                        <div class="card-body text-center">
-                                            <a href="/category">
-                                                <p class="small mb-0 fw-extrabold text-white text-uppercase">desert</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- card-style-18 -->
-                                </div>
-                                <!-- swiper-slide -->
-
-                                <div class="swiper-slide">
-                                    <div class="card card-style-18">
-                                        <div class="card-image-wrapper">
-                                            <img src="assets/images/card/camping.jpg" class="card-img-top"
-                                                alt="img-top">
-                                        </div>
-
-                                        <div class="card-body text-center">
-                                            <a href="/category">
-                                                <p class="small mb-0 fw-extrabold text-white text-uppercase">camping
-                                                </p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- card-style-18 -->
-                                </div>
-                                <!-- swiper-slide -->
-                            </div>
-                            <!-- swiper-wrapper -->
-                        </div>
-                        <!-- swiper -->
                     </div>
 
 
@@ -807,91 +608,34 @@
             <!--feature Section Start ====================== -->
             <section class="feature-section pt-lg-200 pt-150 pb-lg-60 pb-50">
                 <div id="rekomendasi" class="container">
-                    <h4 class="section-title mb-lg-60  mb-md-40 md-20 text-center" data-wow-delay="0.4s">Rekomendasi
-                        Paket Wisata</h4>
-                    <div class="row custom-row-gap  wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="col-lg-6">
-                            <div class="card-style-wrapper pb-40 pb-lg-0">
-                                <!-- single card -->
-                                <div class="card card-style-14">
-                                    <div class="card-image-wrapper">
-                                        <a href="/paket"><img src="assets/images/placeholder.svg"
-                                                data-src="assets/images/blog/explore-image-8.jpg" class="card-img-top"
-                                                alt="Unleashed"></a>
-                                    </div>
-
-                                    <div class="card-body text-center">
-                                        <h5 class="fs-4 text-white card-title fw-extrabold"><a href="/article"
-                                                class="text-white blog-title">Paket Wisata Banyuwangi - Malang</a></h5>
-                                        <h6 class=" text-white card-title fw-extrabold"><a href="/article"
-                                                class="text-white blog-title">3 Hari 2 Malam</a></h6>
-                                        <ul class="list-unstyled card-meta-style-3 mb-0 justify-content-center">
-                                            <div class="clickHere">
-                                                <a href="{{ url('paket', ['type' => 'Rekomendasi']) }}">Lihat
-                                                    Paket</a>
-                                            </div>
-                                            {{-- <li><a class="fw-bold" href="about">Jadi Trip</a></li>
-                                                <li>January 25, <span class="dynamic-year"> </span>.</li> --}}
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!-- single card -->
-                                <div class="card card-style-14 mb-lg-40">
-                                    <div class="card-image-wrapper">
-                                        <a href="/article"><img src="assets/images/placeholder.svg"
-                                                data-src="assets/images/blog/explore-image-13.jpg"
-                                                class="card-img-top" alt="Serenity"></a>
-                                    </div>
-
-                                    <div class="card-body text-center">
-                                        <h5 class="fs-4 text-white card-title fw-extrabold"><a href="/article"
-                                                class="text-white blog-title">Paket Wisata Banyuwangi - Malang</a></h5>
-                                        <h6 class=" text-white card-title fw-extrabold"><a href="/article"
-                                                class="text-white blog-title">3 Hari 2 Malam</a></h6>
-                                        <ul class="list-unstyled card-meta-style-3 mb-0 justify-content-center">
-                                            <div class="clickHere">
-                                                <a href="{{ url('paket', ['type' => 'Rekomendasi']) }}">Lihat
-                                                    Paket</a>
-                                            </div>
-                                            {{-- <li><a class="fw-bold" href="about">Serba Tau</a></li>
-                                                <li>January 20, <span class="dynamic-year"> </span>.</li> --}}
-                                        </ul>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-lg-6 pb-30 pb-lg-0">
-                            <!-- single card -->
+                    <h4 class="section-title mb-lg-60 mb-md-40 md-20 text-center" data-wow-delay="0.4s">Rekomendasi Paket Wisata</h4>
+                    <div class="row custom-row-gap wow fadeInUp" data-wow-delay="0.4s">
+                        @foreach ($pakets as $paket)
+                        <div class="col-lg-6 mb-2">
                             <div class="card card-style-14">
                                 <div class="card-image-wrapper">
-                                    <a href="/article"><img src="assets/images/placeholder.svg"
-                                            data-src="assets/images/blog/explore-image-10.jpg" class="card-img-top"
-                                            alt="Trail"></a>
+                                    <a href="{{ url('paket/'.$paket->tipe.'/'.$paket->slug) }}"><img src="assets/images/placeholder.svg" data-src="{{ url('assets/images/paket/'.$paket->thumbnail) }}" class="card-img-top" alt="Unleashed"></a>
                                 </div>
-
                                 <div class="card-body text-center">
-                                    <h5 class="fs-2 text-white card-title fw-extrabold"><a href="/article"
-                                            class="text-white blog-title">Paket Wisata Banyuwangi - Malang</a></h5>
-                                    <h6 class=" text-white card-title fw-extrabold"><a href="/article"
-                                            class="text-white blog-title">3 Hari 2 Malam</a></h6>
+                                    <h5 class="fs-4 text-white card-title fw-extrabold"><a href="{{ url('paket/'.$paket->tipe.'/'.$paket->slug) }}" rel="nofollow" class="text-white blog-title">{{ $paket->title }}</a></h5>
+                                    <h6 class="text-white card-title fw-extrabold"><a href="{{ url('paket/'.$paket->tipe.'/'.$paket->slug) }}" rel="nofollow" class="text-white blog-title">{{ $paket->deskripsi }}</a></h6>
                                     <ul class="list-unstyled card-meta-style-3 mb-0 justify-content-center">
                                         <div class="clickHere">
-                                            <a href="{{ url('paket', ['type' => 'Rekomendasi']) }}">Lihat Paket</a>
+                                            <a href="{{ url('paket/'.$paket->tipe.'/'.$paket->slug) }}" rel="nofollow">Lihat Paket</a>
                                         </div>
-                                        {{-- <li><a class="fw-bold" href="about">Serba Tau</a></li>
-                                            <li>January 12, <span class="dynamic-year"> </span>.</li> --}}
                                     </ul>
                                 </div>
                             </div>
                         </div>
+                        @endforeach
                     </div>
                 </div>
             </section>
+
             <!--feature Section End ====================== -->
 
             <!--article Section Start ====================== -->
-            <section class="section-article  pb-30  pb-lg-100">
+            <section class="section-article  pb-10  pb-lg-50">
                 <div class="container">
 
                     <div class="row custom-row-gap">
@@ -899,15 +643,18 @@
                             <div class="sticky-elements">
                                 <div class="d-flex flex-column gap-40">
                                     <!-- Iklan 1 -->
-                                    <!-- About Me -->
-                                    <a href="https://www.serbatau.web.id" target="_blank">
-                                        <div class="about-me wow fadeInUp" data-wow-delay="0.4s">
-                                            <img id="iklan1-1" src="assets/images/iklan/explore-image-15.jpg"
-                                                alt="">
-                                            <img id="iklan1-2" src="assets/images/iklan/explore-image-1.jpg"
-                                                alt="">
-                                        </div>
-                                    </a>
+                                    @foreach ($iklans as $iklan)
+                                        @if ($iklan->type === 'Iklan 1' && $iklan->status == 'On')
+                                        <a href="{{ $iklan->tautan }}" title="{{ $iklan->perusahaan }}" target="_blank">
+                                            <div class="about-me wow fadeInUp" data-wow-delay="0.4s">
+                                                <img id="iklan1-1" src="assets/images/iklan/{{ $iklan->sampul }}"
+                                                    alt="{{ $iklan->perusahaan }}">
+                                                <img id="iklan1-2" src="assets/images/iklan/{{ $iklan->sampul }}"
+                                                    alt="{{ $iklan->perusahaan }}">
+                                            </div>
+                                        </a>
+                                        @endif
+                                    @endforeach
                                     <!-- Iklan 1 End -->
 
                                     <!-- Socials -->
@@ -1016,7 +763,7 @@
                         </div>
 
                         <div class="col-lg-8">
-                            <h2 class="section-title mb-lg-60  mb-md-40 md-20">Postingan Terbaru</h2>
+                            <h2 class="section-title mb-lg-50  mb-md-30 md-20">Postingan Terbaru</h2>
                             <div class="row custom-row-gap">
                                 @foreach ($datas as $data)
                                     <div class="col-lg-12 col-xl-6">
@@ -1025,9 +772,9 @@
                                             data-wow-delay="0.4s">
                                             <div class="card-image-wrapper">
                                                 <a href="/article/{{ $data->slug }}"><img
-                                                        src="{{ asset('post_media/' . $data->thumbnail) }}"
+                                                        src="{{ asset('assets/images/placeholder.svg') }}"
                                                         data-src="{{ asset('post_media/' . $data->thumbnail) }}"
-                                                        class="card-img-top" alt="Discovering"></a>
+                                                        class="card-img-top" alt="Discovering" /></a>
                                             </div>
 
                                             <div class="card-body">
@@ -1039,7 +786,7 @@
                                                 <ul class="list-unstyled card-meta  align-items-center">
                                                     <li>By <a href="author-1" class="blog-author fw-bold">Jadi
                                                             Trip</a></li>
-                                                    <li>{{ $data->created_at->DiffForHumans() }}<span>
+                                                    <li>{{ \Carbon\Carbon::parse($data->created_at)->format('F d, Y') }}<span>
                                                         </span>.
                                                     </li>
                                                 </ul>
@@ -1098,7 +845,7 @@
             <!--Cta Section End ====================== -->
 
             <!--Instragram Section Start ====================== -->
-            <section class="section-instragram py-lg-100 py-40">
+            <section class="section-instragram py-lg-70 py-30">
                 <div class="container">
                     <div class="section-instragram-header mb-lg-60  mb-md-40 md-20  wow fadeInUp"
                         data-wow-delay="0.4s">
@@ -1109,11 +856,11 @@
                         <p class="text-center">Follow Me on Instagram</p>
                     </div>
 
-                    <div class=" swiper instagram-slider   wow fadeInUp" data-wow-delay="0.4s">
+                    <div class=" swiper instagram-slider wow fadeInUp" id="swiper-wrapper" data-wow-delay="0.4s">
                         <div class="swiper-wrapper">
 
                             @foreach ($mediaData as $media)
-                                <div class="swiper-slide">
+                                <div class="swiper-slide" id="swiper-slide">
                                     <a href="{{ $media['permalink'] }}" target="__blank">
                                         <div class="instagram-image-wrapper image-hover">
                                             <img src="assets/images/placeholder.svg"
@@ -1157,30 +904,15 @@
                     <div class="footer-top-contents pb-30">
                         <div class="row align-items-center gy-30 gy-lg-0">
                             <div class="col-lg-6">
-                                <div class="footer-link-menu-style-2">
-                                    <ul class="list-unstyled lead">
-                                        <li>
-                                            <a href="/">Home</a>
-                                        </li>
-                                        <li>
-                                            <a href="/blog">Blog</a>
-                                        </li>
-                                        <li>
-                                            <a href="/about">About</a>
-                                        </li>
-                                        <li>
-                                            <a href="/contact">Contact</a>
-                                        </li>
-                                    </ul>
-                                </div>
 
+                                {{-- jangan di hapus, buat space --}}
                                 <!-- footer-links -->
                             </div>
                             <!-- col-6 -->
 
                             <div class="col-lg-6">
                                 <div class="social-icons  d-flex align-items-center justify-content-lg-end gap-20">
-                                    <a href="https://www.facebook.com">
+                                    <a href="https://www.facebook.com" rel="nofollow">
                                         <span class="text-white">
                                             <svg width="10" height="16" viewBox="0 0 11 16" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -1190,7 +922,7 @@
                                         </span>
                                     </a>
 
-                                    <a href="https://www.instagram.com/">
+                                    <a href="https://www.instagram.com/" rel="nofollow">
                                         <span class="text-white">
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -1204,7 +936,7 @@
                                         </span>
                                     </a>
 
-                                    <a href="https://twitter.com">
+                                    <a href="https://twitter.com" rel="nofollow">
                                         <span class="text-white">
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -1213,7 +945,7 @@
                                             </svg>
                                         </span>
                                     </a>
-                                    <a href="https://www.youtube.com">
+                                    <a href="https://www.youtube.com" rel="nofollow">
                                         <span class="text-white">
                                             <svg width="18" height="12" viewBox="0 0 18 12" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -1223,7 +955,7 @@
                                             </svg>
                                         </span>
                                     </a>
-                                    <a href="https://www.linkedin.com">
+                                    <a href="https://www.linkedin.com" rel="nofollow">
                                         <span class="text-white">
                                             <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -1240,7 +972,7 @@
                                         </span>
                                     </a>
 
-                                    <a href="https://www.pinterest.com">
+                                    <a href="https://www.pinterest.com" rel="nofollow">
                                         <span class="text-white">
                                             <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -1265,12 +997,12 @@
                             class="d-flex flex-column flex-sm-row gap-3 gap-lg-0 align-items-lg-center justify-content-lg-between justify-content-center">
 
                             <div class="d-flex justify-content-center gap-10">
-                                <p class="mb-0 lead">A product of</p>
-                                <a class="footer-logo" href="/" aria-label="nav-brands">
+                                <p class="mb-0 lead">A product of <span style="color: rgb(0, 134, 157)"><b><i>Myos Studio</i></b></span></p>
+                                {{-- <a class="footer-logo" href="/" aria-label="nav-brands">
                                     <img src="{{ url('assets/images/placeholder.svg') }}"
                                         data-src="{{ url('assets/images/logo-primary.png') }}"
                                         class="logo-light img-fluid" alt="footer-logo-two">
-                                </a>
+                                </a> --}}
                             </div>
                             <p class="mb-0 text-center lead">&copy; <span class="dynamic-year"> </span>. Jadi Trip.
                                 All rights reserved</p>

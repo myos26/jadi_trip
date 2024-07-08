@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\LayananController;
 use App\Models\Post;
 use App\Models\User;
+use App\Models\Paket;
 use App\Models\iklan;
 use App\Models\Kategori;
 use Illuminate\Routing\RouteGroup;
@@ -31,7 +32,7 @@ use Spatie\Sitemap\Tags\Url;
 
 Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/blog/{Kategori?}', [HomeController::class, 'blog']);
+Route::get('/blog/{Kategori}', [HomeController::class, 'bloges']);
 Route::get('/blog', [HomeController::class, 'blog']);
 
 
@@ -91,7 +92,7 @@ Route::middleware(['auth','admin'])->group(function () {
     // if(Auth::check() && Auth::user()->is_admin == 1){
         Route::get('/dashboard', [AdminController::class, 'Dashboard']);
         Route::get('/Dashboard', [AdminController::class, 'Dashboard']);
-        Route::get('/profil', [ProfileController::class, 'index']);
+        // Route::get('/profil', [ProfileController::class, 'index']);
 
         // post routes
         Route::get('/postingan', [PostController::class, 'index']);
@@ -114,9 +115,9 @@ Route::middleware(['auth','admin'])->group(function () {
 });
 
 // route blog
-Route::get('/paket/{kategori?}', function () {
-    return view('paket');
-});
+Route::get('/paket/{tipe}/{slug}', [HomeController::class, 'detailPaket']);
+Route::get('/paket/{kategori}',[HomeController::class, 'pakets']);
+Route::get('/paket',[HomeController::class, 'paket']);
 Route::get('/about', function () {
     return view('about');
 });

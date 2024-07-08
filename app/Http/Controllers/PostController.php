@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Kategori;
 use App\Models\Post;
+use App\Models\Iklan;
 use DOMDocument;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -16,13 +17,21 @@ class PostController extends Controller
     {
         $posts = Post::with('kategori')->get();
 
-        return view('admin.page.Post.post', compact('posts'));
+        return view('admin.page.Post.Post', compact('posts'));
     }
 
     public function post($slug)
     {
+
         $post = Post::with('kategori')->where('slug', $slug)->first();
-        return view('article', compact('post'));
+
+        $sedangAktif = $post->id;
+        $blogs = Post::where('id','!=',$sedangAktif)->inRandomOrder()->take(5)->get();
+        $bloges = Post::where('id','!=',$sedangAktif)->inRandomOrder()->take(9)->get();
+        $kategoris = Kategori::withCount('posts')->inRandomOrder()->take(8)->get();
+        $iklans = Iklan::all();
+
+        return view('article', compact('post','blogs','bloges','kategoris','iklans'));
     }
 
     public function create()
@@ -50,7 +59,7 @@ class PostController extends Controller
             $content = $request->content;
 
             $dom = new DOMDocument();
-            $dom->loadHTML($content, 9);
+            $dom->loadHTML($content, 9999999);
 
             $images = $dom->getElementsByTagName('img');
 
@@ -115,7 +124,7 @@ class PostController extends Controller
         $content = $request->content;
 
         $dom = new DOMDocument();
-        $dom->loadHTML($content, 9);
+        $dom->loadHTML($content, 9999999);
 
         $images = $dom->getElementsByTagName('img');
 

@@ -1,6 +1,6 @@
 @extends('admin.index')
 <meta name="csrf-token" content="{{ csrf_token() }}">
-<link rel="stylesheet" href="{{ asset('pages/Iklan/iklan.css') }}">
+<link rel="stylesheet" href="{{ asset('pages/iklan/iklan.css') }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
@@ -30,6 +30,7 @@ rel="stylesheet">
                         <div class="putInput">
                             <label for="thumbnail">Sampul &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
                             <input class="form-control" id="input3" type="file" name="sampul">
+                            <span style="color: #fff;" id="fileLabel">&nbsp;&nbsp;(500 x 400)</span>
                         </div>
 
                         <div class="putInput">

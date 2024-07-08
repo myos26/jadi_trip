@@ -37,13 +37,13 @@ class LayananController extends Controller
             $thumb_exten = $request->file('thumbnail')->getClientOriginalExtension();
             $thumb_name = 'thumbail-' . time() . '.' . $thumb_exten;
 
-            $request->file('thumbnail')->move(public_path('/post_media'), $thumb_name);
+            $request->file('thumbnail')->move(public_path('/assets/images/paket/'), $thumb_name);
 
             //menyimpan konten
             $content = $request->konten;
 
             $dom = new DOMDocument();
-            $dom->loadHTML($content, 9);
+            $dom->loadHTML($content, 99999999);
 
             $images = $dom->getElementsByTagName('img');
 
@@ -51,10 +51,10 @@ class LayananController extends Controller
                 $data = base64_decode(explode(',', explode(';', $img->getAttribute('src'))[1])[1]);
                 $image_name = 'media-' . time() . $key . '.' . 'png';
                 file_put_contents($image_name, $data);
-                File::move(public_path('/') . $image_name, public_path('/post_media/') . $image_name);
+                File::move(public_path('/') . $image_name, public_path('/assets/images/paket/') . $image_name);
 
                 $img->removeAttribute('src');
-                $img->setAttribute('src', '/post_media/' . $image_name);
+                $img->setAttribute('src', '/assets/images/paket/' . $image_name);
             }
 
             $content = $dom->saveHTML();
@@ -121,7 +121,7 @@ class LayananController extends Controller
         $content = $request->konten;
 
         $dom = new DOMDocument();
-        $dom->loadHTML($content, 9);
+        $dom->loadHTML($content, 99999999);
 
         $images = $dom->getElementsByTagName('img');
 
@@ -132,10 +132,10 @@ class LayananController extends Controller
                 $data = base64_decode(explode(',', explode(';', $img->getAttribute('src'))[1])[1]);
                 $image_name = 'media-' . time() . $key . '.' . 'png';
                 file_put_contents($image_name, $data);
-                File::move(public_path('/') . $image_name, public_path('/post_media/') . $image_name);
+                File::move(public_path('/') . $image_name, public_path('/assets/images/paket/') . $image_name);
 
                 $img->removeAttribute('src');
-                $img->setAttribute('src', '/post_media/' . $image_name);
+                $img->setAttribute('src', '/assets/images/paket/' . $image_name);
             }
         }
 
@@ -143,8 +143,8 @@ class LayananController extends Controller
 
         if ($request->hasFile('thumbnail')) {
             // hapus thumbnail lama
-            if (File::exists(public_path('/post_media' . $request->old_thumbnail))) {
-                File::delete(public_path('/post_media' . $request->old_thumbnail));
+            if (File::exists(public_path('/assets/images/paket/' . $request->old_thumbnail))) {
+                File::delete(public_path('/assets/images/paket/' . $request->old_thumbnail));
             }
 
             // upload thumbnail baru
@@ -152,7 +152,7 @@ class LayananController extends Controller
             $thumb_exten = $request->file('thumbnail')->getClientOriginalExtension();
             $thumb_name = 'thumbail-' . time() . '.' . $thumb_exten;
 
-            $request->file('thumbnail')->move(public_path('/post_media'), $thumb_name);
+            $request->file('thumbnail')->move(public_path('/assets/images/paket/'), $thumb_name);
 
             db::beginTransaction();
 
@@ -170,7 +170,7 @@ class LayananController extends Controller
                 ]);
 
                 db::commit();
-                return redirect('/postingan');
+                return redirect('/layanan');
             } catch (\Exception $e) {
                 db::rollBack();
                 dd($e);
@@ -213,10 +213,10 @@ class LayananController extends Controller
             $path = $img->getAttribute('src');
 
             if (File::exists(public_path($path))) {
-                File::delete(public_path('/post_media/' . substr($path, 12)));
+                File::delete(public_path('/assets/images/paket/' . substr($path, 12)));
             }
         }
-        File::delete(public_path('/post_media/' . $paket->thumbnail));
+        File::delete(public_path('/assets/images/paket/' . $paket->thumbnail));
 
         $paket->delete();
         return redirect()->back()->with('success', 'Layanan berhasil dihapus');

@@ -534,3 +534,12 @@
   exports.default = WOW;
   module.exports = exports['default'];
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Mendapatkan URL thumbnail dari data atribut
+    var thumbnailUrl = document.getElementById('article-wrapper').getAttribute('data-thumbnail');
+
+    // Menetapkan background image menggunakan CSS custom property
+    document.getElementById('article-wrapper').style.setProperty('--bg-parallax-image', 'url("' + thumbnailUrl + '")');
+});

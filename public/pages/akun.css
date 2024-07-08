@@ -205,3 +205,17 @@ tfoot td{
     width: 80px;
     height: 50px;
 } */
+
+.btn {
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover.red .red {
+    color: red;
+}
+
+.red {
+    color: #c91212;
+}

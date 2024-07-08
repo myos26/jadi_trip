@@ -18,9 +18,7 @@ class AuthController extends Controller
      */
     public function index()
     {
-        $data = Http::get('https://bayik4.github.io/api-wilayah-indonesia/api/provinces.json');
-        $data_provinsi = json_decode($data);
-        return view('auth.register', compact('data_provinsi'));
+        return view('auth.register');
     }
 
     public function loginView()
@@ -55,7 +53,7 @@ class AuthController extends Controller
 
             if ($user->is_activated == 1 && $user->is_info_verified == 1) {
                 if ($user->is_admin == 1) {
-                    return redirect('/dashboard');
+                    return redirect('/profil');
                 }
                 return redirect('/');
             } else {

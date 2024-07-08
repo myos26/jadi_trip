@@ -27,6 +27,7 @@ return new class extends Migration
             $table->string('kabupaten_kota')->nullable();
             $table->string('kecamatan')->nullable();
             $table->string('kelurahan_desa')->nullable();
+            $table->enum('status', ['Aktif', 'Pasif']);
             $table->rememberToken();
             $table->timestamps();
         });

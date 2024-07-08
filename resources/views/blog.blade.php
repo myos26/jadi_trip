@@ -43,7 +43,7 @@
             <div class="container">
                 <nav class="navbar navbar-expand-xl hover-menu">
                     <div class="d-flex w-100 justify-content-between align-items-center">
-                        <a class="navbar-brand dark-light-logo" href="/" aria-label="nav-brands">
+                        <a class="navbar-brand dark-light-logo" href="/" aria-label="nav-brands" rel="nofollow">
                             <img src="{{ url('assets/logo/Jadi Trip Bhitam.png') }}" style="height: 70px"
                                 class="logo-light img-fluid" alt="logo-white">
                             <img src="{{ url('assets/logo/Jadi Trip Bputih.png') }}" style="height: 70px"
@@ -68,104 +68,48 @@
                                 <ul class="gap-20 navbar-nav mb-2 me-2 mb-lg-0">
                                     <li class="nav-item dropdown">
                                         <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center"
-                                            aria-current="page" href="{{ url('blog', ['kategori' => 'Destinasi']) }}"
-                                            aria-label="nav-links">
+                                            aria-current="page" href="{{ url('blog', ['kategori' => 'destinasi']) }}"
+                                            rel="nofollow" aria-label="nav-links">
                                             Destinasi
                                         </a>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center"
-                                            aria-current="page" href="{{ url('blog', ['kategori' => 'Aktifitas']) }}"
-                                            aria-label="nav-links">
+                                            aria-current="page" href="{{ url('blog', ['kategori' => 'aktifitas']) }}"
+                                            rel="nofollow" aria-label="nav-links">
                                             Aktifitas
                                         </a>
-
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center"
-                                            aria-current="page" href="" aria-label="nav-links"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            aria-current="page" href="{{ url('blog', ['kategori' => 'kuliner']) }}" aria-label="nav-links"
+                                            rel="nofollow" aria-expanded="false">
                                             Kuliner
-                                            <span class="dropdown-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="currentColor" class="bi bi-chevron-down"
-                                                    viewBox="0 0 16 16">
-                                                    <path fill-rule="evenodd"
-                                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
-                                                </svg>
-                                            </span>
                                         </a>
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <a class="dropdown-item"
-                                                    href="{{ url('blog', ['kategori' => 'Kuliner Banyuwangi']) }}"
-                                                    aria-label="single-pages">Banyuwangi</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item"
-                                                    href="{{ url('blog', ['kategori' => 'Kuliner Malang']) }}"
-                                                    aria-label="single-pages">Malang</a>
-                                            </li>
-                                        </ul>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center"
-                                            aria-current="page" href="" aria-label="nav-links"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            aria-current="page" href="{{ url('paket') }}" aria-label="nav-links"
+                                            rel="nofollow" aria-expanded="false">
                                             Paket
-                                            <span class="dropdown-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="currentColor" class="bi bi-chevron-down"
-                                                    viewBox="0 0 16 16">
-                                                    <path fill-rule="evenodd"
-                                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
-                                                </svg>
-                                            </span>
                                         </a>
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <a class="dropdown-item"
-                                                    href="{{ url('paket', ['kategori' => 'Open Trip']) }}"
-                                                    aria-label="single-pages">Open Trip</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item"
-                                                    href="{{ url('paket', ['kategori' => 'Paket Wisata']) }}"
-                                                    aria-label="single-pages">Paket Wisata</a>
-                                            </li>
-                                        </ul>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center"
                                             aria-current="page" href="/blog" aria-label="nav-links"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            rel="nofollow" aria-expanded="false">
                                             Blog
-                                            <span class="dropdown-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="currentColor" class="bi bi-chevron-down"
-                                                    viewBox="0 0 16 16">
-                                                    <path fill-rule="evenodd"
-                                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
-                                                </svg>
-                                            </span>
                                         </a>
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <a class="dropdown-item" href="{{ url('blog') }}"
-                                                    aria-label="single-pages">Tips & Trick</a>
-                                            </li>
-
-                                        </ul>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center"
-                                            aria-current="page" href="/about" aria-label="nav-links">
+                                            rel="nofollow" aria-current="page" href="{{ url('about') }}" aria-label="nav-links">
                                             About
                                         </a>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center"
-                                            aria-current="page" href="/kontak" aria-label="nav-links">
+                                            rel="nofollow" aria-current="page" href="{{ url('kontak') }}" aria-label="nav-links">
                                             Kontak
                                         </a>
                                     </li>
@@ -173,7 +117,7 @@
                                 </ul>
                                 <div class="d-flex gap-20 align-items-center">
 
-                                    <a class="serch-icon px-2" data-bs-toggle="offcanvas"
+                                    <a class="serch-icon px-2" data-bs-toggle="offcanvas" rel="nofollow"
                                         data-bs-target="#offcanvasserch" aria-controls="offcanvasserch">
 
                                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -328,13 +272,13 @@
                     <h4 class="offcanvas-title mb-30">Follow Me</h4>
                     <!-- author-socials -->
                     <div class="author-socials mb-30">
-                        <a href="https://www.facebook.com" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com" class="instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com" class="linkedin"><i
+                        <a href="https://www.facebook.com" class="facebook" rel="nofollow"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com" class="instagram" rel="nofollow"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com" class="linkedin" rel="nofollow"><i
                                 class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="https://www.youtube.com" class="youtube"><i class="fab fa-youtube"></i></a>
-                        <a href="https://www.pinterest.com" class="pinterest"><i class="fab fa-pinterest-p"></i></a>
-                        <a href="https://twitter.com" class="twitter"><svg width="16" height="14"
+                        <a href="https://www.youtube.com" class="youtube" rel="nofollow"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.pinterest.com" class="pinterest" rel="nofollow"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="https://twitter.com" class="twitter" rel="nofollow"><svg width="16" height="14"
                                 viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M15.8092 15.98H11.1569L6.89801 9.78339L1.56807 15.98H0.19043L6.28619 8.89157L0.19043 0.0195312H4.84276L8.87486 5.88989L13.9234 0.0195312H15.301L9.48808 6.77751L15.8092 15.98ZM11.8079 14.9929H13.9234L4.18054 1.05696H2.06508L11.8079 14.9929Z">
@@ -460,7 +404,7 @@
         <div class="offcanvas offcanvas-end offcanvasmobile-menu" id="offcanvasmobile-menu" data-bs-backdrop="static"
             tabindex="-1">
             <div class="offcanvas-header pb-30">
-                <a class="navbar-brand dark-light-logo" href="/" aria-label="nav-brands">
+                <a class="navbar-brand dark-light-logo" href="/" aria-label="nav-brands" rel="nofollow">
                     <img src="{{ url('assets/logo/Jadi Trip Bputih.png') }}"
                         data-src="{{ url('assets/logo/Jadi Trip Bputih.png') }}" class="logo-dark gambar-logo"
                         alt="jadi trip">
@@ -474,97 +418,46 @@
                 <ul class="navbar-nav custom-navbar-nav mb-2  mb-lg-0 hover-menu">
                     <li class="nav-item dropdown">
                         <a class="nav-link active d-flex gap-2 align-items-center" aria-current="page"
-                            href="{{ url('blog', ['kategori' => 'Destinasi']) }}" aria-label="nav-links">
+                            href="{{ url('blog', ['kategori' => 'destinasi']) }}" aria-label="nav-links" rel="nofollow">
                             Destinasi
                         </a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link d-flex gap-2 align-items-center"
-                            href="{{ url('blog', ['kategori' => 'Aktifitas']) }}" aria-label="nav-links"
-                            data-bs-toggle="dropdown" aria-expanded="true">
+                            href="{{ url('blog', ['kategori' => 'aktifitas']) }}" aria-label="nav-links"
+                            rel="nofollow" aria-expanded="true">
                             Aktifitas
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="blog"
-                            aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="{{ url('blog', ['kategori' => 'kuliner']) }}"
+                            aria-label="nav-links" rel="nofollow" aria-expanded="false">
                             Kuliner
-                            <span class="dropdown-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
-                                </svg>
-                            </span>
                         </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a class="dropdown-item"
-                                    href="{{ url('blog', ['kategori' => 'Kuliner Banyuwangi']) }}"
-                                    aria-label="single-pages">Banyuwangi</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="{{ url('blog', ['kategori' => 'Kuliner Malang']) }}"
-                                    aria-label="single-pages">Malang</a>
-                            </li>
-                        </ul>
                     </li>
-
-
                     <li class="nav-item dropdown">
-                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="blog"
-                            aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="{{ url('paket') }}"
+                            aria-label="nav-links" rel="nofollow" aria-expanded="false">
                             Paket
-                            <span class="dropdown-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
-                                </svg>
-                            </span>
                         </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a class="dropdown-item" href="{{ url('blog', ['kategori' => 'Open Trip']) }}"
-                                    aria-label="single-pages">Open Trip</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="{{ url('blog', ['kategori' => 'Paket Wisata']) }}"
-                                    aria-label="single-pages">Paket Wisata</a>
-                            </li>
-
-                        </ul>
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="blog"
-                            aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="{{ url('blog') }}"
+                            aria-label="nav-links" rel="nofollow" aria-expanded="false">
                             Blog
-                            <span class="dropdown-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
-                                </svg>
-                            </span>
                         </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a class="dropdown-item" href="{{ url('blog', ['kategori' => 'Tips & Trick']) }}"
-                                    aria-label="single-pages">Tips & Trick</a>
-                            </li>
-                        </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link d-flex gap-2 align-items-center" aria-current="page"
-                            href="{{ url('about') }}" aria-label="nav-links" data-bs-toggle="dropdown"
+                            href="{{ url('about') }}" aria-label="nav-links" rel="nofollow"
                             aria-expanded="false">
                             About
                         </a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link d-flex gap-2 align-items-center" aria-current="page"
-                            href="{{ url('kontak') }}" aria-label="nav-links" data-bs-toggle="dropdown"
+                            href="{{ url('kontak') }}" aria-label="nav-links" rel="nofollow"
                             aria-expanded="false">
                             Kontak
                         </a>
@@ -596,7 +489,7 @@
                     @endif --}}
 
                     {{-- MENU KETIKA SUDAH LOGIN --}}
-                    {{-- @if (Auth::check())
+                    @if (Auth::check())
                         <li class="nav-item dropdown">
                             <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="blog"
                                 aria-label="nav-links" data-bs-toggle="dropdown" aria-expanded="false">
@@ -620,7 +513,7 @@
                                 </li>
                             </ul>
                         </li>
-                    @endif --}}
+                    @endif
                 </ul>
 
 
@@ -631,7 +524,7 @@
         <!-- of canvas Mobile menu End -->
 
         <!-- Offcanvas Serch -->
-        <div class="offcanvas offcanvas-top offcanvasserch py-lg-100 py-40" data-bs-scroll="false" tabindex="-1"
+        {{-- <div class="offcanvas offcanvas-top offcanvasserch py-lg-100 py-40" data-bs-scroll="false" tabindex="-1"
             id="offcanvasserch" data-bs-backdrop="false">
             <div class="offcanvas-header py-0 justify-content-end">
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
@@ -791,7 +684,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- Offcanvas Serch -->
 
         <!-- start to top button -->
@@ -861,7 +754,7 @@
                                         <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp"
                                             data-wow-delay="0.4s">
                                             <div class="card-image-wrapper">
-                                                <a href="/article"><img
+                                                <a href="{{ url('article/'.$post->slug) }}"><img
                                                         src="{{ url('assets/images/placeholder.svg') }}"
                                                         data-src="{{ url('post_media/' . $post->thumbnail) }}"
                                                         class="card-img-top" alt=""></a>
@@ -871,13 +764,13 @@
                                                 <div class="card-header text-uppercase">
                                                     <a href="/category">{{ $post->kategori->name }}</a>
                                                 </div>
-                                                <h5 class="fs-4 card-title"><a href="/article/{{ $post->slug }}"
+                                                <h5 class="fs-4 card-title"><a href="{{ url('article/'.$post->slug) }}"
                                                         class="blog-title">{{ $post->title }}</a></h5>
 
                                                 <ul class="list-unstyled card-meta lead  small">
                                                     <li>By <a href="author-1" class="blog-author fw-bold">Jadi
                                                             Trip</a></li>
-                                                    <li>{{ $post->created_at->DiffForHumans() }}</li>
+                                                    <li>{{ \Carbon\Carbon::parse($post->created_at)->format('F d, Y') }}</li>
                                                 </ul>
 
                                                 <p class="card-text small">{{ $post->description }}</p>
@@ -896,21 +789,21 @@
                         <div class="col-xl-4">
                             <div class="sticky-elements">
                                 {{-- Iklan 1 --}}
-                                {{-- @foreach ($iklans as $iklan)
-                                    @if ($iklan->type == 'Iklan 1')
-                                        <a href="{{ $iklan->link }}" rel="nofollow" target="_blank">
+                                @foreach ($iklans as $iklan)
+                                    @if ($iklan->type == 'Iklan 1' && $iklan->status == 'On')
+                                        <a href="{{ $iklan->tautan }}" rel="nofollow" target="_blank">
                                             <div class="dark-mode about-me wow fadeInUp"
-                                                title="{{ $iklan->company }}" data-wow-delay="0.4s">
+                                                title="{{ $iklan->perusahaan }}" data-wow-delay="0.4s">
                                                 <img id="iklan1-1"
-                                                    src="{{ url('assets/images/iklan/' . $iklan->image) }}"
-                                                    alt="{{ $iklan->company }}">
+                                                    src="{{ url('assets/images/iklan/' . $iklan->sampul) }}"
+                                                    alt="{{ $iklan->perusahaan }}">
                                                 <img id="iklan1-2"
-                                                    src="{{ url('assets/images/iklan/' . $iklan->image) }}"
-                                                    alt="{{ $iklan->company }}">
+                                                    src="{{ url('assets/images/iklan/' . $iklan->sampul) }}"
+                                                    alt="{{ $iklan->perusahaan }}">
                                             </div>
                                         </a>
                                     @endif
-                                @endforeach --}}
+                                @endforeach
 
                                 {{-- end iklan 1 --}}
                                 <!-- socials widget -->
@@ -1000,16 +893,16 @@
                                     <!-- social-icons -->
                                 </div>
                                 {{-- Iklan 2 --}}
-                                {{-- @foreach ($iklans as $iklan)
-                                    @if ($iklan->type == 'Iklan 2')
+                                @foreach ($iklans as $iklan)
+                                    @if ($iklan->type == 'Iklan 2' && $iklan->status == 'On')
                                         <div class="add-image d-xl-block wow iklan2 fadeInUp"
-                                            title="{{ $iklan->company }}" data-wow-delay="0.4s">
-                                            <a href="{{ $iklan->link }}" rel="nofollow" target="_blank"><img
-                                                    src="{{ url('assets/images/iklan/' . $iklan->image) }}"
-                                                    class="img-iklan2" alt="{{ $iklan->company }}"></a>
+                                            title="{{ $iklan->perusahaan }}" data-wow-delay="0.4s">
+                                            <a href="{{ $iklan->tautan }}" rel="nofollow" target="_blank"><img
+                                                    src="{{ url('assets/images/iklan/' . $iklan->sampul) }}"
+                                                    class="img-iklan2" alt="{{ $iklan->perusahaan }}"></a>
                                         </div>
                                     @endif
-                                @endforeach --}}
+                                @endforeach
                                 {{-- Iklan 2 end --}}
                             </div>
 
@@ -1054,30 +947,15 @@
                     <div class="footer-top-contents pb-30">
                         <div class="row align-items-center gy-30 gy-lg-0">
                             <div class="col-lg-6">
-                                <div class="footer-link-menu-style-2">
-                                    <ul class="list-unstyled lead">
-                                        <li>
-                                            <a href="/">Home</a>
-                                        </li>
-                                        <li>
-                                            <a href="/blog">Blog</a>
-                                        </li>
-                                        <li>
-                                            <a href="/about">About</a>
-                                        </li>
-                                        <li>
-                                            <a href="/contact">Contact</a>
-                                        </li>
-                                    </ul>
-                                </div>
 
+                                {{-- jangan di hapus, buat space --}}
                                 <!-- footer-links -->
                             </div>
                             <!-- col-6 -->
 
                             <div class="col-lg-6">
                                 <div class="social-icons  d-flex align-items-center justify-content-lg-end gap-20">
-                                    <a href="https://www.facebook.com">
+                                    <a href="https://www.facebook.com" rel="nofollow">
                                         <span class="text-white">
                                             <svg width="10" height="16" viewBox="0 0 11 16" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -1087,7 +965,7 @@
                                         </span>
                                     </a>
 
-                                    <a href="https://www.instagram.com/">
+                                    <a href="https://www.instagram.com/" rel="nofollow">
                                         <span class="text-white">
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -1101,7 +979,7 @@
                                         </span>
                                     </a>
 
-                                    <a href="https://twitter.com">
+                                    <a href="https://twitter.com" rel="nofollow">
                                         <span class="text-white">
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -1110,7 +988,7 @@
                                             </svg>
                                         </span>
                                     </a>
-                                    <a href="https://www.youtube.com">
+                                    <a href="https://www.youtube.com" rel="nofollow">
                                         <span class="text-white">
                                             <svg width="18" height="12" viewBox="0 0 18 12" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -1120,7 +998,7 @@
                                             </svg>
                                         </span>
                                     </a>
-                                    <a href="https://www.linkedin.com">
+                                    <a href="https://www.linkedin.com" rel="nofollow">
                                         <span class="text-white">
                                             <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -1137,7 +1015,7 @@
                                         </span>
                                     </a>
 
-                                    <a href="https://www.pinterest.com">
+                                    <a href="https://www.pinterest.com" rel="nofollow">
                                         <span class="text-white">
                                             <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -1162,12 +1040,12 @@
                             class="d-flex flex-column flex-sm-row gap-3 gap-lg-0 align-items-lg-center justify-content-lg-between justify-content-center">
 
                             <div class="d-flex justify-content-center gap-10">
-                                <p class="mb-0 lead">A product of</p>
-                                <a class="footer-logo" href="/" aria-label="nav-brands">
+                                <p class="mb-0 lead">A product of <span style="color: rgb(0, 134, 157)"><b><i>Myos Studio</i></b></span></p>
+                                {{-- <a class="footer-logo" href="/" aria-label="nav-brands">
                                     <img src="{{ url('assets/images/placeholder.svg') }}"
                                         data-src="{{ url('assets/images/logo-primary.png') }}"
                                         class="logo-light img-fluid" alt="footer-logo-two">
-                                </a>
+                                </a> --}}
                             </div>
                             <p class="mb-0 text-center lead">&copy; <span class="dynamic-year"> </span>. Jadi Trip.
                                 All rights reserved</p>

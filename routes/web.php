@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\LayananController;
 use App\Models\Post;
 use App\Models\User;
+use App\Models\Paket;
 use App\Models\iklan;
 use App\Models\Kategori;
 use Illuminate\Routing\RouteGroup;
@@ -32,7 +33,7 @@ use Spatie\Sitemap\Tags\Url;
 
 Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/blog/{Kategori?}', [HomeController::class, 'blog']);
+Route::get('/blog/{Kategori}', [HomeController::class, 'bloges']);
 Route::get('/blog', [HomeController::class, 'blog']);
 
 
@@ -103,6 +104,37 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::put('/layanan/update/{id}', [LayananController::class, 'update']);
     Route::get('/layanan/delete/{slug}', [LayananController::class, 'destroy']);
 
+    // profile routes
+    Route::put('/update/profile/{id}', [ProfileController::class, 'update']);
+});
+
+Route::middleware(['auth','admin'])->group(function () {
+    // ADMIN ROUTES
+
+    // if(Auth::check() && Auth::user()->is_admin == 1){
+        Route::get('/dashboard', [AdminController::class, 'Dashboard']);
+        Route::get('/Dashboard', [AdminController::class, 'Dashboard']);
+        // Route::get('/profil', [ProfileController::class, 'index']);
+
+        // post routes
+        Route::get('/postingan', [PostController::class, 'index']);
+        Route::get('/create', [PostController::class, 'create']);
+        Route::post('/upload', [PostController::class, 'upload']);
+        Route::post('/save-post', [PostController::class, 'store']);
+        Route::get('/update/{id}', [PostController::class, 'updateView']);
+        Route::post('/update-post/{id}', [PostController::class, 'update']);
+        Route::get('/delete/{id}', [PostController::class, 'destroy']);
+
+        // kategori routes
+        Route::post('/kategori', [PostController::class, 'storeKategori']);
+        Route::get('/kategori/delete/{id}', [PostController::class, 'deleteKategori']);
+
+        // iklan routes
+        Route::get('/iklan', [IklanController::class, 'index']);
+        Route::post('/inputIklan', [IklanController::class, 'store']);
+        Route::post('/iklan/updateStatus/{id}', [IklanController::class, 'updateStatus'])->name('iklan.updateStatus');
+        Route::post('/iklan/expireAd/{id}', [IklanController::class, 'expireAd'])->name('iklan.expireAd');
+
     // akun routes
     Route::get('/akun', [AkunController::class, 'index']);
     Route::get('/akun-detail/{id}', [AkunController::class, 'show']);
@@ -113,9 +145,9 @@ Route::middleware(['auth', 'admin'])->group(function () {
 });
 
 // route blog
-Route::get('/paket/{kategori?}', function () {
-    return view('paket');
-});
+Route::get('/paket/{tipe}/{slug}', [HomeController::class, 'detailPaket']);
+Route::get('/paket/{kategori}',[HomeController::class, 'pakets']);
+Route::get('/paket',[HomeController::class, 'paket']);
 Route::get('/about', function () {
     return view('about');
 });

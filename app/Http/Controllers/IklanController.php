@@ -43,7 +43,7 @@ class IklanController extends Controller
     $iklan->type = $request->type;
     $iklan->sampul = $imageName;
     $iklan->status = 'Off';
-    $iklan->tanggal = now()->format('h-m-Y');
+    $iklan->tanggal = now();
     $iklan->save();
 
     return redirect('/iklan')->with('success', 'Data iklan berhasil disimpan.');

@@ -1,17 +1,52 @@
 User-agent: *
-Disallow: /dashboard  # Melarang mesin pencari mengakses folder admin
-Disallow: /private-page  # Melarang mesin pencari mengakses halaman tertentu
-Disallow: /temp-home
-Disallow: /login
-Disallow: /register
-Disallow: /verified
-Disallow: /verified-info
 Disallow: /verify
-Disallow: /info
-Disallow: /logout
-Disallow: /Dashboard
-Disallow: /profil
-Disallow: /postingan
-Disallow: /tambahpostingan
-Disallow: /upload
+    Disallow: /info
+    Disallow: /resend-code
+    Disallow: /logout
+
+    Disallow: /dashboard
+    Disallow: /profil'
+    Disallow: /postingan
+    Disallow: /create
+    Disallow: /upload
+    Disallow: /save-post
+    Disallow: /update/{id}
+    Disallow: /update-post/{id}
+    Disallow: /delete/{id}
+    Disallow: /kategori
+    Disallow: /kategori/delete/{id}
+    Disallow: /iklan
+    Disallow: /layanan
+    Disallow: /layanan/create
+    Disallow: /layanan/store
+    Disallow: /layanan/update/{slug}
+    Disallow: /layanan/update/{id}
+    Disallow: /layanan/delete/{slug}
+    Disallow: /update/profile/{id}
+
+    Disallow: /dashboard
+    Disallow: /Dashboard
+    Disallow: /postingan
+    Disallow: /create
+    Disallow: /upload
+    Disallow: /save-post
+    Disallow: /update/{id}
+    Disallow: /update-post/{id}
+    Disallow: /delete/{id}
+    Disallow: /kategori
+    Disallow: /kategori/delete/{id}
+
+    Disallow: /iklan
+    Disallow: /inputIklan
+    Disallow: /iklan/updateStatus/{id}
+    Disallow: /iklan/expireAd/{id}
+    Disallow: /temp-home
+    Disallow: /login
+    Disallow: /register
+    Disallow: /login
+    Disallow: /register
+    Disallow: /verified
+    Disallow: /verified-info
 Sitemap: http://127.0.0.1:8000/sitemap.xml
+
+

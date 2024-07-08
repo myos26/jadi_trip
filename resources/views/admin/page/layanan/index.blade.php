@@ -23,7 +23,7 @@
         @foreach ($pakets as $paket)
             <div class="box-besar">
                 <div class="box-image">
-                    <img src="{{ asset('/post_media/' . $paket->thumbnail) }}" alt="" srcset="">
+                    <img src="{{ asset('/assets/images/paket/' . $paket->thumbnail) }}" alt="" srcset="">
                 </div>
                 <div class="box-content">
                     <h2 onclick="target('{{ $paket->slug }}')">{{ Str::limit($paket->title, 30, '...') }}</h2>
@@ -35,7 +35,7 @@
                 <div class="box-action">
                     <div class="action">
                         <h5>{{ $paket->status }}</h5>
-                        <a href="#" onclick="lihat('{{ $paket->slug }}')">Lihat</a>
+                        <a href="{{ url('paket/'.$paket->tipe.'/'.$paket->slug) }}">Lihat</a>
                         <a href="{{ url('/layanan/delete/' . $paket->id) }}">Hapus</a>
                     </div>
                 </div>
@@ -50,9 +50,10 @@
                 window.location = "/layanan/update/" + slug;
             }
 
-            const lihat = (slug) => {
-                window.open("/article/" + slug, "_blank");
+            const lihat = (tipe, slug) => {
+                window.open("/paket/" + tipe + "/" + slug, "_blank");
             }
+
 
             @if (@session('success'))
                 let msg = @json(session()->pull('success'));

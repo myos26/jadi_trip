@@ -17,10 +17,10 @@ return new class extends Migration
             $table->string('tautan');
             $table->string('type');
             $table->string('sampul');
-            $table->string('status')->default('Off');
+            $table->enum('status',['On','Off','Expired'])->default('Off');
             $table->timestamp('tanggal');
             $table->timestamp('time')->nullable(); // Waktu terakhir status On
-            $table->timestamp('delete_at')->nullable(); // Waktu status Expired
+            $table->softDeletes(); // Waktu status Expired
             $table->timestamps();
         });
     }

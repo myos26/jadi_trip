@@ -179,7 +179,6 @@ class AuthController extends Controller
     public function infoVerified(Request $request)
     {
         $request->validate([
-            'username' => ['required'],
             'nomor_hp' => ['required', 'numeric'],
             'provinsi' => ['required'],
             'kabupaten_kota' => ['required'],
@@ -188,7 +187,6 @@ class AuthController extends Controller
         ]);
 
         $get_user = User::where('email', Auth()->user()->email)->first();
-        $get_user->username = $request->username;
         $get_user->nomor_hp = $request->nomor_hp;
         $get_user->provinsi = $request->provinsi;
         $get_user->kabupaten_kota = $request->kabupaten_kota;

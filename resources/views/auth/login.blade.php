@@ -31,7 +31,7 @@
 
             </div>
             <label>
-                <input type="checkbox">Saya menyatakan bahwa informasi yang diberikan di atas adalah benar dan tepat
+                <input type="checkbox" name="remember_me">Ingat saya
             </label>
 
             <button type="submit" class="btn">Login</button>

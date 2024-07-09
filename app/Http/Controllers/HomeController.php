@@ -50,11 +50,11 @@ class HomeController extends Controller
 
         // return response()->json($result);
 
-        $datas = Post::orderBy('id','desc')->take(10)->get();
+        $datas = Post::orderBy('id', 'desc')->take(10)->get();
 
 
         $iklans = Iklan::all();
-        $pakets = Paket::where('tipe','rekomendasi')->get();
+        $pakets = Paket::where('tipe', 'rekomendasi')->get();
         return view('index', [
             'mediaData' => $result['data'],
             'paging' => $result['paging'],
@@ -64,14 +64,16 @@ class HomeController extends Controller
         ]);
     }
 
-    public function paket(){
-        $paketCount = Paket::whereIn('kategori', ['Paket Wisata','Open Trip'])->count();
+    public function paket()
+    {
+        $paketCount = Paket::whereIn('kategori', ['Paket Wisata', 'Open Trip'])->count();
         $pakets = Paket::all();
 
-        return view('paket', compact('pakets','paketCount'));
+        return view('paket', compact('pakets', 'paketCount'));
     }
 
-    public function pakets($kategori){
+    public function pakets($kategori)
+    {
         $kategori = explode('/', $kategori);
         $kategori = end($kategori);
         $iklans = Iklan::all();
@@ -81,7 +83,8 @@ class HomeController extends Controller
         return view('paket', ['pakets' => $pakets, 'paketCount' => $paketCount, 'iklans' => $iklans, 'kategori' => $kategori]);
     }
 
-    public function detailPaket($tipe,$slug){
+    public function detailPaket($tipe, $slug)
+    {
         $post = Paket::where('slug', $slug)->first();
 
         // $sedangAktif = $post->id;
@@ -90,15 +93,16 @@ class HomeController extends Controller
         $kategoris = DB::table('pakets')->select('kategori', DB::raw('count(*) as total'))->groupBy('kategori')->inRandomOrder()->take(8)->get();
         $iklans = Iklan::all();
 
-        return view('detailPaket', compact('post','blogs','bloges','kategoris','iklans'));
+        return view('detailPaket', compact('post', 'blogs', 'bloges', 'kategoris', 'iklans'));
     }
 
     public function blog()
     {
         $iklans = Iklan::all();
         $Posting = Post::all();
-        return view('blog', compact('Posting','iklans'));
+        return view('blog', compact('Posting', 'iklans'));
     }
+
     public function bloges($kategori)
     {
         $kategori = explode('/', $kategori);
@@ -108,7 +112,7 @@ class HomeController extends Controller
             $query->where('name', $kategori);
         })->get();
 
-        return view('blog', ['Posting' => $Posting, 'Kategori' => $kategori, 'iklans'=> $iklans]);
+        return view('blog', ['Posting' => $Posting, 'Kategori' => $kategori, 'iklans' => $iklans]);
     }
 
     public function verifyOtp()
@@ -119,6 +123,24 @@ class HomeController extends Controller
             return redirect('/');
         } else {
             return redirect('/verify');
+        }
+    }
+
+    public function search(Request $request)
+    {
+        $query = $request->input;
+        $iklans = Iklan::all();
+
+        $posts = Post::where('title', 'LIKE', '%' . $query . '%')
+            ->orWhere('description', 'LIKE', '%' . $query . '%')
+            ->orWhere('content', 'LIKE', '%' . $query . '%')
+            ->get();
+
+        if (!$posts->isEmpty()) {
+            $Posting = $posts;
+            return view('blog', compact('Posting', 'iklans'));
+        } else {
+            return redirect()->back()->with('failed', 'Konten yang anda cari untuk saat ini belum tersedia');
         }
     }
 }

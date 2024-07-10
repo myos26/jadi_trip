@@ -47,6 +47,6 @@ Disallow: /verify
     Disallow: /register
     Disallow: /verified
     Disallow: /verified-info
-Sitemap: http://127.0.0.1:8000/sitemap.xml
+Sitemap: http://jaditrip.com/sitemap.xml
 
 

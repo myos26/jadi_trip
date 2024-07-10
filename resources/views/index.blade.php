@@ -76,21 +76,19 @@
                                     <li class="nav-item dropdown">
                                         <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"
                                             href="{{ url('blog', ['kategori' => 'kuliner']) }}" aria-label="nav-links"
-                                             aria-expanded="true">
+                                            aria-expanded="true">
                                             Kuliner
                                         </a>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"
-                                            href="{{ url('paket') }}" aria-label="nav-links"
-                                            aria-expanded="true">
+                                            href="{{ url('paket') }}" aria-label="nav-links" aria-expanded="true">
                                             Paket
                                         </a>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow"
-                                            href="{{ url('blog') }}" aria-label="nav-links"
-                                            aria-expanded="true">
+                                            href="{{ url('blog') }}" aria-label="nav-links" aria-expanded="true">
                                             Blog
                                         </a>
                                     </li>
@@ -110,12 +108,12 @@
 
                                 {{-- SEARCH MANUAL --}}
                                 <div class="box-search" id="box-search">
-                                    <form action='#' id='search'>
+                                    <form action='{{ url('/search') }}' id='search' method="GET">
                                         {{-- <i class='bx bx-search'></i> --}}
                                         <i class='bx bx-x' id="close-search"></i>
                                         <input aria-label='ketik lalu tekan ENTER' autocomplete='off'
-                                            id='search-input' name='q' placeholder='ketik lalu tekan ENTER'
-                                            type='text' value='' />
+                                            id='search-input' name='input' placeholder='ketik lalu tekan ENTER'
+                                            type='text' />
                                     </form>
                                 </div>
 
@@ -169,7 +167,7 @@
                                                         <span class="material-icons-sharp sub-icon">
                                                             account_circle
                                                         </span>
-                                                        <a href="{{ url('/dashboard') }}">Dashboard</a>
+                                                        <a href="{{ url('/profil') }}">CMS</a>
                                                     </div>
                                                 @else
                                                     <div class="sub-menu-link">
@@ -283,34 +281,32 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow" aria-current="page"
-                        href="{{ url('blog', ['kategori' => 'kuliner']) }}"
-                            aria-label="nav-links" aria-expanded="false">
+                            href="{{ url('blog', ['kategori' => 'kuliner']) }}" aria-label="nav-links"
+                            aria-expanded="false">
                             Kuliner
                         </a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow" aria-current="page"
-                        href="{{ url('paket') }}" aria-label="nav-links" aria-expanded="false">
+                            href="{{ url('paket') }}" aria-label="nav-links" aria-expanded="false">
                             Paket
                         </a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow" aria-current="page"
-                        href="{{ url('blog') }}" aria-label="nav-links" aria-expanded="false">
+                            href="{{ url('blog') }}" aria-label="nav-links" aria-expanded="false">
                             Blog
                         </a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow" aria-current="page"
-                            href="{{ url('about') }}" aria-label="nav-links"
-                            aria-expanded="false">
+                            href="{{ url('about') }}" aria-label="nav-links" aria-expanded="false">
                             About
                         </a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link d-flex gap-2 align-items-center" rel="nofollow" aria-current="page"
-                            href="{{ url('kontak') }}" aria-label="nav-links"
-                            aria-expanded="false">
+                            href="{{ url('kontak') }}" aria-label="nav-links" aria-expanded="false">
                             Kontak
                         </a>
                     </li>
@@ -555,7 +551,8 @@
 
                                         <div class="card-body text-center">
                                             <a href="{{ url('paket', ['kategori' => 'Open Trip']) }}">
-                                                <p class="small mb-0 fw-extrabold text-white text-uppercase">Jasa Open Trip</p>
+                                                <p class="small mb-0 fw-extrabold text-white text-uppercase">Jasa Open
+                                                    Trip</p>
                                             </a>
                                         </div>
                                     </div>
@@ -572,7 +569,8 @@
 
                                         <div class="card-body text-center">
                                             <a href="{{ url('paket', ['kategori' => 'Paket Wisata']) }}">
-                                                <p class="small mb-0 fw-extrabold text-white text-uppercase">Paket Wisata</p>
+                                                <p class="small mb-0 fw-extrabold text-white text-uppercase">Paket
+                                                    Wisata</p>
                                             </a>
                                         </div>
                                     </div>
@@ -589,18 +587,23 @@
 
                                         <div class="card-body text-center">
                                             <a href="{{ url('paket', ['kategori' => 'Rental Mobil']) }}">
-                                                <p class="small mb-0 fw-extrabold text-white text-uppercase">Sewa Mobil</p>
+                                                <p class="small mb-0 fw-extrabold text-white text-uppercase">Sewa Mobil
+                                                </p>
                                             </a>
                                         </div>
                                     </div>
                                     <!-- card-style-18 -->
                                 </div>
                                 <!-- swiper-slide -->
-                    </div>
+                            </div>
 
-
-                </div>
-                <!-- hero-wrapper -->
+                            <!-- If we need navigation buttons -->
+                            {{-- <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div> --}}
+                            <!-- If we need scrollbar -->
+                        </div>
+                        <!-- hero-wrapper -->
+                        <div class="swiper-scrollbar"></div>
 
             </section>
             <!--Hero Section ======================-->
@@ -608,25 +611,36 @@
             <!--feature Section Start ====================== -->
             <section class="feature-section pt-lg-200 pt-150 pb-lg-60 pb-50">
                 <div id="rekomendasi" class="container">
-                    <h4 class="section-title mb-lg-60 mb-md-40 md-20 text-center" data-wow-delay="0.4s">Rekomendasi Paket Wisata</h4>
+                    <h4 class="section-title mb-lg-60 mb-md-40 md-20 text-center" data-wow-delay="0.4s">Rekomendasi
+                        Paket Wisata</h4>
                     <div class="row custom-row-gap wow fadeInUp" data-wow-delay="0.4s">
                         @foreach ($pakets as $paket)
-                        <div class="col-lg-6 mb-2">
-                            <div class="card card-style-14">
-                                <div class="card-image-wrapper">
-                                    <a href="{{ url('paket/'.$paket->tipe.'/'.$paket->slug) }}"><img src="assets/images/placeholder.svg" data-src="{{ url('assets/images/paket/'.$paket->thumbnail) }}" class="card-img-top" alt="Unleashed"></a>
-                                </div>
-                                <div class="card-body text-center">
-                                    <h5 class="fs-4 text-white card-title fw-extrabold"><a href="{{ url('paket/'.$paket->tipe.'/'.$paket->slug) }}" rel="nofollow" class="text-white blog-title">{{ $paket->title }}</a></h5>
-                                    <h6 class="text-white card-title fw-extrabold"><a href="{{ url('paket/'.$paket->tipe.'/'.$paket->slug) }}" rel="nofollow" class="text-white blog-title">{{ $paket->deskripsi }}</a></h6>
-                                    <ul class="list-unstyled card-meta-style-3 mb-0 justify-content-center">
-                                        <div class="clickHere">
-                                            <a href="{{ url('paket/'.$paket->tipe.'/'.$paket->slug) }}" rel="nofollow">Lihat Paket</a>
-                                        </div>
-                                    </ul>
+                            <div class="col-lg-6 mb-2">
+                                <div class="card card-style-14">
+                                    <div class="card-image-wrapper">
+                                        <a href="{{ url('paket/' . $paket->tipe . '/' . $paket->slug) }}"><img
+                                                src="assets/images/placeholder.svg"
+                                                data-src="{{ url('assets/images/paket/' . $paket->thumbnail) }}"
+                                                class="card-img-top" alt="Unleashed"></a>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <h5 class="fs-4 text-white card-title fw-extrabold"><a
+                                                href="{{ url('paket/' . $paket->tipe . '/' . $paket->slug) }}"
+                                                rel="nofollow" class="text-white blog-title">{{ $paket->title }}</a>
+                                        </h5>
+                                        <h6 class="text-white card-title fw-extrabold"><a
+                                                href="{{ url('paket/' . $paket->tipe . '/' . $paket->slug) }}"
+                                                rel="nofollow"
+                                                class="text-white blog-title">{{ $paket->deskripsi }}</a></h6>
+                                        <ul class="list-unstyled card-meta-style-3 mb-0 justify-content-center">
+                                            <div class="clickHere">
+                                                <a href="{{ url('paket/' . $paket->tipe . '/' . $paket->slug) }}"
+                                                    rel="nofollow">Lihat Paket</a>
+                                            </div>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         @endforeach
                     </div>
                 </div>
@@ -645,14 +659,17 @@
                                     <!-- Iklan 1 -->
                                     @foreach ($iklans as $iklan)
                                         @if ($iklan->type === 'Iklan 1' && $iklan->status == 'On')
-                                        <a href="{{ $iklan->tautan }}" title="{{ $iklan->perusahaan }}" target="_blank">
-                                            <div class="about-me wow fadeInUp" data-wow-delay="0.4s">
-                                                <img id="iklan1-1" src="assets/images/iklan/{{ $iklan->sampul }}"
-                                                    alt="{{ $iklan->perusahaan }}">
-                                                <img id="iklan1-2" src="assets/images/iklan/{{ $iklan->sampul }}"
-                                                    alt="{{ $iklan->perusahaan }}">
-                                            </div>
-                                        </a>
+                                            <a href="{{ $iklan->tautan }}" title="{{ $iklan->perusahaan }}"
+                                                target="_blank">
+                                                <div class="about-me wow fadeInUp" data-wow-delay="0.4s">
+                                                    <img id="iklan1-1"
+                                                        src="assets/images/iklan/{{ $iklan->sampul }}"
+                                                        alt="{{ $iklan->perusahaan }}">
+                                                    <img id="iklan1-2"
+                                                        src="assets/images/iklan/{{ $iklan->sampul }}"
+                                                        alt="{{ $iklan->perusahaan }}">
+                                                </div>
+                                            </a>
                                         @endif
                                     @endforeach
                                     <!-- Iklan 1 End -->
@@ -786,8 +803,9 @@
                                                 <ul class="list-unstyled card-meta  align-items-center">
                                                     <li>By <a href="author-1" class="blog-author fw-bold">Jadi
                                                             Trip</a></li>
-                                                    <li>{{ \Carbon\Carbon::parse($data->created_at)->format('F d, Y') }}<span>
-                                                        </span>.
+                                                    <li>
+                                                        {{-- {{ \Carbon\Carbon::parse($data->created_at)->format('F d, Y') }} --}}
+                                                        {{ $data->created_at->diffForHumans() }}
                                                     </li>
                                                 </ul>
 
@@ -997,7 +1015,8 @@
                             class="d-flex flex-column flex-sm-row gap-3 gap-lg-0 align-items-lg-center justify-content-lg-between justify-content-center">
 
                             <div class="d-flex justify-content-center gap-10">
-                                <p class="mb-0 lead">A product of <span style="color: rgb(0, 134, 157)"><b><i>Myos Studio</i></b></span></p>
+                                <p class="mb-0 lead">A product of <span style="color: rgb(0, 134, 157)"><b><i>Myos
+                                                Studio</i></b></span></p>
                                 {{-- <a class="footer-logo" href="/" aria-label="nav-brands">
                                     <img src="{{ url('assets/images/placeholder.svg') }}"
                                         data-src="{{ url('assets/images/logo-primary.png') }}"

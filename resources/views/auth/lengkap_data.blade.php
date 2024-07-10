@@ -19,10 +19,10 @@
             <h1>Lengkapi Profil</h1>
 
             <div class="input-box">
-                <div class="input-field">
+                {{-- <div class="input-field">
                     <input type="text" name="username" placeholder="Username" required>
                     <i class='bx bxs-user'></i>
-                </div>
+                </div> --}}
                 <div class="input-field">
                     <input type="text" id="nomor_hp" name="nomor_hp" placeholder="Nomor Telepon" required>
                     <i class='bx bxs-phone'></i>

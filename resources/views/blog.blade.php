@@ -14,7 +14,7 @@
 
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,700;1,900&family=Lovers+Quarrel&family=Meddon&display=swap"
@@ -82,8 +82,8 @@
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center"
-                                            aria-current="page" href="{{ url('blog', ['kategori' => 'kuliner']) }}" aria-label="nav-links"
-                                            rel="nofollow" aria-expanded="false">
+                                            aria-current="page" href="{{ url('blog', ['kategori' => 'kuliner']) }}"
+                                            aria-label="nav-links" rel="nofollow" aria-expanded="false">
                                             Kuliner
                                         </a>
                                     </li>
@@ -96,29 +96,42 @@
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center"
-                                            aria-current="page" href="/blog" aria-label="nav-links"
-                                            rel="nofollow" aria-expanded="false">
+                                            aria-current="page" href="/blog" aria-label="nav-links" rel="nofollow"
+                                            aria-expanded="false">
                                             Blog
                                         </a>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center"
-                                            rel="nofollow" aria-current="page" href="{{ url('about') }}" aria-label="nav-links">
+                                            rel="nofollow" aria-current="page" href="{{ url('about') }}"
+                                            aria-label="nav-links">
                                             About
                                         </a>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link nav-link-style-2 d-flex gap-2 align-items-center"
-                                            rel="nofollow" aria-current="page" href="{{ url('kontak') }}" aria-label="nav-links">
+                                            rel="nofollow" aria-current="page" href="{{ url('kontak') }}"
+                                            aria-label="nav-links">
                                             Kontak
                                         </a>
                                     </li>
 
                                 </ul>
+
+                                {{-- SEARCH MANUAL --}}
+                                <div class="box-search" id="box-search">
+                                    <form action='{{ url('/search') }}' id='search' method="GET">
+                                        {{-- <i class='bx bx-search'></i> --}}
+                                        <i class='bx bx-x' id="close-search"></i>
+                                        <input aria-label='ketik lalu tekan ENTER' autocomplete='off'
+                                            id='search-input' name='input' placeholder='ketik lalu tekan ENTER'
+                                            type='text' />
+                                    </form>
+                                </div>
+
                                 <div class="d-flex gap-20 align-items-center">
 
-                                    <a class="serch-icon px-2" data-bs-toggle="offcanvas" rel="nofollow"
-                                        data-bs-target="#offcanvasserch" aria-controls="offcanvasserch">
+                                    <a class="serch-icon px-2" id="show-search">
 
                                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -272,14 +285,19 @@
                     <h4 class="offcanvas-title mb-30">Follow Me</h4>
                     <!-- author-socials -->
                     <div class="author-socials mb-30">
-                        <a href="https://www.facebook.com" class="facebook" rel="nofollow"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com" class="instagram" rel="nofollow"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com" class="facebook" rel="nofollow"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com" class="instagram" rel="nofollow"><i
+                                class="fab fa-instagram"></i></a>
                         <a href="https://www.linkedin.com" class="linkedin" rel="nofollow"><i
                                 class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="https://www.youtube.com" class="youtube" rel="nofollow"><i class="fab fa-youtube"></i></a>
-                        <a href="https://www.pinterest.com" class="pinterest" rel="nofollow"><i class="fab fa-pinterest-p"></i></a>
-                        <a href="https://twitter.com" class="twitter" rel="nofollow"><svg width="16" height="14"
-                                viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <a href="https://www.youtube.com" class="youtube" rel="nofollow"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="https://www.pinterest.com" class="pinterest" rel="nofollow"><i
+                                class="fab fa-pinterest-p"></i></a>
+                        <a href="https://twitter.com" class="twitter" rel="nofollow"><svg width="16"
+                                height="14" viewBox="0 0 16 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M15.8092 15.98H11.1569L6.89801 9.78339L1.56807 15.98H0.19043L6.28619 8.89157L0.19043 0.0195312H4.84276L8.87486 5.88989L13.9234 0.0195312H15.301L9.48808 6.77751L15.8092 15.98ZM11.8079 14.9929H13.9234L4.18054 1.05696H2.06508L11.8079 14.9929Z">
                                 </path>
@@ -418,7 +436,8 @@
                 <ul class="navbar-nav custom-navbar-nav mb-2  mb-lg-0 hover-menu">
                     <li class="nav-item dropdown">
                         <a class="nav-link active d-flex gap-2 align-items-center" aria-current="page"
-                            href="{{ url('blog', ['kategori' => 'destinasi']) }}" aria-label="nav-links" rel="nofollow">
+                            href="{{ url('blog', ['kategori' => 'destinasi']) }}" aria-label="nav-links"
+                            rel="nofollow">
                             Destinasi
                         </a>
                     </li>
@@ -430,35 +449,34 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="{{ url('blog', ['kategori' => 'kuliner']) }}"
-                            aria-label="nav-links" rel="nofollow" aria-expanded="false">
+                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page"
+                            href="{{ url('blog', ['kategori' => 'kuliner']) }}" aria-label="nav-links"
+                            rel="nofollow" aria-expanded="false">
                             Kuliner
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="{{ url('paket') }}"
-                            aria-label="nav-links" rel="nofollow" aria-expanded="false">
+                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page"
+                            href="{{ url('paket') }}" aria-label="nav-links" rel="nofollow" aria-expanded="false">
                             Paket
                         </a>
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page" href="{{ url('blog') }}"
-                            aria-label="nav-links" rel="nofollow" aria-expanded="false">
+                        <a class="nav-link d-flex gap-2 align-items-center" aria-current="page"
+                            href="{{ url('blog') }}" aria-label="nav-links" rel="nofollow" aria-expanded="false">
                             Blog
                         </a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link d-flex gap-2 align-items-center" aria-current="page"
-                            href="{{ url('about') }}" aria-label="nav-links" rel="nofollow"
-                            aria-expanded="false">
+                            href="{{ url('about') }}" aria-label="nav-links" rel="nofollow" aria-expanded="false">
                             About
                         </a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link d-flex gap-2 align-items-center" aria-current="page"
-                            href="{{ url('kontak') }}" aria-label="nav-links" rel="nofollow"
-                            aria-expanded="false">
+                            href="{{ url('kontak') }}" aria-label="nav-links" rel="nofollow" aria-expanded="false">
                             Kontak
                         </a>
                     </li>
@@ -754,7 +772,7 @@
                                         <div class="card card-style-2 card-border mb-lg-40 mb-20  wow fadeInUp"
                                             data-wow-delay="0.4s">
                                             <div class="card-image-wrapper">
-                                                <a href="{{ url('article/'.$post->slug) }}"><img
+                                                <a href="{{ url('article/' . $post->slug) }}"><img
                                                         src="{{ url('assets/images/placeholder.svg') }}"
                                                         data-src="{{ url('post_media/' . $post->thumbnail) }}"
                                                         class="card-img-top" alt=""></a>
@@ -764,13 +782,15 @@
                                                 <div class="card-header text-uppercase">
                                                     <a href="/category">{{ $post->kategori->name }}</a>
                                                 </div>
-                                                <h5 class="fs-4 card-title"><a href="{{ url('article/'.$post->slug) }}"
+                                                <h5 class="fs-4 card-title"><a
+                                                        href="{{ url('article/' . $post->slug) }}"
                                                         class="blog-title">{{ $post->title }}</a></h5>
 
                                                 <ul class="list-unstyled card-meta lead  small">
                                                     <li>By <a href="author-1" class="blog-author fw-bold">Jadi
                                                             Trip</a></li>
-                                                    <li>{{ \Carbon\Carbon::parse($post->created_at)->format('F d, Y') }}</li>
+                                                    <li>{{ \Carbon\Carbon::parse($post->created_at)->format('F d, Y') }}
+                                                    </li>
                                                 </ul>
 
                                                 <p class="card-text small">{{ $post->description }}</p>
@@ -1040,7 +1060,8 @@
                             class="d-flex flex-column flex-sm-row gap-3 gap-lg-0 align-items-lg-center justify-content-lg-between justify-content-center">
 
                             <div class="d-flex justify-content-center gap-10">
-                                <p class="mb-0 lead">A product of <span style="color: rgb(0, 134, 157)"><b><i>Myos Studio</i></b></span></p>
+                                <p class="mb-0 lead">A product of <span style="color: rgb(0, 134, 157)"><b><i>Myos
+                                                Studio</i></b></span></p>
                                 {{-- <a class="footer-logo" href="/" aria-label="nav-brands">
                                     <img src="{{ url('assets/images/placeholder.svg') }}"
                                         data-src="{{ url('assets/images/logo-primary.png') }}"
@@ -1078,6 +1099,7 @@
     <script src="{{ url('assets/js/appear.min.js') }}"></script>
     <script src="{{ url('assets/js/lazy.image.js') }}"></script>
     <script src="{{ url('assets/js/script.js') }}"></script>
+    <script src="{{ url('assets/js/search.js') }}"></script>
 
 
 </body>

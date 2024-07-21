@@ -26,12 +26,12 @@ class PostController extends Controller
         $post = Post::with('kategori')->where('slug', $slug)->first();
 
         $sedangAktif = $post->id;
-        $blogs = Post::where('id','!=',$sedangAktif)->inRandomOrder()->take(5)->get();
-        $bloges = Post::where('id','!=',$sedangAktif)->inRandomOrder()->take(9)->get();
+        $blogs = Post::where('id', '!=', $sedangAktif)->inRandomOrder()->take(5)->get();
+        $bloges = Post::where('id', '!=', $sedangAktif)->inRandomOrder()->take(9)->get();
         $kategoris = Kategori::withCount('posts')->inRandomOrder()->take(8)->get();
         $iklans = Iklan::all();
 
-        return view('article', compact('post','blogs','bloges','kategoris','iklans'));
+        return view('article', compact('post', 'blogs', 'bloges', 'kategoris', 'iklans'));
     }
 
     public function create()
@@ -108,10 +108,11 @@ class PostController extends Controller
 
     public function updateView(String $id)
     {
-        $post = Post::where('id', $id)->first();
+        $post = Post::with('kategori')->where('id', $id)->first();
+        $kategories = Kategori::all();
 
         if ($post) {
-            return view('admin.page.Post.edit_post', compact('post'));
+            return view('admin.page.Post.edit_post', compact('post', 'kategories'));
         } else {
             return redirect()->back()->with('failed', 'Maaf record tidak ada');
         }

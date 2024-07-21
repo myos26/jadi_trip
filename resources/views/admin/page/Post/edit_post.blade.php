@@ -76,7 +76,11 @@
                             <div class="form-group">
                                 <label for="kategori" style="font-size: 20px;">Kategori</label>
                                 <select name="kategori" id="kategori" class="form-control">
-                                    <option value="1">Artikel</option>
+                                    <option value="{{ $post->kategori_id }}">{{ $post->kategori->name }}</option>
+                                    <hr>
+                                    @foreach ($kategories as $kategori)
+                                        <option value="{{ $kategori->id }}">{{ $kategori->name }}</option>
+                                    @endforeach
                                 </select>
                             </div>
                             <div class="form-group">
